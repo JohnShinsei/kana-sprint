@@ -21,7 +21,7 @@
     "externalReady": false,
     "totalFiles": 301,
     "missingFiles": 0,
-    "totalBytes": 18419553,
+    "totalBytes": 18419631,
     "publicSitePages": 44,
     "publicSiteRoutes": 44,
     "screenshotEntries": 176,
@@ -89,14 +89,14 @@
         {
           "path": "docs/public-site-hosting-verification.json",
           "exists": true,
-          "bytes": 31205,
-          "sha256": "920d545681c17b0653e6cd8e09b669b1d65674c0c70ed789b96d238d31099f6e"
+          "bytes": 31133,
+          "sha256": "1bf04fa42fd77554dc02b997f5821417ec1c4c12730520a39931486844a4c019"
         },
         {
           "path": "docs/public-site-hosting-verification.md",
           "exists": true,
-          "bytes": 3374,
-          "sha256": "be6b06994b00d31dda2ba6688b72ba933da1a211e8cdd59d470622e097053a4d"
+          "bytes": 3302,
+          "sha256": "9e74333e61764edd163830c4704ac95fc3099e63d5b1dbaa2884fde041da0602"
         },
         {
           "path": "docs/public-site-manifest.json",
@@ -396,7 +396,7 @@
       "summary": {
         "files": 56,
         "missingFiles": 0,
-        "bytes": 358111
+        "bytes": 357967
       }
     },
     {
@@ -1843,14 +1843,14 @@
         {
           "path": "eas.json",
           "exists": true,
-          "bytes": 450,
-          "sha256": "5d28d03ad3077b511fe77b0e976c4c25569a77a56ade3bdb886fe47dea676a40"
+          "bytes": 557,
+          "sha256": "8d28243c9ffe9cd31b84fac12c07912f965a3daae312d5b3deba4fde0dbea94b"
         }
       ],
       "summary": {
         "files": 22,
         "missingFiles": 0,
-        "bytes": 195108
+        "bytes": 195215
       }
     },
     {
@@ -1860,8 +1860,8 @@
         {
           "path": ".github/workflows/release-verify.yml",
           "exists": true,
-          "bytes": 1483,
-          "sha256": "e1752519984565e8fd0a546bd5608f9f91d57339af5706b35cb25d73fe0ef6ec"
+          "bytes": 1511,
+          "sha256": "f0ac4724380b24e6f1833033b73c81b3120b0b1e67b9e71d505ca67d05e5b32a"
         },
         {
           "path": "app.config.js",
@@ -1896,8 +1896,8 @@
         {
           "path": "package.json",
           "exists": true,
-          "bytes": 4496,
-          "sha256": "ae9380875e52998c2a5717e2bd9ee7fcc2ce82c0a858fc5455ad2cdc2b88d53a"
+          "bytes": 4583,
+          "sha256": "19912c41a9be1223b208af3a9db7af6b04f9c08c9ee034cae2b7a71fceab7fe9"
         },
         {
           "path": "README.md",
@@ -1921,7 +1921,7 @@
       "summary": {
         "files": 10,
         "missingFiles": 0,
-        "bytes": 688242
+        "bytes": 688357
       }
     }
   ],

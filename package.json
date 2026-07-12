@@ -82,6 +82,7 @@
     "submission:checklist": "node scripts/generate-eas-submission-checklist.js",
     "handoff:bundle": "node scripts/generate-app-store-handoff-bundle.js",
     "metadata:ios": "npx eas-cli metadata:push",
+    "build:ios-simulator": "npx eas-cli build --platform ios --profile ios-simulator",
     "build:ios": "npx eas-cli build --platform ios --profile production",
     "submit:ios": "npx eas-cli submit --platform ios --profile production"
   },
