@@ -60,9 +60,33 @@
           "C617.1"
         ],
         "ready": true
+      },
+      {
+        "category": "NSPrivacyAccessedAPICategorySystemBootTime",
+        "reasons": [
+          "35F9.1"
+        ],
+        "reason": "React Native and Expo use elapsed-time APIs for in-app timers and event timing.",
+        "present": true,
+        "actualReasons": [
+          "35F9.1"
+        ],
+        "ready": true
+      },
+      {
+        "category": "NSPrivacyAccessedAPICategoryDiskSpace",
+        "reasons": [
+          "E174.1"
+        ],
+        "reason": "Expo file-system code checks available space before writing local files and assets.",
+        "present": true,
+        "actualReasons": [
+          "E174.1"
+        ],
+        "ready": true
       }
     ],
-    "rawAccessedApiTypeCount": 2
+    "rawAccessedApiTypeCount": 4
   },
   "platformPosture": {
     "usesNonExemptEncryption": false,
@@ -95,7 +119,7 @@
     "tracking": false,
     "trackingDomains": 0,
     "collectedDataTypes": 0,
-    "accessedApiTypes": 2,
+    "accessedApiTypes": 4,
     "requiredReasonApisReady": true,
     "nonExemptEncryption": false,
     "androidBlockedPermissionCount": 3,

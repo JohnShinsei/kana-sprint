@@ -33,6 +33,16 @@ const expectedReasonApis = [
     reasons: ['C617.1'],
     reason: 'React Native and Expo dependencies may inspect bundled asset file timestamps.',
   },
+  {
+    category: 'NSPrivacyAccessedAPICategorySystemBootTime',
+    reasons: ['35F9.1'],
+    reason: 'React Native and Expo use elapsed-time APIs for in-app timers and event timing.',
+  },
+  {
+    category: 'NSPrivacyAccessedAPICategoryDiskSpace',
+    reasons: ['E174.1'],
+    reason: 'Expo file-system code checks available space before writing local files and assets.',
+  },
 ];
 const reasonApiRows = expectedReasonApis.map((expected) => {
   const actual = accessedApiTypes.find((entry) => entry.NSPrivacyAccessedAPIType === expected.category);

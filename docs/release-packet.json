@@ -462,7 +462,7 @@
         "status": "OK",
         "category": "local",
         "label": "Privacy manifest audit",
-        "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+        "detail": "iOS privacy manifest has 4 required-reason API categories, no tracking, and no collected data."
       },
       {
         "status": "OK",
@@ -723,7 +723,7 @@
       "status": "OK",
       "category": "local",
       "label": "Privacy manifest audit",
-      "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+      "detail": "iOS privacy manifest has 4 required-reason API categories, no tracking, and no collected data."
     },
     {
       "status": "OK",

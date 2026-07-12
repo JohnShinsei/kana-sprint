@@ -39,7 +39,7 @@ Kana Sprint does not require sign-in. Reviewers can start a practice run directl
 - iOS tracking: No
 - Collected data types: 0
 - Required reason APIs ready: Yes
-- Required reason API categories: 2
+- Required reason API categories: 4
 - Microphone disabled: Yes
 
 ## Content Rights

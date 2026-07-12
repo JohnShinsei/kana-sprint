@@ -6,7 +6,7 @@
 - iOS tracking: No
 - Tracking domains: 0
 - Collected data types: 0
-- Required reason API categories: 2
+- Required reason API categories: 4
 - Required reason APIs ready: Yes
 - Non-exempt encryption: No
 - Android blocked permissions: 3
@@ -19,6 +19,8 @@
 | --- | --- | --- | --- |
 | NSPrivacyAccessedAPICategoryUserDefaults | CA92.1 | Ready | App-specific progress, scores, language, music, and settings are stored locally. |
 | NSPrivacyAccessedAPICategoryFileTimestamp | C617.1 | Ready | React Native and Expo dependencies may inspect bundled asset file timestamps. |
+| NSPrivacyAccessedAPICategorySystemBootTime | 35F9.1 | Ready | React Native and Expo use elapsed-time APIs for in-app timers and event timing. |
+| NSPrivacyAccessedAPICategoryDiskSpace | E174.1 | Ready | Expo file-system code checks available space before writing local files and assets. |
 
 ## Platform Posture
 

@@ -21,7 +21,7 @@
     "externalReady": false,
     "totalFiles": 301,
     "missingFiles": 0,
-    "totalBytes": 18419631,
+    "totalBytes": 18421132,
     "publicSitePages": 44,
     "publicSiteRoutes": 44,
     "screenshotEntries": 176,
@@ -89,14 +89,14 @@
         {
           "path": "docs/public-site-hosting-verification.json",
           "exists": true,
-          "bytes": 31133,
-          "sha256": "1bf04fa42fd77554dc02b997f5821417ec1c4c12730520a39931486844a4c019"
+          "bytes": 31205,
+          "sha256": "5931cf7d5b6ab29094fe32e77e4981c3fa25fd90f721bbdd9549dcdd15ad09f6"
         },
         {
           "path": "docs/public-site-hosting-verification.md",
           "exists": true,
-          "bytes": 3302,
-          "sha256": "9e74333e61764edd163830c4704ac95fc3099e63d5b1dbaa2884fde041da0602"
+          "bytes": 3374,
+          "sha256": "44b3e42a94d12584f3362800b83a1a4abf5663fd6fe6e071ecfac9097c1744bf"
         },
         {
           "path": "docs/public-site-manifest.json",
@@ -396,7 +396,7 @@
       "summary": {
         "files": 56,
         "missingFiles": 0,
-        "bytes": 357967
+        "bytes": 358111
       }
     },
     {
@@ -1587,13 +1587,13 @@
           "path": "docs/app-store-review-guide.json",
           "exists": true,
           "bytes": 2982,
-          "sha256": "d39fd0639b65281e21ce558511161709f16fc16c22d3fd6bddc80904c051091a"
+          "sha256": "3d27f26fedcd696e6826ee08da171fc7e9013f641b0f3c84ff5691b0857bf6cc"
         },
         {
           "path": "docs/app-store-review-guide.md",
           "exists": true,
           "bytes": 2685,
-          "sha256": "b41c07823455f56cee8b86638047467ffd48743a20a11562cfc156c69b73a873"
+          "sha256": "0603ac9e1fa91a93317d7129b280114f9c1dc4726e48ddb18302be8bbb04b465"
         },
         {
           "path": "docs/content-rights-audit.json",
@@ -1634,14 +1634,14 @@
         {
           "path": "docs/privacy-manifest-audit.json",
           "exists": true,
-          "bytes": 3235,
-          "sha256": "4b197c8d08011457ec6c5eb9812fbcf334afe2513eb30fb95551ba79145f2b0b"
+          "bytes": 3912,
+          "sha256": "23e892a8c41129993c49406d599a60d9a1e9c62ef377db1fe41381a015eb5ed9"
         },
         {
           "path": "docs/privacy-manifest-audit.md",
           "exists": true,
-          "bytes": 2276,
-          "sha256": "bf6ab108cced6b16c24fe72fb1aac2a3f27f10383da8777da9c59d54dab2ef48"
+          "bytes": 2567,
+          "sha256": "94365532ceab61305b88e127d584cb11733d4221b9b748fcb5367d51a1df3b82"
         },
         {
           "path": "docs/privacy-review-packet.json",
@@ -1659,13 +1659,13 @@
           "path": "docs/release-packet.json",
           "exists": true,
           "bytes": 25731,
-          "sha256": "ac29a70b6f300a94ff1dab2642e2807b0eb6b6cb7f632e3704ad1bd8cd7e6b9c"
+          "sha256": "65b1c63c9d42aa461e5e824cb9e2a85e0064b9b9b5ad94da4aa8fb58396eb000"
         },
         {
           "path": "docs/release-packet.md",
           "exists": true,
           "bytes": 8146,
-          "sha256": "cf264d8a332f7f30151dd93b225e3600511b706e4355c4a06deb6d53b4a4bf0b"
+          "sha256": "93161cd4425d8ee8608ee977d20eef9e74e03bfeba8a4858fe415b553543dcf3"
         },
         {
           "path": "docs/runtime-ui-flow-audit.json",
@@ -1707,7 +1707,7 @@
       "summary": {
         "files": 30,
         "missingFiles": 0,
-        "bytes": 213230
+        "bytes": 214198
       }
     },
     {
@@ -1766,13 +1766,13 @@
           "path": "docs/eas-submission-checklist.json",
           "exists": true,
           "bytes": 15732,
-          "sha256": "54590222e32e26b122ee542fa832d3fc4fbdc6bd50f4221b91e6e0c9ed4c5485"
+          "sha256": "b82a77478a97b5620727710af3976ef782932b6323e1c10dee2db22c45796d43"
         },
         {
           "path": "docs/eas-submission-checklist.md",
           "exists": true,
           "bytes": 10387,
-          "sha256": "66cb601861e1d58389f08f789ce60eb64017a5e86d9423789c7e83e0ededd6c5"
+          "sha256": "8dd9d293f967bc3e91fd7420fe192adfe4d5da5c2925581911463502dd89d27c"
         },
         {
           "path": "docs/external-readiness.json",
@@ -1872,8 +1872,8 @@
         {
           "path": "app.json",
           "exists": true,
-          "bytes": 4122,
-          "sha256": "f1cbfa28554be427d3715c5aa8b688eb1dab4d0435ea4e1f711423445e06a15a"
+          "bytes": 4511,
+          "sha256": "d4dd5d92350a3ed6b29d568527a14c1451fe9c8123b07438fbd636c06475f37c"
         },
         {
           "path": "App.tsx",
@@ -1921,7 +1921,7 @@
       "summary": {
         "files": 10,
         "missingFiles": 0,
-        "bytes": 688357
+        "bytes": 688746
       }
     }
   ],
@@ -2066,7 +2066,7 @@
         "status": "OK",
         "category": "local",
         "label": "Privacy manifest audit",
-        "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+        "detail": "iOS privacy manifest has 4 required-reason API categories, no tracking, and no collected data."
       },
       {
         "status": "OK",

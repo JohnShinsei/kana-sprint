@@ -677,6 +677,8 @@ const requiredStoreConfirmationEnv = {
 const expectedPrivacyReasons = {
   NSPrivacyAccessedAPICategoryUserDefaults: 'CA92.1',
   NSPrivacyAccessedAPICategoryFileTimestamp: 'C617.1',
+  NSPrivacyAccessedAPICategorySystemBootTime: '35F9.1',
+  NSPrivacyAccessedAPICategoryDiskSpace: 'E174.1',
 };
 const originalityMarkers = {
   'zh-Hans': '原创',
@@ -2628,6 +2630,8 @@ function verifyPrivacyManifestAudit() {
     'Required reason APIs ready: Yes',
     'NSPrivacyAccessedAPICategoryUserDefaults',
     'NSPrivacyAccessedAPICategoryFileTimestamp',
+    'NSPrivacyAccessedAPICategorySystemBootTime',
+    'NSPrivacyAccessedAPICategoryDiskSpace',
     'Android blocked permissions',
     'Google Mobile Ads dependency present: Yes',
     'not legal advice',

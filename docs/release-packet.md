@@ -87,7 +87,7 @@
 - [OK] App Store age rating audit: 12/12 advisory answers are NONE; final rating comes from App Store Connect.
 - [OK] Open source license audit: 515 runtime packages checked; 0 unknown and 0 prohibited runtime licenses.
 - [OK] App Store review guide: No demo account or sign-in required; 176 screenshot entries referenced.
-- [OK] Privacy manifest audit: iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data.
+- [OK] Privacy manifest audit: iOS privacy manifest has 4 required-reason API categories, no tracking, and no collected data.
 - [OK] App Store privacy answer pack: NO_LIVE_ADS state documented; no-account local app practices and live-AdMob disclosure review steps ready.
 - [OK] Privacy review packet: NO_LIVE_ADS privacy packet ready; local evidence=yes, final review confirmed=no.
 - [OK] AdMob release audit: NO_LIVE_ADS state audited; live ads ready=no, external ad setup ready=no.
