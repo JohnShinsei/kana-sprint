@@ -464,8 +464,19 @@ def font(size, bold=False, value=""):
             "malgunbd.ttf" if bold else "malgun.ttf",
         ]
 
-    for name in names:
-        path = Path("C:/Windows/Fonts") / name
+    paths = [Path("C:/Windows/Fonts") / name for name in names]
+    if has_cjk(value) or has_hangul(value):
+        paths.extend([
+            Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc" if bold else "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
+            Path("/System/Library/Fonts/PingFang.ttc"),
+        ])
+    else:
+        paths.extend([
+            Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
+            Path("/System/Library/Fonts/Supplemental/Arial Bold.ttf" if bold else "/System/Library/Fonts/Supplemental/Arial.ttf"),
+        ])
+
+    for path in paths:
         if path.exists():
             return ImageFont.truetype(str(path), size)
 

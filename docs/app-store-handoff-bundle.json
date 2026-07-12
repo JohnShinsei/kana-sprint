@@ -21,7 +21,7 @@
     "externalReady": false,
     "totalFiles": 301,
     "missingFiles": 0,
-    "totalBytes": 18419189,
+    "totalBytes": 18419553,
     "publicSitePages": 44,
     "publicSiteRoutes": 44,
     "screenshotEntries": 176,
@@ -90,13 +90,13 @@
           "path": "docs/public-site-hosting-verification.json",
           "exists": true,
           "bytes": 31205,
-          "sha256": "8b526c5f17e2725b4e46affd4a22d28d593635bc00c07045838b504c7d6a2abf"
+          "sha256": "920d545681c17b0653e6cd8e09b669b1d65674c0c70ed789b96d238d31099f6e"
         },
         {
           "path": "docs/public-site-hosting-verification.md",
           "exists": true,
           "bytes": 3374,
-          "sha256": "b14be3f243870dc4d8fe27d9d2dcbc77b442e4bdb82e336872a30e9b1b7a944c"
+          "sha256": "be6b06994b00d31dda2ba6688b72ba933da1a211e8cdd59d470622e097053a4d"
         },
         {
           "path": "docs/public-site-manifest.json",
@@ -1860,8 +1860,8 @@
         {
           "path": ".github/workflows/release-verify.yml",
           "exists": true,
-          "bytes": 1119,
-          "sha256": "1856286beac9cd487b2890d748e95ba065e56bf38d53919eab2285d534f58c49"
+          "bytes": 1483,
+          "sha256": "e1752519984565e8fd0a546bd5608f9f91d57339af5706b35cb25d73fe0ef6ec"
         },
         {
           "path": "app.config.js",
@@ -1921,7 +1921,7 @@
       "summary": {
         "files": 10,
         "missingFiles": 0,
-        "bytes": 687878
+        "bytes": 688242
       }
     }
   ],
