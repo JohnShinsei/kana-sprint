@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-open-source-license-audit.js",
+  "generatedFrom": {
+    "packageJson": "package.json",
+    "packageLock": "package-lock.json",
+    "contentRightsAudit": "docs/content-rights-audit.json",
+    "runtimeAssetManifest": "docs/runtime-asset-manifest.json"
+  },
+  "posture": {
+    "statement": "Kana Sprint keeps a reproducible local dependency license audit before App Store submission.",
+    "limitation": "This is an automated dependency and local-asset license screen, not legal advice.",
+    "actionIfHit": "Replace or review flagged packages before submission, then rerun npm run legal:licenses and npm run release:verify."
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "lockfileVersion": 3,
+    "totalPackages": 519,
+    "runtimePackages": 515,
+    "devOnlyPackages": 4,
+    "directRuntimeDependencies": 18,
+    "directDevDependencies": 3,
+    "distinctLicenses": 14,
+    "runtimeDistinctLicenses": 14,
+    "unknownRuntimeLicenses": 0,
+    "prohibitedRuntimeLicenses": 0,
+    "unknownAllLicenses": 0,
+    "prohibitedAllLicenses": 0,
+    "reviewRuntimeLicenses": 13,
+    "contentRightsRisk": "PASS",
+    "runtimeAudioAssets": 3,
+    "runtimePngAssets": 6
+  },
+  "acceptedLicenseFamilies": {
+    "permissive": [
+      "0BSD",
+      "Apache-2.0",
+      "BSD-2-Clause",
+      "BSD-3-Clause",
+      "BlueOak-1.0.0",
+      "ISC",
+      "MIT",
+      "Python-2.0"
+    ],
+    "noticeRequired": [
+      "CC-BY-4.0",
+      "CC0-1.0",
+      "Unlicense"
+    ],
+    "weakCopyleftAllowedWithNotice": [
+      "MPL-2.0"
+    ],
+    "prohibitedWithoutPermissiveAlternative": [
+      "AGPL-1.0",
+      "AGPL-1.0-only",
+      "AGPL-1.0-or-later",
+      "AGPL-3.0",
+      "AGPL-3.0-only",
+      "AGPL-3.0-or-later",
+      "GPL-1.0",
+      "GPL-1.0-only",
+      "GPL-1.0-or-later",
+      "GPL-2.0",
+      "GPL-2.0-only",
+      "GPL-2.0-or-later",
+      "GPL-3.0",
+      "GPL-3.0-only",
+      "GPL-3.0-or-later",
+      "LGPL-2.0",
+      "LGPL-2.0-only",
+      "LGPL-2.0-or-later",
+      "LGPL-2.1",
+      "LGPL-2.1-only",
+      "LGPL-2.1-or-later",
+      "LGPL-3.0",
+      "LGPL-3.0-only",
+      "LGPL-3.0-or-later",
+      "SSPL-1.0",
+      "BUSL-1.1",
+      "UNLICENSED"
+    ]
+  },
+  "directRuntime": [
+    {
+      "name": "@expo/metro-runtime",
+      "path": "node_modules/@expo/metro-runtime",
+      "version": "56.0.16",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "@react-native-async-storage/async-storage",
+      "path": "node_modules/@react-native-async-storage/async-storage",
+      "version": "2.2.0",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo",
+      "path": "node_modules/expo",
+      "version": "56.0.15",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-asset",
+      "path": "node_modules/expo-asset",
+      "version": "56.0.19",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-audio",
+      "path": "node_modules/expo-audio",
+      "version": "56.0.12",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-build-properties",
+      "path": "node_modules/expo-build-properties",
+      "version": "56.0.22",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-constants",
+      "path": "node_modules/expo-constants",
+      "version": "56.0.20",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-haptics",
+      "path": "node_modules/expo-haptics",
+      "version": "56.0.3",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-localization",
+      "path": "node_modules/expo-localization",
+      "version": "56.0.6",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-speech",
+      "path": "node_modules/expo-speech",
+      "version": "56.0.3",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-splash-screen",
+      "path": "node_modules/expo-splash-screen",
+      "version": "56.0.12",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-status-bar",
+      "path": "node_modules/expo-status-bar",
+      "version": "56.0.4",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "expo-system-ui",
+      "path": "node_modules/expo-system-ui",
+      "version": "56.0.5",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "react",
+      "path": "node_modules/react",
+      "version": "19.2.3",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "react-dom",
+      "path": "node_modules/react-dom",
+      "version": "19.2.3",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "react-native",
+      "path": "node_modules/react-native",
+      "version": "0.85.3",
+      "license": "MIT",
+      "classification": "permissive"
+    },
+    {
+      "name": "react-native-google-mobile-ads",
+      "path": "node_modules/react-native-google-mobile-ads",
+      "version": "16.3.4",
+      "license": "Apache-2.0",
+      "classification": "permissive"
+    },
+    {
+      "name": "react-native-web",
+      "path": "node_modules/react-native-web",
+      "version": "0.21.2",
+      "license": "MIT",
+      "classification": "permissive"
+    }
+  ],
+  "licenseDistribution": {
+    "MIT": 436,
+    "ISC": 29,
+    "BSD-3-Clause": 9,
+    "Apache-2.0": 14,
+    "(MIT OR CC0-1.0)": 2,
+    "Python-2.0": 1,
+    "Unlicense": 2,
+    "CC-BY-4.0": 1,
+    "(MIT OR Apache-2.0)": 1,
+    "BSD-2-Clause": 4,
+    "BlueOak-1.0.0": 6,
+    "0BSD": 1,
+    "MPL-2.0": 12,
+    "(BSD-3-Clause OR GPL-2.0)": 1
+  },
+  "runtimeLicenseDistribution": {
+    "MIT": 433,
+    "ISC": 29,
+    "BSD-3-Clause": 9,
+    "Apache-2.0": 13,
+    "(MIT OR CC0-1.0)": 2,
+    "Python-2.0": 1,
+    "Unlicense": 2,
+    "CC-BY-4.0": 1,
+    "(MIT OR Apache-2.0)": 1,
+    "BSD-2-Clause": 4,
+    "BlueOak-1.0.0": 6,
+    "0BSD": 1,
+    "MPL-2.0": 12,
+    "(BSD-3-Clause OR GPL-2.0)": 1
+  },
+  "runtimeReviewPackages": [
+    {
+      "name": "lightningcss",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-android-arm64",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-android-arm64",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-darwin-arm64",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-darwin-arm64",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-darwin-x64",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-darwin-x64",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-freebsd-x64",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-freebsd-x64",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-linux-arm-gnueabihf",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-linux-arm-gnueabihf",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-linux-arm64-gnu",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-linux-arm64-gnu",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-linux-arm64-musl",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-linux-arm64-musl",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-linux-x64-gnu",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-linux-x64-gnu",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-linux-x64-musl",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-linux-x64-musl",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-win32-arm64-msvc",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-win32-arm64-msvc",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "lightningcss-win32-x64-msvc",
+      "version": "1.32.0",
+      "path": "node_modules/lightningcss-win32-x64-msvc",
+      "license": "MPL-2.0",
+      "classification": "weak-copyleft-notice"
+    },
+    {
+      "name": "node-forge",
+      "version": "1.4.0",
+      "path": "node_modules/node-forge",
+      "license": "(BSD-3-Clause OR GPL-2.0)",
+      "classification": "dual-license-permissive-option"
+    }
+  ],
+  "runtimeUnknownPackages": [],
+  "runtimeProhibitedPackages": [],
+  "allUnknownPackages": [],
+  "allProhibitedPackages": []
+}

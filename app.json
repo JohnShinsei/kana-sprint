@@ -1,0 +1,154 @@
+{
+  "expo": {
+    "name": "Kana Sprint",
+    "slug": "kana-sprint",
+    "description": "A fast Japanese learning game for kana, JLPT N5-N1 vocabulary, and original anime-style lines.",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#10151F",
+    "primaryColor": "#FFB23F",
+    "scheme": "kanasprint",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.john.kanasprint",
+      "buildNumber": "1",
+      "backgroundColor": "#10151F",
+      "userInterfaceStyle": "dark",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "CFBundleAllowMixedLocalizations": true
+      },
+      "privacyManifests": {
+        "NSPrivacyTracking": false,
+        "NSPrivacyTrackingDomains": [],
+        "NSPrivacyCollectedDataTypes": [],
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "CA92.1"
+            ]
+          },
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryFileTimestamp",
+            "NSPrivacyAccessedAPITypeReasons": [
+              "C617.1"
+            ]
+          }
+        ]
+      }
+    },
+    "android": {
+      "package": "com.john.kanasprint",
+      "versionCode": 1,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+      ],
+      "backgroundColor": "#10151F",
+      "userInterfaceStyle": "dark",
+      "adaptiveIcon": {
+        "backgroundColor": "#10151F",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "locales": {
+      "zh-Hans": "./languages/zh-Hans.json",
+      "zh-Hant": "./languages/zh-Hant.json",
+      "en": "./languages/en.json",
+      "fr": "./languages/fr.json",
+      "it": "./languages/it.json",
+      "de": "./languages/de.json",
+      "es-ES": "./languages/es-ES.json",
+      "ko": "./languages/ko.json",
+      "pl": "./languages/pl.json",
+      "pt-BR": "./languages/pt-BR.json"
+    },
+    "plugins": [
+      "expo-system-ui",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#10151F",
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain"
+        }
+      ],
+      [
+        "expo-localization",
+        {
+          "supportedLocales": {
+            "ios": [
+              "zh-Hans",
+              "zh-Hant",
+              "en",
+              "fr",
+              "it",
+              "de",
+              "es-ES",
+              "ko",
+              "pl",
+              "pt-BR"
+            ],
+            "android": [
+              "zh-Hans",
+              "zh-Hant",
+              "en",
+              "fr",
+              "it",
+              "de",
+              "es-ES",
+              "ko",
+              "pl",
+              "pt-BR"
+            ]
+          }
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "16.4"
+          },
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "minSdkVersion": 24,
+            "buildToolsVersion": "36.0.0"
+          }
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": false,
+          "enableBackgroundRecording": false
+        }
+      ],
+      "expo-asset"
+    ],
+    "extra": {
+      "admob": {
+        "liveAdsEnabled": false
+      },
+      "storeUrls": {},
+      "eas": {
+        "projectId": "ebb5cac4-3842-4be9-853e-8429fa421ef2"
+      }
+    },
+    "owner": "johnshinsei"
+  }
+}

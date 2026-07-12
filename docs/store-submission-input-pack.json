@@ -1,0 +1,712 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-store-submission-input-pack.js",
+  "generatedFrom": {
+    "envTemplate": ".env.example",
+    "externalReadiness": "docs/external-readiness.json",
+    "easEnvironmentChecklist": "docs/eas-env-checklist.json",
+    "releaseStatus": "scripts/release-status.js --json"
+  },
+  "outputs": {
+    "markdown": "docs/store-submission-input-pack.md",
+    "json": "docs/store-submission-input-pack.json",
+    "envLocalTemplate": "docs/store-submission.env.template"
+  },
+  "summary": {
+    "envKeys": 18,
+    "fillableEnvKeys": 18,
+    "externalItems": 11,
+    "blockingExternalItems": 7,
+    "easProductionKeys": 7,
+    "manualConfirmationKeys": 6,
+    "localReady": true
+  },
+  "envLocalTemplateFile": {
+    "path": "docs/store-submission.env.template",
+    "bytes": 959,
+    "sha256": "3eb0bab3630b0ed550c29be3f0fe6176b5eca7d5183c79eae8eca71e7907c97c"
+  },
+  "officialReferences": [
+    {
+      "title": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "title": "EAS environment variables",
+      "url": "https://docs.expo.dev/eas/environment-variables/"
+    }
+  ],
+  "envLocalTemplate": [
+    {
+      "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
+      "group": "AdMob",
+      "value": "",
+      "placeholder": "ca-app-pub-0000000000000000~0000000000",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "live-admob-ids",
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
+          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+        }
+      ]
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
+      "group": "AdMob",
+      "value": "",
+      "placeholder": "ca-app-pub-0000000000000000~0000000000",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "live-admob-ids",
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
+          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+        }
+      ]
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
+      "group": "AdMob",
+      "value": "",
+      "placeholder": "ca-app-pub-0000000000000000/0000000000",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "live-admob-ids",
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
+          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+        }
+      ]
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
+      "group": "AdMob",
+      "value": "",
+      "placeholder": "ca-app-pub-0000000000000000/0000000000",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "live-admob-ids",
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
+          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_BASE_URL",
+      "group": "Public store URLs",
+      "value": "",
+      "placeholder": "production HTTPS URL",
+      "requiredForEasProduction": true,
+      "visibility": "plaintext",
+      "validation": "Production HTTPS root URL; can generate /support and /privacy URLs",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        },
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        },
+        {
+          "label": "Public marketing URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "public-support-url",
+          "label": "Public support URL",
+          "status": "OK",
+          "action": "Host site/ over HTTPS and expose the support page. APP_STORE_BASE_URL can generate /support automatically, or APP_STORE_SUPPORT_URL can point to a custom production HTTPS URL.",
+          "evidence": "The support URL opens without auth, redirects, localhost, .test, .local, or example domains, and docs/public-site-hosting-verification.md reports a live PASS."
+        },
+        {
+          "id": "public-privacy-url",
+          "label": "Public privacy URL",
+          "status": "OK",
+          "action": "Host site/ over HTTPS and expose the privacy policy page. APP_STORE_BASE_URL can generate /privacy automatically, or APP_STORE_PRIVACY_URL can point to a custom production HTTPS URL.",
+          "evidence": "The privacy URL opens without auth, matches docs/app-store-privacy-answers.md plus the final AdMob state, and docs/public-site-hosting-verification.md reports a live PASS."
+        },
+        {
+          "id": "public-marketing-url",
+          "label": "Public marketing URL",
+          "status": "OK",
+          "action": "Optional. Set APP_STORE_MARKETING_URL or APP_STORE_BASE_URL if the App Store listing should include a marketing URL.",
+          "evidence": "A production HTTPS marketing URL is available, or this optional field is intentionally left blank."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_MARKETING_URL",
+      "group": "Public store URLs",
+      "value": "",
+      "placeholder": "production HTTPS URL",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Optional production HTTPS marketing URL",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public marketing URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "public-marketing-url",
+          "label": "Public marketing URL",
+          "status": "OK",
+          "action": "Optional. Set APP_STORE_MARKETING_URL or APP_STORE_BASE_URL if the App Store listing should include a marketing URL.",
+          "evidence": "A production HTTPS marketing URL is available, or this optional field is intentionally left blank."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_SUPPORT_URL",
+      "group": "Public store URLs",
+      "value": "",
+      "placeholder": "production HTTPS URL",
+      "requiredForEasProduction": true,
+      "visibility": "plaintext",
+      "validation": "Production HTTPS support URL; APP_STORE_BASE_URL can derive it",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "public-support-url",
+          "label": "Public support URL",
+          "status": "OK",
+          "action": "Host site/ over HTTPS and expose the support page. APP_STORE_BASE_URL can generate /support automatically, or APP_STORE_SUPPORT_URL can point to a custom production HTTPS URL.",
+          "evidence": "The support URL opens without auth, redirects, localhost, .test, .local, or example domains, and docs/public-site-hosting-verification.md reports a live PASS."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_PRIVACY_URL",
+      "group": "Public store URLs",
+      "value": "",
+      "placeholder": "production HTTPS URL",
+      "requiredForEasProduction": true,
+      "visibility": "plaintext",
+      "validation": "Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it",
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "public-privacy-url",
+          "label": "Public privacy URL",
+          "status": "OK",
+          "action": "Host site/ over HTTPS and expose the privacy policy page. APP_STORE_BASE_URL can generate /privacy automatically, or APP_STORE_PRIVACY_URL can point to a custom production HTTPS URL.",
+          "evidence": "The privacy URL opens without auth, matches docs/app-store-privacy-answers.md plus the final AdMob state, and docs/public-site-hosting-verification.md reports a live PASS."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_FIRST_NAME",
+      "group": "App Store review contact",
+      "value": "",
+      "placeholder": "review first name",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Non-empty first name for App Review contact",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "app-store-review-contact",
+          "label": "App Store review contact",
+          "status": "TODO",
+          "action": "Add the review contact that Apple can use during App Review. Use a monitored email address and a reachable phone number.",
+          "evidence": "store.config.js resolves apple.review, metadata preview shows reviewContactReady=true, and release:status reports the contact OK."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_LAST_NAME",
+      "group": "App Store review contact",
+      "value": "",
+      "placeholder": "review last name",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Non-empty last name for App Review contact",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "app-store-review-contact",
+          "label": "App Store review contact",
+          "status": "TODO",
+          "action": "Add the review contact that Apple can use during App Review. Use a monitored email address and a reachable phone number.",
+          "evidence": "store.config.js resolves apple.review, metadata preview shows reviewContactReady=true, and release:status reports the contact OK."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_EMAIL",
+      "group": "App Store review contact",
+      "value": "",
+      "placeholder": "review email address",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Reachable email address",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "app-store-review-contact",
+          "label": "App Store review contact",
+          "status": "TODO",
+          "action": "Add the review contact that Apple can use during App Review. Use a monitored email address and a reachable phone number.",
+          "evidence": "store.config.js resolves apple.review, metadata preview shows reviewContactReady=true, and release:status reports the contact OK."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_PHONE",
+      "group": "App Store review contact",
+      "value": "",
+      "placeholder": "review phone number",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Reachable phone number with at least 7 digits",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "app-store-review-contact",
+          "label": "App Store review contact",
+          "status": "TODO",
+          "action": "Add the review contact that Apple can use during App Review. Use a monitored email address and a reachable phone number.",
+          "evidence": "store.config.js resolves apple.review, metadata preview shows reviewContactReady=true, and release:status reports the contact OK."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "group": "Manual release confirmations",
+      "value": "0",
+      "placeholder": "0",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after App Store privacy answers match the final build",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "privacy-answers-reviewed",
+          "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+          "status": "TODO",
+          "action": "Fill App Store Connect privacy answers from docs/app-store-privacy-answers.md after deciding whether live AdMob IDs are enabled for the submitted build.",
+          "evidence": "The App Store privacy questionnaire matches the final build, optional rewarded ads, local-only progress storage, and iOS privacy manifest."
+        }
+      ]
+    },
+    {
+      "key": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "group": "Manual release confirmations",
+      "value": "0",
+      "placeholder": "0",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after AdMob Privacy & messaging is configured and tested",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "admob-privacy-messages-configured",
+          "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+          "status": "TODO",
+          "action": "Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads.",
+          "evidence": "A production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "group": "Manual release confirmations",
+      "value": "0",
+      "placeholder": "0",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after final bundle ID/package records are confirmed",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "bundle-id-confirmed",
+          "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+          "status": "TODO",
+          "action": "Confirm app.json ios.bundleIdentifier and android.package are the final store identifiers before the first production build.",
+          "evidence": "The identifiers in app.json match Apple Developer, App Store Connect, Google Play/AdMob records, and EAS project settings."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_CONNECT_RECORD_READY",
+      "group": "Manual release confirmations",
+      "value": "0",
+      "placeholder": "0",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after the App Store Connect record exists",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_CONNECT_RECORD_READY",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "app-store-connect-record-ready",
+          "label": "APP_STORE_CONNECT_RECORD_READY",
+          "status": "TODO",
+          "action": "Create the App Store Connect app record for the final bundle ID and fill the app category, age rating, pricing, availability, and required compliance fields.",
+          "evidence": "The App Store Connect record exists for com.john.kanasprint, and metadata can be pushed with EAS Metadata after release:store-ready passes."
+        }
+      ]
+    },
+    {
+      "key": "EAS_REMOTE_VERSION_INITIALIZED",
+      "group": "Manual release confirmations",
+      "value": "0",
+      "placeholder": "0",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after npx eas-cli build:version:set is complete",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "EAS_REMOTE_VERSION_INITIALIZED",
+          "status": "OK",
+          "detail": "Confirmed."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "eas-remote-version-initialized",
+          "label": "EAS_REMOTE_VERSION_INITIALIZED",
+          "status": "OK",
+          "action": "Log in to Expo and run npx eas-cli build:version:set once for the production iOS app because eas.json uses remote app version management.",
+          "evidence": "EAS remote version state exists for the production profile and app.json buildNumber no longer needs local manual increments."
+        }
+      ]
+    },
+    {
+      "key": "PRODUCTION_DEVICE_TESTED",
+      "group": "Manual release confirmations",
+      "value": "0",
+      "placeholder": "0",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after the exact production/TestFlight build passes device smoke",
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "PRODUCTION_DEVICE_TESTED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ],
+      "externalItems": [
+        {
+          "id": "production-device-tested",
+          "label": "PRODUCTION_DEVICE_TESTED",
+          "status": "TODO",
+          "action": "Install the production archive or TestFlight build on a real iPhone and complete docs/production-device-smoke-test.md for first launch, language selection, N5-N1 game loop, settings, support/privacy/open-source links, BGM, and rewarded-ad continue path.",
+          "evidence": "The exact production build that will be submitted has passed the manual smoke path on device."
+        }
+      ]
+    }
+  ],
+  "easProductionCommands": [
+    {
+      "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
+      "visibility": "sensitive",
+      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_IOS_APP_ID --environment production --visibility sensitive",
+      "valueHint": "AdMob app ID: ca-app-pub-0000000000000000~0000000000"
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
+      "visibility": "sensitive",
+      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_ANDROID_APP_ID --environment production --visibility sensitive",
+      "valueHint": "AdMob app ID: ca-app-pub-0000000000000000~0000000000"
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
+      "visibility": "sensitive",
+      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID --environment production --visibility sensitive",
+      "valueHint": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000"
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
+      "visibility": "sensitive",
+      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID --environment production --visibility sensitive",
+      "valueHint": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000"
+    },
+    {
+      "key": "APP_STORE_BASE_URL",
+      "visibility": "plaintext",
+      "command": "eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext",
+      "valueHint": "Production HTTPS root URL; can generate /support and /privacy URLs"
+    },
+    {
+      "key": "APP_STORE_SUPPORT_URL",
+      "visibility": "plaintext",
+      "command": "eas env:create --name APP_STORE_SUPPORT_URL --environment production --visibility plaintext",
+      "valueHint": "Production HTTPS support URL; APP_STORE_BASE_URL can derive it"
+    },
+    {
+      "key": "APP_STORE_PRIVACY_URL",
+      "visibility": "plaintext",
+      "command": "eas env:create --name APP_STORE_PRIVACY_URL --environment production --visibility plaintext",
+      "valueHint": "Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it"
+    }
+  ],
+  "appStoreConnectFields": [
+    {
+      "label": "Public support URL",
+      "keys": [
+        "APP_STORE_BASE_URL",
+        "APP_STORE_SUPPORT_URL"
+      ],
+      "destination": "App Store Connect support URL and Settings support link.",
+      "currentStatus": "OK",
+      "detail": "https://johnshinsei.github.io/kana-sprint-site/support",
+      "action": "Host site/ over HTTPS and expose the support page. APP_STORE_BASE_URL can generate /support automatically, or APP_STORE_SUPPORT_URL can point to a custom production HTTPS URL.",
+      "evidence": "The support URL opens without auth, redirects, localhost, .test, .local, or example domains, and docs/public-site-hosting-verification.md reports a live PASS."
+    },
+    {
+      "label": "Public privacy URL",
+      "keys": [
+        "APP_STORE_BASE_URL",
+        "APP_STORE_PRIVACY_URL"
+      ],
+      "destination": "App Store Connect privacy policy URL and Settings privacy link.",
+      "currentStatus": "OK",
+      "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy",
+      "action": "Host site/ over HTTPS and expose the privacy policy page. APP_STORE_BASE_URL can generate /privacy automatically, or APP_STORE_PRIVACY_URL can point to a custom production HTTPS URL.",
+      "evidence": "The privacy URL opens without auth, matches docs/app-store-privacy-answers.md plus the final AdMob state, and docs/public-site-hosting-verification.md reports a live PASS."
+    },
+    {
+      "label": "Public marketing URL",
+      "keys": [
+        "APP_STORE_BASE_URL",
+        "APP_STORE_MARKETING_URL"
+      ],
+      "destination": "Optional App Store Connect marketing URL.",
+      "currentStatus": "OK",
+      "detail": "https://johnshinsei.github.io/kana-sprint-site",
+      "action": "Optional. Set APP_STORE_MARKETING_URL or APP_STORE_BASE_URL if the App Store listing should include a marketing URL.",
+      "evidence": "A production HTTPS marketing URL is available, or this optional field is intentionally left blank."
+    },
+    {
+      "label": "App Store review contact",
+      "keys": [
+        "APP_STORE_REVIEW_FIRST_NAME",
+        "APP_STORE_REVIEW_LAST_NAME",
+        "APP_STORE_REVIEW_EMAIL",
+        "APP_STORE_REVIEW_PHONE"
+      ],
+      "destination": "App Review contact block in App Store Connect or EAS Metadata.",
+      "currentStatus": "TODO",
+      "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE",
+      "action": "Add the review contact that Apple can use during App Review. Use a monitored email address and a reachable phone number.",
+      "evidence": "store.config.js resolves apple.review, metadata preview shows reviewContactReady=true, and release:status reports the contact OK."
+    },
+    {
+      "label": "Live AdMob IDs",
+      "keys": [
+        "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
+        "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
+        "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
+        "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID"
+      ],
+      "destination": "Google AdMob app IDs and rewarded ad unit IDs for the submitted build.",
+      "currentStatus": "TODO",
+      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled.",
+      "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
+      "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+    }
+  ],
+  "manualConfirmations": [
+    {
+      "key": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "setTo": "1",
+      "currentStatus": "TODO",
+      "detail": "Set to 1 only after the real external action is complete.",
+      "action": "Fill App Store Connect privacy answers from docs/app-store-privacy-answers.md after deciding whether live AdMob IDs are enabled for the submitted build.",
+      "evidence": "The App Store privacy questionnaire matches the final build, optional rewarded ads, local-only progress storage, and iOS privacy manifest."
+    },
+    {
+      "key": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "setTo": "1",
+      "currentStatus": "TODO",
+      "detail": "Set to 1 only after the real external action is complete.",
+      "action": "Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads.",
+      "evidence": "A production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account."
+    },
+    {
+      "key": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "setTo": "1",
+      "currentStatus": "TODO",
+      "detail": "Set to 1 only after the real external action is complete.",
+      "action": "Confirm app.json ios.bundleIdentifier and android.package are the final store identifiers before the first production build.",
+      "evidence": "The identifiers in app.json match Apple Developer, App Store Connect, Google Play/AdMob records, and EAS project settings."
+    },
+    {
+      "key": "APP_STORE_CONNECT_RECORD_READY",
+      "setTo": "1",
+      "currentStatus": "TODO",
+      "detail": "Set to 1 only after the real external action is complete.",
+      "action": "Create the App Store Connect app record for the final bundle ID and fill the app category, age rating, pricing, availability, and required compliance fields.",
+      "evidence": "The App Store Connect record exists for com.john.kanasprint, and metadata can be pushed with EAS Metadata after release:store-ready passes."
+    },
+    {
+      "key": "EAS_REMOTE_VERSION_INITIALIZED",
+      "setTo": "1",
+      "currentStatus": "OK",
+      "detail": "Confirmed.",
+      "action": "Log in to Expo and run npx eas-cli build:version:set once for the production iOS app because eas.json uses remote app version management.",
+      "evidence": "EAS remote version state exists for the production profile and app.json buildNumber no longer needs local manual increments."
+    },
+    {
+      "key": "PRODUCTION_DEVICE_TESTED",
+      "setTo": "1",
+      "currentStatus": "TODO",
+      "detail": "Set to 1 only after the real external action is complete.",
+      "action": "Install the production archive or TestFlight build on a real iPhone and complete docs/production-device-smoke-test.md for first launch, language selection, N5-N1 game loop, settings, support/privacy/open-source links, BGM, and rewarded-ad continue path.",
+      "evidence": "The exact production build that will be submitted has passed the manual smoke path on device."
+    }
+  ],
+  "verificationCommands": [
+    "npm run store:input-pack",
+    "npm run release:status",
+    "npm run site:localized",
+    "npm run site:manifest",
+    "npm run site:deploy-audit",
+    "npm run site:verify-hosting",
+    "npm run metadata:preview",
+    "npx expo config --json",
+    "npm run metadata:ios",
+    "npx eas-cli build:version:set",
+    "npm run release-check",
+    "physical iPhone or TestFlight ad-flow test",
+    "npm run release:store-ready",
+    "npm run build:ios",
+    "docs/production-device-smoke-test.md",
+    "npm run release:verify",
+    "npm run submit:ios"
+  ]
+}

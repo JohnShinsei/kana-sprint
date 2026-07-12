@@ -1,0 +1,2213 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-app-store-handoff-bundle.js",
+  "generatedFrom": {
+    "releaseStatus": "scripts/release-status.js --json",
+    "publicSiteManifest": "docs/public-site-manifest.json",
+    "screenshotManifest": "docs/app-store-screenshot-manifest.json",
+    "metadataPreview": "docs/app-store-metadata-preview.json",
+    "releasePacket": "docs/release-packet.json",
+    "easSubmissionChecklist": "docs/eas-submission-checklist.json"
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint"
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "externalReady": false,
+    "totalFiles": 301,
+    "missingFiles": 0,
+    "totalBytes": 18419189,
+    "publicSitePages": 44,
+    "publicSiteRoutes": 44,
+    "screenshotEntries": 176,
+    "localizedScreenshotEntries": 160,
+    "appStoreLocales": 10,
+    "externalBlockingItems": 7
+  },
+  "uploadPlan": [
+    {
+      "order": 1,
+      "action": "Host the full site/ directory over production HTTPS, preserving nested locale routes and control files; use .github/workflows/deploy-site.yml when publishing from GitHub Pages."
+    },
+    {
+      "order": 2,
+      "action": "Upload App Store screenshots from assets/store/ios and assets/store/ios-localized according to docs/app-store-screenshot-manifest.json."
+    },
+    {
+      "order": 3,
+      "action": "Push metadata with npm run metadata:ios after public support/privacy URLs and review contact values are set."
+    },
+    {
+      "order": 4,
+      "action": "Fill App Store Connect privacy, age rating, export compliance, pricing, and review fields using the docs/ evidence files in this handoff."
+    },
+    {
+      "order": 5,
+      "action": "Run npm run release:store-ready, then npm run build:ios and npm run submit:ios."
+    }
+  ],
+  "groups": [
+    {
+      "id": "public-site",
+      "label": "Public support/privacy/license website",
+      "files": [
+        {
+          "path": ".github/workflows/deploy-site.yml",
+          "exists": true,
+          "bytes": 996,
+          "sha256": "62cf5f8d846dea521c6491f9e6bb93bfcc2f7cf26aabbcdd79db4f26803c71b9"
+        },
+        {
+          "path": "docs/public-site-deploy-audit.json",
+          "exists": true,
+          "bytes": 24640,
+          "sha256": "a9070f90798a0c6a8341d147493f5394e2b07282251bac2a5ee1ae5d08a6cf9b"
+        },
+        {
+          "path": "docs/public-site-deploy-audit.md",
+          "exists": true,
+          "bytes": 6102,
+          "sha256": "d59efb7b584ef714937fcaa9e0df0e42ef5d574a939f1333b70992d25d819ce5"
+        },
+        {
+          "path": "docs/public-site-hosting-handoff.json",
+          "exists": true,
+          "bytes": 9778,
+          "sha256": "2593af2804047abcb3f61b296344afb19ae7ca5b25f7624e1c933744ce22dfd7"
+        },
+        {
+          "path": "docs/public-site-hosting-handoff.md",
+          "exists": true,
+          "bytes": 5229,
+          "sha256": "bc16a38edd1b8f07af3619d86a7c71c70c44f0877b9e5d096a8dc9d5e2d27109"
+        },
+        {
+          "path": "docs/public-site-hosting-verification.json",
+          "exists": true,
+          "bytes": 31205,
+          "sha256": "8b526c5f17e2725b4e46affd4a22d28d593635bc00c07045838b504c7d6a2abf"
+        },
+        {
+          "path": "docs/public-site-hosting-verification.md",
+          "exists": true,
+          "bytes": 3374,
+          "sha256": "b14be3f243870dc4d8fe27d9d2dcbc77b442e4bdb82e336872a30e9b1b7a944c"
+        },
+        {
+          "path": "docs/public-site-manifest.json",
+          "exists": true,
+          "bytes": 20849,
+          "sha256": "4eda4355dad44b995dff3c10e639201eed14c6f6771bd1cb551d1b1310bad826"
+        },
+        {
+          "path": "site/_headers",
+          "exists": true,
+          "bytes": 228,
+          "sha256": "64c606f32d8c9c0a308846483f3ee5c1586646f539c80ef3dafabdd21a35b6de"
+        },
+        {
+          "path": "site/_redirects",
+          "exists": true,
+          "bytes": 1057,
+          "sha256": "942573909cdd8cc7a6704f355b5366ec30d37e98767887e352fa2c9aca8fe84f"
+        },
+        {
+          "path": "site/de/index.html",
+          "exists": true,
+          "bytes": 4667,
+          "sha256": "37f065c94fbfc5beb001f955363c8868475461d81a1c41f484ce465aa91a1f8a"
+        },
+        {
+          "path": "site/de/licenses/index.html",
+          "exists": true,
+          "bytes": 7899,
+          "sha256": "5f500f61170b300c0a3a2f7702be0f973a726386c5642573b87b5c9a262aba5e"
+        },
+        {
+          "path": "site/de/privacy/index.html",
+          "exists": true,
+          "bytes": 5487,
+          "sha256": "f1560f1eebc1944e3062aec2e173f3ae1de8f2ae4217c58cecb5f712e5b3391f"
+        },
+        {
+          "path": "site/de/support/index.html",
+          "exists": true,
+          "bytes": 4838,
+          "sha256": "667210614712327ad7dc03728ab9a7733cce7c2ea5c2a2295074b22f3db10a42"
+        },
+        {
+          "path": "site/en/index.html",
+          "exists": true,
+          "bytes": 4658,
+          "sha256": "c3e4844594e3f6c7722c472f20b3d28e886f7289f38c5fe6abd6754381cbe476"
+        },
+        {
+          "path": "site/en/licenses/index.html",
+          "exists": true,
+          "bytes": 7905,
+          "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669"
+        },
+        {
+          "path": "site/en/privacy/index.html",
+          "exists": true,
+          "bytes": 5383,
+          "sha256": "b7684583a92750dda28342f74b29aafa3d337bb39c5ff1adf954475cd56cb5d8"
+        },
+        {
+          "path": "site/en/support/index.html",
+          "exists": true,
+          "bytes": 4733,
+          "sha256": "a0b2b6327d19333fd69a83799b8c8abbeb35a5ad0a3150aa9000f089998c029e"
+        },
+        {
+          "path": "site/es-ES/index.html",
+          "exists": true,
+          "bytes": 4675,
+          "sha256": "70ebefbf26a540e32f8c1b074083e63a773697dd43a2b0bb857bfafc703b4fc8"
+        },
+        {
+          "path": "site/es-ES/licenses/index.html",
+          "exists": true,
+          "bytes": 7914,
+          "sha256": "ec4f1a7e7e5306c294351eaf1d0fa5f0430383aa0c6a74d60a9b169f51d70f88"
+        },
+        {
+          "path": "site/es-ES/privacy/index.html",
+          "exists": true,
+          "bytes": 5533,
+          "sha256": "83462a2db4879e0d4e35ab6c1e0f02b7c0e225c22778fa96b9a9fae02d683801"
+        },
+        {
+          "path": "site/es-ES/support/index.html",
+          "exists": true,
+          "bytes": 4917,
+          "sha256": "2405e9c7785d2aacf30f2e31f608dfa7ed75fdd79ece35c3444935e898121738"
+        },
+        {
+          "path": "site/fr/index.html",
+          "exists": true,
+          "bytes": 4686,
+          "sha256": "1f0e09909a1489aeae82704bc2af5baf03e06988da3dc5bb89b65e962f61808e"
+        },
+        {
+          "path": "site/fr/licenses/index.html",
+          "exists": true,
+          "bytes": 7906,
+          "sha256": "73cbfd244503a957a1fda5732b5d5699b11ceb190dc53b04253ee234295c3c09"
+        },
+        {
+          "path": "site/fr/privacy/index.html",
+          "exists": true,
+          "bytes": 5737,
+          "sha256": "83ad24954ba7af157919043bb747faf1bf690135040555db6676793d0221e5dc"
+        },
+        {
+          "path": "site/fr/support/index.html",
+          "exists": true,
+          "bytes": 4968,
+          "sha256": "c11d53b5485303ccd185fedff686b561b2e0fafb5c794f3f16a16183c40fc0fe"
+        },
+        {
+          "path": "site/index.html",
+          "exists": true,
+          "bytes": 4658,
+          "sha256": "c3e4844594e3f6c7722c472f20b3d28e886f7289f38c5fe6abd6754381cbe476"
+        },
+        {
+          "path": "site/it/index.html",
+          "exists": true,
+          "bytes": 4660,
+          "sha256": "afad81c3fafe618c0f50a6b913d58b3ce0ed66122b53206cf752b0b8a5486269"
+        },
+        {
+          "path": "site/it/licenses/index.html",
+          "exists": true,
+          "bytes": 7899,
+          "sha256": "05d4676e1457260dcbb53128ba5b753393673965db3748fc7fca8b059d6e0e0b"
+        },
+        {
+          "path": "site/it/privacy/index.html",
+          "exists": true,
+          "bytes": 5503,
+          "sha256": "422ed440804d13f02e6538439b7174654d0a9e6cfce233f5b8677db940a8dd17"
+        },
+        {
+          "path": "site/it/support/index.html",
+          "exists": true,
+          "bytes": 4847,
+          "sha256": "1fad65a12b167d31e1662565b84fd2641cb0cbb0c55afca679ffa387be0ccc69"
+        },
+        {
+          "path": "site/ko/index.html",
+          "exists": true,
+          "bytes": 4746,
+          "sha256": "5cf43edfd00497120a01f8d7aa45b2b94ddad418b9e9ebc184055a8368be2568"
+        },
+        {
+          "path": "site/ko/licenses/index.html",
+          "exists": true,
+          "bytes": 7915,
+          "sha256": "7eeb9e7df2c35613f7aae29018888f9fe5cad6fde4d10e8969136a7c9f17e126"
+        },
+        {
+          "path": "site/ko/privacy/index.html",
+          "exists": true,
+          "bytes": 5611,
+          "sha256": "f49dbcdc7353f918a0261c2dd9b1a9df97534363a7d1b512c704a1757078a421"
+        },
+        {
+          "path": "site/ko/support/index.html",
+          "exists": true,
+          "bytes": 4903,
+          "sha256": "7ec00752f20aa0c267bc9de3c1a4f85b91471d4abd22f6e84902acb19d8f35cd"
+        },
+        {
+          "path": "site/licenses/index.html",
+          "exists": true,
+          "bytes": 7905,
+          "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669"
+        },
+        {
+          "path": "site/pl/index.html",
+          "exists": true,
+          "bytes": 4670,
+          "sha256": "8b0814ca52be2ea1d5edce475a42cdea7fd90a9dae682d5210039f0af3dd0fef"
+        },
+        {
+          "path": "site/pl/licenses/index.html",
+          "exists": true,
+          "bytes": 7904,
+          "sha256": "f384d69c61540a3bfc38ea16f2bde7ad63d2e2455f91c601d5ab537b691137df"
+        },
+        {
+          "path": "site/pl/privacy/index.html",
+          "exists": true,
+          "bytes": 5455,
+          "sha256": "de00b6262106820e50f6486041262dc9a73f44a7c76d86b164b6b880dcc01241"
+        },
+        {
+          "path": "site/pl/support/index.html",
+          "exists": true,
+          "bytes": 4851,
+          "sha256": "d787bbbde2c313e015362304b0a54f617d3363c775afd23d19c2d61b32ea0bea"
+        },
+        {
+          "path": "site/privacy/index.html",
+          "exists": true,
+          "bytes": 5383,
+          "sha256": "b7684583a92750dda28342f74b29aafa3d337bb39c5ff1adf954475cd56cb5d8"
+        },
+        {
+          "path": "site/pt-BR/index.html",
+          "exists": true,
+          "bytes": 4679,
+          "sha256": "3227294c91d9ff35ee883ab5bdf193ce8d6b7a6cc3e1a5084d166b3e87226ef0"
+        },
+        {
+          "path": "site/pt-BR/licenses/index.html",
+          "exists": true,
+          "bytes": 7915,
+          "sha256": "b36d75a12eb0fa4de91b42df539dba308954965ab3f2663c85c00671bcfe1756"
+        },
+        {
+          "path": "site/pt-BR/privacy/index.html",
+          "exists": true,
+          "bytes": 5524,
+          "sha256": "ec28f789e817a2c8c72d782d2554119716ca570421ad78e82f18f024ce2f5ecd"
+        },
+        {
+          "path": "site/pt-BR/support/index.html",
+          "exists": true,
+          "bytes": 4879,
+          "sha256": "1f531ba9515f6d752242106beaaf0d41209cf4bd0361c4b4c8d68d69ffd26ba4"
+        },
+        {
+          "path": "site/robots.txt",
+          "exists": true,
+          "bytes": 23,
+          "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+        },
+        {
+          "path": "site/sitemap.xml",
+          "exists": true,
+          "bytes": 3736,
+          "sha256": "cb94d18c958ad10d326bcb91a7ac6e5b54180433ee2830a80037567acc5e6613"
+        },
+        {
+          "path": "site/support/index.html",
+          "exists": true,
+          "bytes": 4733,
+          "sha256": "a0b2b6327d19333fd69a83799b8c8abbeb35a5ad0a3150aa9000f089998c029e"
+        },
+        {
+          "path": "site/zh-Hans/index.html",
+          "exists": true,
+          "bytes": 4589,
+          "sha256": "7dc2295b11c416619fc4d844a7560b579ed7bc7fe1304f998250e54d812901a9"
+        },
+        {
+          "path": "site/zh-Hans/licenses/index.html",
+          "exists": true,
+          "bytes": 7858,
+          "sha256": "283337071bf2fcb13c5e715cffceaefafe4231609fcc3d81ca4711cd5850e5e2"
+        },
+        {
+          "path": "site/zh-Hans/privacy/index.html",
+          "exists": true,
+          "bytes": 5104,
+          "sha256": "afb8e2cb318d596c146ecd738cfe17e1c0a72c2f0f63582a79204b9e848ff523"
+        },
+        {
+          "path": "site/zh-Hans/support/index.html",
+          "exists": true,
+          "bytes": 4614,
+          "sha256": "7c6e5c9b0de6bfcb7f266196f934d48accd35210bddffec0fc24b675d3615f99"
+        },
+        {
+          "path": "site/zh-Hant/index.html",
+          "exists": true,
+          "bytes": 4589,
+          "sha256": "a07e5b8298c6370d7aa99ead41f22106cde0525bab3f89314cf8fb1c9c7874ac"
+        },
+        {
+          "path": "site/zh-Hant/licenses/index.html",
+          "exists": true,
+          "bytes": 7864,
+          "sha256": "43e07c099f4069a52911a5625da5918244e1cae90f38ad4ac553862baa533d07"
+        },
+        {
+          "path": "site/zh-Hant/privacy/index.html",
+          "exists": true,
+          "bytes": 5116,
+          "sha256": "da13852a3390fd2e68578a1def4d12e8fd26314dc2764b772fcf84c8d54679a8"
+        },
+        {
+          "path": "site/zh-Hant/support/index.html",
+          "exists": true,
+          "bytes": 4614,
+          "sha256": "06a6a4fc2901d8352ebca335edd18c1c29312cc849173b3054fbd46949ca5292"
+        }
+      ],
+      "summary": {
+        "files": 56,
+        "missingFiles": 0,
+        "bytes": 358111
+      }
+    },
+    {
+      "id": "screenshots",
+      "label": "App Store screenshot upload packs",
+      "files": [
+        {
+          "path": "assets/store/ios-localized/de/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 121858,
+          "sha256": "362b086abbad44a74372982d53ad6d4c5babc8dfe77604afdce6a641080da7f9"
+        },
+        {
+          "path": "assets/store/ios-localized/de/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 85806,
+          "sha256": "0612f533c1a485c35a0946cc5cf023a3b109a8d7a536fd4db79f96be6c410ea0"
+        },
+        {
+          "path": "assets/store/ios-localized/de/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 123583,
+          "sha256": "7b471485826a400708a95e38987cb82c84f1ff810a6fbc390d5835b28075212a"
+        },
+        {
+          "path": "assets/store/ios-localized/de/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 104617,
+          "sha256": "51044354656c74b72fd8a33ba62a95fd60a18854fc3df4dc67a4e86ef2e5f137"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 88674,
+          "sha256": "e008a553ba8ea06c16508bd7677206def8288678c2169d3de84b7b1b315f808e"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 61513,
+          "sha256": "f38f78fff6ee877993ee449c45d0d40ec8f7fb0a7260b75843e9576de69c8b96"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 90712,
+          "sha256": "249763de2a415d2e518e502a262dbc626fa748886bf0296566ab0309a26341e3"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 76347,
+          "sha256": "7b3a3b73d117d1bafe5dea4255a16dd1aadf27dd2c79b0be393325dbe2b29054"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 108554,
+          "sha256": "60ff638237c34b4986dcd9fe63d58b2a9417d1655ac916f49ae15835ac35d842"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 75222,
+          "sha256": "aebb0aa5405b8876f43d79926d9aec3cb9edf3b92d984aa83e31a6765bb78be5"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 111196,
+          "sha256": "84e7fd7ef59db26eb3d121248c783af1bee6146b38516689457dd3c6bc898e1a"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 94498,
+          "sha256": "07546add270757296058ce7a67bba535fdddaefb02e75e2c1330d803748a7672"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 120295,
+          "sha256": "703009e4b5193e3ade23e83ab6b59fa640e6ddf4b10e9d53a0189aa89b9a0304"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 81714,
+          "sha256": "f15b6d12c905d02e838cfb722d5b5c6869f3a9e4733b0d770e0987e6b3551a00"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 122066,
+          "sha256": "a293b4d26f2b1cbdf1b1bccb789ceed7f754aba614a46164343a8555e100a333"
+        },
+        {
+          "path": "assets/store/ios-localized/de/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 102287,
+          "sha256": "e6f9d61dfa76fd687dd2fb6f7709abe0a91c77ddf12365ebbf5b574c215412de"
+        },
+        {
+          "path": "assets/store/ios-localized/en/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 118430,
+          "sha256": "2bfa9d03dd9275b111ea10f52bab8d50252a3267e5ccb7b0d98cb4bb770b8317"
+        },
+        {
+          "path": "assets/store/ios-localized/en/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 86446,
+          "sha256": "dda260b1a42118e9b716dea9bdf678b4059c9306e2c315d239c99e983f722d80"
+        },
+        {
+          "path": "assets/store/ios-localized/en/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 120912,
+          "sha256": "b741a0e44d99d41fc2c2f53b37ad9f33f7b326c0253f1e1329822e19372d05de"
+        },
+        {
+          "path": "assets/store/ios-localized/en/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 100752,
+          "sha256": "5c1b9af5b057d9c09522f7756ea964f20134031a7efc7d9c7432e936f30abee8"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 85569,
+          "sha256": "f4274382561fb0a743dc51e0b80e9b7d193f5b8edcfc12e8642e407ad2d1eb3c"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 61921,
+          "sha256": "7c5807da1250d500335f9e05456b9f905fd561a1ed04cc79ae72d16b254061ed"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 88629,
+          "sha256": "41fcd19e853f0b1798fa71a45dcea8260aa6de133ce47f21c159e507d3a83166"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 72993,
+          "sha256": "8f58501c348f231bb696583f436b6861fb028ca8122bba8adb8ff1b1cba28842"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 105558,
+          "sha256": "e37ab61d2961a8206257bcc065f40e0590412ebb011ed0cdab9a2dacc625146d"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 75930,
+          "sha256": "ccfe24dca354193efc84dac3af3c4558c187672197d666b60bef799495452b0e"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 110228,
+          "sha256": "975bf92f987232528a2503581da2d8dcb51fc7db969a8a77a44822031f756e81"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 90347,
+          "sha256": "f6567fd9f0eea0df2d00caa418b59741cc7c84c17dbb1bc1d2ead5f636666a30"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 117700,
+          "sha256": "6e3e9b215624e9c40849de83d109a20a4cde8add71c8a10a1bceff0b1a92a434"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 82613,
+          "sha256": "0b81eae140d1c7c8515df3d3a3aa282f350836b83bd19a460276bb62006b7e66"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 120565,
+          "sha256": "3e730e6c319e3ccee4c33aaf5e3f3c0665535d1c6f83e7a53371639090c8ef41"
+        },
+        {
+          "path": "assets/store/ios-localized/en/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 98890,
+          "sha256": "f26df2db1696a3d3eab8b22bc451e3362123640cafd63b33291ad858bef872f2"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 119208,
+          "sha256": "acf474b1a87dc2ef61df963b487784debc65f66deee7d7f1f50c1a6c69b0bed0"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 84633,
+          "sha256": "a0660c89af95f0ef66ccc7a329ad292667ba145967416f4b6a62ab761f7d4c57"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 118199,
+          "sha256": "85e68607624f2d2b09771c7a45619e89e843b766fb85cc4c859c43abd2bbbd7b"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 100016,
+          "sha256": "c14f1ddc14a875881da522d7be5053db8672b050c7aade1aa2ba7f8d5483da42"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 86068,
+          "sha256": "e7a7cb7796c888b64d15938a609fd57dade1ce5b5036ac96d4c465fadbb9d698"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 60189,
+          "sha256": "016af4938e7372f8c7dfe7c0beb9e3aaaeb6acf13f941ed3f010709cde3120c9"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 85844,
+          "sha256": "357b447d207ff534f6266459b3068a6b9264fd541d250d5e426969bf23a2435b"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 72386,
+          "sha256": "5e9d9bc392777223942b635808e5adf56b02b2e3f823e2846832fe7de375660d"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 105403,
+          "sha256": "598d4cbfcf299601f187329448ee61e94f272228ec2cc957e93872e46659b93f"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 73934,
+          "sha256": "f215be0e2169880e156eeb283176824b76ae661cd86a2996d53ab0c81b70684d"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 105657,
+          "sha256": "0538a58eebc5b145b2b76d491aafd72bd4be62f82ff92cfbdd56e9c3b842e6fb"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 89755,
+          "sha256": "6dec3a08313ac3bf4f38d2b09d12914e0705a24299d16c02a4dee0b6c358c8a2"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 117077,
+          "sha256": "efbacb915f730abbad8db17a1bace4023d41c74a169e582477a89c8ada4bdb84"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 80563,
+          "sha256": "f00233e0401390e4f88a1a4d6b3f6031708739042b8de4c2764f545877123c17"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 115545,
+          "sha256": "9f0578164df4eb1705500cbd772622738137ce373f7543860060100da503f5c0"
+        },
+        {
+          "path": "assets/store/ios-localized/es-ES/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 97945,
+          "sha256": "d5a087e95ca5d94e9ec7ef5497297fcaa685323655b314652af11d10a7f343a9"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 116435,
+          "sha256": "fcc35c4da27eafb4a0797d7e55802459d16b5d6921713460ebbfd9603da510fc"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 82590,
+          "sha256": "1d3b2bafbdf0454565780bb959a349baac0f4b66dfd00ddca741014e21b86a90"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 116610,
+          "sha256": "d91c8fe6b0f60571948c22f2c070d37357359541871a5b4520336325f07ed8b3"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 98563,
+          "sha256": "17b26f2621d65d938387a3d6ea827c0e4ab99b89b0371d3c1c108a0a1157398e"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 83725,
+          "sha256": "806eb9710bbc3aab9b89f20f3a30d2bd207edeca18cc299b474d6eb88b3f909d"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 58921,
+          "sha256": "57fbddcb3fb13d502f86a76c05fe786dc3cc2d3a5ea26334e63c55d08aa3f54e"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 84878,
+          "sha256": "868fdba547f903495b1a5bad4f11ef510ad65f0b85633bc797c591eb106c9f62"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 71751,
+          "sha256": "9fb5a8e6ff7cd5807dde15b0fd592cfcd7f51dc32dc32984c26e69f1076036b2"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 102707,
+          "sha256": "d8461b12909a5295768086f6d74d4eeefbad40eb5c3377f4c30adc2dc37b4b94"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 71933,
+          "sha256": "779db9274a41fdf000f85c1fb9cb64e4f9534f86bf66289a94867a63b56302c3"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 104103,
+          "sha256": "fad2d48048dbf6619adac3a8adc55fbd0533dc696b8629863290bfe28528f525"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 88369,
+          "sha256": "881415a8503548058fa7960360f7e6d1a827369da2dc1b8843be4ac8336e50ba"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 113898,
+          "sha256": "c159fb40ca5f4a74720cc85fc793a4f43595ccffedd457e25568303d41213745"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 78504,
+          "sha256": "02d22f0c1f26abcdd460d10d4d539e140cbef9cb5b651d3adbfcedf1573a644a"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 113822,
+          "sha256": "c7f633521e8f5a90597d9e231d7c7543aa4c7f2c96718c60840664d3e28069f5"
+        },
+        {
+          "path": "assets/store/ios-localized/fr/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 96552,
+          "sha256": "3634f82914f1deb14f48c21c446b0dbafac278f76dd20e81297c42db7957b789"
+        },
+        {
+          "path": "assets/store/ios-localized/it/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 110648,
+          "sha256": "812a718aa84a4be3144822ed4f41aad76e0e9f93178a8c160d83023f74d3f42e"
+        },
+        {
+          "path": "assets/store/ios-localized/it/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 85007,
+          "sha256": "e0029b64ea5e18b88991623355cbb9002f660394ed53f8ef1fa00b5f9d363efc"
+        },
+        {
+          "path": "assets/store/ios-localized/it/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 116101,
+          "sha256": "ab42e183e76551096ad23195589c9bc38cf3f46282dfc526bbb1681433272632"
+        },
+        {
+          "path": "assets/store/ios-localized/it/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 97645,
+          "sha256": "fa91375a4e8c82240a7d198fdea681e2c018a93659240f65b33c3c9d96fc6722"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 79301,
+          "sha256": "8d54643810f61f7a75669cda485a27206368abac36ac642ec68f8c2ff3a37840"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 60483,
+          "sha256": "6b6202d135432136ad53e6b9bf699821b35858b456c23a247b2abf08971128a5"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 84345,
+          "sha256": "c429056a2cdf046b40a7722e61f6ca4c45635fe0e3cebb95368d4ba4f663c9dd"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 70832,
+          "sha256": "76f533296bcb1b494a39b371c6042bbbb42c97df3418f887c6794f693d6bf917"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 97448,
+          "sha256": "2343fa5a9200180ba473ec19791fe3896ae340a80aaca180dd82a4815de666f3"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 74516,
+          "sha256": "f65714954430f2b94ffc6f53421a68f08ad16926d5da19eeffbf2ebe995c6502"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 103603,
+          "sha256": "9064524146325feae0302301442819f1113e974431e8609f67e306ece82326f3"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 87701,
+          "sha256": "724709a85e14a61d57ac9f0b935532520c2ae44525b51bfd3f464a6004286733"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 108231,
+          "sha256": "f38b5179ea484d0374bdc0514381341a9d3f6e31b1b3b907a3a4abb94c662c5d"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 81280,
+          "sha256": "1c3f8bef29cfccf9aa2e8503babc4a71f219d963a49e4d78514c11180c208102"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 113450,
+          "sha256": "350bc99e9afe172a72437fa3810d6636b7137de22319aa28547a5ee774e012bb"
+        },
+        {
+          "path": "assets/store/ios-localized/it/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 95971,
+          "sha256": "fc73cfa0ed1213d82cd68f137deca101b55a11e1362b467cda5173f23833f61a"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 102768,
+          "sha256": "9d55e92e31d6abd6913c99cb62a46666afb6fe38dd45c5c1fec060111d616476"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 69696,
+          "sha256": "f07f74643afaf158aacadffe2830ec4c595703e5ad53ec963c803ee978ed2128"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 106709,
+          "sha256": "064afc6dcf4a98dc1d340c5c6b0bdaa8fcf40e1418cf6d2114cf2032fdb9b6f9"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 87136,
+          "sha256": "15f34f62cb8e3cfcf86aa10496f0ad00c4a3dc9631e6ea1367eddd167ffacc8b"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 74954,
+          "sha256": "5d943f844a70bef8f7ee05b4d8d47d5945f6eeea9c751157ec45c3b0581cb3ab"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 48970,
+          "sha256": "7f0cd0e2c8450c70bb3b346bfc3a6114e1aea37658516de6a35b61ce2c702b08"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 78648,
+          "sha256": "e35eea415ccbee7df77ebde8b77f398f71d3da5be4c31b2ffdf0a17121728056"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 62888,
+          "sha256": "2aa8c32de72b32cfb5ebabf7adff4b11c14d4b06c420e91f97224d0ddd88c1e2"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 89993,
+          "sha256": "5389173729b398a174878f6efd6ea59f4eb4f789fac0c4d6b9f79be78c2ff412"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 59461,
+          "sha256": "2b0b3cd192cdce6c23b3672e1dcd0bbf8eff730faab718ba274deb4b360638bd"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 94540,
+          "sha256": "fd79c8b5c1af1c1ce88d1ffac686d2ed21f79dd4a72d6b309f6a154186c0cda8"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 76858,
+          "sha256": "298e4938b0bf31bfd0baf774c1481e7483804a553af0d83ac009463e87feb8da"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 99031,
+          "sha256": "de721d556f97587aadaef4d6ecbddf071bc3988dd0e9a98b515b454dbc707248"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 64659,
+          "sha256": "70135703f8a57262644871a92fcdc760a6303c32fbf9a2807c03328c7da1562a"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 103639,
+          "sha256": "37c45ed2ba51e98278bb5d129b97fe962947ed67cbd931cf8009122301b16707"
+        },
+        {
+          "path": "assets/store/ios-localized/ko/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 84123,
+          "sha256": "9d833c1cca01551100bf19ad0553a21ea2e6a53427581f390493b9567db1abc0"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 118609,
+          "sha256": "2b3d03df0696052762428c1e7bf64145ae050427e7929bbd7562cbbc15086b6c"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 93283,
+          "sha256": "3c635cdd54b0d3bffdc571482358c6f40c1f5a9b66656454907da175df59dc64"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 125188,
+          "sha256": "51e35be0c3a04f0289fdff8b1494baebbe793dedff0160ff00a7d6a9577401b5"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 107282,
+          "sha256": "b99bd67d86501df73074acdb70f169647a38998f5748e636cccfc7273dfc396f"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 85788,
+          "sha256": "88cc511c6051e05475ee105a765bebd0288deaf8f7808cb11cf3789836867cd3"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 67025,
+          "sha256": "d6edb858d2dd55347b104c36ea89e0be7f3f54a7764a894d8b9147e906176fe5"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 91742,
+          "sha256": "206db23b48f84ce30fa94b31521a2e5b2633df96551cbd435028cf9790cd38e5"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 77914,
+          "sha256": "b05718a03ca4d70391e71b457acfb6332576cb47eb48d5a707854f87bef2e7d2"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 105380,
+          "sha256": "48abd54b3d10b86b1cd5ed3dcfb232b8b1017358bbd67c7eeaec639f3c7f35e4"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 82649,
+          "sha256": "f31d29dfeec26de423f8564181def3af0e9e338749f076e457a9242117683202"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 112807,
+          "sha256": "4cd803629422a26c6a2a147a205387d233bf79f8b868edb6be44d69e9ab6ecf2"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 97140,
+          "sha256": "cff5cb40c445b7942a821d36df4b060f4077e00968015b8fa5a8f6a7aff0c4f7"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 116655,
+          "sha256": "b0ceda1316a2c52922ef272078f7b60e6f30dd173544f9868159a37c5bb6394c"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 89663,
+          "sha256": "a12f263091ce9300a3d95e3b33c95b9d483fb2f3d587b6a57ccd042cd25df95f"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 123656,
+          "sha256": "4eeda47a067d44cbe3a084f20d302e7eba95ee950e2c15f3789a3588716bf736"
+        },
+        {
+          "path": "assets/store/ios-localized/pl/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 105517,
+          "sha256": "ad537bd438d44df11f77cf8a1fb721182a3010cbde309acfd424e1f9842c8ffe"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 119191,
+          "sha256": "e3fb9b81d88f72eee43cc77d130709d7776b1295be7612ff9365a6cae4d4af8b"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 84625,
+          "sha256": "12de141fd242047feb9c48f3b44f2f4e0880fc30e9daafd145c2123a9c1f3c91"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 116715,
+          "sha256": "5baa2c5c89a5636aee13fb35f9f59365c6914f608f5fec7ac94e57e09ed9b115"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 104946,
+          "sha256": "905cb8f325b661030d8af59edf58d9d5a270b80b1d6f476bb178c4495d8a6965"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 86063,
+          "sha256": "ec40ff0f487bcf72331976f152c20dad6ce9e5a32c4c9332567a4d217e2c5252"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 59997,
+          "sha256": "98862c8f96e9eb2b80c351a64908fda2c1cd10aa73e513b173baf11a82467296"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 85328,
+          "sha256": "8f432766aff03e010f22f2ad220e0c9479b7ef02c118b9ed07a9b34cf3c5d035"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 76334,
+          "sha256": "020898ca4323fbad825a6fa5f14769213a32185144f194151c0398587129a9d5"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 105422,
+          "sha256": "7dbb7ad26456bbbd2e7ce0e6cffd30fcba66209547fb27fd286cb422fb5f6228"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 73739,
+          "sha256": "45b393c6d7c7e120817caaf32c85586d033a9fcc7b359c6713532e767fbd404e"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 104070,
+          "sha256": "b8dbf655476c62f21078f7c575827678513b4b021637a527a39afee69f8b1d05"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 94489,
+          "sha256": "d1f3be48e412af6dadc8cb15c271bbc1b14dfa19b438be667d575f21c69fa526"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 117595,
+          "sha256": "fba883eff1b7ebb09ff97db55fad9902386d30a5e4405c6f28e1edc07a64716e"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 80591,
+          "sha256": "30099c03fee6afb5b404d5105a1ce4f79e88a40ec96a96ac10a905a7543f0f6f"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 113983,
+          "sha256": "c2d44d45c8c54558194534d8db2484ab647b5263abbc501a0880c828a646c62b"
+        },
+        {
+          "path": "assets/store/ios-localized/pt-BR/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 102882,
+          "sha256": "95af5f7d6b5d1b144e7cbf790fa24a82c37c368684cf0f270857e4d3b82350e9"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 143334,
+          "sha256": "5a841fdad08ba66c1d374b7ce30f38d77446e34406f4f77514054fbcdf4e2e9e"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 88476,
+          "sha256": "b77163329cc6d8ed504119dd16e1026ece9a3b191f277b388b158e04f35b8d97"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 121706,
+          "sha256": "c4ed5dd51626321dead1e7099b21d6b4cce6655b436bc230f1570a36de2a5806"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 104714,
+          "sha256": "e51d284b6b4920df10c1cbf502937ddb5a96cc56757120a8ff8414b84e7b6b5a"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 103955,
+          "sha256": "15d7bd64b0f9388d0f1e2fc3f603c4ca2b5ee7e59467a32af1b8a44ff8830058"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 64483,
+          "sha256": "497a171d849e973fa88cb27cef6d2a148ffc978f42eb83a205a853687ef43702"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 91097,
+          "sha256": "2bb7ddde42b56e10fa0f11ee1b169b019d02967015c420dbf2cba24be25f7425"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 76960,
+          "sha256": "b233c5aaf351f4e10be630763459b8481eb468f61f0e3be115995792eb0d8099"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 127454,
+          "sha256": "f49c4253b0140b3393203c216ed784c3e7b28de2d2c1b44bc8c0c228e6f7fa2e"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 77750,
+          "sha256": "305c1177385e179817220784fe41fc5b8e14b22d0a3b77ce6bf13faef649ebfa"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 109296,
+          "sha256": "0539fbfc485e892e8230cd2788167bfbeb959047cc0f4d7c254b9201b0ab1ba0"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 94342,
+          "sha256": "3359c6e677ef42e2796c0d55270d4c602d1a29e2878f9de4f91911d0c86882e6"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 139018,
+          "sha256": "76e95529c5819562e5b99985ccd7cf48ebb971eb6d566053fdf1eba08c7090fc"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 83757,
+          "sha256": "dffbc4c87dfcff77847eabd73d6379412440f10ad3a3b13c24d29a24ee2d14f6"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 119244,
+          "sha256": "531929ffea9d9e903099ed989896756dc741e9058101c33d873387b173bb30c1"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hans/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 101256,
+          "sha256": "97d5bdef3d9941cbdde712d80b2f93f4ee22b2d7f6fc23351f91b5d766776358"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 145365,
+          "sha256": "52ebe41d085e7ee0aa6574f974f4715c6d2feb0836eba382ee4e0d3852455a20"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 92289,
+          "sha256": "0c6e65a6d7320368586cd4db880fb46dfa637f5a4a346bd8390afdadcf55c39b"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 121491,
+          "sha256": "76293bb595127fe9206b7b421d532fc5610bf6ee145ed73857e6eea8217f75c1"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 109448,
+          "sha256": "7677742d4f99d18168323a2aef3e812e75c4c2253fa7885267a7a6a439efb61e"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 105726,
+          "sha256": "772b00bae6dcce8065856587a2c7b8459f6f6df153cc6096ea80b4269d154e4d"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 67411,
+          "sha256": "f11b3e986fa6457c4ec9eca17f3f21a1b3f84a4dcdb7e44dab9766cf9a907cf6"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 91051,
+          "sha256": "5075fab05659c5c8f4ecaea4c800f09b63fbe3c762bffee05d007330c249963c"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 80705,
+          "sha256": "d6d2da46d509337bc1e2fa3a7dd934595d217627920ccf58cbbc5f1dcdb1ebb9"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 129666,
+          "sha256": "6de891369f3b5ed8be81a3f15627218a9db4354e2874044f06c48f6a23a9b655"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 81111,
+          "sha256": "aeb8be620d34627689e5c4b9750b848a2b274e25ae2be1361ef08f9558c08d80"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 108915,
+          "sha256": "7a9acd5461a04a995f401de0de0db588d9de52ba3ffc05a53a75279f5da962ba"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 98500,
+          "sha256": "f88f8fd7b5b31c4b0f84bd70b4a131906bc50001b4ca5db160bb5eeff54df733"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 141415,
+          "sha256": "55ece4072494d31aeb6754e771de6ce199e20b18b73b7b088282f9055b1aaadd"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 87435,
+          "sha256": "5b34d81505eebae2b909f759030cb55d4497dad11b591d41deb952e741cac157"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 118763,
+          "sha256": "f0ae79d440391a3a1a1ff26dac6131db0936235fa4d405c06b2bc194bc698f94"
+        },
+        {
+          "path": "assets/store/ios-localized/zh-Hant/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 106462,
+          "sha256": "1aa522793b95c88ac825fc8aaa2c7f28418a5e60f3eec1c129a4e02de2a529e4"
+        },
+        {
+          "path": "assets/store/ios/ipad-13/01-ready.png",
+          "exists": true,
+          "bytes": 118430,
+          "sha256": "2bfa9d03dd9275b111ea10f52bab8d50252a3267e5ccb7b0d98cb4bb770b8317"
+        },
+        {
+          "path": "assets/store/ios/ipad-13/02-playing.png",
+          "exists": true,
+          "bytes": 86446,
+          "sha256": "dda260b1a42118e9b716dea9bdf678b4059c9306e2c315d239c99e983f722d80"
+        },
+        {
+          "path": "assets/store/ios/ipad-13/03-levels.png",
+          "exists": true,
+          "bytes": 120912,
+          "sha256": "b741a0e44d99d41fc2c2f53b37ad9f33f7b326c0253f1e1329822e19372d05de"
+        },
+        {
+          "path": "assets/store/ios/ipad-13/04-settings.png",
+          "exists": true,
+          "bytes": 100752,
+          "sha256": "5c1b9af5b057d9c09522f7756ea964f20134031a7efc7d9c7432e936f30abee8"
+        },
+        {
+          "path": "assets/store/ios/iphone-5.5/01-ready.png",
+          "exists": true,
+          "bytes": 85569,
+          "sha256": "f4274382561fb0a743dc51e0b80e9b7d193f5b8edcfc12e8642e407ad2d1eb3c"
+        },
+        {
+          "path": "assets/store/ios/iphone-5.5/02-playing.png",
+          "exists": true,
+          "bytes": 61921,
+          "sha256": "7c5807da1250d500335f9e05456b9f905fd561a1ed04cc79ae72d16b254061ed"
+        },
+        {
+          "path": "assets/store/ios/iphone-5.5/03-levels.png",
+          "exists": true,
+          "bytes": 88629,
+          "sha256": "41fcd19e853f0b1798fa71a45dcea8260aa6de133ce47f21c159e507d3a83166"
+        },
+        {
+          "path": "assets/store/ios/iphone-5.5/04-settings.png",
+          "exists": true,
+          "bytes": 72993,
+          "sha256": "8f58501c348f231bb696583f436b6861fb028ca8122bba8adb8ff1b1cba28842"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.5/01-ready.png",
+          "exists": true,
+          "bytes": 105558,
+          "sha256": "e37ab61d2961a8206257bcc065f40e0590412ebb011ed0cdab9a2dacc625146d"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.5/02-playing.png",
+          "exists": true,
+          "bytes": 75930,
+          "sha256": "ccfe24dca354193efc84dac3af3c4558c187672197d666b60bef799495452b0e"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.5/03-levels.png",
+          "exists": true,
+          "bytes": 110228,
+          "sha256": "975bf92f987232528a2503581da2d8dcb51fc7db969a8a77a44822031f756e81"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.5/04-settings.png",
+          "exists": true,
+          "bytes": 90347,
+          "sha256": "f6567fd9f0eea0df2d00caa418b59741cc7c84c17dbb1bc1d2ead5f636666a30"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.9/01-ready.png",
+          "exists": true,
+          "bytes": 117700,
+          "sha256": "6e3e9b215624e9c40849de83d109a20a4cde8add71c8a10a1bceff0b1a92a434"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.9/02-playing.png",
+          "exists": true,
+          "bytes": 82613,
+          "sha256": "0b81eae140d1c7c8515df3d3a3aa282f350836b83bd19a460276bb62006b7e66"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.9/03-levels.png",
+          "exists": true,
+          "bytes": 120565,
+          "sha256": "3e730e6c319e3ccee4c33aaf5e3f3c0665535d1c6f83e7a53371639090c8ef41"
+        },
+        {
+          "path": "assets/store/ios/iphone-6.9/04-settings.png",
+          "exists": true,
+          "bytes": 98890,
+          "sha256": "f26df2db1696a3d3eab8b22bc451e3362123640cafd63b33291ad858bef872f2"
+        }
+      ],
+      "summary": {
+        "files": 176,
+        "missingFiles": 0,
+        "bytes": 16869189
+      }
+    },
+    {
+      "id": "metadata",
+      "label": "App Store metadata sources",
+      "files": [
+        {
+          "path": "docs/app-store-copy-audit.json",
+          "exists": true,
+          "bytes": 16648,
+          "sha256": "f7fa322b380f5087cd799cddcdd0d081d51aedd161c06d9af1385f1431ca92cb"
+        },
+        {
+          "path": "docs/app-store-copy-audit.md",
+          "exists": true,
+          "bytes": 1697,
+          "sha256": "48eaf8c9aad24bae3fffc91dfbc1c4ac9732aaaa01394555b13ad1759540875a"
+        },
+        {
+          "path": "docs/app-store-localizations.json",
+          "exists": true,
+          "bytes": 7696,
+          "sha256": "b03e96092c10f7fc74f7cc3b6e06f326d59f19ae08dd8e49068a54b9ac7b7d4a"
+        },
+        {
+          "path": "docs/app-store-metadata-preview.json",
+          "exists": true,
+          "bytes": 19503,
+          "sha256": "8996a6cf5cb37a250be4ddc16e878ef2eccb673d41bab8c240f776bb9e7390bf"
+        },
+        {
+          "path": "docs/app-store-metadata-upload-packet.json",
+          "exists": true,
+          "bytes": 32372,
+          "sha256": "5634bba5bd70f7a0ebf5c79bb3e288f69f5cba362d8e62902d094f9d03ae7bf4"
+        },
+        {
+          "path": "docs/app-store-metadata-upload-packet.md",
+          "exists": true,
+          "bytes": 13025,
+          "sha256": "12fdb0c238c53ed04f02533a64372fecd073952decbccbb5f72ab168f4afd751"
+        },
+        {
+          "path": "store.config.js",
+          "exists": true,
+          "bytes": 4732,
+          "sha256": "b06deed0ee0822d32296a6d2f783ba43420c660bc664360d6c5578983e55d88a"
+        }
+      ],
+      "summary": {
+        "files": 7,
+        "missingFiles": 0,
+        "bytes": 95673
+      }
+    },
+    {
+      "id": "review-compliance",
+      "label": "Review, privacy, ads, and content evidence",
+      "files": [
+        {
+          "path": "docs/admob-release-audit.json",
+          "exists": true,
+          "bytes": 5990,
+          "sha256": "5d15f2a273f346f557679c768e6cd3256cf769715627d01ff113b7626f4f6eae"
+        },
+        {
+          "path": "docs/admob-release-audit.md",
+          "exists": true,
+          "bytes": 3579,
+          "sha256": "2b7183cb496156df2a46aad7cd87c8e8bc264a9ba54f5701244f405d0ce53e2f"
+        },
+        {
+          "path": "docs/admob-setup-handoff.json",
+          "exists": true,
+          "bytes": 6793,
+          "sha256": "7b3ac51491a510ab557c4a0e388a4bc4dfd58413d9673cf56f6b38115d8a7191"
+        },
+        {
+          "path": "docs/admob-setup-handoff.md",
+          "exists": true,
+          "bytes": 4787,
+          "sha256": "ee18cfcdf19ea97013886f07eaa61faeaa1ae140e0ae6bf9433e5dd39f072fe3"
+        },
+        {
+          "path": "docs/app-store-age-rating-audit.json",
+          "exists": true,
+          "bytes": 6713,
+          "sha256": "48cdc1accfe08d05f3a9a54145514e5041cc4d7289dfd8e8483a33e0a7f0d8e3"
+        },
+        {
+          "path": "docs/app-store-age-rating-audit.md",
+          "exists": true,
+          "bytes": 3358,
+          "sha256": "d6bf2218a983f40c7e83b6b5a2c8712828da566dc9de57fdb3dd61c8e16e9011"
+        },
+        {
+          "path": "docs/app-store-connect-checklist.json",
+          "exists": true,
+          "bytes": 20969,
+          "sha256": "934efd292e524695ff0011006299c4816a1bd8c900d26608db306d685640696e"
+        },
+        {
+          "path": "docs/app-store-connect-checklist.md",
+          "exists": true,
+          "bytes": 12809,
+          "sha256": "72bbd2e1cc93ac60f2cd272b62b1ada1120fbf16f79d57c042795d674fea9d46"
+        },
+        {
+          "path": "docs/app-store-privacy-answers.json",
+          "exists": true,
+          "bytes": 10078,
+          "sha256": "a85578aefe995bc26c08343400d12aa8cb48093b37968965bc049a522afcfb43"
+        },
+        {
+          "path": "docs/app-store-privacy-answers.md",
+          "exists": true,
+          "bytes": 7233,
+          "sha256": "cee5121bfc3255f3047c9f37ec551909528f914f355e1f6b5e7bf3933872f821"
+        },
+        {
+          "path": "docs/app-store-review-guide.json",
+          "exists": true,
+          "bytes": 2982,
+          "sha256": "d39fd0639b65281e21ce558511161709f16fc16c22d3fd6bddc80904c051091a"
+        },
+        {
+          "path": "docs/app-store-review-guide.md",
+          "exists": true,
+          "bytes": 2685,
+          "sha256": "b41c07823455f56cee8b86638047467ffd48743a20a11562cfc156c69b73a873"
+        },
+        {
+          "path": "docs/content-rights-audit.json",
+          "exists": true,
+          "bytes": 6303,
+          "sha256": "0fc10ece5a409d2a100d53dbf2e04abe53244524df9f33182a9b596697904fa4"
+        },
+        {
+          "path": "docs/content-rights-audit.md",
+          "exists": true,
+          "bytes": 2544,
+          "sha256": "ddd41fab935bfed5a941d7631ccb41e712e34c923c0c9c85d75cca4a4df55d18"
+        },
+        {
+          "path": "docs/data-flow-privacy-audit.json",
+          "exists": true,
+          "bytes": 5376,
+          "sha256": "0dab5d1e30c98ea8a409ee3902204d46a6993255935b15a55f1a43a69af53ebf"
+        },
+        {
+          "path": "docs/data-flow-privacy-audit.md",
+          "exists": true,
+          "bytes": 3014,
+          "sha256": "69325ee1ba18e154b4705b3e73260d064c3baf9bc8468975d6310692f2a39cb1"
+        },
+        {
+          "path": "docs/open-source-license-audit.json",
+          "exists": true,
+          "bytes": 9175,
+          "sha256": "fa02d388c6947f38343d920cc767a9388ef969f7e487a3139ef07ed0b15e7ce7"
+        },
+        {
+          "path": "docs/open-source-license-audit.md",
+          "exists": true,
+          "bytes": 3093,
+          "sha256": "3a5260ff229986499ea0c2c55095c7354e7cd34f1aac27792d76ecabd5ce445f"
+        },
+        {
+          "path": "docs/privacy-manifest-audit.json",
+          "exists": true,
+          "bytes": 3235,
+          "sha256": "4b197c8d08011457ec6c5eb9812fbcf334afe2513eb30fb95551ba79145f2b0b"
+        },
+        {
+          "path": "docs/privacy-manifest-audit.md",
+          "exists": true,
+          "bytes": 2276,
+          "sha256": "bf6ab108cced6b16c24fe72fb1aac2a3f27f10383da8777da9c59d54dab2ef48"
+        },
+        {
+          "path": "docs/privacy-review-packet.json",
+          "exists": true,
+          "bytes": 9994,
+          "sha256": "bab472f60f0d598926ad2688c1fc1e23b1a7eb84fcff407251f2b13fc522c1f0"
+        },
+        {
+          "path": "docs/privacy-review-packet.md",
+          "exists": true,
+          "bytes": 5913,
+          "sha256": "5eb57db79e62e6a8b4f84bd8710474ee894103b1e3c4ca00f2b3350543a16d0d"
+        },
+        {
+          "path": "docs/release-packet.json",
+          "exists": true,
+          "bytes": 25731,
+          "sha256": "ac29a70b6f300a94ff1dab2642e2807b0eb6b6cb7f632e3704ad1bd8cd7e6b9c"
+        },
+        {
+          "path": "docs/release-packet.md",
+          "exists": true,
+          "bytes": 8146,
+          "sha256": "cf264d8a332f7f30151dd93b225e3600511b706e4355c4a06deb6d53b4a4bf0b"
+        },
+        {
+          "path": "docs/runtime-ui-flow-audit.json",
+          "exists": true,
+          "bytes": 8397,
+          "sha256": "8b1d088c47669857e2e371d2e1eead0df5d7af8458caf5bec257afd46b877e2f"
+        },
+        {
+          "path": "docs/runtime-ui-flow-audit.md",
+          "exists": true,
+          "bytes": 3732,
+          "sha256": "8ce4f16e37d720800c74d77d4d9b02221559aaf37adeb74caa2403d8c381845d"
+        },
+        {
+          "path": "docs/study-bank-depth-audit.json",
+          "exists": true,
+          "bytes": 18586,
+          "sha256": "99952b607cf4b4a68d6ff41cae5a33f0dc2bc00df39d43f29fe6db409ea96deb"
+        },
+        {
+          "path": "docs/study-bank-depth-audit.md",
+          "exists": true,
+          "bytes": 1890,
+          "sha256": "b5845fd4f1258987c1e924c5d20945d5802c940fc447f2ba59757771b3a1d03c"
+        },
+        {
+          "path": "docs/study-content-localization-audit.json",
+          "exists": true,
+          "bytes": 5905,
+          "sha256": "3df827402a4a5c4caa8db140a1f66465f6d39fb0b46ba10b6378696618dfdaeb"
+        },
+        {
+          "path": "docs/study-content-localization-audit.md",
+          "exists": true,
+          "bytes": 1944,
+          "sha256": "aab208baf75060156e8f302e965f6c76e3ac6f0df6696f2fa169519872d9b3e3"
+        }
+      ],
+      "summary": {
+        "files": 30,
+        "missingFiles": 0,
+        "bytes": 213230
+      }
+    },
+    {
+      "id": "eas-submit",
+      "label": "EAS build and submit handoff",
+      "files": [
+        {
+          "path": ".easignore",
+          "exists": true,
+          "bytes": 576,
+          "sha256": "5c716e20d11517c4d1722d02462701edd88235b6e6696bb9a657c07665580d80"
+        },
+        {
+          "path": ".env.example",
+          "exists": true,
+          "bytes": 1113,
+          "sha256": "4cf63fe3af8f0a4e8eaa652bb8f62ce6bb9873f0abf38774372b352fb02ae0ad"
+        },
+        {
+          "path": "docs/account-service-preflight.json",
+          "exists": true,
+          "bytes": 14090,
+          "sha256": "b3e81f646e6f8888f62fca5b9bc3fcce5e56fb4bff59960279b896a8e6eb0688"
+        },
+        {
+          "path": "docs/account-service-preflight.md",
+          "exists": true,
+          "bytes": 4408,
+          "sha256": "b98d9b637cd7060ecd1edd2d2daed0c16a705a275097f0dfd3e5f85b6b513ad8"
+        },
+        {
+          "path": "docs/eas-build-preflight.json",
+          "exists": true,
+          "bytes": 4736,
+          "sha256": "75ffaf398afab276ac0a13518a1fcf74bf2defaa4611a2f38c07a5568e8c5c57"
+        },
+        {
+          "path": "docs/eas-build-preflight.md",
+          "exists": true,
+          "bytes": 2929,
+          "sha256": "b60fa6cfdc114b90219e54f5601b8947f7b354ce580fb12b43c4de30e4a2f6af"
+        },
+        {
+          "path": "docs/eas-env-checklist.json",
+          "exists": true,
+          "bytes": 15181,
+          "sha256": "3cb6536f9b428e4367244e75d732c701434989d0071eb99a87444aeda3908e32"
+        },
+        {
+          "path": "docs/eas-env-checklist.md",
+          "exists": true,
+          "bytes": 5086,
+          "sha256": "9f3a1c9582b8f288b14ffa13f7a65c3e6fcf45aae70d128104f7c7366748f940"
+        },
+        {
+          "path": "docs/eas-submission-checklist.json",
+          "exists": true,
+          "bytes": 15732,
+          "sha256": "54590222e32e26b122ee542fa832d3fc4fbdc6bd50f4221b91e6e0c9ed4c5485"
+        },
+        {
+          "path": "docs/eas-submission-checklist.md",
+          "exists": true,
+          "bytes": 10387,
+          "sha256": "66cb601861e1d58389f08f789ce60eb64017a5e86d9423789c7e83e0ededd6c5"
+        },
+        {
+          "path": "docs/external-readiness.json",
+          "exists": true,
+          "bytes": 9462,
+          "sha256": "7778aa69a0c57fa66666718ce21d334c0be01fa27372b3c279f582f5475df25a"
+        },
+        {
+          "path": "docs/external-readiness.md",
+          "exists": true,
+          "bytes": 7229,
+          "sha256": "058c8c26e23615321e574d11154c60da8cdda09765a93c9ded22dca467877ac9"
+        },
+        {
+          "path": "docs/external-todo-tracker.json",
+          "exists": true,
+          "bytes": 22829,
+          "sha256": "bb906185bc3aa4b48c54f7be222af7b122d3faa3003511dfe846bf0d4a9ba028"
+        },
+        {
+          "path": "docs/external-todo-tracker.md",
+          "exists": true,
+          "bytes": 4788,
+          "sha256": "5ea9c6021003bbd52bbf943a5c428d3c4a5e96d5d93c919c6b0e6aab9ce868ac"
+        },
+        {
+          "path": "docs/final-launch-runbook.json",
+          "exists": true,
+          "bytes": 10486,
+          "sha256": "87904cc5b55cf8d36975db3f63f9b1ba2813d0ada054ff505bf25432fdccacfb"
+        },
+        {
+          "path": "docs/final-launch-runbook.md",
+          "exists": true,
+          "bytes": 4597,
+          "sha256": "ee75696dbf2fb7ae731eae81a87b2d7f2ee3f9241435db472a5de7166c52272a"
+        },
+        {
+          "path": "docs/production-device-smoke-test.json",
+          "exists": true,
+          "bytes": 14011,
+          "sha256": "ac5ca7a254be4323f4603da2b416aea39885c1a7ed1ebfb87f68ed0ef7ac9027"
+        },
+        {
+          "path": "docs/production-device-smoke-test.md",
+          "exists": true,
+          "bytes": 8784,
+          "sha256": "45f928f1a697c678feb307b2e3dbf990ff0b937c929dc425046d9bf731414cf6"
+        },
+        {
+          "path": "docs/store-submission-input-pack.json",
+          "exists": true,
+          "bytes": 30806,
+          "sha256": "0fbdf95443693266a86ee0646588ebd588d60ffb2d7d3832ea33d8d5d1309ac7"
+        },
+        {
+          "path": "docs/store-submission-input-pack.md",
+          "exists": true,
+          "bytes": 6469,
+          "sha256": "e2989ab7bda0439a7a6724fc87ba0fb636de4be47b16d022ae75700d782c47c7"
+        },
+        {
+          "path": "docs/store-submission.env.template",
+          "exists": true,
+          "bytes": 959,
+          "sha256": "3eb0bab3630b0ed550c29be3f0fe6176b5eca7d5183c79eae8eca71e7907c97c"
+        },
+        {
+          "path": "eas.json",
+          "exists": true,
+          "bytes": 450,
+          "sha256": "5d28d03ad3077b511fe77b0e976c4c25569a77a56ade3bdb886fe47dea676a40"
+        }
+      ],
+      "summary": {
+        "files": 22,
+        "missingFiles": 0,
+        "bytes": 195108
+      }
+    },
+    {
+      "id": "source-config",
+      "label": "Source and runtime configuration snapshot",
+      "files": [
+        {
+          "path": ".github/workflows/release-verify.yml",
+          "exists": true,
+          "bytes": 1119,
+          "sha256": "1856286beac9cd487b2890d748e95ba065e56bf38d53919eab2285d534f58c49"
+        },
+        {
+          "path": "app.config.js",
+          "exists": true,
+          "bytes": 4214,
+          "sha256": "14c7eb0bc186bd2788c391559751b87e9d073c1759ff4ec57f44739ba9ea2034"
+        },
+        {
+          "path": "app.json",
+          "exists": true,
+          "bytes": 4122,
+          "sha256": "f1cbfa28554be427d3715c5aa8b688eb1dab4d0435ea4e1f711423445e06a15a"
+        },
+        {
+          "path": "App.tsx",
+          "exists": true,
+          "bytes": 91057,
+          "sha256": "22206bb0a5b0a7caaf71926b69df684110970be4969c3f9b300712f9d6ae0ce2"
+        },
+        {
+          "path": "docs/release-handoff.md",
+          "exists": true,
+          "bytes": 12529,
+          "sha256": "ec0030a7e3c71ea7d0d3bd7b25649c775eddbaccd0b8cabc229938197cbfa87f"
+        },
+        {
+          "path": "package-lock.json",
+          "exists": true,
+          "bytes": 245461,
+          "sha256": "1a2ca52cef9b72401e3d591278cb45c344d34a88e7f98f89f62ff029cf4b1c59"
+        },
+        {
+          "path": "package.json",
+          "exists": true,
+          "bytes": 4496,
+          "sha256": "ae9380875e52998c2a5717e2bd9ee7fcc2ce82c0a858fc5455ad2cdc2b88d53a"
+        },
+        {
+          "path": "README.md",
+          "exists": true,
+          "bytes": 24706,
+          "sha256": "1daacc8968fca2c71dc0b2c6d9614bdcc0f36c9c6ebfed307816c4aadbf36b43"
+        },
+        {
+          "path": "src/gameData.ts",
+          "exists": true,
+          "bytes": 116060,
+          "sha256": "8ab600c5638bc0bfbc19446efb5feae035251c1705033fa5db3791e6740923f9"
+        },
+        {
+          "path": "src/i18n.ts",
+          "exists": true,
+          "bytes": 184114,
+          "sha256": "5d45ee477c4b7394934e9d58ed1e59eb7ae4aed28070df17b1dba9cd424783c9"
+        }
+      ],
+      "summary": {
+        "files": 10,
+        "missingFiles": 0,
+        "bytes": 687878
+      }
+    }
+  ],
+  "missingFiles": [],
+  "releaseStatus": {
+    "summary": {
+      "ok": 35,
+      "todo": 7,
+      "bad": 0,
+      "info": 0,
+      "categories": {
+        "local": {
+          "ok": 31,
+          "todo": 0,
+          "bad": 0,
+          "info": 0
+        },
+        "external": {
+          "ok": 4,
+          "todo": 7,
+          "bad": 0,
+          "info": 0
+        }
+      }
+    },
+    "rows": [
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Expo SDK 56 baseline",
+        "detail": "Expo 56, React 19.2.3, React Native 0.85.3, Node >=22.13.0, iOS 16.4, Android SDK 36."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Release CI workflow",
+        "detail": "GitHub Actions release verification runs Node 22.13.0 with typecheck, gameplay contract, and release:verify."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "UI locale coverage",
+        "detail": "10 UI locales configured from system language; Japanese UI locale omitted."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "JLPT N5-N1 study bank",
+        "detail": "92 kana, 513 vocabulary, 148 original anime-style line prompts, 100 grammar prompts."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Study bank depth audit",
+        "detail": "853 items, 26 topic families, N5-N1 progression verified."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Study content localization",
+        "detail": "853 study items and 685 study text keys localized for 10 UI locales."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Runtime assets",
+        "detail": "6 PNG assets and 3 BGM tracks recorded."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Public support/privacy/license site",
+        "detail": "44 generated pages for 10 UI locales."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Public site deploy audit",
+        "detail": "44 routes plus hosting control files packaged; GitHub Pages workflow ready=yes, sitemap ready=yes, external hosting ready=yes."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Public site hosting handoff",
+        "detail": "44 routes mapped to 4 hosting options; external hosting verified=yes."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store screenshots",
+        "detail": "176 screenshots across default and localized iOS packs."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store screenshot QA",
+        "detail": "176 screenshots QA-passed across 10 localized upload packs."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store metadata preview",
+        "detail": "10 App Store locales previewed."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store copy audit",
+        "detail": "10/10 locales pass App Store copy, keyword, and claim checks."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store metadata upload packet",
+        "detail": "10/10 locales have copy-ready fields and screenshot upload packs; support URLs ready=10/10."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Localization QA audit",
+        "detail": "10 UI locales, 10 App Store locales, and 160 localized screenshots verified."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store age rating audit",
+        "detail": "12/12 advisory answers are NONE; final rating comes from App Store Connect."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Open source license audit",
+        "detail": "515 runtime packages checked; 0 unknown and 0 prohibited runtime licenses."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store review guide",
+        "detail": "No demo account or sign-in required; 176 screenshot entries referenced."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Privacy manifest audit",
+        "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store privacy answer pack",
+        "detail": "NO_LIVE_ADS state documented; no-account local app practices and live-AdMob disclosure review steps ready."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Privacy review packet",
+        "detail": "NO_LIVE_ADS privacy packet ready; local evidence=yes, final review confirmed=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "AdMob release audit",
+        "detail": "NO_LIVE_ADS state audited; live ads ready=no, external ad setup ready=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "AdMob setup handoff",
+        "detail": "4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Data flow privacy audit",
+        "detail": "local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Runtime UI flow audit",
+        "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Store submission input pack",
+        "detail": "18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "External TODO tracker",
+        "detail": "11 external items tracked, 7 blocking, 5 final commands blocked."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Account and service preflight",
+        "detail": "10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Final launch runbook",
+        "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "EAS production preflight",
+        "detail": "production profile ready, submit metadata path=./store.config.js, strict gate ready=no."
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "Public support URL",
+        "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "Public privacy URL",
+        "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "Public marketing URL",
+        "detail": "https://johnshinsei.github.io/kana-sprint-site"
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "App Store review contact",
+        "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "Live AdMob IDs",
+        "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "APP_STORE_CONNECT_RECORD_READY",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "EAS_REMOTE_VERSION_INITIALIZED",
+        "detail": "Confirmed."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "PRODUCTION_DEVICE_TESTED",
+        "detail": "Set to 1 only after the real external action is complete."
+      }
+    ]
+  },
+  "commands": [
+    "npm run release:verify",
+    "npm run handoff:bundle",
+    "npm run release:store-ready",
+    "npm run metadata:ios",
+    "npm run build:ios",
+    "npm run submit:ios"
+  ]
+}

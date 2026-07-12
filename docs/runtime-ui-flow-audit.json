@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-runtime-ui-flow-audit.js",
+  "generatedFrom": {
+    "runtimeSources": [
+      "App.tsx",
+      "src/i18n.ts",
+      "src/gameData.ts",
+      "src/grammarData.ts",
+      "src/gameEngine.ts",
+      "src/storage.ts",
+      "src/bgm.ts",
+      "src/ads.ts",
+      "src/ads.native.ts",
+      "src/ads.web.ts"
+    ],
+    "gameplayContract": "scripts/check-gameplay-contract.js",
+    "releaseStatus": "scripts/release-status.js"
+  },
+  "posture": {
+    "statement": "Kana Sprint starts on the playable game surface and keeps N5-N1 mastery progress, daily run goals, run missions, weak-item review, local data reset, language, music, support/privacy, rewarded-ad, daily challenge, and exit controls reachable from runtime UI.",
+    "releaseAction": "If this audit fails, fix the runtime App.tsx flow before regenerating screenshots or submitting for review."
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "locales": 10,
+    "levels": 5,
+    "modes": 5,
+    "phases": 3,
+    "bgmTracks": 3,
+    "hasJapaneseUiLocale": false,
+    "checks": 21,
+    "passedChecks": 21,
+    "requiredFlowFailures": 0
+  },
+  "app": {
+    "firstScreen": "ready",
+    "phases": [
+      "ready",
+      "playing",
+      "finished"
+    ],
+    "locales": [
+      "zh-Hans",
+      "zh-Hant",
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "levels": [
+      "N5",
+      "N4",
+      "N3",
+      "N2",
+      "N1"
+    ],
+    "modes": [
+      "mix",
+      "kana",
+      "vocab",
+      "lines",
+      "grammar"
+    ],
+    "bgmTracks": [
+      "rush",
+      "focus",
+      "night"
+    ],
+    "noAccountRequired": true,
+    "settingsOwnsLanguageSwitching": true,
+    "localProgressResetAvailable": true,
+    "dailyGoalAvailable": true,
+    "sessionMissionAvailable": true,
+    "weakReviewAvailable": true
+  },
+  "checks": [
+    {
+      "id": "first-playable-screen",
+      "label": "First screen is a playable ready state with practice and daily challenge entry points",
+      "passed": true,
+      "evidence": [
+        "App.tsx initializes phase to ready and renders practice/daily buttons from the ready body."
+      ]
+    },
+    {
+      "id": "difficulty-selector",
+      "label": "N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts",
+      "passed": true,
+      "evidence": [
+        "5 JLPT levels exposed: N5, N4, N3, N2, N1."
+      ]
+    },
+    {
+      "id": "level-mastery-map",
+      "label": "Ready screen shows local mastery progress for every JLPT level",
+      "passed": true,
+      "evidence": [
+        "The ready screen renders N5-N1 progress rows from the local mastery store."
+      ]
+    },
+    {
+      "id": "weak-review-retention",
+      "label": "Ready screen exposes a local weak-item review loop from recent mistakes",
+      "passed": true,
+      "evidence": [
+        "Recent wrong answers are persisted locally, filtered by mode/level, and replayed through a dedicated weak-review entry."
+      ]
+    },
+    {
+      "id": "next-step-guidance",
+      "label": "Ready screen recommends the next local learning action from weak items and JLPT mastery",
+      "passed": true,
+      "evidence": [
+        "The ready screen turns local mastery and mistake data into a tappable next-step recommendation."
+      ]
+    },
+    {
+      "id": "achievement-milestones",
+      "label": "Ready screen shows local achievement milestones from runs, streaks, mastery, and N1 progress",
+      "passed": true,
+      "evidence": [
+        "The ready screen adds compact local achievement badges without accounts, analytics, or server sync."
+      ]
+    },
+    {
+      "id": "session-mission-retention",
+      "label": "Each run has a visible local mission target, live progress text, and finish-state result",
+      "passed": true,
+      "evidence": [
+        "A lightweight run mission is generated from mode/level/daily-review context, shown before play, updated during play, and resolved on the finish screen."
+      ]
+    },
+    {
+      "id": "daily-goal-retention",
+      "label": "Ready screen shows a persisted daily run goal that advances after every finished run",
+      "passed": true,
+      "evidence": [
+        "The ready screen renders today's local run target and storage advances/resets it by date without accounts or server sync."
+      ]
+    },
+    {
+      "id": "mode-selector",
+      "label": "Five game modes are exposed before a run: mix, kana, words, lines, and grammar",
+      "passed": true,
+      "evidence": [
+        "5 modes found in App.tsx: mix, kana, vocab, lines, grammar."
+      ]
+    },
+    {
+      "id": "playing-loop",
+      "label": "Playing state contains timer, score, combo/lives, prompt, four options, feedback, and answer handling",
+      "passed": true,
+      "evidence": [
+        "The playing branch wires score/timer UI to answerQuestion and scoreForAnswer."
+      ]
+    },
+    {
+      "id": "answer-study-hint",
+      "label": "Answered questions reveal a compact study hint with the correct answer, reading, and meaning",
+      "passed": true,
+      "evidence": [
+        "The playing branch keeps the answer reveal visible long enough to show reading, romaji, and localized meaning after each answer."
+      ]
+    },
+    {
+      "id": "exit-run",
+      "label": "A visible in-game exit button returns from an active run to the ready screen",
+      "passed": true,
+      "evidence": [
+        "The playing header uses the localized exitRun button and the goHome handler resets to ready."
+      ]
+    },
+    {
+      "id": "finish-loop",
+      "label": "Finished state lets the player play again or switch mode without restarting the app",
+      "passed": true,
+      "evidence": [
+        "The finished branch exposes play-again and switch-mode flows."
+      ]
+    },
+    {
+      "id": "finish-learning-recap",
+      "label": "Finished state summarizes new mastery and mistakes, then links back into weak review",
+      "passed": true,
+      "evidence": [
+        "The finish screen turns the just-finished run into a learning recap and a direct review path for misses."
+      ]
+    },
+    {
+      "id": "settings-language",
+      "label": "Language switching lives inside Settings, follows the system by default, and excludes Japanese as a UI locale",
+      "passed": true,
+      "evidence": [
+        "10 settings locales found; Japanese UI locale present: no."
+      ]
+    },
+    {
+      "id": "settings-local-data-reset",
+      "label": "Settings exposes a two-tap local progress reset without accounts or server sync",
+      "passed": true,
+      "evidence": [
+        "The Settings modal resets only the local progress object after an explicit confirmation tap."
+      ]
+    },
+    {
+      "id": "settings-compliance-links",
+      "label": "Settings exposes support, privacy, open-source notices, and ad privacy options when available",
+      "passed": true,
+      "evidence": [
+        "Support, privacy, open-source, local fallback information, and UMP ad privacy entries are only in Settings."
+      ]
+    },
+    {
+      "id": "settings-audio",
+      "label": "Settings exposes BGM enablement and track selection without adding recording permissions",
+      "passed": true,
+      "evidence": [
+        "3 BGM tracks configured: rush, focus, night."
+      ]
+    },
+    {
+      "id": "rewarded-ad-entry",
+      "label": "Rewarded-ad continue entry is wired from gameplay UI to native/web ad boundaries",
+      "passed": true,
+      "evidence": [
+        "The gameplay ad button calls claimAdReward; native and web ad boundary files exist."
+      ]
+    },
+    {
+      "id": "daily-streak-retention",
+      "label": "Daily challenge and streak state are retained locally across sessions",
+      "passed": true,
+      "evidence": [
+        "Daily challenge keys are level-aware in App.tsx and streak state is persisted by storage.ts."
+      ]
+    },
+    {
+      "id": "release-runtime-boundary",
+      "label": "Runtime flow stays no-account/local-first while still exposing review-ready links and ad entry points",
+      "passed": true,
+      "evidence": [
+        "No TextInput, sign-in, or auth entry appears in App.tsx; progress/settings stay local."
+      ]
+    }
+  ],
+  "failures": [],
+  "commands": [
+    "npm run runtime:ui-flow",
+    "npm run gameplay-check",
+    "npm run release:verify"
+  ]
+}

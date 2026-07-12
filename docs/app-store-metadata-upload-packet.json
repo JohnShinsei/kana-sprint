@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-app-store-metadata-upload-packet.js",
+  "generatedFrom": {
+    "storeConfig": "store.config.js",
+    "metadataPreview": "docs/app-store-metadata-preview.json",
+    "appStoreCopyAudit": "docs/app-store-copy-audit.json",
+    "screenshotManifest": "docs/app-store-screenshot-manifest.json",
+    "publicSiteHostingVerification": "docs/public-site-hosting-verification.json"
+  },
+  "purpose": "Manual App Store Connect field packet and EAS Metadata fallback for the exact current Kana Sprint release.",
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "buildNumber": "1",
+    "categories": [
+      [
+        "GAMES",
+        "GAMES_WORD"
+      ],
+      "EDUCATION"
+    ],
+    "automaticRelease": false,
+    "phasedRelease": false
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "externalUrlsReady": true,
+    "reviewContactReady": false,
+    "locales": 10,
+    "fieldReadyLocales": 10,
+    "screenshotReadyLocales": 10,
+    "supportUrlReadyLocales": 10,
+    "privacyUrlReadyLocales": 10,
+    "marketingUrlReadyLocales": 10,
+    "copyAuditRisk": "PASS",
+    "hostingVerificationStatus": "PASS",
+    "failures": 0
+  },
+  "limits": {
+    "title": 30,
+    "subtitle": 30,
+    "promoText": 170,
+    "keywords": 100,
+    "descriptionMax": 4000
+  },
+  "locales": [
+    {
+      "appStoreLocale": "zh-Hans",
+      "sourceLocale": "zh-Hans",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "日语假名与台词速记游戏",
+        "promotionalText": "60 秒短局练日语：假名、JLPT N5-N1 词汇、原创动漫感台词，连击刷分。",
+        "description": "Kana Sprint 是一款轻量、可反复玩的日语学习游戏。你需要在 60 秒内快速匹配平假名、片假名、JLPT N5-N1 分级词汇和原创动漫感台词。连续答对会提升连击得分，答错会扣生命，并进入本机薄弱项复习。今日挑战会固定题序，并记录每日连续学习天数，方便每天回来刷新纪录。内容适合从假名到高阶词汇的日语学习者，也适合想用碎片时间复习常用表达的玩家。",
+        "keywords": "平假名,片假名,词汇,动漫风,原创短句,JLPT,N5N1",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 11,
+        "promoText": 40,
+        "description": 177,
+        "keywords": 29
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/zh-Hans",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/zh-Hans/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/zh-Hans/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/zh-Hans/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/zh-Hans/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/zh-Hans/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/zh-Hans/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/zh-Hans/ipad-13/01-ready.png",
+          "assets/store/ios-localized/zh-Hans/ipad-13/02-playing.png",
+          "assets/store/ios-localized/zh-Hans/ipad-13/03-levels.png",
+          "assets/store/ios-localized/zh-Hans/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "zh-Hant",
+      "sourceLocale": "zh-Hant",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "日語假名與台詞速記遊戲",
+        "promotionalText": "60 秒短局練日語：假名、JLPT N5-N1 詞彙、原創動漫感台詞，連擊刷分。",
+        "description": "Kana Sprint 是一款輕量、可反覆遊玩的日語學習遊戲。你需要在 60 秒內快速配對平假名、片假名、JLPT N5-N1 分級詞彙和原創動漫感台詞。連續答對會提升連擊得分，答錯會扣生命，並進入本機薄弱項複習。今日挑戰會固定題序，並記錄每日連續學習天數，方便每天回來刷新紀錄。內容適合從假名到高階詞彙的日語學習者，也適合想用零碎時間複習常用表達的玩家。",
+        "keywords": "平假名,片假名,詞彙,動漫風,原創短句,JLPT,N5N1",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 11,
+        "promoText": 40,
+        "description": 178,
+        "keywords": 29
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/zh-Hant",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/zh-Hant/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/zh-Hant/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/zh-Hant/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/zh-Hant/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/zh-Hant/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/zh-Hant/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/zh-Hant/ipad-13/01-ready.png",
+          "assets/store/ios-localized/zh-Hant/ipad-13/02-playing.png",
+          "assets/store/ios-localized/zh-Hant/ipad-13/03-levels.png",
+          "assets/store/ios-localized/zh-Hant/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "en-US",
+      "sourceLocale": "en",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Japanese kana speed game",
+        "promotionalText": "Train kana, JLPT N5-N1 words, and original anime-style Japanese lines in quick 60-second runs.",
+        "description": "Kana Sprint is a fast, replayable Japanese learning game. Match hiragana, katakana, romaji, JLPT N5-N1 vocabulary, and original anime-style Japanese lines before the 60-second timer runs out. Correct answers build combo score, mistakes cost lives and feed a local weak-item review loop, and the daily challenge uses a fixed question order plus a local streak counter so you have a reason to come back every day.",
+        "keywords": "hiragana,katakana,vocabulary,anime-style,original lines,JLPT,N5N1,romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 24,
+        "promoText": 94,
+        "description": 411,
+        "keywords": 72
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/en",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/en/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/en/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/en",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/en/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/en/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/en/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/en/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/en/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/en/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/en/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/en/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/en/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/en/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/en/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/en/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/en/ipad-13/01-ready.png",
+          "assets/store/ios-localized/en/ipad-13/02-playing.png",
+          "assets/store/ios-localized/en/ipad-13/03-levels.png",
+          "assets/store/ios-localized/en/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "fr-FR",
+      "sourceLocale": "fr",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Jeu rapide de kana japonais",
+        "promotionalText": "Révise kana, mots JLPT N5-N1 et phrases japonaises style anime en parties de 60 secondes.",
+        "description": "Kana Sprint est un jeu d'apprentissage du japonais rapide et rejouable. Associe hiragana, katakana, romaji, vocabulaire JLPT N5-N1 et phrases japonaises originales inspirées de l'ambiance anime avant la fin du chrono de 60 secondes. Les bonnes réponses créent un combo, les erreurs coûtent des vies et alimentent une révision locale des points faibles, et le défi quotidien garde le même ordre de questions avec une série locale pour revenir chaque jour.",
+        "keywords": "hiragana,katakana,vocabulaire,style anime,phrases originales,JLPT,N5N1,romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 27,
+        "promoText": 89,
+        "description": 454,
+        "keywords": 77
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/fr",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/fr",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/fr/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/fr/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/fr/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/fr/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/fr/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/fr/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/fr/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/fr/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/fr/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/fr/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/fr/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/fr/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/fr/ipad-13/01-ready.png",
+          "assets/store/ios-localized/fr/ipad-13/02-playing.png",
+          "assets/store/ios-localized/fr/ipad-13/03-levels.png",
+          "assets/store/ios-localized/fr/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "it",
+      "sourceLocale": "it",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Gioco veloce di kana",
+        "promotionalText": "Allena kana, parole JLPT N5-N1 e frasi giapponesi stile anime in partite da 60 secondi.",
+        "description": "Kana Sprint è un gioco veloce e rigiocabile per imparare il giapponese. Abbina hiragana, katakana, romaji, vocabolario JLPT N5-N1 e frasi giapponesi originali in stile anime prima che scada il timer di 60 secondi. Le risposte corrette aumentano il combo, gli errori costano vite e alimentano un ripasso locale dei punti deboli, mentre la sfida giornaliera usa lo stesso ordine di domande con una serie locale per tornare ogni giorno.",
+        "keywords": "hiragana,katakana,vocabolario,stile anime,frasi originali,JLPT,N5N1,romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 20,
+        "promoText": 87,
+        "description": 433,
+        "keywords": 74
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/it",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/it/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/it/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/it",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/it/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/it/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/it/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/it/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/it/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/it/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/it/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/it/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/it/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/it/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/it/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/it/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/it/ipad-13/01-ready.png",
+          "assets/store/ios-localized/it/ipad-13/02-playing.png",
+          "assets/store/ios-localized/it/ipad-13/03-levels.png",
+          "assets/store/ios-localized/it/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "de-DE",
+      "sourceLocale": "de",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Schnelles Kana-Lernspiel",
+        "promotionalText": "Trainiere Kana, JLPT N5-N1 Wörter und originale Anime-Stil-Sätze in 60-Sekunden-Runden.",
+        "description": "Kana Sprint ist ein schnelles, wiederholbares Japanisch-Lernspiel. Ordne Hiragana, Katakana, Romaji, JLPT N5-N1 Wortschatz und originale japanische Sätze im Anime-Stil zu, bevor der 60-Sekunden-Timer abläuft. Richtige Antworten bauen Kombos auf, Fehler kosten Leben und speisen eine lokale Schwachstellen-Wiederholung, und die tägliche Herausforderung nutzt eine feste Reihenfolge plus lokale Serie, damit du jeden Tag zurückkommst.",
+        "keywords": "Hiragana,Katakana,Wortschatz,Anime-Stil,originale Sätze,JLPT,N5N1,Romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 24,
+        "promoText": 87,
+        "description": 432,
+        "keywords": 72
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/de",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/de/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/de/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/de",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/de/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/de/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/de/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/de/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/de/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/de/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/de/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/de/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/de/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/de/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/de/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/de/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/de/ipad-13/01-ready.png",
+          "assets/store/ios-localized/de/ipad-13/02-playing.png",
+          "assets/store/ios-localized/de/ipad-13/03-levels.png",
+          "assets/store/ios-localized/de/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "es-ES",
+      "sourceLocale": "es-ES",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Juego rápido de kana japonés",
+        "promotionalText": "Practica kana, palabras JLPT N5-N1 y frases japonesas estilo anime en rondas de 60 segundos.",
+        "description": "Kana Sprint es un juego rápido y rejugable para aprender japonés. Relaciona hiragana, katakana, romaji, vocabulario JLPT N5-N1 y frases japonesas originales con estilo anime antes de que termine el temporizador de 60 segundos. Las respuestas correctas crean combos, los errores cuestan vidas y alimentan un repaso local de puntos débiles, y el reto diario mantiene el mismo orden de preguntas con una racha local para volver cada día.",
+        "keywords": "hiragana,katakana,vocabulario,estilo anime,frases originales,JLPT,N5N1,romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 28,
+        "promoText": 92,
+        "description": 434,
+        "keywords": 77
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/es-ES",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/es-ES/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/es-ES/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/es-ES/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/es-ES/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/es-ES/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/es-ES/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/es-ES/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/es-ES/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/es-ES/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/es-ES/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/es-ES/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/es-ES/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/es-ES/ipad-13/01-ready.png",
+          "assets/store/ios-localized/es-ES/ipad-13/02-playing.png",
+          "assets/store/ios-localized/es-ES/ipad-13/03-levels.png",
+          "assets/store/ios-localized/es-ES/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "ko",
+      "sourceLocale": "ko",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "일본어 가나 스피드 학습 게임",
+        "promotionalText": "60초 라운드로 가나, JLPT N5-N1 단어, 오리지널 애니풍 일본어 문장을 연습하세요.",
+        "description": "Kana Sprint는 빠르고 반복 가능한 일본어 학습 게임입니다. 60초 안에 히라가나, 가타카나, 로마자, JLPT N5-N1 어휘, 오리지널 애니풍 일본어 문장을 빠르게 맞춰 보세요. 연속 정답은 콤보 점수를 올리고, 오답은 라이프를 줄이며 로컬 약점 복습에 쌓입니다. 데일리 챌린지는 고정된 문제 순서와 로컬 연속 학습 기록으로 매일 다시 도전할 이유를 줍니다.",
+        "keywords": "히라가나,가타카나,어휘,애니풍,오리지널 문장,JLPT,N5N1,로마자",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 16,
+        "promoText": 51,
+        "description": 206,
+        "keywords": 38
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/ko",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/ko",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/ko/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/ko/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/ko/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/ko/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/ko/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/ko/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/ko/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/ko/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/ko/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/ko/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/ko/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/ko/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/ko/ipad-13/01-ready.png",
+          "assets/store/ios-localized/ko/ipad-13/02-playing.png",
+          "assets/store/ios-localized/ko/ipad-13/03-levels.png",
+          "assets/store/ios-localized/ko/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "pl",
+      "sourceLocale": "pl",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Szybka gra do nauki kana",
+        "promotionalText": "Ćwicz kanę, słowa JLPT N5-N1 i oryginalne japońskie kwestie anime w rundach 60 s.",
+        "description": "Kana Sprint to szybka i wielokrotna gra do nauki japońskiego. Dopasowuj hiraganę, katakanę, romaji, słownictwo JLPT N5-N1 i oryginalne japońskie kwestie w stylu anime przed końcem 60-sekundowego licznika. Dobre odpowiedzi budują combo, błędy kosztują życia i zasilają lokalną powtórkę słabych punktów, a dzienne wyzwanie ma stałą kolejność pytań oraz lokalną serię, żeby wracać każdego dnia.",
+        "keywords": "hiragana,katakana,słownictwo,styl anime,oryginalne kwestie,JLPT,N5N1,romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 24,
+        "promoText": 81,
+        "description": 391,
+        "keywords": 75
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/pl",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/pl",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/pl/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/pl/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/pl/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/pl/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/pl/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/pl/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/pl/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/pl/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/pl/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/pl/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/pl/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/pl/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/pl/ipad-13/01-ready.png",
+          "assets/store/ios-localized/pl/ipad-13/02-playing.png",
+          "assets/store/ios-localized/pl/ipad-13/03-levels.png",
+          "assets/store/ios-localized/pl/ipad-13/04-settings.png"
+        ]
+      }
+    },
+    {
+      "appStoreLocale": "pt-BR",
+      "sourceLocale": "pt-BR",
+      "fieldLimitsReady": true,
+      "screenshotPackReady": true,
+      "fields": {
+        "title": "Kana Sprint",
+        "subtitle": "Jogo rápido de kana japonês",
+        "promotionalText": "Treine kana, palavras JLPT N5-N1 e frases japonesas estilo anime em rodadas de 60 segundos.",
+        "description": "Kana Sprint é um jogo rápido e rejogável para aprender japonês. Combine hiragana, katakana, romaji, vocabulário JLPT N5-N1 e frases japonesas originais em estilo anime antes que o cronômetro de 60 segundos acabe. Respostas certas criam combo, erros custam vidas e alimentam uma revisão local de pontos fracos, e o desafio diário usa uma ordem fixa de perguntas com sequência local para você voltar todos os dias.",
+        "keywords": "hiragana,katakana,vocabulário,estilo anime,frases originais,JLPT,N5N1,romaji",
+        "releaseNotes": "Initial release."
+      },
+      "fieldLengths": {
+        "title": 11,
+        "subtitle": 27,
+        "promoText": 91,
+        "description": 412,
+        "keywords": 76
+      },
+      "urls": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/support",
+        "privacyPolicyUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/privacy",
+        "marketingReady": true,
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "screenshots": {
+        "root": "assets/store/ios-localized/pt-BR",
+        "count": 16,
+        "devices": [
+          "iphone-6.9",
+          "iphone-6.5",
+          "iphone-5.5",
+          "ipad-13"
+        ],
+        "scenes": [
+          "Ready screen",
+          "Active round with rewarded-ad continue entry",
+          "JLPT N5-N1 level selection",
+          "Settings, language, BGM, local data, support, privacy"
+        ],
+        "files": [
+          "assets/store/ios-localized/pt-BR/iphone-6.9/01-ready.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.9/02-playing.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.9/03-levels.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.9/04-settings.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.5/01-ready.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.5/02-playing.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.5/03-levels.png",
+          "assets/store/ios-localized/pt-BR/iphone-6.5/04-settings.png",
+          "assets/store/ios-localized/pt-BR/iphone-5.5/01-ready.png",
+          "assets/store/ios-localized/pt-BR/iphone-5.5/02-playing.png",
+          "assets/store/ios-localized/pt-BR/iphone-5.5/03-levels.png",
+          "assets/store/ios-localized/pt-BR/iphone-5.5/04-settings.png",
+          "assets/store/ios-localized/pt-BR/ipad-13/01-ready.png",
+          "assets/store/ios-localized/pt-BR/ipad-13/02-playing.png",
+          "assets/store/ios-localized/pt-BR/ipad-13/03-levels.png",
+          "assets/store/ios-localized/pt-BR/ipad-13/04-settings.png"
+        ]
+      }
+    }
+  ],
+  "failures": []
+}

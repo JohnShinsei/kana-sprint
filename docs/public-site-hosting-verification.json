@@ -1,0 +1,1083 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/verify-public-site-hosting.js",
+  "generatedFrom": {
+    "publicSiteManifest": "docs/public-site-manifest.json",
+    "envTemplate": ".env.example",
+    "appConfig": "app.json + app.config.js",
+    "localSiteGenerator": "scripts/generate-localized-site.js"
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint"
+  },
+  "summary": {
+    "status": "PASS",
+    "ready": true,
+    "strictMode": false,
+    "urlConfigurationReady": true,
+    "hasProductionBaseUrl": true,
+    "checkedUrls": 45,
+    "passedUrls": 45,
+    "failedUrls": 0,
+    "expectedPageRoutes": 44,
+    "expectedLocales": 10,
+    "timeoutMs": 8000
+  },
+  "urls": {
+    "baseUrl": "https://johnshinsei.github.io/kana-sprint-site",
+    "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/support",
+    "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/privacy",
+    "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site"
+  },
+  "endpoints": [
+    {
+      "id": "page-root",
+      "kind": "landing",
+      "locale": "en",
+      "route": "/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-support",
+      "kind": "support",
+      "locale": "en",
+      "route": "/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-privacy",
+      "kind": "privacy",
+      "locale": "en",
+      "route": "/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-licenses",
+      "kind": "licenses",
+      "locale": "en",
+      "route": "/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-zh-Hans",
+      "kind": "landing",
+      "locale": "zh-Hans",
+      "route": "/zh-Hans/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-zh-Hans-support",
+      "kind": "support",
+      "locale": "zh-Hans",
+      "route": "/zh-Hans/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-zh-Hans-privacy",
+      "kind": "privacy",
+      "locale": "zh-Hans",
+      "route": "/zh-Hans/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-zh-Hans-licenses",
+      "kind": "licenses",
+      "locale": "zh-Hans",
+      "route": "/zh-Hans/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-zh-Hant",
+      "kind": "landing",
+      "locale": "zh-Hant",
+      "route": "/zh-Hant/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-zh-Hant-support",
+      "kind": "support",
+      "locale": "zh-Hant",
+      "route": "/zh-Hant/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-zh-Hant-privacy",
+      "kind": "privacy",
+      "locale": "zh-Hant",
+      "route": "/zh-Hant/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-zh-Hant-licenses",
+      "kind": "licenses",
+      "locale": "zh-Hant",
+      "route": "/zh-Hant/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-en",
+      "kind": "landing",
+      "locale": "en",
+      "route": "/en/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-en-support",
+      "kind": "support",
+      "locale": "en",
+      "route": "/en/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-en-privacy",
+      "kind": "privacy",
+      "locale": "en",
+      "route": "/en/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-en-licenses",
+      "kind": "licenses",
+      "locale": "en",
+      "route": "/en/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-fr",
+      "kind": "landing",
+      "locale": "fr",
+      "route": "/fr/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-fr-support",
+      "kind": "support",
+      "locale": "fr",
+      "route": "/fr/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-fr-privacy",
+      "kind": "privacy",
+      "locale": "fr",
+      "route": "/fr/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-fr-licenses",
+      "kind": "licenses",
+      "locale": "fr",
+      "route": "/fr/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-it",
+      "kind": "landing",
+      "locale": "it",
+      "route": "/it/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-it-support",
+      "kind": "support",
+      "locale": "it",
+      "route": "/it/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-it-privacy",
+      "kind": "privacy",
+      "locale": "it",
+      "route": "/it/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-it-licenses",
+      "kind": "licenses",
+      "locale": "it",
+      "route": "/it/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-de",
+      "kind": "landing",
+      "locale": "de",
+      "route": "/de/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-de-support",
+      "kind": "support",
+      "locale": "de",
+      "route": "/de/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-de-privacy",
+      "kind": "privacy",
+      "locale": "de",
+      "route": "/de/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-de-licenses",
+      "kind": "licenses",
+      "locale": "de",
+      "route": "/de/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-es-ES",
+      "kind": "landing",
+      "locale": "es-ES",
+      "route": "/es-ES/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-es-ES-support",
+      "kind": "support",
+      "locale": "es-ES",
+      "route": "/es-ES/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-es-ES-privacy",
+      "kind": "privacy",
+      "locale": "es-ES",
+      "route": "/es-ES/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-es-ES-licenses",
+      "kind": "licenses",
+      "locale": "es-ES",
+      "route": "/es-ES/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-ko",
+      "kind": "landing",
+      "locale": "ko",
+      "route": "/ko/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-ko-support",
+      "kind": "support",
+      "locale": "ko",
+      "route": "/ko/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-ko-privacy",
+      "kind": "privacy",
+      "locale": "ko",
+      "route": "/ko/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-ko-licenses",
+      "kind": "licenses",
+      "locale": "ko",
+      "route": "/ko/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-pl",
+      "kind": "landing",
+      "locale": "pl",
+      "route": "/pl/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-pl-support",
+      "kind": "support",
+      "locale": "pl",
+      "route": "/pl/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-pl-privacy",
+      "kind": "privacy",
+      "locale": "pl",
+      "route": "/pl/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-pl-licenses",
+      "kind": "licenses",
+      "locale": "pl",
+      "route": "/pl/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "page-pt-BR",
+      "kind": "landing",
+      "locale": "pt-BR",
+      "route": "/pt-BR/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-pt-BR-support",
+      "kind": "support",
+      "locale": "pt-BR",
+      "route": "/pt-BR/support/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/support/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "JLPT N5-N1"
+      ]
+    },
+    {
+      "id": "page-pt-BR-privacy",
+      "kind": "privacy",
+      "locale": "pt-BR",
+      "route": "/pt-BR/privacy/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/privacy/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Google Mobile Ads"
+      ]
+    },
+    {
+      "id": "page-pt-BR-licenses",
+      "kind": "licenses",
+      "locale": "pt-BR",
+      "route": "/pt-BR/licenses/",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/licenses/",
+      "requiredSnippets": [
+        "Kana Sprint",
+        "Runtime packages"
+      ]
+    },
+    {
+      "id": "sitemap",
+      "kind": "sitemap",
+      "locale": "all",
+      "route": "/sitemap.xml",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/sitemap.xml",
+      "requiredSnippets": [
+        "<urlset",
+        "<loc>",
+        "support",
+        "privacy"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "page-root",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4666,
+      "durationMs": 280,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4741,
+      "durationMs": 180,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5391,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7919,
+      "durationMs": 194,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hans",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4597,
+      "durationMs": 178,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hans-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4622,
+      "durationMs": 179,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hans-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5112,
+      "durationMs": 182,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hans-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7872,
+      "durationMs": 181,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hant",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4597,
+      "durationMs": 180,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hant-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4622,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hant-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5124,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-zh-Hant-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7878,
+      "durationMs": 178,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-en",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/en/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4666,
+      "durationMs": 177,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-en-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/en/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4741,
+      "durationMs": 170,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-en-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/en/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5391,
+      "durationMs": 179,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-en-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/en/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/en/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7919,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-fr",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4694,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-fr-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4976,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-fr-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5745,
+      "durationMs": 178,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-fr-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/fr/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7920,
+      "durationMs": 180,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-it",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/it/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4668,
+      "durationMs": 181,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-it-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/it/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4855,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-it-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/it/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5511,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-it-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/it/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/it/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7913,
+      "durationMs": 174,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-de",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/de/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4675,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-de-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/de/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4846,
+      "durationMs": 192,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-de-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/de/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5495,
+      "durationMs": 179,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-de-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/de/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/de/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7913,
+      "durationMs": 174,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-es-ES",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4683,
+      "durationMs": 180,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-es-ES-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4925,
+      "durationMs": 177,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-es-ES-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5541,
+      "durationMs": 174,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-es-ES-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/es-ES/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7928,
+      "durationMs": 188,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-ko",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4754,
+      "durationMs": 177,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-ko-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4911,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-ko-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5619,
+      "durationMs": 173,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-ko-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/ko/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7929,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pl",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4678,
+      "durationMs": 182,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pl-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4859,
+      "durationMs": 196,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pl-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5463,
+      "durationMs": 179,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pl-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pl/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7918,
+      "durationMs": 177,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pt-BR",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4687,
+      "durationMs": 178,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pt-BR-support",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/support/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/support/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 4887,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pt-BR-privacy",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/privacy/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/privacy/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 5532,
+      "durationMs": 175,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "page-pt-BR-licenses",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/licenses/",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/licenses/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 7929,
+      "durationMs": 174,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    },
+    {
+      "id": "sitemap",
+      "url": "https://johnshinsei.github.io/kana-sprint-site/sitemap.xml",
+      "finalUrl": "https://johnshinsei.github.io/kana-sprint-site/sitemap.xml",
+      "status": 200,
+      "contentType": "application/xml",
+      "bytes": 3736,
+      "durationMs": 176,
+      "passed": true,
+      "missingSnippets": [],
+      "error": null
+    }
+  ],
+  "commands": [
+    "npm run site:localized",
+    "npm run site:manifest",
+    "npm run site:deploy-audit",
+    "npm run site:verify-hosting",
+    "npm run release:store-ready"
+  ]
+}

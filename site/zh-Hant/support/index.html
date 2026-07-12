@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kana Sprint 支援</title>
+    <meta name="description" content="Kana Sprint 是 60 秒日語學習遊戲，訓練假名、JLPT N5-N1 詞彙和原創動漫感短句。">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #172131;
+        --ink: #fff7e8;
+        --muted: #a7b0c4;
+        --accent: #ffb23f;
+        --green: #31c6a7;
+        --line: #2e3a4e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 64px;
+      }
+      .mark {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 38px;
+        font-weight: 800;
+      }
+      nav { margin-bottom: 48px; }
+      a { color: var(--accent); }
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 76px);
+        line-height: 1;
+      }
+      h2 {
+        margin: 38px 0 10px;
+        font-size: 24px;
+      }
+      p, li {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: var(--panel);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .button.primary {
+        border-color: transparent;
+        background: var(--accent);
+        color: var(--bg);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 60px;
+      }
+      .fact, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green);
+      }
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      td {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .locale-note {
+        margin-top: 34px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav><a href="../">Kana Sprint</a></nav>
+      <h1>Kana Sprint 支援</h1>
+      <p class="panel">Kana Sprint 是一款日語學習遊戲，包含假名、JLPT N5-N1 詞彙和原創動漫感練習短句。</p>
+      <h2>聯絡</h2>
+      <p>如需協助、回報問題或 App Store 審核溝通，請使用 App Store 頁面公布的支援信箱聯絡開發者。</p>
+      <h2>是否需要帳號？</h2>
+      <p>不需要。Kana Sprint 不要求登入、註冊帳號或雲端同步。</p>
+      <h2>進度保存在哪裡？</h2>
+      <p>進度、最高分、每日連續天數、每日目標進度、設定和已學項目數量保存在裝置本地，可在設定裡重置本機進度。</p>
+      <h2>為什麼廣告不可用？</h2>
+      <p>只有發布構建配置正式 AdMob App ID 和激勵廣告單元 ID 後，續局激勵廣告才會顯示。</p>
+      <h2>會引用真實動漫嗎？</h2>
+      <p>不會。動漫感日語短句是原創學習材料，不引用受保護動漫腳本、角色、品牌或標題。</p>
+
+    </main>
+  </body>
+</html>

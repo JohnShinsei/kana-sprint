@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-account-service-preflight.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "easJson": "eas.json",
+    "packageJson": "package.json",
+    "releaseStatus": "scripts/release-status.js --json",
+    "storeSubmissionInputPack": "docs/store-submission-input-pack.json"
+  },
+  "mode": "manual",
+  "app": {
+    "name": "Kana Sprint",
+    "slug": "kana-sprint",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint",
+    "version": "1.0.0",
+    "easAppVersionSource": "remote"
+  },
+  "summary": {
+    "planReady": true,
+    "liveMode": false,
+    "checks": 10,
+    "liveProbes": 0,
+    "commandsReady": true,
+    "externalBlockingItems": 7,
+    "manualOrTodoChecks": 10,
+    "okChecks": 0
+  },
+  "commands": {
+    "manual": "npm run account:preflight",
+    "live": "npm run account:preflight -- --live",
+    "finalGate": "npm run release:verify && node scripts/release-check.js --strict",
+    "metadata": "npx eas-cli metadata:push",
+    "build": "npx eas-cli build --platform ios --profile production",
+    "submit": "npx eas-cli submit --platform ios --profile production"
+  },
+  "requiredEasProductionEnv": [
+    "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
+    "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
+    "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
+    "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
+    "APP_STORE_BASE_URL",
+    "APP_STORE_SUPPORT_URL",
+    "APP_STORE_PRIVACY_URL"
+  ],
+  "externalBlockingRows": [
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "App Store review contact",
+      "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "Live AdMob IDs",
+      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_CONNECT_RECORD_READY",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "PRODUCTION_DEVICE_TESTED",
+      "detail": "Set to 1 only after the real external action is complete."
+    }
+  ],
+  "checks": [
+    {
+      "id": "expo-account-login",
+      "system": "Expo account",
+      "owner": "Expo/EAS",
+      "command": "npx eas-cli whoami",
+      "liveProbeId": "eas-whoami",
+      "evidence": "The command prints the Expo account that owns or can access the EAS project.",
+      "releaseStatusLabels": [
+        "EAS_REMOTE_VERSION_INITIALIZED"
+      ],
+      "nextAction": "Log in with npx eas-cli login, then rerun npm run account:preflight -- --live.",
+      "officialReference": "https://docs.expo.dev/eas/cli/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "EAS_REMOTE_VERSION_INITIALIZED",
+          "status": "OK",
+          "detail": "Confirmed."
+        }
+      ]
+    },
+    {
+      "id": "eas-project-link",
+      "system": "EAS project linkage",
+      "owner": "Expo/EAS",
+      "command": "npx eas-cli project:info",
+      "liveProbeId": "eas-project-info",
+      "evidence": "The project is linked to slug kana-sprint and bundle identifier com.john.kanasprint.",
+      "releaseStatusLabels": [
+        "APP_STORE_BUNDLE_ID_CONFIRMED"
+      ],
+      "nextAction": "If the project is not linked, run npx eas-cli project:init and confirm the project ID before building.",
+      "officialReference": "https://docs.expo.dev/eas/cli/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "id": "eas-production-env",
+      "system": "EAS production environment",
+      "owner": "Expo/EAS",
+      "command": "npx eas-cli env:list production --format long --scope project",
+      "liveProbeId": "eas-production-env-list",
+      "evidence": "7 required production build keys exist in the EAS production environment: EXPO_PUBLIC_ADMOB_IOS_APP_ID, EXPO_PUBLIC_ADMOB_ANDROID_APP_ID, EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID, EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID, APP_STORE_BASE_URL, APP_STORE_SUPPORT_URL, APP_STORE_PRIVACY_URL.",
+      "releaseStatusLabels": [
+        "Live AdMob IDs",
+        "Public support URL",
+        "Public privacy URL"
+      ],
+      "nextAction": "Use docs/store-submission-input-pack.md to create or update the production EAS environment variables.",
+      "officialReference": "https://docs.expo.dev/eas/environment-variables/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        },
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        },
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        }
+      ]
+    },
+    {
+      "id": "eas-remote-version",
+      "system": "Remote app version",
+      "owner": "Expo/EAS",
+      "command": "npx eas-cli build:version:get --platform ios --profile production --json --non-interactive",
+      "liveProbeId": "eas-build-version-get",
+      "evidence": "The production iOS app has remote version state initialized before the first store build.",
+      "releaseStatusLabels": [
+        "EAS_REMOTE_VERSION_INITIALIZED"
+      ],
+      "nextAction": "Run npx eas-cli build:version:set after the final bundle ID and EAS project are confirmed.",
+      "officialReference": "https://docs.expo.dev/eas/cli/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "EAS_REMOTE_VERSION_INITIALIZED",
+          "status": "OK",
+          "detail": "Confirmed."
+        }
+      ]
+    },
+    {
+      "id": "app-store-connect-record",
+      "system": "App Store Connect",
+      "owner": "Apple",
+      "command": "npm run metadata:ios",
+      "evidence": "The App Store Connect app record exists for com.john.kanasprint, and EAS Metadata can push store.config.js.",
+      "releaseStatusLabels": [
+        "APP_STORE_CONNECT_RECORD_READY",
+        "App Store review contact",
+        "Public support URL",
+        "Public privacy URL"
+      ],
+      "nextAction": "Create the App Store Connect record, fill review contact fields, then run npm run metadata:ios after release:store-ready passes.",
+      "officialReference": "https://docs.expo.dev/submit/ios/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_CONNECT_RECORD_READY",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        },
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        },
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        },
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        }
+      ]
+    },
+    {
+      "id": "admob-production",
+      "system": "AdMob production account",
+      "owner": "Google AdMob",
+      "command": "npm run ads:audit",
+      "evidence": "Production app IDs, rewarded-unit IDs, and Privacy & messaging are configured for the submitted build.",
+      "releaseStatusLabels": [
+        "Live AdMob IDs",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED"
+      ],
+      "nextAction": "Create real AdMob apps and rewarded units, configure Privacy & messaging, then fill .env.local and EAS production env values.",
+      "officialReference": "https://developers.google.com/admob/ios/privacy",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        },
+        {
+          "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "id": "public-hosting",
+      "system": "Public HTTPS hosting",
+      "owner": "Hosting provider",
+      "command": "npm run site:verify-hosting",
+      "evidence": "Support, privacy, license, localized pages, and sitemap routes open over production HTTPS without auth.",
+      "releaseStatusLabels": [
+        "Public support URL",
+        "Public privacy URL",
+        "Public marketing URL"
+      ],
+      "nextAction": "Host the site/ directory, set APP_STORE_BASE_URL or explicit support/privacy URLs, then rerun site verification.",
+      "officialReference": "https://docs.expo.dev/eas/environment-variables/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        },
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        },
+        {
+          "label": "Public marketing URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site"
+        }
+      ]
+    },
+    {
+      "id": "ios-production-build",
+      "system": "iOS production build",
+      "owner": "Expo/EAS + Apple Developer",
+      "command": "npx eas-cli build --platform ios --profile production",
+      "evidence": "EAS Build produces a store-distribution iOS archive for the final bundle ID.",
+      "releaseStatusLabels": [
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "EAS_REMOTE_VERSION_INITIALIZED"
+      ],
+      "nextAction": "After all external TODOs are clear, run npm run release:store-ready and npm run build:ios.",
+      "officialReference": "https://docs.expo.dev/build/setup/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        },
+        {
+          "label": "EAS_REMOTE_VERSION_INITIALIZED",
+          "status": "OK",
+          "detail": "Confirmed."
+        }
+      ]
+    },
+    {
+      "id": "testflight-device-smoke",
+      "system": "TestFlight or physical iPhone",
+      "owner": "Apple/TestFlight",
+      "command": "docs/production-device-smoke-test.md",
+      "evidence": "The exact production/TestFlight build passes first launch, N5-N1 gameplay, Settings links, BGM, and rewarded-ad continue checks.",
+      "releaseStatusLabels": [
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "nextAction": "Install the submitted build through TestFlight or on a real iPhone and complete the smoke checklist.",
+      "officialReference": "https://docs.expo.dev/submit/introduction/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "PRODUCTION_DEVICE_TESTED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "id": "ios-submit",
+      "system": "EAS Submit to App Store Connect",
+      "owner": "Expo/EAS + Apple",
+      "command": "npx eas-cli submit --platform ios --profile production",
+      "evidence": "The latest production build is submitted to App Store Connect through EAS Submit.",
+      "releaseStatusLabels": [
+        "APP_STORE_CONNECT_RECORD_READY",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "nextAction": "Run npm run submit:ios only after release:store-ready and production device testing pass.",
+      "officialReference": "https://docs.expo.dev/submit/introduction/",
+      "status": "MANUAL",
+      "liveProbe": null,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_CONNECT_RECORD_READY",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        },
+        {
+          "label": "PRODUCTION_DEVICE_TESTED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    }
+  ],
+  "liveProbes": [],
+  "officialReferences": [
+    {
+      "title": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "title": "EAS Build setup",
+      "url": "https://docs.expo.dev/build/setup/"
+    },
+    {
+      "title": "EAS CLI reference",
+      "url": "https://docs.expo.dev/eas/cli/"
+    },
+    {
+      "title": "EAS environment variables",
+      "url": "https://docs.expo.dev/eas/environment-variables/"
+    },
+    {
+      "title": "EAS Submit",
+      "url": "https://docs.expo.dev/submit/introduction/"
+    }
+  ]
+}

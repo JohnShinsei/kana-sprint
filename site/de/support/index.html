@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kana Sprint Hilfe</title>
+    <meta name="description" content="Kana Sprint trainiert Kana, JLPT N5-N1 Wortschatz und originale japanische Anime-Stil-Sätze in 60-Sekunden-Runden.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #172131;
+        --ink: #fff7e8;
+        --muted: #a7b0c4;
+        --accent: #ffb23f;
+        --green: #31c6a7;
+        --line: #2e3a4e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 64px;
+      }
+      .mark {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 38px;
+        font-weight: 800;
+      }
+      nav { margin-bottom: 48px; }
+      a { color: var(--accent); }
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 76px);
+        line-height: 1;
+      }
+      h2 {
+        margin: 38px 0 10px;
+        font-size: 24px;
+      }
+      p, li {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: var(--panel);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .button.primary {
+        border-color: transparent;
+        background: var(--accent);
+        color: var(--bg);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 60px;
+      }
+      .fact, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green);
+      }
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      td {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .locale-note {
+        margin-top: 34px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav><a href="../">Kana Sprint</a></nav>
+      <h1>Kana Sprint Hilfe</h1>
+      <p class="panel">Kana Sprint ist ein Japanisch-Lernspiel für Kana, JLPT N5-N1 Wortschatz und originale Übungssätze im Anime-Stil.</p>
+      <h2>Kontakt</h2>
+      <p>Für Hilfe, Fehlerberichte oder Fragen zur App Store Prüfung kontaktieren Sie den Entwickler über die Support-E-Mail in der App Store Seite.</p>
+      <h2>Benötigt die App ein Konto?</h2>
+      <p>Nein. Kana Sprint benötigt keine Anmeldung, Kontoerstellung oder Cloud-Synchronisierung.</p>
+      <h2>Wo wird der Fortschritt gespeichert?</h2>
+      <p>Fortschritt, Highscores, tägliche Serien, Tagesziel-Fortschritt, Einstellungen und gelernte Elemente werden lokal auf dem Gerät gespeichert. Lokaler Fortschritt kann in den Einstellungen gelöscht werden.</p>
+      <h2>Warum sind Anzeigen nicht verfügbar?</h2>
+      <p>Die belohnte Anzeige zum Fortsetzen einer Runde erscheint nur, wenn Produktions-AdMob-App-IDs und belohnte Anzeigenblöcke für den Release-Build konfiguriert sind.</p>
+      <h2>Zitiert die App echte Anime?</h2>
+      <p>Nein. Die japanischen Anime-Stil-Sätze sind originales Lernmaterial und zitieren keine geschützten Anime-Skripte, Figuren, Marken oder Titel.</p>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,701 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-app-store-copy-audit.js",
+  "generatedFrom": {
+    "localizations": "docs/app-store-localizations.json",
+    "metadataPreview": "docs/app-store-metadata-preview.json",
+    "screenshotManifest": "docs/app-store-screenshot-manifest.json",
+    "contentRightsAudit": "docs/content-rights-audit.json",
+    "privacyAnswers": "docs/app-store-privacy-answers.json",
+    "admobReleaseAudit": "docs/admob-release-audit.json"
+  },
+  "officialReferences": [
+    {
+      "label": "Apple App Store search keywords",
+      "url": "https://developer.apple.com/app-store/search/"
+    },
+    {
+      "label": "Apple App Store Connect platform version information",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information/"
+    }
+  ],
+  "expectedLocales": [
+    "zh-Hans",
+    "zh-Hant",
+    "en",
+    "fr",
+    "it",
+    "de",
+    "es-ES",
+    "ko",
+    "pl",
+    "pt-BR"
+  ],
+  "expectedAppleLocales": {
+    "zh-Hans": "zh-Hans",
+    "zh-Hant": "zh-Hant",
+    "en": "en-US",
+    "fr": "fr-FR",
+    "it": "it",
+    "de": "de-DE",
+    "es-ES": "es-ES",
+    "ko": "ko",
+    "pl": "pl",
+    "pt-BR": "pt-BR"
+  },
+  "copyRules": {
+    "titleCharactersMax": 30,
+    "subtitleCharactersMax": 30,
+    "promotionalTextCharactersMax": 170,
+    "descriptionCharactersMax": 4000,
+    "keywordsBytesMax": 100,
+    "reviewNotesBytesMax": 4000
+  },
+  "rows": [
+    {
+      "locale": "zh-Hans",
+      "appStoreLocale": "zh-Hans",
+      "previewLocale": "zh-Hans",
+      "title": "Kana Sprint",
+      "subtitle": "日语假名与台词速记游戏",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 40,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 177,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 59,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 7,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "appStoreLocale": "zh-Hant",
+      "previewLocale": "zh-Hant",
+      "title": "Kana Sprint",
+      "subtitle": "日語假名與台詞速記遊戲",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 40,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 178,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 59,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 7,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "appStoreLocale": "en-US",
+      "previewLocale": "en-US",
+      "title": "Kana Sprint",
+      "subtitle": "Japanese kana speed game",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 24,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 94,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 411,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 72,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "appStoreLocale": "fr-FR",
+      "previewLocale": "fr-FR",
+      "title": "Kana Sprint",
+      "subtitle": "Jeu rapide de kana japonais",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 27,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 89,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 454,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 77,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "appStoreLocale": "it",
+      "previewLocale": "it",
+      "title": "Kana Sprint",
+      "subtitle": "Gioco veloce di kana",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 20,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 87,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 433,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 74,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "appStoreLocale": "de-DE",
+      "previewLocale": "de-DE",
+      "title": "Kana Sprint",
+      "subtitle": "Schnelles Kana-Lernspiel",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 24,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 87,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 432,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 73,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "appStoreLocale": "es-ES",
+      "previewLocale": "es-ES",
+      "title": "Kana Sprint",
+      "subtitle": "Juego rápido de kana japonés",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 28,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 92,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 434,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 77,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "appStoreLocale": "ko",
+      "previewLocale": "ko",
+      "title": "Kana Sprint",
+      "subtitle": "일본어 가나 스피드 학습 게임",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 16,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 51,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 206,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 82,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "appStoreLocale": "pl",
+      "previewLocale": "pl",
+      "title": "Kana Sprint",
+      "subtitle": "Szybka gra do nauki kana",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 24,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 81,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 391,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 76,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "appStoreLocale": "pt-BR",
+      "previewLocale": "pt-BR",
+      "title": "Kana Sprint",
+      "subtitle": "Jogo rápido de kana japonês",
+      "limits": {
+        "title": {
+          "value": 11,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "subtitle": {
+          "value": 27,
+          "min": 1,
+          "max": 30,
+          "ready": true
+        },
+        "promotionalText": {
+          "value": 91,
+          "min": 1,
+          "max": 170,
+          "ready": true
+        },
+        "description": {
+          "value": 412,
+          "min": 80,
+          "max": 4000,
+          "ready": true
+        },
+        "keywordsBytes": {
+          "value": 77,
+          "min": 1,
+          "max": 100,
+          "ready": true
+        }
+      },
+      "keywordChecks": {
+        "terms": 8,
+        "hasEmptyTerm": false,
+        "hasCommaSpaces": false,
+        "duplicatedSearchTerms": [],
+        "hasJlpt": true,
+        "ready": true
+      },
+      "claimChecks": {
+        "mentionsJlpt": true,
+        "mentionsSixtySeconds": true,
+        "mentionsOriginalLinePosture": true,
+        "forbiddenClaims": [],
+        "protectedTermHits": [],
+        "coreFeatureClaimsReady": true
+      },
+      "screenshotPackReady": true,
+      "screenshotCount": 16,
+      "urls": {
+        "supportReady": true,
+        "privacyReady": true
+      },
+      "ready": true
+    }
+  ],
+  "releasePosture": {
+    "contentRightsRisk": "PASS",
+    "protectedIpTermHits": 0,
+    "privacyAnswerState": "NO_LIVE_ADS",
+    "admobState": "NO_LIVE_ADS",
+    "liveAdsReady": false
+  },
+  "summary": {
+    "risk": "PASS",
+    "locales": 10,
+    "readyLocales": 10,
+    "titleLimitReady": true,
+    "subtitleLimitReady": true,
+    "promotionalTextLimitReady": true,
+    "descriptionLimitReady": true,
+    "keywordsByteLimitReady": true,
+    "keywordFormatReady": true,
+    "noForbiddenClaims": true,
+    "noProtectedTermHits": true,
+    "coreFeatureClaimsReady": true,
+    "screenshotPacksReady": true,
+    "contentRightsRisk": "PASS",
+    "privacyAnswerState": "NO_LIVE_ADS",
+    "admobState": "NO_LIVE_ADS"
+  }
+}

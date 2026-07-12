@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-runtime-asset-manifest.js",
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "icon": "assets/icon.png"
+  },
+  "pngAssets": [
+    {
+      "role": "app-icon",
+      "platform": "all",
+      "path": "assets/icon.png",
+      "expected": {
+        "width": 1024,
+        "height": 1024,
+        "alpha": false
+      },
+      "file": {
+        "path": "assets/icon.png",
+        "bytes": 25929,
+        "sha256": "981a69851b5d150373fe80fee4c9d8ec41c8a356c84a29f54477ee086e1ff86f"
+      },
+      "png": {
+        "width": 1024,
+        "height": 1024,
+        "bitDepth": 8,
+        "colorType": 2,
+        "hasAlphaChannel": false
+      }
+    },
+    {
+      "role": "splash-image",
+      "platform": "all",
+      "path": "assets/splash-icon.png",
+      "expected": {
+        "width": 1024,
+        "height": 1024
+      },
+      "file": {
+        "path": "assets/splash-icon.png",
+        "bytes": 24689,
+        "sha256": "6386f5e6bc9a2866f45af450d231e5a6e4316ed488c93560baf99333b3dd6f04"
+      },
+      "png": {
+        "width": 1024,
+        "height": 1024,
+        "bitDepth": 8,
+        "colorType": 6,
+        "hasAlphaChannel": true
+      }
+    },
+    {
+      "role": "android-adaptive-foreground",
+      "platform": "android",
+      "path": "assets/android-icon-foreground.png",
+      "expected": {
+        "width": 1024,
+        "height": 1024,
+        "alpha": true
+      },
+      "file": {
+        "path": "assets/android-icon-foreground.png",
+        "bytes": 27280,
+        "sha256": "b7ba206c09edc7349d362a8c08ca7800b4ab9600133c0814298ed3ec49aa3cc9"
+      },
+      "png": {
+        "width": 1024,
+        "height": 1024,
+        "bitDepth": 8,
+        "colorType": 6,
+        "hasAlphaChannel": true
+      }
+    },
+    {
+      "role": "android-adaptive-background",
+      "platform": "android",
+      "path": "assets/android-icon-background.png",
+      "expected": {
+        "width": 1024,
+        "height": 1024,
+        "alpha": false
+      },
+      "file": {
+        "path": "assets/android-icon-background.png",
+        "bytes": 5734,
+        "sha256": "d7d82ec838a56db52e0919202f162a88f27c4b34844b2635688c0e794161ef17"
+      },
+      "png": {
+        "width": 1024,
+        "height": 1024,
+        "bitDepth": 8,
+        "colorType": 2,
+        "hasAlphaChannel": false
+      }
+    },
+    {
+      "role": "android-adaptive-monochrome",
+      "platform": "android",
+      "path": "assets/android-icon-monochrome.png",
+      "expected": {
+        "width": 1024,
+        "height": 1024,
+        "alpha": true
+      },
+      "file": {
+        "path": "assets/android-icon-monochrome.png",
+        "bytes": 23466,
+        "sha256": "a5047d2ad3956431fc20222fb32ae6cf8afce14bd9ffced970eedbbc8a5f227f"
+      },
+      "png": {
+        "width": 1024,
+        "height": 1024,
+        "bitDepth": 8,
+        "colorType": 6,
+        "hasAlphaChannel": true
+      }
+    },
+    {
+      "role": "web-favicon",
+      "platform": "web",
+      "path": "assets/favicon.png",
+      "expected": {
+        "width": 48,
+        "height": 48
+      },
+      "file": {
+        "path": "assets/favicon.png",
+        "bytes": 2852,
+        "sha256": "ac9556ecb640ffc86180135764f21d1640f9bdba2455258af5fdb319e4e7bb36"
+      },
+      "png": {
+        "width": 48,
+        "height": 48,
+        "bitDepth": 8,
+        "colorType": 6,
+        "hasAlphaChannel": true
+      }
+    }
+  ],
+  "audioAssets": [
+    {
+      "role": "bgm-rush",
+      "trackId": "rush",
+      "titleKey": "bgmRush",
+      "platform": "all",
+      "path": "assets/bgm/dojo_rush_loop.wav",
+      "file": {
+        "path": "assets/bgm/dojo_rush_loop.wav",
+        "bytes": 2565862,
+        "sha256": "2de2debab9ad1929f13a0006beb7ac8208e7196941039ce96edcfbb29fb67c49"
+      },
+      "wav": {
+        "format": "PCM",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitsPerSample": 16,
+        "dataBytes": 2565818,
+        "durationSeconds": 29.09
+      }
+    },
+    {
+      "role": "bgm-focus",
+      "trackId": "focus",
+      "titleKey": "bgmFocus",
+      "platform": "all",
+      "path": "assets/bgm/neon_focus_loop.wav",
+      "file": {
+        "path": "assets/bgm/neon_focus_loop.wav",
+        "bytes": 3136044,
+        "sha256": "9d6a39be84a49b908afdef49b6e11c09134d25df7e3eae76faa221ed36e89c92"
+      },
+      "wav": {
+        "format": "PCM",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitsPerSample": 16,
+        "dataBytes": 3136000,
+        "durationSeconds": 35.56
+      }
+    },
+    {
+      "role": "bgm-night",
+      "trackId": "night",
+      "titleKey": "bgmNight",
+      "platform": "all",
+      "path": "assets/bgm/starline_night_loop.wav",
+      "file": {
+        "path": "assets/bgm/starline_night_loop.wav",
+        "bytes": 2646044,
+        "sha256": "8cbec49c9582b31070a6703af72311a46e0643c76d0fe7fae0389cc0834366b6"
+      },
+      "wav": {
+        "format": "PCM",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitsPerSample": 16,
+        "dataBytes": 2646000,
+        "durationSeconds": 30
+      }
+    }
+  ],
+  "summary": {
+    "pngCount": 6,
+    "audioCount": 3,
+    "totalBytes": 8457900
+  }
+}

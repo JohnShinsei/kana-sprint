@@ -1,0 +1,690 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-public-site-deploy-audit.js",
+  "generatedFrom": {
+    "publicSiteManifest": "docs/public-site-manifest.json",
+    "localizedSiteGenerator": "scripts/generate-localized-site.js",
+    "siteManifestGenerator": "scripts/generate-site-manifest.js",
+    "hostingControlFiles": "scripts/generate-localized-site.js",
+    "hostingVerification": "scripts/verify-public-site-hosting.js",
+    "envTemplate": ".env.example",
+    "appConfig": "app.json + app.config.js",
+    "storeConfig": "store.config.js",
+    "githubPagesWorkflow": ".github/workflows/deploy-site.yml"
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint"
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "hostingReady": true,
+    "externalHostingPending": false,
+    "routeCount": 44,
+    "locales": 10,
+    "supportUrlReady": true,
+    "privacyUrlReady": true,
+    "openSourceNoticesUrlReady": true,
+    "marketingUrlReady": true,
+    "hostingControlFilesReady": true,
+    "githubPagesWorkflowReady": true,
+    "sitemapReady": true,
+    "sitemapRequired": true,
+    "missingFiles": 0,
+    "missingControlFiles": 0
+  },
+  "deployRoot": {
+    "path": "site",
+    "requiredPages": 44,
+    "requiredLocales": [
+      "zh-Hans",
+      "zh-Hant",
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "requiredPageKinds": [
+      "landing",
+      "support",
+      "privacy",
+      "licenses"
+    ],
+    "requiredControlFiles": [
+      "site/robots.txt",
+      "site/_headers",
+      "site/_redirects"
+    ],
+    "deploymentWorkflow": ".github/workflows/deploy-site.yml"
+  },
+  "deploymentWorkflow": {
+    "path": ".github/workflows/deploy-site.yml",
+    "exists": true,
+    "bytes": 996,
+    "sha256": "62cf5f8d846dea521c6491f9e6bb93bfcc2f7cf26aabbcdd79db4f26803c71b9",
+    "ready": true,
+    "requiredSnippets": [
+      "workflow_dispatch:",
+      "pages: write",
+      "id-token: write",
+      "actions/configure-pages@v6",
+      "actions/upload-pages-artifact@v5",
+      "path: site",
+      "actions/deploy-pages@v5"
+    ]
+  },
+  "urls": {
+    "baseUrl": "https://johnshinsei.github.io/kana-sprint-site",
+    "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site",
+    "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/support",
+    "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/privacy",
+    "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/licenses",
+    "localized": {
+      "zh-Hans": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/licenses"
+      },
+      "zh-Hant": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/licenses"
+      },
+      "en": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/en",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/en/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/en/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/en/licenses"
+      },
+      "fr": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/fr",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/licenses"
+      },
+      "it": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/it",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/it/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/it/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/it/licenses"
+      },
+      "de": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/de",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/de/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/de/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/de/licenses"
+      },
+      "es-ES": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/licenses"
+      },
+      "ko": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/ko",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/licenses"
+      },
+      "pl": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/pl",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/licenses"
+      },
+      "pt-BR": {
+        "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/privacy",
+        "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/licenses"
+      }
+    }
+  },
+  "routes": [
+    {
+      "path": "site/index.html",
+      "route": "/",
+      "locale": "en",
+      "kind": "landing",
+      "default": true,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site",
+      "sha256": "c3e4844594e3f6c7722c472f20b3d28e886f7289f38c5fe6abd6754381cbe476",
+      "bytes": 4658
+    },
+    {
+      "path": "site/support/index.html",
+      "route": "/support/",
+      "locale": "en",
+      "kind": "support",
+      "default": true,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/support/",
+      "sha256": "a0b2b6327d19333fd69a83799b8c8abbeb35a5ad0a3150aa9000f089998c029e",
+      "bytes": 4733
+    },
+    {
+      "path": "site/privacy/index.html",
+      "route": "/privacy/",
+      "locale": "en",
+      "kind": "privacy",
+      "default": true,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/privacy/",
+      "sha256": "b7684583a92750dda28342f74b29aafa3d337bb39c5ff1adf954475cd56cb5d8",
+      "bytes": 5383
+    },
+    {
+      "path": "site/licenses/index.html",
+      "route": "/licenses/",
+      "locale": "en",
+      "kind": "licenses",
+      "default": true,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/licenses/",
+      "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669",
+      "bytes": 7905
+    },
+    {
+      "path": "site/zh-Hans/index.html",
+      "route": "/zh-Hans/",
+      "locale": "zh-Hans",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/",
+      "sha256": "7dc2295b11c416619fc4d844a7560b579ed7bc7fe1304f998250e54d812901a9",
+      "bytes": 4589
+    },
+    {
+      "path": "site/zh-Hans/support/index.html",
+      "route": "/zh-Hans/support/",
+      "locale": "zh-Hans",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support/",
+      "sha256": "7c6e5c9b0de6bfcb7f266196f934d48accd35210bddffec0fc24b675d3615f99",
+      "bytes": 4614
+    },
+    {
+      "path": "site/zh-Hans/privacy/index.html",
+      "route": "/zh-Hans/privacy/",
+      "locale": "zh-Hans",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy/",
+      "sha256": "afb8e2cb318d596c146ecd738cfe17e1c0a72c2f0f63582a79204b9e848ff523",
+      "bytes": 5104
+    },
+    {
+      "path": "site/zh-Hans/licenses/index.html",
+      "route": "/zh-Hans/licenses/",
+      "locale": "zh-Hans",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/licenses/",
+      "sha256": "283337071bf2fcb13c5e715cffceaefafe4231609fcc3d81ca4711cd5850e5e2",
+      "bytes": 7858
+    },
+    {
+      "path": "site/zh-Hant/index.html",
+      "route": "/zh-Hant/",
+      "locale": "zh-Hant",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/",
+      "sha256": "a07e5b8298c6370d7aa99ead41f22106cde0525bab3f89314cf8fb1c9c7874ac",
+      "bytes": 4589
+    },
+    {
+      "path": "site/zh-Hant/support/index.html",
+      "route": "/zh-Hant/support/",
+      "locale": "zh-Hant",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support/",
+      "sha256": "06a6a4fc2901d8352ebca335edd18c1c29312cc849173b3054fbd46949ca5292",
+      "bytes": 4614
+    },
+    {
+      "path": "site/zh-Hant/privacy/index.html",
+      "route": "/zh-Hant/privacy/",
+      "locale": "zh-Hant",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy/",
+      "sha256": "da13852a3390fd2e68578a1def4d12e8fd26314dc2764b772fcf84c8d54679a8",
+      "bytes": 5116
+    },
+    {
+      "path": "site/zh-Hant/licenses/index.html",
+      "route": "/zh-Hant/licenses/",
+      "locale": "zh-Hant",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/licenses/",
+      "sha256": "43e07c099f4069a52911a5625da5918244e1cae90f38ad4ac553862baa533d07",
+      "bytes": 7864
+    },
+    {
+      "path": "site/en/index.html",
+      "route": "/en/",
+      "locale": "en",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/en/",
+      "sha256": "c3e4844594e3f6c7722c472f20b3d28e886f7289f38c5fe6abd6754381cbe476",
+      "bytes": 4658
+    },
+    {
+      "path": "site/en/support/index.html",
+      "route": "/en/support/",
+      "locale": "en",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/en/support/",
+      "sha256": "a0b2b6327d19333fd69a83799b8c8abbeb35a5ad0a3150aa9000f089998c029e",
+      "bytes": 4733
+    },
+    {
+      "path": "site/en/privacy/index.html",
+      "route": "/en/privacy/",
+      "locale": "en",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/en/privacy/",
+      "sha256": "b7684583a92750dda28342f74b29aafa3d337bb39c5ff1adf954475cd56cb5d8",
+      "bytes": 5383
+    },
+    {
+      "path": "site/en/licenses/index.html",
+      "route": "/en/licenses/",
+      "locale": "en",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/en/licenses/",
+      "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669",
+      "bytes": 7905
+    },
+    {
+      "path": "site/fr/index.html",
+      "route": "/fr/",
+      "locale": "fr",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/",
+      "sha256": "1f0e09909a1489aeae82704bc2af5baf03e06988da3dc5bb89b65e962f61808e",
+      "bytes": 4686
+    },
+    {
+      "path": "site/fr/support/index.html",
+      "route": "/fr/support/",
+      "locale": "fr",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/support/",
+      "sha256": "c11d53b5485303ccd185fedff686b561b2e0fafb5c794f3f16a16183c40fc0fe",
+      "bytes": 4968
+    },
+    {
+      "path": "site/fr/privacy/index.html",
+      "route": "/fr/privacy/",
+      "locale": "fr",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy/",
+      "sha256": "83ad24954ba7af157919043bb747faf1bf690135040555db6676793d0221e5dc",
+      "bytes": 5737
+    },
+    {
+      "path": "site/fr/licenses/index.html",
+      "route": "/fr/licenses/",
+      "locale": "fr",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/licenses/",
+      "sha256": "73cbfd244503a957a1fda5732b5d5699b11ceb190dc53b04253ee234295c3c09",
+      "bytes": 7906
+    },
+    {
+      "path": "site/it/index.html",
+      "route": "/it/",
+      "locale": "it",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/it/",
+      "sha256": "afad81c3fafe618c0f50a6b913d58b3ce0ed66122b53206cf752b0b8a5486269",
+      "bytes": 4660
+    },
+    {
+      "path": "site/it/support/index.html",
+      "route": "/it/support/",
+      "locale": "it",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/it/support/",
+      "sha256": "1fad65a12b167d31e1662565b84fd2641cb0cbb0c55afca679ffa387be0ccc69",
+      "bytes": 4847
+    },
+    {
+      "path": "site/it/privacy/index.html",
+      "route": "/it/privacy/",
+      "locale": "it",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/it/privacy/",
+      "sha256": "422ed440804d13f02e6538439b7174654d0a9e6cfce233f5b8677db940a8dd17",
+      "bytes": 5503
+    },
+    {
+      "path": "site/it/licenses/index.html",
+      "route": "/it/licenses/",
+      "locale": "it",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/it/licenses/",
+      "sha256": "05d4676e1457260dcbb53128ba5b753393673965db3748fc7fca8b059d6e0e0b",
+      "bytes": 7899
+    },
+    {
+      "path": "site/de/index.html",
+      "route": "/de/",
+      "locale": "de",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/de/",
+      "sha256": "37f065c94fbfc5beb001f955363c8868475461d81a1c41f484ce465aa91a1f8a",
+      "bytes": 4667
+    },
+    {
+      "path": "site/de/support/index.html",
+      "route": "/de/support/",
+      "locale": "de",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/de/support/",
+      "sha256": "667210614712327ad7dc03728ab9a7733cce7c2ea5c2a2295074b22f3db10a42",
+      "bytes": 4838
+    },
+    {
+      "path": "site/de/privacy/index.html",
+      "route": "/de/privacy/",
+      "locale": "de",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/de/privacy/",
+      "sha256": "f1560f1eebc1944e3062aec2e173f3ae1de8f2ae4217c58cecb5f712e5b3391f",
+      "bytes": 5487
+    },
+    {
+      "path": "site/de/licenses/index.html",
+      "route": "/de/licenses/",
+      "locale": "de",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/de/licenses/",
+      "sha256": "5f500f61170b300c0a3a2f7702be0f973a726386c5642573b87b5c9a262aba5e",
+      "bytes": 7899
+    },
+    {
+      "path": "site/es-ES/index.html",
+      "route": "/es-ES/",
+      "locale": "es-ES",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/",
+      "sha256": "70ebefbf26a540e32f8c1b074083e63a773697dd43a2b0bb857bfafc703b4fc8",
+      "bytes": 4675
+    },
+    {
+      "path": "site/es-ES/support/index.html",
+      "route": "/es-ES/support/",
+      "locale": "es-ES",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/support/",
+      "sha256": "2405e9c7785d2aacf30f2e31f608dfa7ed75fdd79ece35c3444935e898121738",
+      "bytes": 4917
+    },
+    {
+      "path": "site/es-ES/privacy/index.html",
+      "route": "/es-ES/privacy/",
+      "locale": "es-ES",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/privacy/",
+      "sha256": "83462a2db4879e0d4e35ab6c1e0f02b7c0e225c22778fa96b9a9fae02d683801",
+      "bytes": 5533
+    },
+    {
+      "path": "site/es-ES/licenses/index.html",
+      "route": "/es-ES/licenses/",
+      "locale": "es-ES",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/es-ES/licenses/",
+      "sha256": "ec4f1a7e7e5306c294351eaf1d0fa5f0430383aa0c6a74d60a9b169f51d70f88",
+      "bytes": 7914
+    },
+    {
+      "path": "site/ko/index.html",
+      "route": "/ko/",
+      "locale": "ko",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/",
+      "sha256": "5cf43edfd00497120a01f8d7aa45b2b94ddad418b9e9ebc184055a8368be2568",
+      "bytes": 4746
+    },
+    {
+      "path": "site/ko/support/index.html",
+      "route": "/ko/support/",
+      "locale": "ko",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/support/",
+      "sha256": "7ec00752f20aa0c267bc9de3c1a4f85b91471d4abd22f6e84902acb19d8f35cd",
+      "bytes": 4903
+    },
+    {
+      "path": "site/ko/privacy/index.html",
+      "route": "/ko/privacy/",
+      "locale": "ko",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/privacy/",
+      "sha256": "f49dbcdc7353f918a0261c2dd9b1a9df97534363a7d1b512c704a1757078a421",
+      "bytes": 5611
+    },
+    {
+      "path": "site/ko/licenses/index.html",
+      "route": "/ko/licenses/",
+      "locale": "ko",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/ko/licenses/",
+      "sha256": "7eeb9e7df2c35613f7aae29018888f9fe5cad6fde4d10e8969136a7c9f17e126",
+      "bytes": 7915
+    },
+    {
+      "path": "site/pl/index.html",
+      "route": "/pl/",
+      "locale": "pl",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/",
+      "sha256": "8b0814ca52be2ea1d5edce475a42cdea7fd90a9dae682d5210039f0af3dd0fef",
+      "bytes": 4670
+    },
+    {
+      "path": "site/pl/support/index.html",
+      "route": "/pl/support/",
+      "locale": "pl",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/support/",
+      "sha256": "d787bbbde2c313e015362304b0a54f617d3363c775afd23d19c2d61b32ea0bea",
+      "bytes": 4851
+    },
+    {
+      "path": "site/pl/privacy/index.html",
+      "route": "/pl/privacy/",
+      "locale": "pl",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/privacy/",
+      "sha256": "de00b6262106820e50f6486041262dc9a73f44a7c76d86b164b6b880dcc01241",
+      "bytes": 5455
+    },
+    {
+      "path": "site/pl/licenses/index.html",
+      "route": "/pl/licenses/",
+      "locale": "pl",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pl/licenses/",
+      "sha256": "f384d69c61540a3bfc38ea16f2bde7ad63d2e2455f91c601d5ab537b691137df",
+      "bytes": 7904
+    },
+    {
+      "path": "site/pt-BR/index.html",
+      "route": "/pt-BR/",
+      "locale": "pt-BR",
+      "kind": "landing",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/",
+      "sha256": "3227294c91d9ff35ee883ab5bdf193ce8d6b7a6cc3e1a5084d166b3e87226ef0",
+      "bytes": 4679
+    },
+    {
+      "path": "site/pt-BR/support/index.html",
+      "route": "/pt-BR/support/",
+      "locale": "pt-BR",
+      "kind": "support",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/support/",
+      "sha256": "1f531ba9515f6d752242106beaaf0d41209cf4bd0361c4b4c8d68d69ffd26ba4",
+      "bytes": 4879
+    },
+    {
+      "path": "site/pt-BR/privacy/index.html",
+      "route": "/pt-BR/privacy/",
+      "locale": "pt-BR",
+      "kind": "privacy",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/privacy/",
+      "sha256": "ec28f789e817a2c8c72d782d2554119716ca570421ad78e82f18f024ce2f5ecd",
+      "bytes": 5524
+    },
+    {
+      "path": "site/pt-BR/licenses/index.html",
+      "route": "/pt-BR/licenses/",
+      "locale": "pt-BR",
+      "kind": "licenses",
+      "default": false,
+      "hostedUrl": "https://johnshinsei.github.io/kana-sprint-site/pt-BR/licenses/",
+      "sha256": "b36d75a12eb0fa4de91b42df539dba308954965ab3f2663c85c00671bcfe1756",
+      "bytes": 7915
+    }
+  ],
+  "controlFiles": [
+    {
+      "path": "site/robots.txt",
+      "exists": true,
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    },
+    {
+      "path": "site/_headers",
+      "exists": true,
+      "bytes": 228,
+      "sha256": "64c606f32d8c9c0a308846483f3ee5c1586646f539c80ef3dafabdd21a35b6de"
+    },
+    {
+      "path": "site/_redirects",
+      "exists": true,
+      "bytes": 1057,
+      "sha256": "942573909cdd8cc7a6704f355b5366ec30d37e98767887e352fa2c9aca8fe84f"
+    }
+  ],
+  "sitemap": {
+    "path": "site/sitemap.xml",
+    "exists": true,
+    "required": true,
+    "ready": true,
+    "urlCount": 44,
+    "expectedUrlCount": 44,
+    "sha256": "cb94d18c958ad10d326bcb91a7ac6e5b54180433ee2830a80037567acc5e6613",
+    "bytes": 3736
+  },
+  "checks": [
+    {
+      "id": "site-folder",
+      "action": "Host the entire site/ folder as the web root.",
+      "status": "READY",
+      "evidence": "The deploy root must preserve nested support/privacy/license routes."
+    },
+    {
+      "id": "hosting-control-files",
+      "action": "Upload robots.txt, _headers, and _redirects with the site root.",
+      "status": "READY",
+      "evidence": "These files are generated beside index.html."
+    },
+    {
+      "id": "github-pages-workflow",
+      "action": "Use the GitHub Pages workflow to publish site/ when this repo is hosted on GitHub.",
+      "status": "READY",
+      "evidence": "The workflow uploads site/ with the official Pages artifact and deploy actions."
+    },
+    {
+      "id": "sitemap",
+      "action": "Set APP_STORE_BASE_URL and rerun the site commands to generate sitemap.xml.",
+      "status": "READY",
+      "evidence": "The sitemap is generated only for a production HTTPS base URL."
+    },
+    {
+      "id": "https",
+      "action": "Use a production HTTPS origin, not localhost, .test, .local, .example, or example.com.",
+      "status": "READY",
+      "evidence": "App Store support and privacy URLs must be public."
+    },
+    {
+      "id": "support-url",
+      "action": "Confirm the Support URL opens without auth.",
+      "status": "READY",
+      "evidence": "Use APP_STORE_BASE_URL or APP_STORE_SUPPORT_URL."
+    },
+    {
+      "id": "privacy-url",
+      "action": "Confirm the Privacy Policy URL opens without auth.",
+      "status": "READY",
+      "evidence": "Use APP_STORE_BASE_URL or APP_STORE_PRIVACY_URL."
+    },
+    {
+      "id": "localized-routes",
+      "action": "Confirm localized /<locale>/support/, /<locale>/privacy/, and /<locale>/licenses/ routes are served.",
+      "status": "READY",
+      "evidence": "Settings uses localized links when APP_STORE_BASE_URL is set."
+    },
+    {
+      "id": "metadata-sync",
+      "action": "Rerun metadata preview after setting production URLs.",
+      "status": "READY",
+      "evidence": "store.config.js injects the same URL state into EAS Metadata."
+    }
+  ],
+  "commands": [
+    "npm run site:localized",
+    "npm run site:manifest",
+    "npm run site:deploy-audit",
+    "npm run site:verify-hosting",
+    "GitHub Actions: Deploy public site",
+    "npm run metadata:preview",
+    "npm run release:status",
+    "npm run release:store-ready"
+  ]
+}

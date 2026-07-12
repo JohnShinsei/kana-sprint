@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-privacy-manifest-audit.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "dynamicExpoConfig": "app.config.js",
+    "privacyAnswers": "docs/app-store-privacy-answers.md",
+    "privacyPolicy": "docs/privacy.md",
+    "adsNative": "src/ads.native.ts"
+  },
+  "officialReferences": [
+    {
+      "label": "Apple Privacy Manifest Files",
+      "url": "https://developer.apple.com/documentation/bundleresources/privacy-manifest-files"
+    },
+    {
+      "label": "Apple Describing Data Use In Privacy Manifests",
+      "url": "https://developer.apple.com/documentation/bundleresources/describing-data-use-in-privacy-manifests"
+    },
+    {
+      "label": "Apple Describing Use Of Required Reason API",
+      "url": "https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api"
+    },
+    {
+      "label": "Apple App Privacy Details",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/"
+    }
+  ],
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint"
+  },
+  "iosPrivacyManifest": {
+    "tracking": false,
+    "trackingDomains": [],
+    "collectedDataTypes": [],
+    "accessedApiTypes": [
+      {
+        "category": "NSPrivacyAccessedAPICategoryUserDefaults",
+        "reasons": [
+          "CA92.1"
+        ],
+        "reason": "App-specific progress, scores, language, music, and settings are stored locally.",
+        "present": true,
+        "actualReasons": [
+          "CA92.1"
+        ],
+        "ready": true
+      },
+      {
+        "category": "NSPrivacyAccessedAPICategoryFileTimestamp",
+        "reasons": [
+          "C617.1"
+        ],
+        "reason": "React Native and Expo dependencies may inspect bundled asset file timestamps.",
+        "present": true,
+        "actualReasons": [
+          "C617.1"
+        ],
+        "ready": true
+      }
+    ],
+    "rawAccessedApiTypeCount": 2
+  },
+  "platformPosture": {
+    "usesNonExemptEncryption": false,
+    "microphonePermission": false,
+    "audioBackgroundPlayback": false,
+    "audioBackgroundRecording": false,
+    "recordAudioAndroid": false,
+    "androidBlockedPermissions": [
+      "android.permission.RECORD_AUDIO",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+    ]
+  },
+  "adMobPosture": {
+    "dependencyPresent": true,
+    "liveAdsEnabled": false,
+    "nativePluginConfigured": false,
+    "umpConsentFlowPresent": true,
+    "nonPersonalizedDefault": true,
+    "finalPrivacyAnswersEnv": "APP_STORE_PRIVACY_ANSWERS_REVIEWED"
+  },
+  "documents": {
+    "privacyAnswersMentionsApple": true,
+    "privacyAnswersMentionsGoogleMobileAds": true,
+    "privacyPolicyMentionsNoAccount": true,
+    "privacyPolicyMentionsLocalData": true
+  },
+  "summary": {
+    "risk": "PASS",
+    "tracking": false,
+    "trackingDomains": 0,
+    "collectedDataTypes": 0,
+    "accessedApiTypes": 2,
+    "requiredReasonApisReady": true,
+    "nonExemptEncryption": false,
+    "androidBlockedPermissionCount": 3,
+    "microphoneDisabled": true,
+    "liveAdsEnabled": false,
+    "adMobPrivacyReviewRequired": false
+  }
+}

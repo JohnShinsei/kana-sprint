@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>隐私政策</title>
+    <meta name="description" content="Kana Sprint 是 60 秒日语学习游戏，训练假名、JLPT N5-N1 词汇和原创动漫感短句。">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #172131;
+        --ink: #fff7e8;
+        --muted: #a7b0c4;
+        --accent: #ffb23f;
+        --green: #31c6a7;
+        --line: #2e3a4e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 64px;
+      }
+      .mark {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 38px;
+        font-weight: 800;
+      }
+      nav { margin-bottom: 48px; }
+      a { color: var(--accent); }
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 76px);
+        line-height: 1;
+      }
+      h2 {
+        margin: 38px 0 10px;
+        font-size: 24px;
+      }
+      p, li {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: var(--panel);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .button.primary {
+        border-color: transparent;
+        background: var(--accent);
+        color: var(--bg);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 60px;
+      }
+      .fact, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green);
+      }
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      td {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .locale-note {
+        margin-top: 34px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav><a href="../">Kana Sprint</a></nav>
+      <h1>隐私政策</h1>
+      <p class="panel">Kana Sprint 本身不收集个人数据。</p>
+      <h2>本地数据</h2>
+      <p>应用会在用户设备本地保存游戏进度、最高分、连击记录、每日连续天数、每日目标进度、已学项目数量、语言设置、音乐设置和所选难度。用户可在设置里重置本机进度。这些数据不会发送给开发者或云服务。</p>
+      <h2>无账号或跟踪</h2>
+      <p>Kana Sprint 不要求登录、账号创建、分析 SDK、位置、通讯录、相机、麦克风、后台音频、推送通知或用户生成内容。当前构建的 iOS 隐私清单声明无跟踪和无收集数据。</p>
+      <h2>激励广告</h2>
+      <p>Kana Sprint 包含可选的续局激励广告入口。只有正式发布构建配置有效 AdMob ID 后，Google Mobile Ads 才会启用。广告请求默认使用非个性化广告。</p>
+      <p>当 Google UMP 报告需要广告隐私选项时，应用会在设置中显示广告隐私入口，用于打开 UMP 隐私选项表单。</p>
+      <p>启用 Google Mobile Ads 后，Google 的 SDK 可能接收广告相关数据，例如 IP 地址、由 IP 推断的大致位置、崩溃日志、性能数据、设备 ID 或广告标识符、广告数据以及广告展示或应用交互等产品交互数据。</p>
+      <h2>变更</h2>
+      <p>如果未来版本的数据使用方式发生变化，此页面和 App Store 隐私信息应在发布前更新。</p>
+
+    </main>
+  </body>
+</html>

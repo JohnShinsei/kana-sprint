@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-final-launch-runbook.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "packageJson": "package.json",
+    "releaseStatus": "scripts/release-status.js --json",
+    "externalReadiness": "docs/external-readiness.json",
+    "storeSubmissionInputPack": "docs/store-submission-input-pack.json",
+    "accountServicePreflight": "docs/account-service-preflight.json",
+    "easSubmissionChecklist": "docs/eas-submission-checklist.json",
+    "releasePacket": "docs/release-packet.json"
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint",
+    "locales": 10
+  },
+  "summary": {
+    "localReady": true,
+    "externalReady": false,
+    "strictGateReady": false,
+    "readyToRunMetadataBuildSubmit": false,
+    "phaseCount": 9,
+    "readyPhases": 1,
+    "todoPhases": 3,
+    "blockedPhases": 5,
+    "reviewPhases": 0,
+    "localEvidenceRows": 30,
+    "externalRows": 11,
+    "externalBlockingItems": 7
+  },
+  "currentStatus": {
+    "ok": 36,
+    "todo": 7,
+    "bad": 0,
+    "info": 0,
+    "categories": {
+      "local": {
+        "ok": 32,
+        "todo": 0,
+        "bad": 0,
+        "info": 0
+      },
+      "external": {
+        "ok": 4,
+        "todo": 7,
+        "bad": 0,
+        "info": 0
+      }
+    }
+  },
+  "finalCommands": [
+    "npm run release:verify",
+    "npm run account:preflight -- --live",
+    "npm run release:store-ready",
+    "npm run metadata:ios",
+    "npm run build:ios",
+    "npm run submit:ios"
+  ],
+  "evidence": {
+    "externalReadinessBlocking": 7,
+    "envInputs": 18,
+    "easProductionEnvKeys": 7,
+    "accountServiceChecks": 10,
+    "easSubmissionSequence": [
+      "npm run release:verify",
+      "npm run release:store-ready",
+      "npx eas-cli metadata:push",
+      "npx eas-cli build --platform ios --profile production",
+      "npx eas-cli submit --platform ios --profile production"
+    ]
+  },
+  "blockers": [
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "App Store review contact",
+      "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "Live AdMob IDs",
+      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_CONNECT_RECORD_READY",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "PRODUCTION_DEVICE_TESTED",
+      "detail": "Set to 1 only after the real external action is complete."
+    }
+  ],
+  "phases": [
+    {
+      "id": "refresh-local-evidence",
+      "title": "Refresh local release evidence",
+      "status": "READY",
+      "command": "npm run release:verify",
+      "evidence": [
+        "docs/release-packet.md",
+        "docs/app-store-handoff-bundle.md",
+        "docs/final-launch-runbook.md"
+      ],
+      "requiredBefore": [
+        "external-inputs",
+        "strict-store-gate"
+      ],
+      "action": "Run the full local verification chain on the exact workspace state that will be submitted.",
+      "commandReady": true
+    },
+    {
+      "id": "external-inputs",
+      "title": "Fill external inputs",
+      "status": "TODO",
+      "command": "npm run store:input-pack",
+      "evidence": [
+        "docs/store-submission-input-pack.md",
+        "docs/external-readiness.md"
+      ],
+      "blockers": [
+        "App Store review contact",
+        "Live AdMob IDs",
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "APP_STORE_CONNECT_RECORD_READY",
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [
+        "strict-store-gate"
+      ],
+      "action": "Fill .env.local, EAS production env values, public URLs, App Store review contact, AdMob IDs, and manual confirmations.",
+      "commandReady": true
+    },
+    {
+      "id": "account-service-preflight",
+      "title": "Verify accounts and remote services",
+      "status": "TODO",
+      "command": "npm run account:preflight -- --live",
+      "evidence": [
+        "docs/account-service-preflight.md"
+      ],
+      "blockers": [
+        "Expo account",
+        "EAS project linkage",
+        "EAS production environment",
+        "Remote app version",
+        "App Store Connect",
+        "AdMob production account",
+        "Public HTTPS hosting",
+        "iOS production build",
+        "TestFlight or physical iPhone",
+        "EAS Submit to App Store Connect"
+      ],
+      "requiredBefore": [
+        "strict-store-gate",
+        "build-ios"
+      ],
+      "action": "Check signed-in Expo/EAS state, project linkage, EAS production env values, remote version state, App Store Connect, AdMob, public hosting, and TestFlight path.",
+      "commandReady": true
+    },
+    {
+      "id": "strict-store-gate",
+      "title": "Run strict store-ready gate",
+      "status": "BLOCKED",
+      "command": "npm run release:store-ready",
+      "evidence": [
+        "docs/release-packet.md",
+        "docs/eas-submission-checklist.md"
+      ],
+      "blockers": [
+        "App Store review contact",
+        "Live AdMob IDs",
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "APP_STORE_CONNECT_RECORD_READY",
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [
+        "metadata-ios",
+        "build-ios",
+        "submit-ios"
+      ],
+      "action": "Run the strict local gate only after every TODO/BAD release-status row is cleared.",
+      "commandReady": true
+    },
+    {
+      "id": "metadata-ios",
+      "title": "Push App Store metadata",
+      "status": "BLOCKED",
+      "command": "npm run metadata:ios",
+      "evidence": [
+        "store.config.js",
+        "docs/app-store-metadata-upload-packet.md"
+      ],
+      "blockers": [
+        "App Store review contact",
+        "Live AdMob IDs",
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "APP_STORE_CONNECT_RECORD_READY",
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [
+        "build-ios"
+      ],
+      "action": "Push localized App Store metadata after public URLs and review contact values are valid.",
+      "commandReady": true
+    },
+    {
+      "id": "build-ios",
+      "title": "Build iOS production archive",
+      "status": "BLOCKED",
+      "command": "npm run build:ios",
+      "evidence": [
+        "docs/eas-build-preflight.md",
+        "docs/account-service-preflight.md"
+      ],
+      "blockers": [
+        "App Store review contact",
+        "Live AdMob IDs",
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "APP_STORE_CONNECT_RECORD_READY",
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [
+        "testflight-smoke",
+        "submit-ios"
+      ],
+      "action": "Create the App Store distribution archive with EAS Build for the final bundle identifier.",
+      "commandReady": true
+    },
+    {
+      "id": "testflight-smoke",
+      "title": "Run TestFlight or physical-device smoke",
+      "status": "TODO",
+      "command": "docs/production-device-smoke-test.md",
+      "evidence": [
+        "docs/production-device-smoke-test.md"
+      ],
+      "blockers": [
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [
+        "submit-ios",
+        "app-store-review"
+      ],
+      "action": "Install the exact production/TestFlight build and complete the first-launch, N5-N1, Settings, BGM, links, and rewarded-ad smoke path.",
+      "commandReady": true
+    },
+    {
+      "id": "submit-ios",
+      "title": "Submit iOS build",
+      "status": "BLOCKED",
+      "command": "npm run submit:ios",
+      "evidence": [
+        "docs/eas-submission-checklist.md"
+      ],
+      "blockers": [
+        "App Store review contact",
+        "Live AdMob IDs",
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "APP_STORE_CONNECT_RECORD_READY",
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [
+        "app-store-review"
+      ],
+      "action": "Submit the production build to App Store Connect through EAS Submit.",
+      "commandReady": true
+    },
+    {
+      "id": "app-store-review",
+      "title": "Send for App Review",
+      "status": "BLOCKED",
+      "command": "App Store Connect",
+      "evidence": [
+        "docs/app-store-connect-checklist.md",
+        "docs/app-store-review-guide.md"
+      ],
+      "blockers": [
+        "App Store review contact",
+        "Live AdMob IDs",
+        "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "APP_STORE_CONNECT_RECORD_READY",
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "requiredBefore": [],
+      "action": "In App Store Connect, confirm privacy, age rating, export compliance, pricing, availability, screenshots, review notes, and submit for review.",
+      "commandReady": true
+    }
+  ],
+  "officialReferences": [
+    {
+      "title": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "title": "EAS Build setup",
+      "url": "https://docs.expo.dev/build/setup/"
+    },
+    {
+      "title": "EAS CLI reference",
+      "url": "https://docs.expo.dev/eas/cli/"
+    },
+    {
+      "title": "EAS Submit",
+      "url": "https://docs.expo.dev/submit/introduction/"
+    }
+  ]
+}

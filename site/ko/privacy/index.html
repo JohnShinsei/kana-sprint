@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>개인정보 처리방침</title>
+    <meta name="description" content="Kana Sprint는 60초 라운드로 가나, JLPT N5-N1 단어, 오리지널 애니풍 일본어 문장을 연습하는 게임입니다.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #172131;
+        --ink: #fff7e8;
+        --muted: #a7b0c4;
+        --accent: #ffb23f;
+        --green: #31c6a7;
+        --line: #2e3a4e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 64px;
+      }
+      .mark {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 38px;
+        font-weight: 800;
+      }
+      nav { margin-bottom: 48px; }
+      a { color: var(--accent); }
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 76px);
+        line-height: 1;
+      }
+      h2 {
+        margin: 38px 0 10px;
+        font-size: 24px;
+      }
+      p, li {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: var(--panel);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .button.primary {
+        border-color: transparent;
+        background: var(--accent);
+        color: var(--bg);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 60px;
+      }
+      .fact, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green);
+      }
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      td {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .locale-note {
+        margin-top: 34px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav><a href="../">Kana Sprint</a></nav>
+      <h1>개인정보 처리방침</h1>
+      <p class="panel">Kana Sprint 자체는 개인 데이터를 수집하지 않습니다.</p>
+      <h2>로컬 데이터</h2>
+      <p>앱은 게임 진행도, 최고 점수, 콤보 기록, 데일리 연속 기록, 오늘 목표 진행도, 학습한 항목 수, 언어 설정, 음악 설정, 선택한 난이도를 사용자 기기에 로컬로 저장합니다. 로컬 진행도는 설정에서 초기화할 수 있습니다. 이 데이터는 개발자나 클라우드 서비스로 전송되지 않습니다.</p>
+      <h2>계정 및 추적 없음</h2>
+      <p>Kana Sprint는 로그인, 계정 생성, 분석 SDK, 위치, 연락처, 카메라, 마이크, 백그라운드 오디오, 푸시 알림, 사용자 생성 콘텐츠를 요구하지 않습니다. 현재 빌드의 iOS 개인정보 매니페스트는 추적 없음과 수집 데이터 없음을 선언합니다.</p>
+      <h2>보상형 광고</h2>
+      <p>Kana Sprint에는 라운드를 이어하기 위한 선택형 보상형 광고 입구가 포함되어 있습니다. 유효한 AdMob ID가 출시 빌드에 설정된 경우에만 Google Mobile Ads가 활성화됩니다. 광고 요청은 기본적으로 개인 맞춤이 아닌 광고를 사용합니다.</p>
+      <p>Google UMP가 광고 개인정보 옵션이 필요하다고 보고하면, 앱은 설정에 광고 개인정보 항목을 표시하여 UMP 개인정보 옵션 양식을 열 수 있게 합니다.</p>
+      <p>Google Mobile Ads가 활성화되면 해당 SDK는 IP 주소, IP에서 추정한 대략적 위치, 충돌 로그, 성능 데이터, 기기 ID 또는 광고 식별자, 광고 데이터, 광고 조회나 앱 상호작용 같은 제품 상호작용 데이터를 받을 수 있습니다.</p>
+      <h2>변경</h2>
+      <p>향후 버전에서 데이터 사용 방식이 바뀌면 출시 전에 이 페이지와 App Store 개인정보 정보를 업데이트해야 합니다.</p>
+
+    </main>
+  </body>
+</html>

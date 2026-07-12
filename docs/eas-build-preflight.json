@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-eas-build-preflight.js",
+  "generatedFrom": {
+    "appConfig": "app.json + app.config.js",
+    "easJson": "eas.json",
+    "packageJson": "package.json",
+    "easIgnore": ".easignore",
+    "easEnvironmentChecklist": "docs/eas-env-checklist.json",
+    "externalReadiness": "docs/external-readiness.json",
+    "releaseStatus": "scripts/release-status.js --json"
+  },
+  "officialReferences": [
+    {
+      "label": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "label": "EAS Build eas.json",
+      "url": "https://docs.expo.dev/build/eas-json/"
+    },
+    {
+      "label": "EAS Submit eas.json",
+      "url": "https://docs.expo.dev/submit/eas-json/"
+    }
+  ],
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "externalReady": false,
+    "strictGateReady": false,
+    "externalBlockingItems": 7,
+    "localFailures": 0
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "slug": "kana-sprint",
+    "bundleIdentifier": "com.john.kanasprint",
+    "buildNumber": "1",
+    "packageName": "com.john.kanasprint",
+    "versionCode": 1,
+    "supportsTablet": true,
+    "nonExemptEncryption": false,
+    "privacyTracking": false
+  },
+  "eas": {
+    "cliVersion": ">= 16.0.0",
+    "appVersionSource": "remote",
+    "productionBuildProfile": {
+      "autoIncrement": true,
+      "environment": "production",
+      "developmentClient": false,
+      "distribution": "store",
+      "ready": true
+    },
+    "productionSubmitProfile": {
+      "metadataPath": "./store.config.js",
+      "ready": true
+    }
+  },
+  "commands": {
+    "metadata": "npx eas-cli metadata:push",
+    "build": "npx eas-cli build --platform ios --profile production",
+    "submit": "npx eas-cli submit --platform ios --profile production",
+    "remoteVersion": "npx eas-cli build:version:set",
+    "strictGate": "npm run release:verify && node scripts/release-check.js --strict",
+    "ready": true
+  },
+  "uploadPolicy": {
+    "easIgnorePresent": true,
+    "requiredEntries": [
+      {
+        "entry": "node_modules/",
+        "present": true
+      },
+      {
+        "entry": ".expo/",
+        "present": true
+      },
+      {
+        "entry": ".release-web-check/",
+        "present": true
+      },
+      {
+        "entry": ".env*.local",
+        "present": true
+      },
+      {
+        "entry": "/ios",
+        "present": true
+      },
+      {
+        "entry": "/android",
+        "present": true
+      },
+      {
+        "entry": "/assets/store",
+        "present": true
+      },
+      {
+        "entry": "/site",
+        "present": true
+      },
+      {
+        "entry": "/docs",
+        "present": true
+      }
+    ],
+    "forbiddenEntries": [
+      {
+        "entry": "/assets",
+        "absent": true
+      },
+      {
+        "entry": "/assets/bgm",
+        "absent": true
+      },
+      {
+        "entry": "/assets/icon.png",
+        "absent": true
+      },
+      {
+        "entry": "/assets/splash-icon.png",
+        "absent": true
+      }
+    ],
+    "keepsRuntimeAssets": true,
+    "excludesStoreArtifacts": true,
+    "ready": true
+  },
+  "environment": {
+    "checklist": "docs/eas-env-checklist.md",
+    "productionProfileEnvironmentReady": true,
+    "requiredForEasProduction": 7,
+    "clientVisible": 8
+  },
+  "externalGate": {
+    "checklist": "docs/external-readiness.md",
+    "readinessItems": 11,
+    "blockingItems": 7,
+    "blockers": [
+      {
+        "label": "App Store review contact",
+        "status": "TODO",
+        "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+      },
+      {
+        "label": "Live AdMob IDs",
+        "status": "TODO",
+        "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+      },
+      {
+        "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "status": "TODO",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "label": "APP_STORE_CONNECT_RECORD_READY",
+        "status": "TODO",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "status": "TODO",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "status": "TODO",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "label": "PRODUCTION_DEVICE_TESTED",
+        "status": "TODO",
+        "detail": "Set to 1 only after the real external action is complete."
+      }
+    ]
+  },
+  "localFailures": []
+}

@@ -1,0 +1,853 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-release-packet.js",
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "slug": "kana-sprint",
+    "scheme": "kanasprint",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint",
+    "supportsTablet": true,
+    "node": ">=22.13.0",
+    "expo": "~56.0.15",
+    "reactNative": "0.85.3"
+  },
+  "localization": {
+    "appLocales": [
+      "zh-Hans",
+      "zh-Hant",
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "appStoreLocales": [
+      "zh-Hans",
+      "zh-Hant",
+      "en-US",
+      "fr-FR",
+      "it",
+      "de-DE",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "japaneseUiLocaleRemoved": true
+  },
+  "content": {
+    "studyBank": {
+      "kana": 92,
+      "totalVocabulary": 513,
+      "totalLines": 148,
+      "totalGrammar": 100,
+      "levels": {
+        "N5": {
+          "kana": 92,
+          "vocab": 137,
+          "lines": 44,
+          "grammar": 20
+        },
+        "N4": {
+          "kana": 0,
+          "vocab": 94,
+          "lines": 26,
+          "grammar": 20
+        },
+        "N3": {
+          "kana": 0,
+          "vocab": 94,
+          "lines": 26,
+          "grammar": 20
+        },
+        "N2": {
+          "kana": 0,
+          "vocab": 94,
+          "lines": 26,
+          "grammar": 20
+        },
+        "N1": {
+          "kana": 0,
+          "vocab": 94,
+          "lines": 26,
+          "grammar": 20
+        }
+      }
+    },
+    "modes": [
+      "mix",
+      "kana",
+      "vocab",
+      "lines",
+      "grammar"
+    ],
+    "originalAnimeStyleLines": true,
+    "studyBankDepthVerified": true,
+    "studyContentLocalizationVerified": true,
+    "noKnownProtectedIpReferences": true
+  },
+  "artifacts": {
+    "runtimeAssetManifest": {
+      "path": "docs/runtime-asset-manifest.json",
+      "pngAssets": 6,
+      "audioAssets": 3,
+      "bytes": 8457900
+    },
+    "runtimeUiFlowAudit": {
+      "path": "docs/runtime-ui-flow-audit.md",
+      "risk": "PASS",
+      "localReady": true,
+      "checks": 21,
+      "passedChecks": 21,
+      "requiredFlowFailures": 0,
+      "locales": 10,
+      "levels": 5,
+      "modes": 5
+    },
+    "publicSiteManifest": {
+      "path": "docs/public-site-manifest.json",
+      "pages": 44,
+      "locales": [
+        "zh-Hans",
+        "zh-Hant",
+        "en",
+        "fr",
+        "it",
+        "de",
+        "es-ES",
+        "ko",
+        "pl",
+        "pt-BR"
+      ]
+    },
+    "publicSiteDeployAudit": {
+      "path": "docs/public-site-deploy-audit.md",
+      "risk": "PASS",
+      "localReady": true,
+      "hostingReady": true,
+      "routes": 44,
+      "supportUrlReady": true,
+      "privacyUrlReady": true,
+      "hostingControlFilesReady": true,
+      "sitemapReady": true
+    },
+    "publicSiteHostingVerification": {
+      "path": "docs/public-site-hosting-verification.md",
+      "status": "PASS",
+      "ready": true,
+      "checkedUrls": 45,
+      "passedUrls": 45,
+      "failedUrls": 0,
+      "hasProductionBaseUrl": true
+    },
+    "screenshotManifest": {
+      "path": "docs/app-store-screenshot-manifest.json",
+      "platform": "ios",
+      "entries": 176,
+      "localizedPacks": 10
+    },
+    "screenshotQaAudit": {
+      "path": "docs/screenshot-qa-audit.md",
+      "risk": "PASS",
+      "entries": 176,
+      "allScreenshotsReady": true,
+      "localizedNonEnglishDistinctFromDefault": true,
+      "unexpectedDuplicateGroups": 0
+    },
+    "metadataPreview": {
+      "path": "docs/app-store-metadata-preview.json",
+      "locales": 10,
+      "reviewContactReady": false
+    },
+    "appStoreCopyAudit": {
+      "path": "docs/app-store-copy-audit.md",
+      "risk": "PASS",
+      "readyLocales": 10,
+      "locales": 10,
+      "keywordFormatReady": true,
+      "keywordsByteLimitReady": true,
+      "noProtectedTermHits": true
+    },
+    "metadataUploadPacket": {
+      "path": "docs/app-store-metadata-upload-packet.md",
+      "risk": "PASS",
+      "localReady": true,
+      "locales": 10,
+      "fieldReadyLocales": 10,
+      "screenshotReadyLocales": 10,
+      "supportUrlReadyLocales": 10,
+      "privacyUrlReadyLocales": 10,
+      "copyAuditRisk": "PASS"
+    },
+    "localizationAudit": {
+      "path": "docs/localization-audit.md",
+      "risk": "PASS",
+      "uiLocales": 10,
+      "appStoreLocales": 10,
+      "localizedScreenshotEntries": 160,
+      "publicSitePages": 44,
+      "japaneseUiLocaleRemoved": true
+    },
+    "reviewGuide": {
+      "path": "docs/app-store-review-guide.md",
+      "demoAccountRequired": false,
+      "signInRequired": false
+    },
+    "ageRatingAudit": {
+      "path": "docs/app-store-age-rating-audit.md",
+      "risk": "PASS",
+      "suggestedAppleGlobalRating": "4+ candidate",
+      "frequencyNoneAnswers": 12,
+      "frequencyQuestions": 12,
+      "finalRatingSource": "App Store Connect age rating questionnaire"
+    },
+    "studyBankDepthAudit": {
+      "path": "docs/study-bank-depth-audit.md",
+      "risk": "PASS",
+      "levels": 5,
+      "topicFamilies": 26,
+      "playableMeaningPrompts": 661,
+      "difficultyProgressionPassed": true
+    },
+    "studyContentLocalizationAudit": {
+      "path": "docs/study-content-localization-audit.md",
+      "risk": "PASS",
+      "locales": 10,
+      "studyItems": 853,
+      "studyTextKeys": 685,
+      "localizedFieldsReady": 17060,
+      "expectedLocalizedFields": 17060,
+      "contentTranslationEntriesReady": 4110,
+      "expectedContentTranslationEntries": 4110,
+      "missingLocalizedFields": 0,
+      "missingTranslationEntries": 0
+    },
+    "contentRightsAudit": {
+      "path": "docs/content-rights-audit.md",
+      "risk": "PASS",
+      "protectedIpTermHits": 0,
+      "originalAnimeStyleLinePrompts": 148
+    },
+    "openSourceLicenseAudit": {
+      "path": "docs/open-source-license-audit.md",
+      "risk": "PASS",
+      "runtimePackages": 515,
+      "unknownRuntimeLicenses": 0,
+      "prohibitedRuntimeLicenses": 0,
+      "reviewRuntimeLicenses": 13
+    },
+    "privacyManifestAudit": {
+      "path": "docs/privacy-manifest-audit.md",
+      "risk": "PASS",
+      "tracking": false,
+      "collectedDataTypes": 0,
+      "requiredReasonApisReady": true
+    },
+    "privacyAnswers": {
+      "path": "docs/app-store-privacy-answers.md",
+      "risk": "PASS",
+      "currentState": "NO_LIVE_ADS",
+      "appCodeCollectsPersonalData": false,
+      "noLiveAdsRows": 11,
+      "liveAdMobDisclosureRows": 6,
+      "confirmationEnv": "APP_STORE_PRIVACY_ANSWERS_REVIEWED"
+    },
+    "privacyReviewPacket": {
+      "path": "docs/privacy-review-packet.md",
+      "risk": "PASS",
+      "localReady": true,
+      "currentState": "NO_LIVE_ADS",
+      "finalReviewConfirmed": false,
+      "noLiveAdsSuggestedRows": 11,
+      "liveAdMobDisclosureRows": 6,
+      "appOwnedNetworkRequests": 0,
+      "analyticsSdkCount": 0,
+      "authSdkCount": 0,
+      "userContentEntryCount": 0
+    },
+    "admobReleaseAudit": {
+      "path": "docs/admob-release-audit.md",
+      "risk": "PASS",
+      "currentState": "NO_LIVE_ADS",
+      "localReady": true,
+      "liveAdsReady": false,
+      "externalReady": false,
+      "externalBlockingItems": 2
+    },
+    "dataFlowPrivacyAudit": {
+      "path": "docs/data-flow-privacy-audit.md",
+      "risk": "PASS",
+      "localReady": true,
+      "appOwnedNetworkRequests": 0,
+      "analyticsSdkCount": 0,
+      "authSdkCount": 0,
+      "userContentEntryCount": 0,
+      "localStorageKeys": 2
+    },
+    "productionSmokeTest": {
+      "path": "docs/production-device-smoke-test.md",
+      "sections": 7,
+      "items": 34,
+      "finalConfirmation": "PRODUCTION_DEVICE_TESTED"
+    },
+    "externalReadiness": {
+      "path": "docs/external-readiness.md",
+      "items": 11,
+      "blocking": 7
+    },
+    "easEnvironment": {
+      "path": "docs/eas-env-checklist.md",
+      "keys": 18,
+      "requiredForEasProduction": 7,
+      "productionProfileEnvironment": "production"
+    },
+    "easBuildPreflight": {
+      "path": "docs/eas-build-preflight.md",
+      "risk": "PASS",
+      "localReady": true,
+      "externalReady": false,
+      "productionProfileReady": true,
+      "submitProfileReady": true,
+      "uploadPolicyReady": true,
+      "externalBlockingItems": 7
+    },
+    "appStoreConnectChecklist": {
+      "path": "docs/app-store-connect-checklist.md",
+      "sections": 5,
+      "fields": 34
+    }
+  },
+  "releaseStatus": {
+    "summary": {
+      "ok": 36,
+      "todo": 7,
+      "bad": 0,
+      "info": 0,
+      "categories": {
+        "local": {
+          "ok": 32,
+          "todo": 0,
+          "bad": 0,
+          "info": 0
+        },
+        "external": {
+          "ok": 4,
+          "todo": 7,
+          "bad": 0,
+          "info": 0
+        }
+      }
+    },
+    "rows": [
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Expo SDK 56 baseline",
+        "detail": "Expo 56, React 19.2.3, React Native 0.85.3, Node >=22.13.0, iOS 16.4, Android SDK 36."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Release CI workflow",
+        "detail": "GitHub Actions release verification runs Node 22.13.0 with typecheck, gameplay contract, and release:verify."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "UI locale coverage",
+        "detail": "10 UI locales configured from system language; Japanese UI locale omitted."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "JLPT N5-N1 study bank",
+        "detail": "92 kana, 513 vocabulary, 148 original anime-style line prompts, 100 grammar prompts."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Study bank depth audit",
+        "detail": "853 items, 26 topic families, N5-N1 progression verified."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Study content localization",
+        "detail": "853 study items and 685 study text keys localized for 10 UI locales."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Runtime assets",
+        "detail": "6 PNG assets and 3 BGM tracks recorded."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Public support/privacy/license site",
+        "detail": "44 generated pages for 10 UI locales."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Public site deploy audit",
+        "detail": "44 routes plus hosting control files packaged; GitHub Pages workflow ready=yes, sitemap ready=yes, external hosting ready=yes."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Public site hosting handoff",
+        "detail": "44 routes mapped to 4 hosting options; external hosting verified=yes."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store screenshots",
+        "detail": "176 screenshots across default and localized iOS packs."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store screenshot QA",
+        "detail": "176 screenshots QA-passed across 10 localized upload packs."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store metadata preview",
+        "detail": "10 App Store locales previewed."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store copy audit",
+        "detail": "10/10 locales pass App Store copy, keyword, and claim checks."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store metadata upload packet",
+        "detail": "10/10 locales have copy-ready fields and screenshot upload packs; support URLs ready=10/10."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Localization QA audit",
+        "detail": "10 UI locales, 10 App Store locales, and 160 localized screenshots verified."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store age rating audit",
+        "detail": "12/12 advisory answers are NONE; final rating comes from App Store Connect."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Open source license audit",
+        "detail": "515 runtime packages checked; 0 unknown and 0 prohibited runtime licenses."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store review guide",
+        "detail": "No demo account or sign-in required; 176 screenshot entries referenced."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Privacy manifest audit",
+        "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store privacy answer pack",
+        "detail": "NO_LIVE_ADS state documented; no-account local app practices and live-AdMob disclosure review steps ready."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Privacy review packet",
+        "detail": "NO_LIVE_ADS privacy packet ready; local evidence=yes, final review confirmed=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "AdMob release audit",
+        "detail": "NO_LIVE_ADS state audited; live ads ready=no, external ad setup ready=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "AdMob setup handoff",
+        "detail": "4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Data flow privacy audit",
+        "detail": "local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Runtime UI flow audit",
+        "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Store submission input pack",
+        "detail": "18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "External TODO tracker",
+        "detail": "11 external items tracked, 7 blocking, 5 final commands blocked."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Account and service preflight",
+        "detail": "10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "Final launch runbook",
+        "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "EAS production preflight",
+        "detail": "production profile ready, submit metadata path=./store.config.js, strict gate ready=no."
+      },
+      {
+        "status": "OK",
+        "category": "local",
+        "label": "App Store handoff bundle",
+        "detail": "301 handoff files indexed with hashes; external blockers=7."
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "Public support URL",
+        "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "Public privacy URL",
+        "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "Public marketing URL",
+        "detail": "https://johnshinsei.github.io/kana-sprint-site"
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "App Store review contact",
+        "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "Live AdMob IDs",
+        "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "APP_STORE_CONNECT_RECORD_READY",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "OK",
+        "category": "external",
+        "label": "EAS_REMOTE_VERSION_INITIALIZED",
+        "detail": "Confirmed."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+        "detail": "Set to 1 only after the real external action is complete."
+      },
+      {
+        "status": "TODO",
+        "category": "external",
+        "label": "PRODUCTION_DEVICE_TESTED",
+        "detail": "Set to 1 only after the real external action is complete."
+      }
+    ]
+  },
+  "localEvidence": [
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Expo SDK 56 baseline",
+      "detail": "Expo 56, React 19.2.3, React Native 0.85.3, Node >=22.13.0, iOS 16.4, Android SDK 36."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Release CI workflow",
+      "detail": "GitHub Actions release verification runs Node 22.13.0 with typecheck, gameplay contract, and release:verify."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "UI locale coverage",
+      "detail": "10 UI locales configured from system language; Japanese UI locale omitted."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "JLPT N5-N1 study bank",
+      "detail": "92 kana, 513 vocabulary, 148 original anime-style line prompts, 100 grammar prompts."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Study bank depth audit",
+      "detail": "853 items, 26 topic families, N5-N1 progression verified."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Study content localization",
+      "detail": "853 study items and 685 study text keys localized for 10 UI locales."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Runtime assets",
+      "detail": "6 PNG assets and 3 BGM tracks recorded."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Public support/privacy/license site",
+      "detail": "44 generated pages for 10 UI locales."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Public site deploy audit",
+      "detail": "44 routes plus hosting control files packaged; GitHub Pages workflow ready=yes, sitemap ready=yes, external hosting ready=yes."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Public site hosting handoff",
+      "detail": "44 routes mapped to 4 hosting options; external hosting verified=yes."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store screenshots",
+      "detail": "176 screenshots across default and localized iOS packs."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store screenshot QA",
+      "detail": "176 screenshots QA-passed across 10 localized upload packs."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store metadata preview",
+      "detail": "10 App Store locales previewed."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store copy audit",
+      "detail": "10/10 locales pass App Store copy, keyword, and claim checks."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store metadata upload packet",
+      "detail": "10/10 locales have copy-ready fields and screenshot upload packs; support URLs ready=10/10."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Localization QA audit",
+      "detail": "10 UI locales, 10 App Store locales, and 160 localized screenshots verified."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store age rating audit",
+      "detail": "12/12 advisory answers are NONE; final rating comes from App Store Connect."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Open source license audit",
+      "detail": "515 runtime packages checked; 0 unknown and 0 prohibited runtime licenses."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store review guide",
+      "detail": "No demo account or sign-in required; 176 screenshot entries referenced."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Privacy manifest audit",
+      "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store privacy answer pack",
+      "detail": "NO_LIVE_ADS state documented; no-account local app practices and live-AdMob disclosure review steps ready."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Privacy review packet",
+      "detail": "NO_LIVE_ADS privacy packet ready; local evidence=yes, final review confirmed=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "AdMob release audit",
+      "detail": "NO_LIVE_ADS state audited; live ads ready=no, external ad setup ready=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "AdMob setup handoff",
+      "detail": "4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Data flow privacy audit",
+      "detail": "local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Runtime UI flow audit",
+      "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Store submission input pack",
+      "detail": "18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "External TODO tracker",
+      "detail": "11 external items tracked, 7 blocking, 5 final commands blocked."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Account and service preflight",
+      "detail": "10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Final launch runbook",
+      "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=7."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "EAS production preflight",
+      "detail": "production profile ready, submit metadata path=./store.config.js, strict gate ready=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store handoff bundle",
+      "detail": "301 handoff files indexed with hashes; external blockers=7."
+    }
+  ],
+  "localBlockers": [],
+  "externalBlockers": [
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "App Store review contact",
+      "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "Live AdMob IDs",
+      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_CONNECT_RECORD_READY",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "PRODUCTION_DEVICE_TESTED",
+      "detail": "Set to 1 only after the real external action is complete."
+    }
+  ],
+  "commands": {
+    "verify": "npm run release:verify",
+    "strictGate": "npm run release:store-ready",
+    "metadata": "npm run metadata:ios",
+    "build": "npm run build:ios",
+    "submit": "npm run submit:ios"
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-eas-submission-checklist.js",
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "slug": "kana-sprint",
+    "bundleIdentifier": "com.john.kanasprint",
+    "buildNumber": "1",
+    "supportsTablet": true,
+    "packageName": "com.john.kanasprint"
+  },
+  "eas": {
+    "cliVersion": ">= 16.0.0",
+    "appVersionSource": "remote",
+    "productionBuild": {
+      "autoIncrement": true,
+      "environment": "production",
+      "command": "npx eas-cli build --platform ios --profile production"
+    },
+    "productionSubmit": {
+      "metadataPath": "./store.config.js",
+      "command": "npx eas-cli submit --platform ios --profile production"
+    },
+    "metadataCommand": "npx eas-cli metadata:push",
+    "remoteVersionCommand": "npx eas-cli build:version:set",
+    "buildPreflight": {
+      "path": "docs/eas-build-preflight.md",
+      "risk": "PASS",
+      "localReady": true,
+      "externalReady": false,
+      "uploadPolicyReady": true,
+      "externalBlockingItems": 7
+    }
+  },
+  "evidence": {
+    "releasePacket": "docs/release-packet.json",
+    "runtimeAssetManifest": "docs/runtime-asset-manifest.json",
+    "runtimeUiFlowAudit": "docs/runtime-ui-flow-audit.md",
+    "metadataPreview": "docs/app-store-metadata-preview.json",
+    "appStoreCopyAudit": "docs/app-store-copy-audit.md",
+    "metadataUploadPacket": "docs/app-store-metadata-upload-packet.md",
+    "localizationAudit": "docs/localization-audit.md",
+    "publicSiteDeployAudit": "docs/public-site-deploy-audit.md",
+    "publicSiteHostingVerification": "docs/public-site-hosting-verification.md",
+    "reviewGuide": "docs/app-store-review-guide.md",
+    "ageRatingAudit": "docs/app-store-age-rating-audit.md",
+    "studyBankDepthAudit": "docs/study-bank-depth-audit.md",
+    "studyContentLocalizationAudit": "docs/study-content-localization-audit.md",
+    "contentRightsAudit": "docs/content-rights-audit.md",
+    "privacyManifestAudit": "docs/privacy-manifest-audit.md",
+    "privacyAnswers": "docs/app-store-privacy-answers.md",
+    "privacyReviewPacket": "docs/privacy-review-packet.md",
+    "admobReleaseAudit": "docs/admob-release-audit.md",
+    "dataFlowPrivacyAudit": "docs/data-flow-privacy-audit.md",
+    "productionSmokeTest": "docs/production-device-smoke-test.md",
+    "externalReadiness": "docs/external-readiness.md",
+    "easEnvironment": "docs/eas-env-checklist.md",
+    "easBuildPreflight": "docs/eas-build-preflight.md",
+    "appStoreConnectChecklist": "docs/app-store-connect-checklist.md",
+    "screenshotManifest": "docs/app-store-screenshot-manifest.json",
+    "screenshotQaAudit": "docs/screenshot-qa-audit.md",
+    "appStoreLocales": 10,
+    "screenshotEntries": 176,
+    "screenshotQaRisk": "PASS",
+    "screenshotQaReady": true,
+    "screenshotQaLocalizedDistinct": true,
+    "screenshotQaUnexpectedDuplicateGroups": 0,
+    "runtimeUiFlowRisk": "PASS",
+    "runtimeUiFlowReady": true,
+    "runtimeUiFlowChecks": 21,
+    "runtimeUiFlowPassedChecks": 21,
+    "runtimeUiFlowRequiredFailures": 0,
+    "appStoreCopyRisk": "PASS",
+    "appStoreCopyReadyLocales": 10,
+    "appStoreCopyLocales": 10,
+    "appStoreCopyKeywordFormatReady": true,
+    "appStoreCopyKeywordsByteLimitReady": true,
+    "appStoreCopyNoProtectedTerms": true,
+    "metadataUploadPacketRisk": "PASS",
+    "metadataUploadPacketLocalReady": true,
+    "metadataUploadPacketFieldReadyLocales": 10,
+    "metadataUploadPacketScreenshotReadyLocales": 10,
+    "metadataUploadPacketSupportUrlReadyLocales": 10,
+    "metadataUploadPacketPrivacyUrlReadyLocales": 10,
+    "localizationRisk": "PASS",
+    "localizationUiLocales": 10,
+    "localizationAppStoreLocales": 10,
+    "localizationScreenshotEntries": 160,
+    "localizationPublicSitePages": 44,
+    "localizationJapaneseUiRemoved": true,
+    "publicSiteDeployRisk": "PASS",
+    "publicSiteDeployLocalReady": true,
+    "publicSiteDeployHostingReady": true,
+    "publicSiteDeployRoutes": 44,
+    "publicSiteHostingVerificationStatus": "PASS",
+    "publicSiteHostingVerificationReady": true,
+    "publicSiteHostingVerificationCheckedUrls": 45,
+    "publicSiteHostingVerificationPassedUrls": 45,
+    "publicSiteHostingVerificationFailedUrls": 0,
+    "reviewContactReady": false,
+    "demoAccountRequired": false,
+    "signInRequired": false,
+    "ageRatingRisk": "PASS",
+    "ageRatingSuggestedAppleGlobalRating": "4+ candidate",
+    "ageRatingFrequencyNoneAnswers": 12,
+    "ageRatingFrequencyQuestions": 12,
+    "ageRatingFinalSource": "App Store Connect age rating questionnaire",
+    "studyBankDepthRisk": "PASS",
+    "studyBankDepthLevels": 5,
+    "studyBankDepthTotalItems": 853,
+    "studyBankDepthTopicFamilies": 26,
+    "studyBankDepthProgressionPassed": true,
+    "studyContentLocalizationRisk": "PASS",
+    "studyContentLocalizationLocales": 10,
+    "studyContentLocalizationItems": 853,
+    "studyContentLocalizationTextKeys": 685,
+    "studyContentLocalizedFields": 17060,
+    "studyContentExpectedFields": 17060,
+    "studyContentTranslationEntries": 4110,
+    "studyContentExpectedTranslationEntries": 4110,
+    "studyContentMissingLocalizedFields": 0,
+    "studyContentMissingTranslationEntries": 0,
+    "contentRightsRisk": "PASS",
+    "protectedIpTermHits": 0,
+    "originalAnimeStyleLinePrompts": 148,
+    "privacyManifestRisk": "PASS",
+    "privacyManifestTracking": false,
+    "privacyManifestCollectedDataTypes": 0,
+    "requiredReasonApisReady": true,
+    "privacyAnswersRisk": "PASS",
+    "privacyAnswersCurrentState": "NO_LIVE_ADS",
+    "privacyAnswersAppCodeCollectsPersonalData": false,
+    "privacyAnswersLiveAdMobDisclosureRows": 6,
+    "privacyReviewPacketRisk": "PASS",
+    "privacyReviewPacketLocalReady": true,
+    "privacyReviewPacketCurrentState": "NO_LIVE_ADS",
+    "privacyReviewPacketFinalReviewConfirmed": false,
+    "privacyReviewPacketNoLiveAdsSuggestedRows": 11,
+    "privacyReviewPacketLiveAdMobDisclosureRows": 6,
+    "privacyReviewPacketAppOwnedNetworkRequests": 0,
+    "privacyReviewPacketAnalyticsSdkCount": 0,
+    "privacyReviewPacketAuthSdkCount": 0,
+    "admobReleaseRisk": "PASS",
+    "admobReleaseCurrentState": "NO_LIVE_ADS",
+    "admobReleaseLocalReady": true,
+    "admobReleaseLiveAdsReady": false,
+    "admobReleaseExternalReady": false,
+    "admobReleaseExternalBlockingItems": 2,
+    "dataFlowPrivacyRisk": "PASS",
+    "dataFlowPrivacyLocalReady": true,
+    "dataFlowAppOwnedNetworkRequests": 0,
+    "dataFlowAnalyticsSdkCount": 0,
+    "dataFlowAuthSdkCount": 0,
+    "dataFlowUserContentEntryCount": 0,
+    "dataFlowLocalStorageKeys": 2,
+    "productionSmokeSections": 7,
+    "productionSmokeItems": 34,
+    "externalReadinessItems": 11,
+    "externalReadinessBlocking": 7,
+    "easEnvironmentKeys": 18,
+    "easEnvironmentRequiredForBuild": 7,
+    "easProductionProfileReady": true,
+    "appStoreConnectSections": 5,
+    "appStoreConnectFields": 34
+  },
+  "status": {
+    "ok": 36,
+    "todo": 7,
+    "bad": 0,
+    "info": 0,
+    "categories": {
+      "local": {
+        "ok": 32,
+        "todo": 0,
+        "bad": 0,
+        "info": 0
+      },
+      "external": {
+        "ok": 4,
+        "todo": 7,
+        "bad": 0,
+        "info": 0
+      }
+    }
+  },
+  "localEvidence": [
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Expo SDK 56 baseline",
+      "detail": "Expo 56, React 19.2.3, React Native 0.85.3, Node >=22.13.0, iOS 16.4, Android SDK 36."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Release CI workflow",
+      "detail": "GitHub Actions release verification runs Node 22.13.0 with typecheck, gameplay contract, and release:verify."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "UI locale coverage",
+      "detail": "10 UI locales configured from system language; Japanese UI locale omitted."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "JLPT N5-N1 study bank",
+      "detail": "92 kana, 513 vocabulary, 148 original anime-style line prompts, 100 grammar prompts."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Study bank depth audit",
+      "detail": "853 items, 26 topic families, N5-N1 progression verified."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Study content localization",
+      "detail": "853 study items and 685 study text keys localized for 10 UI locales."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Runtime assets",
+      "detail": "6 PNG assets and 3 BGM tracks recorded."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Public support/privacy/license site",
+      "detail": "44 generated pages for 10 UI locales."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Public site deploy audit",
+      "detail": "44 routes plus hosting control files packaged; GitHub Pages workflow ready=yes, sitemap ready=yes, external hosting ready=yes."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Public site hosting handoff",
+      "detail": "44 routes mapped to 4 hosting options; external hosting verified=yes."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store screenshots",
+      "detail": "176 screenshots across default and localized iOS packs."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store screenshot QA",
+      "detail": "176 screenshots QA-passed across 10 localized upload packs."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store metadata preview",
+      "detail": "10 App Store locales previewed."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store copy audit",
+      "detail": "10/10 locales pass App Store copy, keyword, and claim checks."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store metadata upload packet",
+      "detail": "10/10 locales have copy-ready fields and screenshot upload packs; support URLs ready=10/10."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Localization QA audit",
+      "detail": "10 UI locales, 10 App Store locales, and 160 localized screenshots verified."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store age rating audit",
+      "detail": "12/12 advisory answers are NONE; final rating comes from App Store Connect."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Open source license audit",
+      "detail": "515 runtime packages checked; 0 unknown and 0 prohibited runtime licenses."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store review guide",
+      "detail": "No demo account or sign-in required; 176 screenshot entries referenced."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Privacy manifest audit",
+      "detail": "iOS privacy manifest has 2 required-reason API categories, no tracking, and no collected data."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store privacy answer pack",
+      "detail": "NO_LIVE_ADS state documented; no-account local app practices and live-AdMob disclosure review steps ready."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Privacy review packet",
+      "detail": "NO_LIVE_ADS privacy packet ready; local evidence=yes, final review confirmed=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "AdMob release audit",
+      "detail": "NO_LIVE_ADS state audited; live ads ready=no, external ad setup ready=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "AdMob setup handoff",
+      "detail": "4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Data flow privacy audit",
+      "detail": "local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Runtime UI flow audit",
+      "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Store submission input pack",
+      "detail": "18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "External TODO tracker",
+      "detail": "11 external items tracked, 7 blocking, 5 final commands blocked."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Account and service preflight",
+      "detail": "10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "Final launch runbook",
+      "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=7."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "EAS production preflight",
+      "detail": "production profile ready, submit metadata path=./store.config.js, strict gate ready=no."
+    },
+    {
+      "status": "OK",
+      "category": "local",
+      "label": "App Store handoff bundle",
+      "detail": "301 handoff files indexed with hashes; external blockers=7."
+    }
+  ],
+  "blockers": [
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "App Store review contact",
+      "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "Live AdMob IDs",
+      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_CONNECT_RECORD_READY",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "detail": "Set to 1 only after the real external action is complete."
+    },
+    {
+      "status": "TODO",
+      "category": "external",
+      "label": "PRODUCTION_DEVICE_TESTED",
+      "detail": "Set to 1 only after the real external action is complete."
+    }
+  ],
+  "sequence": [
+    {
+      "step": "Verify local release evidence",
+      "command": "npm run release:verify",
+      "requiresClearedBlockers": false
+    },
+    {
+      "step": "Run strict store-ready gate",
+      "command": "npm run release:store-ready",
+      "requiresClearedBlockers": true
+    },
+    {
+      "step": "Push App Store metadata",
+      "command": "npx eas-cli metadata:push",
+      "requiresClearedBlockers": true
+    },
+    {
+      "step": "Build iOS production archive",
+      "command": "npx eas-cli build --platform ios --profile production",
+      "requiresClearedBlockers": true
+    },
+    {
+      "step": "Submit iOS build",
+      "command": "npx eas-cli submit --platform ios --profile production",
+      "requiresClearedBlockers": true
+    }
+  ]
+}

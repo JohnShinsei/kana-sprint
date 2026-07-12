@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-public-site-hosting-handoff.js",
+  "generatedFrom": {
+    "publicSiteManifest": "docs/public-site-manifest.json",
+    "publicSiteDeployAudit": "docs/public-site-deploy-audit.json",
+    "publicSiteHostingVerification": "docs/public-site-hosting-verification.json",
+    "githubPagesWorkflow": ".github/workflows/deploy-site.yml",
+    "envTemplate": ".env.example",
+    "appConfig": "app.json + app.config.js",
+    "storeConfig": "store.config.js"
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint"
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "externalReady": true,
+    "externalPending": false,
+    "urlConfigurationReady": true,
+    "hasProductionBaseUrl": true,
+    "routeCount": 44,
+    "locales": 10,
+    "hostingVerificationStatus": "PASS",
+    "hostingVerificationCheckedUrls": 45,
+    "hostingVerificationPassedUrls": 45,
+    "hostingVerificationFailedUrls": 0,
+    "githubPagesWorkflowReady": true,
+    "hostingControlFilesReady": true,
+    "sitemapReady": true,
+    "sitemapRequired": true
+  },
+  "deployPackage": {
+    "root": "site",
+    "exists": true,
+    "pageCount": 44,
+    "locales": [
+      "zh-Hans",
+      "zh-Hant",
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "pageKinds": [
+      "landing",
+      "support",
+      "privacy",
+      "licenses"
+    ],
+    "controlFiles": [
+      {
+        "path": "site/robots.txt",
+        "exists": true,
+        "bytes": 23
+      },
+      {
+        "path": "site/_headers",
+        "exists": true,
+        "bytes": 228
+      },
+      {
+        "path": "site/_redirects",
+        "exists": true,
+        "bytes": 1057
+      }
+    ],
+    "workflow": {
+      "path": ".github/workflows/deploy-site.yml",
+      "exists": true,
+      "bytes": 996
+    },
+    "routeSample": [
+      {
+        "route": "/",
+        "path": "site/index.html",
+        "locale": "en",
+        "kind": "landing"
+      },
+      {
+        "route": "/support/",
+        "path": "site/support/index.html",
+        "locale": "en",
+        "kind": "support"
+      },
+      {
+        "route": "/privacy/",
+        "path": "site/privacy/index.html",
+        "locale": "en",
+        "kind": "privacy"
+      },
+      {
+        "route": "/licenses/",
+        "path": "site/licenses/index.html",
+        "locale": "en",
+        "kind": "licenses"
+      },
+      {
+        "route": "/zh-Hans/",
+        "path": "site/zh-Hans/index.html",
+        "locale": "zh-Hans",
+        "kind": "landing"
+      },
+      {
+        "route": "/zh-Hans/support/",
+        "path": "site/zh-Hans/support/index.html",
+        "locale": "zh-Hans",
+        "kind": "support"
+      },
+      {
+        "route": "/zh-Hans/privacy/",
+        "path": "site/zh-Hans/privacy/index.html",
+        "locale": "zh-Hans",
+        "kind": "privacy"
+      },
+      {
+        "route": "/zh-Hans/licenses/",
+        "path": "site/zh-Hans/licenses/index.html",
+        "locale": "zh-Hans",
+        "kind": "licenses"
+      },
+      {
+        "route": "/zh-Hant/",
+        "path": "site/zh-Hant/index.html",
+        "locale": "zh-Hant",
+        "kind": "landing"
+      },
+      {
+        "route": "/zh-Hant/support/",
+        "path": "site/zh-Hant/support/index.html",
+        "locale": "zh-Hant",
+        "kind": "support"
+      },
+      {
+        "route": "/zh-Hant/privacy/",
+        "path": "site/zh-Hant/privacy/index.html",
+        "locale": "zh-Hant",
+        "kind": "privacy"
+      },
+      {
+        "route": "/zh-Hant/licenses/",
+        "path": "site/zh-Hant/licenses/index.html",
+        "locale": "zh-Hant",
+        "kind": "licenses"
+      },
+      {
+        "route": "/en/",
+        "path": "site/en/index.html",
+        "locale": "en",
+        "kind": "landing"
+      },
+      {
+        "route": "/en/support/",
+        "path": "site/en/support/index.html",
+        "locale": "en",
+        "kind": "support"
+      },
+      {
+        "route": "/en/privacy/",
+        "path": "site/en/privacy/index.html",
+        "locale": "en",
+        "kind": "privacy"
+      },
+      {
+        "route": "/en/licenses/",
+        "path": "site/en/licenses/index.html",
+        "locale": "en",
+        "kind": "licenses"
+      }
+    ]
+  },
+  "urls": {
+    "baseUrl": "https://johnshinsei.github.io/kana-sprint-site",
+    "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/support",
+    "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/privacy",
+    "marketingUrl": "https://johnshinsei.github.io/kana-sprint-site",
+    "openSourceNoticesUrl": "https://johnshinsei.github.io/kana-sprint-site/licenses",
+    "localizedExamples": [
+      {
+        "locale": "zh-Hans",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/privacy",
+        "licensesUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hans/licenses"
+      },
+      {
+        "locale": "zh-Hant",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/privacy",
+        "licensesUrl": "https://johnshinsei.github.io/kana-sprint-site/zh-Hant/licenses"
+      },
+      {
+        "locale": "en",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/en/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/en/privacy",
+        "licensesUrl": "https://johnshinsei.github.io/kana-sprint-site/en/licenses"
+      },
+      {
+        "locale": "fr",
+        "supportUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/support",
+        "privacyUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/privacy",
+        "licensesUrl": "https://johnshinsei.github.io/kana-sprint-site/fr/licenses"
+      }
+    ]
+  },
+  "hostingOptions": [
+    {
+      "id": "github-pages",
+      "label": "GitHub Pages",
+      "ready": true,
+      "steps": [
+        "Commit the repository with the generated site/ folder and .github/workflows/deploy-site.yml.",
+        "In GitHub repository settings, enable Pages with GitHub Actions as the source.",
+        "Run the Deploy public site workflow manually, or let it run after pushing to main.",
+        "Use the deployed HTTPS origin as APP_STORE_BASE_URL."
+      ]
+    },
+    {
+      "id": "netlify-drop",
+      "label": "Netlify static deploy",
+      "ready": true,
+      "steps": [
+        "Drag and drop the site/ folder, or configure the project publish directory as site.",
+        "Do not add a build command; the generated site/ folder is already the deploy root.",
+        "Preserve nested locale routes and the generated _headers file.",
+        "Use the production HTTPS site URL as APP_STORE_BASE_URL."
+      ]
+    },
+    {
+      "id": "cloudflare-pages",
+      "label": "Cloudflare Pages",
+      "ready": true,
+      "steps": [
+        "Create a Pages project with the repository or direct upload flow.",
+        "Set the output directory to site and leave the build command empty unless your provider requires one.",
+        "Preserve robots.txt, _headers, _redirects, and every locale subdirectory.",
+        "Use the production HTTPS Pages URL as APP_STORE_BASE_URL."
+      ]
+    },
+    {
+      "id": "generic-static-host",
+      "label": "Any static HTTPS host",
+      "ready": true,
+      "steps": [
+        "Upload the full site/ directory as the web root, not as a nested /site path.",
+        "Confirm /support/, /privacy/, /licenses/, and locale routes such as /zh-Hans/privacy/ resolve without auth.",
+        "If the host ignores _redirects, configure trailing-slash redirects for support, privacy, licenses, and locale routes.",
+        "Use APP_STORE_BASE_URL when every generated route is hosted under one origin; otherwise set explicit support and privacy URLs."
+      ]
+    }
+  ],
+  "envPlan": [
+    {
+      "key": "APP_STORE_BASE_URL",
+      "currentValue": "https://johnshinsei.github.io/kana-sprint-site",
+      "valueHint": "<production HTTPS origin>",
+      "ready": true,
+      "note": "Preferred. Enables localized support/privacy/license links and sitemap generation."
+    },
+    {
+      "key": "APP_STORE_SUPPORT_URL",
+      "currentValue": null,
+      "valueHint": "<production HTTPS support URL>",
+      "ready": false,
+      "note": "Only needed if support is not APP_STORE_BASE_URL/support."
+    },
+    {
+      "key": "APP_STORE_PRIVACY_URL",
+      "currentValue": null,
+      "valueHint": "<production HTTPS privacy URL>",
+      "ready": false,
+      "note": "Only needed if privacy is not APP_STORE_BASE_URL/privacy."
+    },
+    {
+      "key": "APP_STORE_MARKETING_URL",
+      "currentValue": null,
+      "valueHint": "<production HTTPS marketing URL>",
+      "ready": true,
+      "note": "Optional App Store marketing URL. APP_STORE_BASE_URL can fill it."
+    }
+  ],
+  "easEnvCommands": [
+    "eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext",
+    "eas env:create --name APP_STORE_SUPPORT_URL --environment production --visibility plaintext",
+    "eas env:create --name APP_STORE_PRIVACY_URL --environment production --visibility plaintext"
+  ],
+  "verificationOrder": [
+    "npm run site:localized",
+    "npm run site:manifest",
+    "npm run site:deploy-audit",
+    "npm run site:hosting-handoff",
+    "Host the site/ directory on the selected provider",
+    "Set APP_STORE_BASE_URL or explicit APP_STORE_SUPPORT_URL and APP_STORE_PRIVACY_URL",
+    "npm run site:verify-hosting",
+    "npm run metadata:preview",
+    "npm run release:status",
+    "npm run release:store-ready"
+  ]
+}

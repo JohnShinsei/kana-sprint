@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-privacy-review-packet.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "packageJson": "package.json",
+    "privacyAnswers": "docs/app-store-privacy-answers.json",
+    "privacyManifestAudit": "docs/privacy-manifest-audit.json",
+    "dataFlowPrivacyAudit": "docs/data-flow-privacy-audit.json",
+    "admobReleaseAudit": "docs/admob-release-audit.json",
+    "externalReadiness": "docs/external-readiness.json",
+    "officialApplePrivacy": "https://developer.apple.com/app-store/app-privacy-details/",
+    "officialGoogleAdMobDisclosure": "https://developers.google.com/admob/ios/privacy/data-disclosure"
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint",
+    "expo": "~56.0.15",
+    "googleMobileAdsPackage": "^16.3.4"
+  },
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "currentState": "NO_LIVE_ADS",
+    "confirmationEnv": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+    "finalReviewConfirmed": false,
+    "noLiveAdsSuggestedRows": 11,
+    "liveAdMobDisclosureRows": 6,
+    "appCodeCollectsPersonalData": false,
+    "accountRequired": false,
+    "trackingDeclaredByAppCode": false,
+    "privacyManifestTracking": false,
+    "privacyManifestCollectedDataTypes": 0,
+    "requiredReasonApisReady": true,
+    "appOwnedNetworkRequests": 0,
+    "analyticsSdkCount": 0,
+    "authSdkCount": 0,
+    "userContentEntryCount": 0,
+    "admobCurrentState": "NO_LIVE_ADS",
+    "liveAdsReady": false,
+    "externalAdSetupReady": false,
+    "externalPrivacyMessagingReady": false,
+    "externalBlockingItems": 7,
+    "localFailures": 0
+  },
+  "noLiveAdsSubmission": {
+    "applicable": true,
+    "suggestedAppStoreConnectRows": [
+      {
+        "field": "Data collected by this app",
+        "suggestedAnswer": "No",
+        "rationale": "The app code stores progress, daily goal progress, and settings locally and does not transmit user data off device."
+      },
+      {
+        "field": "Tracking",
+        "suggestedAnswer": "No",
+        "rationale": "No tracking SDK is initialized in this build state."
+      },
+      {
+        "field": "Account creation",
+        "suggestedAnswer": "No",
+        "rationale": "No account, login, or demo account is required."
+      },
+      {
+        "field": "Analytics",
+        "suggestedAnswer": "No",
+        "rationale": "No analytics SDK or analytics endpoint is present."
+      },
+      {
+        "field": "Location",
+        "suggestedAnswer": "No",
+        "rationale": "No location permission or location API is used by app code."
+      },
+      {
+        "field": "Contacts",
+        "suggestedAnswer": "No",
+        "rationale": "No contacts permission or contacts API is used."
+      },
+      {
+        "field": "User content",
+        "suggestedAnswer": "No",
+        "rationale": "No user upload, chat, or free-form content submission exists."
+      },
+      {
+        "field": "Purchases",
+        "suggestedAnswer": "No",
+        "rationale": "No in-app purchases or subscriptions exist."
+      },
+      {
+        "field": "Camera",
+        "suggestedAnswer": "No",
+        "rationale": "No camera permission or camera API is used."
+      },
+      {
+        "field": "Microphone",
+        "suggestedAnswer": "No",
+        "rationale": "The audio plugin is configured without microphone recording."
+      },
+      {
+        "field": "Push notifications",
+        "suggestedAnswer": "No",
+        "rationale": "No push notification SDK or permission path exists."
+      }
+    ],
+    "reviewerExplanation": "Kana Sprint stores progress, daily goal progress, and settings locally on the device. The app has no account system, no analytics SDK, no server sync, no user-generated content, and no live ad SDK initialization in this build.",
+    "evidence": [
+      "docs/app-store-privacy-answers.md",
+      "docs/privacy-manifest-audit.md",
+      "docs/data-flow-privacy-audit.md",
+      "docs/admob-release-audit.md"
+    ]
+  },
+  "liveAdMobSubmission": {
+    "applicable": false,
+    "manualReviewRequired": true,
+    "requiredBeforeSubmission": [
+      "Confirm react-native-google-mobile-ads is present in the resolved Expo plugins for the production archive.",
+      "Open the final iOS privacy report for the archived build and compare Google Mobile Ads SDK declarations.",
+      "Review the current Google Mobile Ads SDK data disclosure page for the SDK version in the submitted build.",
+      "Configure AdMob Privacy & messaging for the release regions and verify UMP canRequestAds on device.",
+      "Decide the App Tracking Transparency and IDFA answer based on final ad configuration, mediation, and regional consent behavior.",
+      "Set APP_STORE_PRIVACY_ANSWERS_REVIEWED=1 only after App Store Connect privacy answers match the exact submitted build."
+    ],
+    "likelyGoogleMobileAdsDataTypes": [
+      {
+        "appleDataType": "Coarse Location",
+        "basis": "IP address may be used to estimate general device location.",
+        "purposes": [
+          "Third-Party Advertising",
+          "Analytics",
+          "App Functionality"
+        ],
+        "linkedToUser": "Review final Google Mobile Ads SDK privacy report and App Store Connect wording.",
+        "tracking": "Review final ATT, mediation, and ad personalization configuration."
+      },
+      {
+        "appleDataType": "Crash Data",
+        "basis": "Non-user related crash logs may be used to diagnose problems and improve the SDK.",
+        "purposes": [
+          "App Functionality",
+          "Analytics"
+        ],
+        "linkedToUser": "Review final Google Mobile Ads SDK privacy report and App Store Connect wording.",
+        "tracking": "Review final ATT, mediation, and ad personalization configuration."
+      },
+      {
+        "appleDataType": "Performance Data",
+        "basis": "Performance data such as launch time, hang rate, or energy use may be collected.",
+        "purposes": [
+          "App Functionality",
+          "Analytics",
+          "Third-Party Advertising"
+        ],
+        "linkedToUser": "Review final Google Mobile Ads SDK privacy report and App Store Connect wording.",
+        "tracking": "Review final ATT, mediation, and ad personalization configuration."
+      },
+      {
+        "appleDataType": "Device ID",
+        "basis": "Advertising identifier or other device-level IDs may be used by the ad SDK.",
+        "purposes": [
+          "Third-Party Advertising",
+          "Analytics"
+        ],
+        "linkedToUser": "Review final Google Mobile Ads SDK privacy report and App Store Connect wording.",
+        "tracking": "Review final ATT, mediation, and ad personalization configuration."
+      },
+      {
+        "appleDataType": "Advertising Data",
+        "basis": "Information about advertisements the user has seen may be used for ads and analytics features.",
+        "purposes": [
+          "Third-Party Advertising",
+          "Analytics"
+        ],
+        "linkedToUser": "Review final Google Mobile Ads SDK privacy report and App Store Connect wording.",
+        "tracking": "Review final ATT, mediation, and ad personalization configuration."
+      },
+      {
+        "appleDataType": "Product Interaction",
+        "basis": "Ad views, app launches, taps, and video views may be used to improve advertising performance.",
+        "purposes": [
+          "Third-Party Advertising",
+          "Analytics"
+        ],
+        "linkedToUser": "Review final Google Mobile Ads SDK privacy report and App Store Connect wording.",
+        "tracking": "Review final ATT, mediation, and ad personalization configuration."
+      }
+    ],
+    "reviewerNoteAddition": "Rewarded ads are available only through the continue-run entry point. Ad requests are configured for non-personalized ads by default. The app itself has no account, analytics, location, contacts, camera, microphone, or user-generated content features, and gameplay progress remains on device. When UMP says privacy options are required, Settings includes an Ad privacy entry that opens the privacy options form."
+  },
+  "checks": [
+    {
+      "id": "privacy-answers-risk",
+      "label": "App Store privacy answer pack passes locally",
+      "passed": true
+    },
+    {
+      "id": "privacy-build-state",
+      "label": "Privacy answer pack identifies no-live-ads or live-AdMob state",
+      "passed": true
+    },
+    {
+      "id": "privacy-answer-rows",
+      "label": "No-live-ads and live-AdMob answer rows are populated",
+      "passed": true
+    },
+    {
+      "id": "app-code-data",
+      "label": "App code does not collect personal data, require accounts, or declare tracking",
+      "passed": true
+    },
+    {
+      "id": "privacy-manifest",
+      "label": "Privacy manifest has no tracking, no collected data types, and required-reason APIs ready",
+      "passed": true
+    },
+    {
+      "id": "data-flow",
+      "label": "Runtime data flow has no app-owned network, analytics, auth, or user-content entries",
+      "passed": true
+    },
+    {
+      "id": "admob-boundary",
+      "label": "AdMob integration boundary passes locally and records external setup state",
+      "passed": true
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "label": "App Store privacy answers",
+      "path": "docs/app-store-privacy-answers.md",
+      "risk": "PASS",
+      "exists": true
+    },
+    {
+      "label": "iOS privacy manifest audit",
+      "path": "docs/privacy-manifest-audit.md",
+      "risk": "PASS",
+      "exists": true
+    },
+    {
+      "label": "Data flow privacy audit",
+      "path": "docs/data-flow-privacy-audit.md",
+      "risk": "PASS",
+      "exists": true
+    },
+    {
+      "label": "AdMob release audit",
+      "path": "docs/admob-release-audit.md",
+      "risk": "PASS",
+      "exists": true
+    },
+    {
+      "label": "External readiness checklist",
+      "path": "docs/external-readiness.md",
+      "risk": "TODO",
+      "exists": true
+    }
+  ]
+}

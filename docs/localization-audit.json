@@ -1,0 +1,717 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-localization-audit.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "i18nSource": "src/i18n.ts",
+    "appSource": "App.tsx",
+    "languageFiles": "languages/*.json",
+    "appStoreLocalizations": "docs/app-store-localizations.json",
+    "metadataPreview": "docs/app-store-metadata-preview.json",
+    "screenshotManifest": "docs/app-store-screenshot-manifest.json",
+    "publicSiteManifest": "docs/public-site-manifest.json",
+    "studyContentLocalizationAudit": "docs/study-content-localization-audit.json"
+  },
+  "officialReferences": [
+    {
+      "label": "Expo SDK 56",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "label": "Expo Localization",
+      "url": "https://docs.expo.dev/versions/v56.0.0/sdk/localization/"
+    }
+  ],
+  "expectedLocales": [
+    "zh-Hans",
+    "zh-Hant",
+    "en",
+    "fr",
+    "it",
+    "de",
+    "es-ES",
+    "ko",
+    "pl",
+    "pt-BR"
+  ],
+  "expectedAppleLocales": {
+    "zh-Hans": "zh-Hans",
+    "zh-Hant": "zh-Hant",
+    "en": "en-US",
+    "fr": "fr-FR",
+    "it": "it",
+    "de": "de-DE",
+    "es-ES": "es-ES",
+    "ko": "ko",
+    "pl": "pl",
+    "pt-BR": "pt-BR"
+  },
+  "appLocales": [
+    "zh-Hans",
+    "zh-Hant",
+    "en",
+    "fr",
+    "it",
+    "de",
+    "es-ES",
+    "ko",
+    "pl",
+    "pt-BR"
+  ],
+  "pluginSupportedLocales": {
+    "ios": [
+      "zh-Hans",
+      "zh-Hant",
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "android": [
+      "zh-Hans",
+      "zh-Hant",
+      "en",
+      "fr",
+      "it",
+      "de",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ]
+  },
+  "localeOptions": [
+    "zh-Hans",
+    "zh-Hant",
+    "en",
+    "fr",
+    "it",
+    "de",
+    "es-ES",
+    "ko",
+    "pl",
+    "pt-BR"
+  ],
+  "languageFiles": [
+    {
+      "locale": "zh-Hans",
+      "configuredPath": "languages/zh-Hans.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "configuredPath": "languages/zh-Hant.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "configuredPath": "languages/en.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "configuredPath": "languages/fr.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "configuredPath": "languages/it.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "configuredPath": "languages/de.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "configuredPath": "languages/es-ES.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "configuredPath": "languages/ko.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "configuredPath": "languages/pl.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "configuredPath": "languages/pt-BR.json",
+      "exists": true,
+      "iosDisplayName": "Kana Sprint",
+      "androidAppName": "Kana Sprint",
+      "ready": true
+    }
+  ],
+  "uiCopy": [
+    {
+      "locale": "zh-Hans",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 132,
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 132,
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 132,
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 122,
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 125,
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 127,
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 128,
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 132,
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 125,
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "keys": 132,
+      "nonEmpty": 132,
+      "translatedFromEnglish": 128,
+      "ready": true
+    }
+  ],
+  "appStoreRows": [
+    {
+      "locale": "zh-Hans",
+      "appStoreLocale": "zh-Hans",
+      "previewLocale": "zh-Hans",
+      "titleLength": 11,
+      "subtitleLength": 11,
+      "promoTextLength": 40,
+      "descriptionLength": 177,
+      "keywordsLength": 29,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "appStoreLocale": "zh-Hant",
+      "previewLocale": "zh-Hant",
+      "titleLength": 11,
+      "subtitleLength": 11,
+      "promoTextLength": 40,
+      "descriptionLength": 178,
+      "keywordsLength": 29,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "appStoreLocale": "en-US",
+      "previewLocale": "en-US",
+      "titleLength": 11,
+      "subtitleLength": 24,
+      "promoTextLength": 94,
+      "descriptionLength": 411,
+      "keywordsLength": 72,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "appStoreLocale": "fr-FR",
+      "previewLocale": "fr-FR",
+      "titleLength": 11,
+      "subtitleLength": 27,
+      "promoTextLength": 89,
+      "descriptionLength": 454,
+      "keywordsLength": 77,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "appStoreLocale": "it",
+      "previewLocale": "it",
+      "titleLength": 11,
+      "subtitleLength": 20,
+      "promoTextLength": 87,
+      "descriptionLength": 433,
+      "keywordsLength": 74,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "appStoreLocale": "de-DE",
+      "previewLocale": "de-DE",
+      "titleLength": 11,
+      "subtitleLength": 24,
+      "promoTextLength": 87,
+      "descriptionLength": 432,
+      "keywordsLength": 72,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "appStoreLocale": "es-ES",
+      "previewLocale": "es-ES",
+      "titleLength": 11,
+      "subtitleLength": 28,
+      "promoTextLength": 92,
+      "descriptionLength": 434,
+      "keywordsLength": 77,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "appStoreLocale": "ko",
+      "previewLocale": "ko",
+      "titleLength": 11,
+      "subtitleLength": 16,
+      "promoTextLength": 51,
+      "descriptionLength": 206,
+      "keywordsLength": 38,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "appStoreLocale": "pl",
+      "previewLocale": "pl",
+      "titleLength": 11,
+      "subtitleLength": 24,
+      "promoTextLength": 81,
+      "descriptionLength": 391,
+      "keywordsLength": 75,
+      "mentionsJlpt": true,
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "appStoreLocale": "pt-BR",
+      "previewLocale": "pt-BR",
+      "titleLength": 11,
+      "subtitleLength": 27,
+      "promoTextLength": 91,
+      "descriptionLength": 412,
+      "keywordsLength": 76,
+      "mentionsJlpt": true,
+      "ready": true
+    }
+  ],
+  "screenshotRows": [
+    {
+      "locale": "zh-Hans",
+      "appStoreLocale": "zh-Hans",
+      "packLocale": "zh-Hans",
+      "root": "assets/store/ios-localized/zh-Hans",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "appStoreLocale": "zh-Hant",
+      "packLocale": "zh-Hant",
+      "root": "assets/store/ios-localized/zh-Hant",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "appStoreLocale": "en-US",
+      "packLocale": "en-US",
+      "root": "assets/store/ios-localized/en",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "appStoreLocale": "fr-FR",
+      "packLocale": "fr-FR",
+      "root": "assets/store/ios-localized/fr",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "appStoreLocale": "it",
+      "packLocale": "it",
+      "root": "assets/store/ios-localized/it",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "appStoreLocale": "de-DE",
+      "packLocale": "de-DE",
+      "root": "assets/store/ios-localized/de",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "appStoreLocale": "es-ES",
+      "packLocale": "es-ES",
+      "root": "assets/store/ios-localized/es-ES",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "appStoreLocale": "ko",
+      "packLocale": "ko",
+      "root": "assets/store/ios-localized/ko",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "appStoreLocale": "pl",
+      "packLocale": "pl",
+      "root": "assets/store/ios-localized/pl",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "appStoreLocale": "pt-BR",
+      "packLocale": "pt-BR",
+      "root": "assets/store/ios-localized/pt-BR",
+      "screenshots": 16,
+      "devices": [
+        "iphone-6.9",
+        "iphone-6.5",
+        "iphone-5.5",
+        "ipad-13"
+      ],
+      "scenes": [
+        "Ready screen",
+        "Active round with rewarded-ad continue entry",
+        "JLPT N5-N1 level selection",
+        "Settings, language, BGM, local data, support, privacy"
+      ],
+      "ready": true
+    }
+  ],
+  "publicSiteRows": [
+    {
+      "locale": "zh-Hans",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "pages": 4,
+      "kinds": [
+        "landing",
+        "support",
+        "privacy",
+        "licenses"
+      ],
+      "ready": true
+    }
+  ],
+  "runtimeSignals": {
+    "systemLanguageDetection": true,
+    "settingsLanguageSwitch": true,
+    "languageSwitchInSettings": true,
+    "japaneseUiLocaleRemoved": true
+  },
+  "summary": {
+    "risk": "PASS",
+    "uiLocales": 10,
+    "appStoreLocales": 10,
+    "uiCopyKeys": 132,
+    "languageFilesReady": true,
+    "uiCopyReady": true,
+    "appStoreMetadataReady": true,
+    "screenshotPacksReady": true,
+    "localizedScreenshotEntries": 160,
+    "publicSiteReady": true,
+    "publicSitePages": 44,
+    "studyContentLocalizationRisk": "PASS",
+    "studyContentLocalizationReady": true,
+    "studyContentLocalizedFields": 17060,
+    "studyContentExpectedFields": 17060,
+    "studyContentTranslationEntries": 4110,
+    "studyContentExpectedTranslationEntries": 4110,
+    "studyContentTextKeys": 685,
+    "runtimeSignalsReady": true,
+    "japaneseUiLocaleRemoved": true
+  }
+}

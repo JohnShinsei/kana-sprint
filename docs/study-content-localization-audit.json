@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-study-content-localization-audit.js",
+  "generatedFrom": {
+    "gameData": "src/gameData.ts",
+    "i18nSource": "src/i18n.ts",
+    "studyBankDepthAudit": "docs/study-bank-depth-audit.json",
+    "localizationAudit": "docs/localization-audit.json"
+  },
+  "posture": {
+    "statement": "Kana Sprint keeps JLPT N5-N1 study meanings and topics available in every supported non-Japanese UI language.",
+    "releaseAction": "If this audit fails, add the missing study text translations before regenerating App Store screenshots or metadata."
+  },
+  "expectedLocales": [
+    "zh-Hans",
+    "zh-Hant",
+    "en",
+    "fr",
+    "it",
+    "de",
+    "es-ES",
+    "ko",
+    "pl",
+    "pt-BR"
+  ],
+  "expectedLevels": [
+    "N5",
+    "N4",
+    "N3",
+    "N2",
+    "N1"
+  ],
+  "contentTranslationLocales": [
+    "fr",
+    "it",
+    "de",
+    "es-ES",
+    "pl",
+    "pt-BR"
+  ],
+  "summary": {
+    "risk": "PASS",
+    "expectedLocales": 10,
+    "levels": 5,
+    "totalStudyItems": 853,
+    "playableMeaningPrompts": 661,
+    "kanaPrompts": 92,
+    "vocabularyPrompts": 513,
+    "originalAnimeStyleLinePrompts": 148,
+    "grammarPrompts": 100,
+    "studyTextKeys": 685,
+    "contentTranslationKeys": 686,
+    "expectedLocalizedFields": 17060,
+    "localizedFieldsReady": 17060,
+    "missingLocalizedFields": 0,
+    "expectedContentTranslationEntries": 4110,
+    "contentTranslationEntriesReady": 4110,
+    "missingTranslationEntries": 0,
+    "emptyTranslationEntries": 0,
+    "sixLocaleTranslationReady": true,
+    "fullStudyItemLocaleFieldsReady": true,
+    "englishFallbackRisks": 0,
+    "failures": 0
+  },
+  "localeCoverage": [
+    {
+      "locale": "zh-Hans",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 0,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "zh-Hant",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 0,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "en",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 0,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "fr",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 685,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "it",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 685,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "de",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 685,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "es-ES",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 685,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "ko",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 0,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "pl",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 685,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    },
+    {
+      "locale": "pt-BR",
+      "studyFields": 1706,
+      "localizedFields": 1706,
+      "missingFields": 0,
+      "requiredContentTranslations": 685,
+      "missingContentTranslations": 0,
+      "emptyContentTranslations": 0,
+      "ready": true
+    }
+  ],
+  "levelCoverage": [
+    {
+      "level": "N5",
+      "items": 293,
+      "kana": 92,
+      "vocabulary": 137,
+      "linePrompts": 44,
+      "grammarPrompts": 20,
+      "localizedFields": 5860,
+      "missingLocalizedFields": 0,
+      "auditedTextKeys": 202,
+      "missingTranslationEntries": 0,
+      "ready": true
+    },
+    {
+      "level": "N4",
+      "items": 140,
+      "kana": 0,
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "localizedFields": 2800,
+      "missingLocalizedFields": 0,
+      "auditedTextKeys": 142,
+      "missingTranslationEntries": 0,
+      "ready": true
+    },
+    {
+      "level": "N3",
+      "items": 140,
+      "kana": 0,
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "localizedFields": 2800,
+      "missingLocalizedFields": 0,
+      "auditedTextKeys": 135,
+      "missingTranslationEntries": 0,
+      "ready": true
+    },
+    {
+      "level": "N2",
+      "items": 140,
+      "kana": 0,
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "localizedFields": 2800,
+      "missingLocalizedFields": 0,
+      "auditedTextKeys": 133,
+      "missingTranslationEntries": 0,
+      "ready": true
+    },
+    {
+      "level": "N1",
+      "items": 140,
+      "kana": 0,
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "localizedFields": 2800,
+      "missingLocalizedFields": 0,
+      "auditedTextKeys": 133,
+      "missingTranslationEntries": 0,
+      "ready": true
+    }
+  ],
+  "missingTranslationEntries": [],
+  "emptyTranslationEntries": [],
+  "missingLocalizedFields": [],
+  "failures": []
+}

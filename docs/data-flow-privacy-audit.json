@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-data-flow-privacy-audit.js",
+  "generatedFrom": {
+    "appConfig": "app.json + app.config.js",
+    "packageJson": "package.json",
+    "runtimeSources": [
+      "App.tsx",
+      "src/ads.native.ts",
+      "src/ads.ts",
+      "src/ads.web.ts",
+      "src/bgm.ts",
+      "src/gameData.ts",
+      "src/gameEngine.ts",
+      "src/grammarData.ts",
+      "src/i18n.ts",
+      "src/storage.ts"
+    ],
+    "storage": "src/storage.ts",
+    "privacyManifestAudit": "docs/privacy-manifest-audit.json",
+    "privacyAnswers": "docs/app-store-privacy-answers.json",
+    "admobReleaseAudit": "docs/admob-release-audit.json"
+  },
+  "officialReferences": [
+    {
+      "label": "Apple App Privacy Details",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/"
+    },
+    {
+      "label": "Apple Privacy Manifest Files",
+      "url": "https://developer.apple.com/documentation/bundleresources/privacy-manifest-files"
+    },
+    {
+      "label": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    }
+  ],
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "appOwnedNetworkRequests": 0,
+    "analyticsSdkCount": 0,
+    "authSdkCount": 0,
+    "userContentEntryCount": 0,
+    "sensitiveDependencyCount": 0,
+    "localStorageKeys": 2,
+    "externalLinkEntryCount": 1,
+    "appCodeCollectsPersonalData": false,
+    "accountRequired": false,
+    "userGeneratedContent": false,
+    "analyticsEnabled": false,
+    "localFailures": 0
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint"
+  },
+  "dataFlow": {
+    "storage": {
+      "library": "@react-native-async-storage/async-storage",
+      "keys": [
+        "@kana-sprint/progress-v1",
+        "@kana-sprint/settings-v1"
+      ],
+      "operations": [
+        "AsyncStorage.getItem",
+        "AsyncStorage.setItem",
+        "AsyncStorage.getItem",
+        "AsyncStorage.setItem"
+      ],
+      "localOnly": true,
+      "progressResetAvailable": true
+    },
+    "network": {
+      "appOwnedHits": [],
+      "appOwnedNetworkReady": true,
+      "userInitiatedExternalLinks": [
+        {
+          "file": "App.tsx",
+          "line": 762,
+          "match": "Linking.openURL"
+        }
+      ],
+      "supportPrivacyLinksOnly": true,
+      "supportPrivacyLicenseLinksOnly": true
+    },
+    "ads": {
+      "googleMobileAdsDependency": "^16.3.4",
+      "currentState": "NO_LIVE_ADS",
+      "liveAdsReady": false,
+      "localAdIntegrationReady": true,
+      "externalAdSetupReady": false
+    }
+  },
+  "capabilities": {
+    "accountFeatureReady": true,
+    "analyticsReady": true,
+    "userContentReady": true,
+    "sensitiveApiReady": true,
+    "dependencies": {
+      "analyticsHits": [],
+      "authHits": [],
+      "sensitiveDependencyHits": []
+    },
+    "androidBlockedPermissions": [
+      "android.permission.RECORD_AUDIO",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+    ],
+    "microphonePermission": false,
+    "recordAudioAndroid": false
+  },
+  "privacyEvidence": {
+    "privacyManifestRisk": "PASS",
+    "privacyManifestTracking": false,
+    "privacyManifestCollectedDataTypes": 0,
+    "privacyAnswersRisk": "PASS",
+    "privacyAnswersCurrentState": "NO_LIVE_ADS",
+    "appCodeCollectsPersonalData": false,
+    "accountRequired": false,
+    "trackingDeclaredByAppCode": false
+  },
+  "checks": [
+    {
+      "id": "app-owned-network",
+      "label": "No app-owned fetch/XHR/WebSocket/beacon/GraphQL client is present in runtime app code",
+      "passed": true
+    },
+    {
+      "id": "account-auth",
+      "label": "No account, login, auth, cloud-sync, or profile SDK is included",
+      "passed": true
+    },
+    {
+      "id": "analytics",
+      "label": "No analytics, crash analytics, telemetry, or event tracking SDK is included",
+      "passed": true
+    },
+    {
+      "id": "user-content",
+      "label": "No free-text, upload, camera, image, document, or form-data user-content entry exists",
+      "passed": true
+    },
+    {
+      "id": "sensitive-apis",
+      "label": "Camera, contacts, location, notification, microphone recording, and media picker capabilities are absent or blocked",
+      "passed": true
+    },
+    {
+      "id": "local-storage",
+      "label": "Progress and settings use only the two documented AsyncStorage keys",
+      "passed": true
+    },
+    {
+      "id": "local-progress-reset",
+      "label": "Settings exposes a local-only progress reset that rewrites only the progress store",
+      "passed": true
+    },
+    {
+      "id": "external-links",
+      "label": "Support, privacy, and open source notice pages are user-initiated external links from Settings only",
+      "passed": true
+    },
+    {
+      "id": "ad-boundary",
+      "label": "Google Mobile Ads is isolated behind the rewarded-ad gate and AdMob release audit",
+      "passed": true
+    },
+    {
+      "id": "privacy-docs",
+      "label": "Privacy manifest and App Store privacy answer pack match the no-account local-data posture",
+      "passed": true
+    }
+  ],
+  "localFailures": [],
+  "commands": [
+    "npm run privacy:data-flow",
+    "npm run privacy:manifest",
+    "npm run privacy:answers",
+    "npm run ads:audit",
+    "npm run release:verify"
+  ]
+}

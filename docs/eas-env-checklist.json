@@ -1,0 +1,484 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-eas-env-checklist.js",
+  "generatedFrom": {
+    "envTemplate": ".env.example",
+    "easJson": "eas.json",
+    "releaseStatus": "scripts/release-status.js --json",
+    "expoDocs": "https://docs.expo.dev/eas/environment-variables/"
+  },
+  "eas": {
+    "cliVersion": ">= 16.0.0",
+    "appVersionSource": "remote",
+    "productionBuildProfile": {
+      "autoIncrement": true,
+      "environment": "production",
+      "ready": true
+    }
+  },
+  "summary": {
+    "totalKeys": 18,
+    "requiredForEasProduction": 7,
+    "clientVisible": 8,
+    "sensitive": 8,
+    "plaintext": 10,
+    "missingDefinitions": 0,
+    "productionProfileEnvironmentReady": true
+  },
+  "officialReferences": [
+    {
+      "title": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "title": "EAS environment variables",
+      "url": "https://docs.expo.dev/eas/environment-variables/"
+    }
+  ],
+  "commands": [
+    "eas env:create --name EXPO_PUBLIC_ADMOB_IOS_APP_ID --environment production --visibility sensitive",
+    "eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext",
+    "eas env:pull --environment production",
+    "npm run release:status"
+  ],
+  "keys": [
+    {
+      "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
+      "group": "AdMob",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
+      "usedBy": [
+        "app.config.js native plugin injection",
+        "Expo extra.admob",
+        "production iOS build"
+      ],
+      "releaseStatusLabels": [
+        "Live AdMob IDs"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ]
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
+      "group": "AdMob",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
+      "usedBy": [
+        "app.config.js native plugin injection",
+        "Expo extra.admob",
+        "production Android build"
+      ],
+      "releaseStatusLabels": [
+        "Live AdMob IDs"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ]
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
+      "group": "AdMob",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
+      "usedBy": [
+        "src/ads.native.ts rewarded ad unit",
+        "Expo extra.admob",
+        "production iOS build"
+      ],
+      "releaseStatusLabels": [
+        "Live AdMob IDs"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ]
+    },
+    {
+      "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
+      "group": "AdMob",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "sensitive",
+      "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
+      "usedBy": [
+        "src/ads.native.ts rewarded ad unit",
+        "Expo extra.admob",
+        "production Android build"
+      ],
+      "releaseStatusLabels": [
+        "Live AdMob IDs"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Live AdMob IDs",
+          "status": "TODO",
+          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_BASE_URL",
+      "group": "Public store URLs",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "plaintext",
+      "validation": "Production HTTPS root URL; can generate /support and /privacy URLs",
+      "usedBy": [
+        "app.config.js store URLs",
+        "store.config.js localized App Store URLs",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "Public support URL",
+        "Public privacy URL",
+        "Public marketing URL"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        },
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        },
+        {
+          "label": "Public marketing URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_MARKETING_URL",
+      "group": "Public store URLs",
+      "easLocation": "optional local .env.local + EAS production when used",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Optional production HTTPS marketing URL",
+      "usedBy": [
+        "app.config.js store URLs",
+        "store.config.js App Store marketingUrl"
+      ],
+      "releaseStatusLabels": [
+        "Public marketing URL"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public marketing URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_SUPPORT_URL",
+      "group": "Public store URLs",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "plaintext",
+      "validation": "Production HTTPS support URL; APP_STORE_BASE_URL can derive it",
+      "usedBy": [
+        "app.config.js Settings support link",
+        "store.config.js supportUrl",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "Public support URL"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public support URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/support"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_PRIVACY_URL",
+      "group": "Public store URLs",
+      "easLocation": "local .env.local + EAS production",
+      "requiredForEasProduction": true,
+      "visibility": "plaintext",
+      "validation": "Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it",
+      "usedBy": [
+        "app.config.js Settings privacy link",
+        "store.config.js privacyPolicyUrl",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "Public privacy URL"
+      ],
+      "clientVisible": true,
+      "releaseStatuses": [
+        {
+          "label": "Public privacy URL",
+          "status": "OK",
+          "detail": "https://johnshinsei.github.io/kana-sprint-site/privacy"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_FIRST_NAME",
+      "group": "App Store review contact",
+      "easLocation": "local gate + CI/EAS workflow if metadata is automated",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Non-empty first name for App Review contact",
+      "usedBy": [
+        "store.config.js apple.review",
+        "metadata preview",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "App Store review contact"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_LAST_NAME",
+      "group": "App Store review contact",
+      "easLocation": "local gate + CI/EAS workflow if metadata is automated",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Non-empty last name for App Review contact",
+      "usedBy": [
+        "store.config.js apple.review",
+        "metadata preview",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "App Store review contact"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_EMAIL",
+      "group": "App Store review contact",
+      "easLocation": "local gate + CI/EAS workflow if metadata is automated",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Reachable email address",
+      "usedBy": [
+        "store.config.js apple.review",
+        "metadata preview",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "App Store review contact"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_REVIEW_PHONE",
+      "group": "App Store review contact",
+      "easLocation": "local gate + CI/EAS workflow if metadata is automated",
+      "requiredForEasProduction": false,
+      "visibility": "sensitive",
+      "validation": "Reachable phone number with at least 7 digits",
+      "usedBy": [
+        "store.config.js apple.review",
+        "metadata preview",
+        "release-check"
+      ],
+      "releaseStatusLabels": [
+        "App Store review contact"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "App Store review contact",
+          "status": "TODO",
+          "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+      "group": "Manual release confirmations",
+      "easLocation": "local gate + CI/EAS workflow",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after App Store privacy answers match the final build",
+      "usedBy": [
+        "release-check --strict",
+        "release-status"
+      ],
+      "releaseStatusLabels": [
+        "APP_STORE_PRIVACY_ANSWERS_REVIEWED"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "key": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "group": "Manual release confirmations",
+      "easLocation": "local gate + CI/EAS workflow",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after AdMob Privacy & messaging is configured and tested",
+      "usedBy": [
+        "release-check --strict",
+        "release-status"
+      ],
+      "releaseStatusLabels": [
+        "ADMOB_PRIVACY_MESSAGES_CONFIGURED"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_BUNDLE_ID_CONFIRMED",
+      "group": "Manual release confirmations",
+      "easLocation": "local gate + CI/EAS workflow",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after final bundle ID/package records are confirmed",
+      "usedBy": [
+        "release-check --strict",
+        "release-status"
+      ],
+      "releaseStatusLabels": [
+        "APP_STORE_BUNDLE_ID_CONFIRMED"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "key": "APP_STORE_CONNECT_RECORD_READY",
+      "group": "Manual release confirmations",
+      "easLocation": "local gate + CI/EAS workflow",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after the App Store Connect record exists",
+      "usedBy": [
+        "release-check --strict",
+        "release-status"
+      ],
+      "releaseStatusLabels": [
+        "APP_STORE_CONNECT_RECORD_READY"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "APP_STORE_CONNECT_RECORD_READY",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    },
+    {
+      "key": "EAS_REMOTE_VERSION_INITIALIZED",
+      "group": "Manual release confirmations",
+      "easLocation": "local gate + CI/EAS workflow",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after npx eas-cli build:version:set is complete",
+      "usedBy": [
+        "release-check --strict",
+        "release-status"
+      ],
+      "releaseStatusLabels": [
+        "EAS_REMOTE_VERSION_INITIALIZED"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "EAS_REMOTE_VERSION_INITIALIZED",
+          "status": "OK",
+          "detail": "Confirmed."
+        }
+      ]
+    },
+    {
+      "key": "PRODUCTION_DEVICE_TESTED",
+      "group": "Manual release confirmations",
+      "easLocation": "local gate + CI/EAS workflow",
+      "requiredForEasProduction": false,
+      "visibility": "plaintext",
+      "validation": "Set to 1 only after the exact production/TestFlight build passes device smoke",
+      "usedBy": [
+        "release-check --strict",
+        "release-status",
+        "docs/production-device-smoke-test.md"
+      ],
+      "releaseStatusLabels": [
+        "PRODUCTION_DEVICE_TESTED"
+      ],
+      "clientVisible": false,
+      "releaseStatuses": [
+        {
+          "label": "PRODUCTION_DEVICE_TESTED",
+          "status": "TODO",
+          "detail": "Set to 1 only after the real external action is complete."
+        }
+      ]
+    }
+  ]
+}

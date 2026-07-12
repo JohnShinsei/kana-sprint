@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-admob-release-audit.js",
+  "generatedFrom": {
+    "appConfig": "app.json + app.config.js",
+    "appSource": "App.tsx",
+    "adsNative": "src/ads.native.ts",
+    "adsWeb": "src/ads.web.ts",
+    "adsFallback": "src/ads.ts",
+    "envTemplate": ".env.example",
+    "privacyAnswers": "docs/app-store-privacy-answers.json",
+    "privacyManifestAudit": "docs/privacy-manifest-audit.json",
+    "externalReadiness": "docs/external-readiness.json",
+    "easEnvironmentChecklist": "docs/eas-env-checklist.json"
+  },
+  "officialReferences": [
+    {
+      "label": "Expo SDK 56 reference",
+      "url": "https://docs.expo.dev/versions/v56.0.0/"
+    },
+    {
+      "label": "React Native Google Mobile Ads",
+      "url": "https://docs.page/invertase/react-native-google-mobile-ads"
+    },
+    {
+      "label": "Google Mobile Ads iOS privacy disclosure",
+      "url": "https://developers.google.com/admob/ios/privacy/data-disclosure"
+    },
+    {
+      "label": "Google Mobile Ads iOS test ads",
+      "url": "https://developers.google.com/admob/ios/test-ads"
+    },
+    {
+      "label": "Google Mobile Ads Android test ads",
+      "url": "https://developers.google.com/admob/android/test-ads"
+    },
+    {
+      "label": "Apple App Privacy Details",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/"
+    }
+  ],
+  "summary": {
+    "risk": "PASS",
+    "localReady": true,
+    "currentState": "NO_LIVE_ADS",
+    "liveAdsReady": false,
+    "validAdMobIdsConfigured": false,
+    "googleMobileAdsPluginInjected": false,
+    "externalPrivacyMessagingReady": false,
+    "externalReady": false,
+    "localFailures": 0,
+    "externalBlockingItems": 2
+  },
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "packageName": "com.john.kanasprint",
+    "googleMobileAdsPackage": "^16.3.4"
+  },
+  "environment": {
+    "keys": [
+      {
+        "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
+        "configured": false,
+        "valid": false,
+        "clientVisible": true
+      },
+      {
+        "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
+        "configured": false,
+        "valid": false,
+        "clientVisible": true
+      },
+      {
+        "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
+        "configured": false,
+        "valid": false,
+        "clientVisible": true
+      },
+      {
+        "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
+        "configured": false,
+        "valid": false,
+        "clientVisible": true
+      }
+    ],
+    "state": "NO_LIVE_ADS",
+    "allProductionIdsValid": false,
+    "hasAnyAdMobValue": false
+  },
+  "nativeConfig": {
+    "pluginAbsentWithoutIds": true,
+    "pluginInjectedWithValidIds": true,
+    "pluginAbsentWithPlaceholderIds": true,
+    "pluginAbsentWithDemoIds": true,
+    "currentPluginInjected": false,
+    "delayAppMeasurementInit": true,
+    "skAdNetworkItems": 50,
+    "liveAdsEnabledWithoutIds": false,
+    "liveAdsEnabledWithPlaceholderIds": false,
+    "liveAdsEnabledWithDemoIds": false,
+    "liveAdsEnabledWithValidIds": true,
+    "liveAdsEnabledCurrent": false
+  },
+  "runtimeFlow": {
+    "uiEntryReady": true,
+    "settingsPrivacyReady": true,
+    "nativeConsentReady": true,
+    "nativeRewardReady": true,
+    "nativeRuntimeGuardReady": true,
+    "requestConfigReady": true,
+    "webExportGuardReady": true,
+    "developmentRewardGuarded": true
+  },
+  "privacy": {
+    "appStorePrivacyAnswerState": "NO_LIVE_ADS",
+    "privacyConfirmationEnv": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
+    "liveAdMobDisclosureRows": 6,
+    "privacyManifestRisk": "PASS",
+    "appCodeCollectsPersonalData": false,
+    "externalPrivacyMessagingReady": false
+  },
+  "localChecks": [
+    {
+      "id": "ui-entry",
+      "label": "Rewarded-ad continue entry exists in gameplay UI",
+      "passed": true
+    },
+    {
+      "id": "settings-privacy",
+      "label": "Settings exposes ad privacy options when UMP requires them",
+      "passed": true
+    },
+    {
+      "id": "native-consent",
+      "label": "Native ad flow requests UMP consent info before ads load",
+      "passed": true
+    },
+    {
+      "id": "native-reward",
+      "label": "Native rewarded ad lifecycle grants reward only after earned reward event",
+      "passed": true
+    },
+    {
+      "id": "native-id-guard",
+      "label": "Native runtime rejects placeholder and Google demo AdMob IDs",
+      "passed": true
+    },
+    {
+      "id": "request-config",
+      "label": "Native ad request config limits ad content and uses non-personalized ad requests",
+      "passed": true
+    },
+    {
+      "id": "web-guard",
+      "label": "Web export is guarded from the native Google Mobile Ads SDK",
+      "passed": true
+    },
+    {
+      "id": "config-guard",
+      "label": "Expo config injects Google Mobile Ads only when all production IDs are valid",
+      "passed": true
+    },
+    {
+      "id": "env-template",
+      "label": ".env.example documents every AdMob and privacy confirmation key",
+      "passed": true
+    },
+    {
+      "id": "privacy-evidence",
+      "label": "Privacy answer pack and policy document no-live/live-AdMob states",
+      "passed": true
+    },
+    {
+      "id": "external-checklists",
+      "label": "External readiness and EAS env checklists include AdMob release actions",
+      "passed": true
+    }
+  ],
+  "externalActions": [
+    {
+      "label": "Live AdMob IDs",
+      "ready": false,
+      "action": "Create production AdMob app IDs and rewarded ad-unit IDs, then set all four EXPO_PUBLIC_ADMOB_* values."
+    },
+    {
+      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
+      "ready": false,
+      "action": "Configure AdMob Privacy & messaging for release regions and verify UMP canRequestAds in a production build before setting this to 1."
+    }
+  ],
+  "commands": [
+    "npm run ads:audit",
+    "npm run privacy:answers",
+    "npm run eas:env-checklist",
+    "npm run release:verify",
+    "npm run release:store-ready"
+  ]
+}

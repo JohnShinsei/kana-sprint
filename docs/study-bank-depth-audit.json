@@ -1,0 +1,806 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-study-bank-depth-audit.js",
+  "generatedFrom": {
+    "gameData": "src/gameData.ts",
+    "gameEngine": "src/gameEngine.ts",
+    "gameplayContract": "scripts/check-gameplay-contract.js"
+  },
+  "posture": {
+    "statement": "Kana Sprint ships a local N5-N1 study bank with separate vocabulary and original anime-style line prompts for each JLPT level.",
+    "difficultyModel": "Difficulty increases through level-specific content, higher line-prompt weight, more reverse Japanese recall, same-topic distractors, and longer average kana readings.",
+    "releaseAction": "If this audit fails, expand or rebalance the study bank before generating App Store assets again."
+  },
+  "thresholds": {
+    "N5": {
+      "kana": 92,
+      "vocabulary": 130,
+      "linePrompts": 40,
+      "grammarPrompts": 12,
+      "topics": 16,
+      "vocabularyTopics": 12,
+      "lineTopics": 5
+    },
+    "N4": {
+      "kana": 0,
+      "vocabulary": 90,
+      "linePrompts": 24,
+      "grammarPrompts": 12,
+      "topics": 12,
+      "vocabularyTopics": 8,
+      "lineTopics": 6
+    },
+    "N3": {
+      "kana": 0,
+      "vocabulary": 90,
+      "linePrompts": 24,
+      "grammarPrompts": 12,
+      "topics": 12,
+      "vocabularyTopics": 8,
+      "lineTopics": 6
+    },
+    "N2": {
+      "kana": 0,
+      "vocabulary": 90,
+      "linePrompts": 24,
+      "grammarPrompts": 12,
+      "topics": 10,
+      "vocabularyTopics": 8,
+      "lineTopics": 5
+    },
+    "N1": {
+      "kana": 0,
+      "vocabulary": 90,
+      "linePrompts": 24,
+      "grammarPrompts": 12,
+      "topics": 10,
+      "vocabularyTopics": 8,
+      "lineTopics": 5
+    }
+  },
+  "summary": {
+    "risk": "PASS",
+    "levels": 5,
+    "expectedLevels": [
+      "N5",
+      "N4",
+      "N3",
+      "N2",
+      "N1"
+    ],
+    "totalStudyItems": 853,
+    "kanaPrompts": 92,
+    "vocabularyPrompts": 513,
+    "originalAnimeStyleLinePrompts": 148,
+    "grammarPrompts": 100,
+    "playableMeaningPrompts": 661,
+    "totalTopics": 26,
+    "duplicateIds": 0,
+    "duplicateDisplaysByLevel": 0,
+    "failures": 0
+  },
+  "difficultyProgression": {
+    "passed": true,
+    "rows": [
+      {
+        "level": "N5",
+        "order": 1,
+        "kanaWeight": 0.28,
+        "vocabularyWeight": 0.34,
+        "lineWeight": 0.18,
+        "grammarWeight": 0.2,
+        "meaningToWordWeight": 0.32,
+        "topicDistractorBias": 0,
+        "lengthDistractorBias": 0,
+        "averageKanaLength": 4.43
+      },
+      {
+        "level": "N4",
+        "order": 2,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.46,
+        "lineWeight": 0.26,
+        "grammarWeight": 0.28,
+        "meaningToWordWeight": 0.4,
+        "topicDistractorBias": 1,
+        "lengthDistractorBias": 0,
+        "averageKanaLength": 5.67
+      },
+      {
+        "level": "N3",
+        "order": 3,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.4,
+        "lineWeight": 0.29,
+        "grammarWeight": 0.31,
+        "meaningToWordWeight": 0.48,
+        "topicDistractorBias": 2,
+        "lengthDistractorBias": 0,
+        "averageKanaLength": 6.2
+      },
+      {
+        "level": "N2",
+        "order": 4,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.34,
+        "lineWeight": 0.32,
+        "grammarWeight": 0.34,
+        "meaningToWordWeight": 0.56,
+        "topicDistractorBias": 3,
+        "lengthDistractorBias": 1,
+        "averageKanaLength": 6.38
+      },
+      {
+        "level": "N1",
+        "order": 5,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.28,
+        "lineWeight": 0.35,
+        "grammarWeight": 0.37,
+        "meaningToWordWeight": 0.64,
+        "topicDistractorBias": 4,
+        "lengthDistractorBias": 2,
+        "averageKanaLength": 6.78
+      }
+    ],
+    "issues": []
+  },
+  "levels": {
+    "N5": {
+      "counts": {
+        "kana": 92,
+        "vocabulary": 137,
+        "linePrompts": 44,
+        "grammarPrompts": 20,
+        "total": 293
+      },
+      "coverage": {
+        "topics": 21,
+        "vocabularyTopics": 17,
+        "lineTopics": 5,
+        "localizedMeaningFields": 1810,
+        "localizedTopicFields": 1810
+      },
+      "averages": {
+        "kanaLength": 4.43,
+        "displayLength": 3.1,
+        "romajiWords": 1.7
+      },
+      "mixProfile": {
+        "order": 1,
+        "kanaWeight": 0.28,
+        "vocabularyWeight": 0.34,
+        "lineWeight": 0.18,
+        "grammarWeight": 0.2,
+        "meaningToWordWeight": 0.32,
+        "topicDistractorBias": 0,
+        "lengthDistractorBias": 0
+      },
+      "topicBreakdown": [
+        {
+          "topic": "Actions",
+          "count": 22
+        },
+        {
+          "topic": "Places",
+          "count": 15
+        },
+        {
+          "topic": "Adventure line",
+          "count": 11
+        },
+        {
+          "topic": "Descriptions",
+          "count": 11
+        },
+        {
+          "topic": "Courage line",
+          "count": 10
+        },
+        {
+          "topic": "Friendship line",
+          "count": 10
+        },
+        {
+          "topic": "Objects",
+          "count": 9
+        },
+        {
+          "topic": "Time",
+          "count": 9
+        },
+        {
+          "topic": "Nature",
+          "count": 8
+        },
+        {
+          "topic": "Numbers",
+          "count": 8
+        },
+        {
+          "topic": "People",
+          "count": 8
+        },
+        {
+          "topic": "School line",
+          "count": 8
+        },
+        {
+          "topic": "Food",
+          "count": 7
+        },
+        {
+          "topic": "Travel",
+          "count": 7
+        },
+        {
+          "topic": "Daily life",
+          "count": 6
+        },
+        {
+          "topic": "Family",
+          "count": 6
+        },
+        {
+          "topic": "Mystery line",
+          "count": 6
+        },
+        {
+          "topic": "Question words",
+          "count": 6
+        },
+        {
+          "topic": "Feelings",
+          "count": 5
+        },
+        {
+          "topic": "School",
+          "count": 5
+        },
+        {
+          "topic": "Greetings",
+          "count": 4
+        }
+      ],
+      "sampleVocabularyIds": [
+        "vocab-ohayou",
+        "vocab-konnichiwa",
+        "vocab-arigatou",
+        "vocab-sumimasen",
+        "vocab-sensei",
+        "vocab-gakkou",
+        "vocab-benkyou",
+        "vocab-hon"
+      ],
+      "sampleLineIds": [
+        "line-mada-owarenai",
+        "line-kokoro-orenai",
+        "line-zenryoku-de-ikou",
+        "line-ima-koso-kawaru",
+        "line-yuuki-wa-koko",
+        "line-nakama-wo-shinjiru",
+        "line-yakusoku-wa-mamoru",
+        "line-kimi-nara-dekiru"
+      ],
+      "sampleGrammarIds": [
+        "grammar-topic-wa",
+        "grammar-addition-mo",
+        "grammar-object-wo",
+        "grammar-time-ni",
+        "grammar-place-de",
+        "grammar-direction-e",
+        "grammar-possession-no",
+        "grammar-start-kara"
+      ]
+    },
+    "N4": {
+      "counts": {
+        "kana": 0,
+        "vocabulary": 94,
+        "linePrompts": 26,
+        "grammarPrompts": 20,
+        "total": 140
+      },
+      "coverage": {
+        "topics": 22,
+        "vocabularyTopics": 19,
+        "lineTopics": 10,
+        "localizedMeaningFields": 1200,
+        "localizedTopicFields": 1200
+      },
+      "averages": {
+        "kanaLength": 5.67,
+        "displayLength": 3.92,
+        "romajiWords": 1.92
+      },
+      "mixProfile": {
+        "order": 2,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.46,
+        "lineWeight": 0.26,
+        "grammarWeight": 0.28,
+        "meaningToWordWeight": 0.4,
+        "topicDistractorBias": 1,
+        "lengthDistractorBias": 0
+      },
+      "topicBreakdown": [
+        {
+          "topic": "Actions",
+          "count": 25
+        },
+        {
+          "topic": "Feelings",
+          "count": 15
+        },
+        {
+          "topic": "Daily life",
+          "count": 13
+        },
+        {
+          "topic": "Friendship line",
+          "count": 10
+        },
+        {
+          "topic": "Plans",
+          "count": 8
+        },
+        {
+          "topic": "School",
+          "count": 6
+        },
+        {
+          "topic": "Travel",
+          "count": 6
+        },
+        {
+          "topic": "Courage line",
+          "count": 5
+        },
+        {
+          "topic": "Time",
+          "count": 5
+        },
+        {
+          "topic": "School line",
+          "count": 4
+        },
+        {
+          "topic": "Descriptions",
+          "count": 3
+        },
+        {
+          "topic": "People",
+          "count": 3
+        },
+        {
+          "topic": "Society",
+          "count": 3
+        },
+        {
+          "topic": "Adventure line",
+          "count": 2
+        },
+        {
+          "topic": "Food",
+          "count": 2
+        },
+        {
+          "topic": "Growth",
+          "count": 2
+        },
+        {
+          "topic": "Nature",
+          "count": 2
+        },
+        {
+          "topic": "Places",
+          "count": 2
+        },
+        {
+          "topic": "Nuance",
+          "count": 1
+        },
+        {
+          "topic": "Numbers",
+          "count": 1
+        },
+        {
+          "topic": "Objects",
+          "count": 1
+        },
+        {
+          "topic": "Question words",
+          "count": 1
+        }
+      ],
+      "sampleVocabularyIds": [
+        "vocab-hitsuyou",
+        "vocab-yotei",
+        "vocab-keiken",
+        "vocab-iken",
+        "vocab-setsumei",
+        "vocab-yakusoku",
+        "vocab-junbi",
+        "vocab-renraku"
+      ],
+      "sampleLineIds": [
+        "line-yotei-wa-kaerareru",
+        "line-shippai-shite-mo-daijoubu",
+        "line-yakusoku-no-basho-de",
+        "line-kimi-no-iken-wo-kikasete",
+        "line-junbi-ga-dekitara-hashirou",
+        "line-atarashii-michi-wo-erabou",
+        "line-watashi-wo-shoukai-suru",
+        "line-shoutai-wa-yuuki-no-hajimari"
+      ],
+      "sampleGrammarIds": [
+        "grammar-simultaneous-nagara",
+        "grammar-experience-koto-ga-aru",
+        "grammar-intention-tsumori",
+        "grammar-obligation-nakereba",
+        "grammar-permission-temo-ii",
+        "grammar-prohibition-tewa-ikenai",
+        "grammar-appearance-sou",
+        "grammar-excess-sugite"
+      ]
+    },
+    "N3": {
+      "counts": {
+        "kana": 0,
+        "vocabulary": 94,
+        "linePrompts": 26,
+        "grammarPrompts": 20,
+        "total": 140
+      },
+      "coverage": {
+        "topics": 16,
+        "vocabularyTopics": 15,
+        "lineTopics": 8,
+        "localizedMeaningFields": 1200,
+        "localizedTopicFields": 1200
+      },
+      "averages": {
+        "kanaLength": 6.2,
+        "displayLength": 3.92,
+        "romajiWords": 1.99
+      },
+      "mixProfile": {
+        "order": 3,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.4,
+        "lineWeight": 0.29,
+        "grammarWeight": 0.31,
+        "meaningToWordWeight": 0.48,
+        "topicDistractorBias": 2,
+        "lengthDistractorBias": 0
+      },
+      "topicBreakdown": [
+        {
+          "topic": "Abstract thought",
+          "count": 26
+        },
+        {
+          "topic": "Growth",
+          "count": 24
+        },
+        {
+          "topic": "Society",
+          "count": 21
+        },
+        {
+          "topic": "Actions",
+          "count": 10
+        },
+        {
+          "topic": "Feelings",
+          "count": 6
+        },
+        {
+          "topic": "Plans",
+          "count": 5
+        },
+        {
+          "topic": "School",
+          "count": 5
+        },
+        {
+          "topic": "Courage line",
+          "count": 4
+        },
+        {
+          "topic": "Mystery line",
+          "count": 4
+        },
+        {
+          "topic": "Daily life",
+          "count": 3
+        },
+        {
+          "topic": "Friendship line",
+          "count": 3
+        },
+        {
+          "topic": "Time",
+          "count": 3
+        },
+        {
+          "topic": "Adventure line",
+          "count": 2
+        },
+        {
+          "topic": "Numbers",
+          "count": 2
+        },
+        {
+          "topic": "Nuance",
+          "count": 1
+        },
+        {
+          "topic": "People",
+          "count": 1
+        }
+      ],
+      "sampleVocabularyIds": [
+        "vocab-kanou",
+        "vocab-shippai",
+        "vocab-seikou",
+        "vocab-mokuteki",
+        "vocab-jouken",
+        "vocab-kakunin",
+        "vocab-kitai",
+        "vocab-doryoku"
+      ],
+      "sampleLineIds": [
+        "line-kotae-wa-hitotsu-ja-nai",
+        "line-doryoku-wa-shizuka-ni-hikaru",
+        "line-mokuteki-wo-wasurenai",
+        "line-kitai-ga-senaka-wo-osu",
+        "line-bunka-wo-koete-waraou",
+        "line-shippai-no-riyuu-wo-ashita-e",
+        "line-kekka-yori-koudou-da",
+        "line-genin-wo-mitsukereba-kaerareru"
+      ],
+      "sampleGrammarIds": [
+        "grammar-habit-you-ni-suru",
+        "grammar-decision-koto-ni-suru",
+        "grammar-arrangement-koto-ni-naru",
+        "grammar-regret-te-shimau",
+        "grammar-just-did-bakari",
+        "grammar-about-to-tokoro",
+        "grammar-hearsay-rashii",
+        "grammar-expectation-hazu"
+      ]
+    },
+    "N2": {
+      "counts": {
+        "kana": 0,
+        "vocabulary": 94,
+        "linePrompts": 26,
+        "grammarPrompts": 20,
+        "total": 140
+      },
+      "coverage": {
+        "topics": 13,
+        "vocabularyTopics": 11,
+        "lineTopics": 6,
+        "localizedMeaningFields": 1200,
+        "localizedTopicFields": 1200
+      },
+      "averages": {
+        "kanaLength": 6.38,
+        "displayLength": 4.09,
+        "romajiWords": 2.2
+      },
+      "mixProfile": {
+        "order": 4,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.34,
+        "lineWeight": 0.32,
+        "grammarWeight": 0.34,
+        "meaningToWordWeight": 0.56,
+        "topicDistractorBias": 3,
+        "lengthDistractorBias": 1
+      },
+      "topicBreakdown": [
+        {
+          "topic": "Abstract thought",
+          "count": 36
+        },
+        {
+          "topic": "Society",
+          "count": 34
+        },
+        {
+          "topic": "Growth",
+          "count": 18
+        },
+        {
+          "topic": "Actions",
+          "count": 6
+        },
+        {
+          "topic": "Courage line",
+          "count": 6
+        },
+        {
+          "topic": "Plans",
+          "count": 6
+        },
+        {
+          "topic": "Friendship line",
+          "count": 4
+        },
+        {
+          "topic": "Mystery line",
+          "count": 3
+        },
+        {
+          "topic": "School",
+          "count": 3
+        },
+        {
+          "topic": "Nuance",
+          "count": 1
+        },
+        {
+          "topic": "People",
+          "count": 1
+        },
+        {
+          "topic": "Question words",
+          "count": 1
+        },
+        {
+          "topic": "Time",
+          "count": 1
+        }
+      ],
+      "sampleVocabularyIds": [
+        "vocab-eikyou",
+        "vocab-handan",
+        "vocab-sekinin",
+        "vocab-joukyou",
+        "vocab-taishou",
+        "vocab-kachi",
+        "vocab-kaizen",
+        "vocab-bunseki"
+      ],
+      "sampleLineIds": [
+        "line-joukyou-wo-kaeru-handan",
+        "line-sekinin-wo-seotte-mae-e",
+        "line-genjitsu-to-mukiau-yuuki",
+        "line-kachi-wa-dareka-ga-kimeru-mono-ja-nai",
+        "line-kadai-wo-koeta-saki-ni",
+        "line-kimi-no-sentaku-ga-mirai-wo-sasaeru",
+        "line-yakuwari-wa-jibun-de-tsukuru",
+        "line-shoumei-wa-kokoro-ni-aru"
+      ],
+      "sampleGrammarIds": [
+        "grammar-partial-negation-wake-dewa-nai",
+        "grammar-certainty-ni-chigai-nai",
+        "grammar-basis-koto-kara",
+        "grammar-target-ni-taishite",
+        "grammar-topic-ni-kanshite",
+        "grammar-addition-ni-kuwaete",
+        "grammar-concession-monono",
+        "grammar-two-sides-ippou-de"
+      ]
+    },
+    "N1": {
+      "counts": {
+        "kana": 0,
+        "vocabulary": 94,
+        "linePrompts": 26,
+        "grammarPrompts": 20,
+        "total": 140
+      },
+      "coverage": {
+        "topics": 13,
+        "vocabularyTopics": 12,
+        "lineTopics": 7,
+        "localizedMeaningFields": 1200,
+        "localizedTopicFields": 1200
+      },
+      "averages": {
+        "kanaLength": 6.78,
+        "displayLength": 4.26,
+        "romajiWords": 2.23
+      },
+      "mixProfile": {
+        "order": 5,
+        "kanaWeight": 0,
+        "vocabularyWeight": 0.28,
+        "lineWeight": 0.35,
+        "grammarWeight": 0.37,
+        "meaningToWordWeight": 0.64,
+        "topicDistractorBias": 4,
+        "lengthDistractorBias": 2
+      },
+      "topicBreakdown": [
+        {
+          "topic": "Abstract thought",
+          "count": 40
+        },
+        {
+          "topic": "Nuance",
+          "count": 31
+        },
+        {
+          "topic": "Mystery line",
+          "count": 11
+        },
+        {
+          "topic": "Growth",
+          "count": 10
+        },
+        {
+          "topic": "Society",
+          "count": 8
+        },
+        {
+          "topic": "Actions",
+          "count": 7
+        },
+        {
+          "topic": "Courage line",
+          "count": 5
+        },
+        {
+          "topic": "Feelings",
+          "count": 3
+        },
+        {
+          "topic": "Adventure line",
+          "count": 1
+        },
+        {
+          "topic": "Nature",
+          "count": 1
+        },
+        {
+          "topic": "Plans",
+          "count": 1
+        },
+        {
+          "topic": "School",
+          "count": 1
+        },
+        {
+          "topic": "Time",
+          "count": 1
+        }
+      ],
+      "sampleVocabularyIds": [
+        "vocab-mujun",
+        "vocab-gainen",
+        "vocab-honshitsu",
+        "vocab-yoin",
+        "vocab-kattou",
+        "vocab-chimitsu",
+        "vocab-hakanai",
+        "vocab-bakuzen"
+      ],
+      "sampleLineIds": [
+        "line-mujun-no-naka-ni-honshitsu",
+        "line-hakanai-yoin-wo-mune-ni",
+        "line-kattou-goto-kakugo-ni-kaeru",
+        "line-bakuzen-to-shita-rinkaku",
+        "line-uketsuida-hikari-wo-tsuranuku",
+        "line-kaishaku-wo-kutsugaeshite",
+        "line-rinen-wa-yami-de-mo-yuraganai",
+        "line-muishiki-ga-sasayaku-namae"
+      ],
+      "sampleGrammarIds": [
+        "grammar-extent-ni-itaru-made",
+        "grammar-inevitable-effect-zuniwa-okanai",
+        "grammar-duty-naidewa-sumanai",
+        "grammar-purpose-n-ga-tame",
+        "grammar-concession-to-wa-ie",
+        "grammar-starting-wo-kawagiri-ni",
+        "grammar-unique-nara-dewa",
+        "grammar-obvious-mademo-naku"
+      ]
+    }
+  },
+  "failures": []
+}

@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-app-store-connect-checklist.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "storeConfig": "store.config.js",
+    "metadataPreview": "docs/app-store-metadata-preview.json",
+    "appStoreCopyAudit": "docs/app-store-copy-audit.json",
+    "metadataUploadPacket": "docs/app-store-metadata-upload-packet.json",
+    "localizationAudit": "docs/localization-audit.json",
+    "screenshotQaAudit": "docs/screenshot-qa-audit.json",
+    "publicSiteDeployAudit": "docs/public-site-deploy-audit.json",
+    "publicSiteHostingVerification": "docs/public-site-hosting-verification.json",
+    "reviewGuide": "docs/app-store-review-guide.json",
+    "ageRatingAudit": "docs/app-store-age-rating-audit.json",
+    "studyBankDepthAudit": "docs/study-bank-depth-audit.json",
+    "studyContentLocalizationAudit": "docs/study-content-localization-audit.json",
+    "contentRightsAudit": "docs/content-rights-audit.json",
+    "privacyManifestAudit": "docs/privacy-manifest-audit.json",
+    "privacyAnswers": "docs/app-store-privacy-answers.json",
+    "privacyReviewPacket": "docs/privacy-review-packet.json",
+    "admobReleaseAudit": "docs/admob-release-audit.json",
+    "dataFlowPrivacyAudit": "docs/data-flow-privacy-audit.json",
+    "runtimeUiFlowAudit": "docs/runtime-ui-flow-audit.json",
+    "externalReadiness": "docs/external-readiness.json",
+    "productionDeviceSmokeTest": "docs/production-device-smoke-test.json",
+    "releaseStatus": "scripts/release-status.js --json"
+  },
+  "officialReferences": [
+    {
+      "label": "Apple App Privacy Details",
+      "url": "https://developer.apple.com/app-store/app-privacy-details/",
+      "reason": "Privacy answers must include the app and integrated third-party SDK practices."
+    },
+    {
+      "label": "Apple Manage App Privacy",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-app-information/manage-app-privacy/",
+      "reason": "Privacy Policy URL is entered in App Store Connect App Privacy."
+    },
+    {
+      "label": "Apple Set An App Age Rating",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating/",
+      "reason": "Age rating is determined by the App Store Connect questionnaire."
+    },
+    {
+      "label": "Apple Age Rating Values And Definitions",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions/",
+      "reason": "Final age rating is shown after questionnaire answers are submitted."
+    }
+  ],
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "slug": "kana-sprint",
+    "bundleIdentifier": "com.john.kanasprint",
+    "buildNumber": "1",
+    "packageName": "com.john.kanasprint",
+    "expo": "~56.0.15",
+    "reactNative": "0.85.3",
+    "supportsTablet": true,
+    "encryption": "No non-exempt encryption declared"
+  },
+  "metadata": {
+    "locales": [
+      "zh-Hans",
+      "zh-Hant",
+      "en-US",
+      "fr-FR",
+      "it",
+      "de-DE",
+      "es-ES",
+      "ko",
+      "pl",
+      "pt-BR"
+    ],
+    "defaultLocale": "en-US",
+    "categories": [
+      [
+        "GAMES",
+        "GAMES_WORD"
+      ],
+      "EDUCATION"
+    ],
+    "copyright": "2026 Kana Sprint",
+    "reviewContactReady": false,
+    "supportReady": true,
+    "privacyReady": true,
+    "screenshotEntries": 176,
+    "screenshotQaAudit": "docs/screenshot-qa-audit.md",
+    "screenshotQaRisk": "PASS",
+    "screenshotQaReady": true,
+    "screenshotQaLocalizedDistinct": true,
+    "screenshotQaUnexpectedDuplicateGroups": 0,
+    "appStoreCopyAudit": "docs/app-store-copy-audit.md",
+    "appStoreCopyRisk": "PASS",
+    "appStoreCopyReadyLocales": 10,
+    "appStoreCopyLocales": 10,
+    "appStoreCopyKeywordFormatReady": true,
+    "appStoreCopyKeywordsByteLimitReady": true,
+    "appStoreCopyNoProtectedTerms": true,
+    "metadataUploadPacket": "docs/app-store-metadata-upload-packet.md",
+    "metadataUploadPacketRisk": "PASS",
+    "metadataUploadPacketLocalReady": true,
+    "metadataUploadPacketFieldReadyLocales": 10,
+    "metadataUploadPacketScreenshotReadyLocales": 10,
+    "metadataUploadPacketSupportUrlReadyLocales": 10,
+    "metadataUploadPacketPrivacyUrlReadyLocales": 10,
+    "localizationAudit": "docs/localization-audit.md",
+    "localizationRisk": "PASS",
+    "localizationUiLocales": 10,
+    "localizationAppStoreLocales": 10,
+    "localizationScreenshotEntries": 160,
+    "runtimeUiFlowAudit": "docs/runtime-ui-flow-audit.md",
+    "runtimeUiFlowRisk": "PASS",
+    "runtimeUiFlowReady": true,
+    "runtimeUiFlowChecks": 21,
+    "runtimeUiFlowPassedChecks": 21,
+    "runtimeUiFlowRequiredFailures": 0,
+    "publicSiteDeployAudit": "docs/public-site-deploy-audit.md",
+    "publicSiteDeployRisk": "PASS",
+    "publicSiteLocalReady": true,
+    "publicSiteHostingReady": true,
+    "publicSiteHostingVerification": "docs/public-site-hosting-verification.md",
+    "publicSiteHostingVerificationStatus": "PASS",
+    "publicSiteHostingVerificationReady": true,
+    "publicSiteHostingVerificationCheckedUrls": 45,
+    "publicSiteHostingVerificationPassedUrls": 45,
+    "publicSiteHostingVerificationFailedUrls": 0,
+    "ageRatingAudit": "docs/app-store-age-rating-audit.md",
+    "ageRatingRisk": "PASS",
+    "ageRatingSuggestedAppleGlobalRating": "4+ candidate",
+    "ageRatingFrequencyNoneAnswers": 12,
+    "ageRatingFrequencyQuestions": 12,
+    "studyBankDepthAudit": "docs/study-bank-depth-audit.md",
+    "studyBankDepthRisk": "PASS",
+    "studyBankDepthLevels": 5,
+    "studyBankDepthTopics": 26,
+    "studyBankDepthProgression": true,
+    "studyContentLocalizationAudit": "docs/study-content-localization-audit.md",
+    "studyContentLocalizationRisk": "PASS",
+    "studyContentLocalizationLocales": 10,
+    "studyContentLocalizationItems": 853,
+    "studyContentLocalizationTextKeys": 685,
+    "studyContentLocalizedFields": 17060,
+    "studyContentExpectedFields": 17060,
+    "studyContentTranslationEntries": 4110,
+    "studyContentExpectedTranslationEntries": 4110,
+    "studyContentMissingLocalizedFields": 0,
+    "studyContentMissingTranslationEntries": 0,
+    "contentRightsAudit": "docs/content-rights-audit.md",
+    "protectedIpTermHits": 0,
+    "privacyManifestAudit": "docs/privacy-manifest-audit.md",
+    "privacyManifestRisk": "PASS",
+    "privacyManifestTracking": false,
+    "privacyManifestCollectedDataTypes": 0,
+    "privacyAnswers": "docs/app-store-privacy-answers.md",
+    "privacyAnswersRisk": "PASS",
+    "privacyAnswersCurrentState": "NO_LIVE_ADS",
+    "privacyAnswersAppCodeCollectsPersonalData": false,
+    "privacyReviewPacket": "docs/privacy-review-packet.md",
+    "privacyReviewPacketRisk": "PASS",
+    "privacyReviewPacketLocalReady": true,
+    "privacyReviewPacketCurrentState": "NO_LIVE_ADS",
+    "privacyReviewPacketFinalReviewConfirmed": false,
+    "privacyReviewPacketNoLiveAdsSuggestedRows": 11,
+    "privacyReviewPacketLiveAdMobDisclosureRows": 6,
+    "admobReleaseAudit": "docs/admob-release-audit.md",
+    "admobReleaseRisk": "PASS",
+    "admobReleaseCurrentState": "NO_LIVE_ADS",
+    "admobReleaseLocalReady": true,
+    "admobReleaseLiveAdsReady": false,
+    "admobReleaseExternalReady": false,
+    "dataFlowPrivacyAudit": "docs/data-flow-privacy-audit.md",
+    "dataFlowPrivacyRisk": "PASS",
+    "dataFlowPrivacyLocalReady": true,
+    "dataFlowAppOwnedNetworkRequests": 0,
+    "dataFlowAnalyticsSdkCount": 0,
+    "dataFlowAuthSdkCount": 0
+  },
+  "suggestedAnswers": {
+    "appInformation": {
+      "primaryCategory": "Games",
+      "secondaryCategory": "Education",
+      "subcategory": "Word",
+      "studyBankDepth": "N5-N1 local study bank: 513 vocabulary prompts, 148 original anime-style line prompts, 26 topic families. Audit risk: PASS.",
+      "studyContentLocalization": "Study content localization: 853 study items and 685 study text keys are available across 10 UI locales. Audit risk: PASS.",
+      "contentRights": "Kana Sprint uses original anime-style study lines and does not include known protected anime quotes, characters, titles, or third-party story worlds. Audit risk: PASS.",
+      "kidsCategory": false,
+      "containsAds": true,
+      "inAppPurchases": false,
+      "userGeneratedContent": false,
+      "signInRequired": false,
+      "demoAccountRequired": false
+    },
+    "ageRating": {
+      "auditPath": "docs/app-store-age-rating-audit.md",
+      "risk": "PASS",
+      "expected": "4+ candidate; final global and region-specific ratings are calculated by App Store Connect",
+      "finalSource": "App Store Connect age rating questionnaire",
+      "frequencyNoneAnswers": 12,
+      "frequencyQuestions": 12,
+      "advisory": {
+        "alcoholTobaccoOrDrugUseOrReferences": "NONE",
+        "contests": "NONE",
+        "gamblingSimulated": "NONE",
+        "horrorOrFearThemes": "NONE",
+        "matureOrSuggestiveThemes": "NONE",
+        "medicalOrTreatmentInformation": "NONE",
+        "profanityOrCrudeHumor": "NONE",
+        "sexualContentGraphicAndNudity": "NONE",
+        "sexualContentOrNudity": "NONE",
+        "violenceCartoonOrFantasy": "NONE",
+        "violenceRealistic": "NONE",
+        "violenceRealisticProlongedGraphicOrSadistic": "NONE",
+        "gambling": false,
+        "unrestrictedWebAccess": false,
+        "kidsAgeBand": null,
+        "ageRatingOverride": "NONE",
+        "koreaAgeRatingOverride": "NONE"
+      }
+    },
+    "privacy": {
+      "privacyPolicyUrlStatus": "OK",
+      "supportUrlStatus": "OK",
+      "privacyManifestAudit": "docs/privacy-manifest-audit.md",
+      "privacyManifestRisk": "PASS",
+      "privacyAnswers": "docs/app-store-privacy-answers.md",
+      "privacyAnswersRisk": "PASS",
+      "privacyReviewPacket": "docs/privacy-review-packet.md",
+      "privacyReviewPacketRisk": "PASS",
+      "currentBuildState": "NO_LIVE_ADS",
+      "admobReleaseAudit": "docs/admob-release-audit.md",
+      "admobReleaseRisk": "PASS",
+      "dataFlowPrivacyAudit": "docs/data-flow-privacy-audit.md",
+      "dataFlowPrivacyRisk": "PASS",
+      "noLiveAdsState": "No data collected by this app; no tracking; no account; progress and settings stay local.",
+      "liveAdsState": "Review Google Mobile Ads SDK privacy report and disclose ad SDK data collection before APP_STORE_PRIVACY_ANSWERS_REVIEWED=1.",
+      "finalConfirmationEnv": "APP_STORE_PRIVACY_ANSWERS_REVIEWED"
+    },
+    "review": {
+      "contactStatus": "TODO",
+      "notes": "Kana Sprint does not require sign-in. Reviewers can start a practice run directly, switch N5-N1 difficulty, open Settings for language and music, and use the rewarded-ad continue entry point when production AdMob IDs are configured.",
+      "noDemoAccount": true,
+      "productionDeviceStatus": "TODO",
+      "runtimeUiFlowAudit": "docs/runtime-ui-flow-audit.md",
+      "runtimeUiFlowReady": true
+    },
+    "compliance": {
+      "exportCompliance": "ITSAppUsesNonExemptEncryption=false",
+      "tracking": "No tracking by app code; final IDFA/tracking answer must match live AdMob SDK behavior and ATT decision.",
+      "ads": "Rewarded ad entry exists; local AdMob integration ready; live ads disabled until production AdMob IDs are valid."
+    }
+  },
+  "sections": [
+    {
+      "id": "app-record",
+      "title": "App Record And Identity",
+      "fields": [
+        {
+          "label": "Bundle ID",
+          "value": "com.john.kanasprint",
+          "status": "TODO",
+          "note": "Must match Apple Developer and App Store Connect app record."
+        },
+        {
+          "label": "SKU",
+          "value": "kana-sprint-ios-v1",
+          "status": "MANUAL",
+          "note": "Suggested stable SKU for the first iOS app record; set once in App Store Connect."
+        },
+        {
+          "label": "Version",
+          "value": "1.0.0",
+          "status": "READY",
+          "note": "Matches app.json and EAS metadata."
+        },
+        {
+          "label": "Build number",
+          "value": "1",
+          "status": "READY",
+          "note": "EAS remote versioning should be initialized before production build."
+        },
+        {
+          "label": "Copyright",
+          "value": "2026 Kana Sprint",
+          "status": "READY",
+          "note": "Generated in store.config.js."
+        }
+      ]
+    },
+    {
+      "id": "app-information",
+      "title": "App Information",
+      "fields": [
+        {
+          "label": "Primary category",
+          "value": "Games",
+          "status": "READY",
+          "note": "store.config.js categories include GAMES / GAMES_WORD."
+        },
+        {
+          "label": "Secondary category",
+          "value": "Education",
+          "status": "READY",
+          "note": "Matches learning-game positioning."
+        },
+        {
+          "label": "Age rating questionnaire",
+          "value": "Risk PASS; 12/12 advisory frequency answers are NONE; suggested 4+ candidate.",
+          "status": "READY",
+          "note": "Use docs/app-store-age-rating-audit.md while answering App Store Connect; confirm the calculated global and region-specific ratings before review."
+        },
+        {
+          "label": "App Store copy audit",
+          "value": "Risk PASS; 10/10 locales ready; keywords byte limit=pass.",
+          "status": "READY",
+          "note": "See docs/app-store-copy-audit.md before editing App Store titles, subtitles, keywords, or descriptions."
+        },
+        {
+          "label": "Metadata upload packet",
+          "value": "Risk PASS; fields=10/10; screenshots=10/10; support URLs=10/10; privacy URLs=10/10.",
+          "status": "READY",
+          "note": "Use docs/app-store-metadata-upload-packet.md as the manual App Store Connect fallback if EAS Metadata cannot push fields."
+        },
+        {
+          "label": "Runtime UI flow audit",
+          "value": "Risk PASS; 21/21 runtime flows ready; failures=0.",
+          "status": "READY",
+          "note": "See docs/runtime-ui-flow-audit.md before confirming first screen, Settings language, exit, daily challenge, BGM, support/privacy links, and rewarded-ad entry."
+        },
+        {
+          "label": "JLPT study depth",
+          "value": "5 JLPT levels, 853 study items, 26 topic families, progression=pass.",
+          "status": "READY",
+          "note": "See docs/study-bank-depth-audit.md before changing the N5-N1 content bank."
+        },
+        {
+          "label": "Study content localization",
+          "value": "853 study items, 685 text keys, 10 UI locales, missing fields=0, missing translations=0.",
+          "status": "READY",
+          "note": "See docs/study-content-localization-audit.md before adding vocabulary, line prompts, or supported languages."
+        },
+        {
+          "label": "Content rights",
+          "value": "Original study data, 148 original anime-style lines, game-style BGM assets, app-owned generated screenshots.",
+          "status": "READY",
+          "note": "See docs/content-rights-audit.md; confirm no protected anime quote, character, title, brand, or third-party asset is used."
+        },
+        {
+          "label": "Kids category",
+          "value": "No",
+          "status": "READY",
+          "note": "The app is for general learners, not submitted as a Kids category app."
+        }
+      ]
+    },
+    {
+      "id": "pricing-availability",
+      "title": "Pricing And Availability",
+      "fields": [
+        {
+          "label": "Price",
+          "value": "Free recommended",
+          "status": "MANUAL",
+          "note": "Rewarded ads are the monetization path; choose the final App Store price tier manually."
+        },
+        {
+          "label": "Availability",
+          "value": "All intended App Store countries/regions",
+          "status": "MANUAL",
+          "note": "Confirm regions match ad privacy messaging and localization coverage."
+        },
+        {
+          "label": "In-app purchases",
+          "value": "None",
+          "status": "READY",
+          "note": "No purchase or subscription code exists in the app."
+        },
+        {
+          "label": "Phased release",
+          "value": "No",
+          "status": "READY",
+          "note": "store.config.js controls EAS metadata release settings."
+        }
+      ]
+    },
+    {
+      "id": "privacy-compliance",
+      "title": "Privacy And Compliance",
+      "fields": [
+        {
+          "label": "Privacy Policy URL",
+          "value": "https://johnshinsei.github.io/kana-sprint-site/privacy",
+          "status": "OK",
+          "note": "Host site/ over HTTPS or set APP_STORE_PRIVACY_URL / APP_STORE_BASE_URL."
+        },
+        {
+          "label": "Support URL",
+          "value": "https://johnshinsei.github.io/kana-sprint-site/support",
+          "status": "OK",
+          "note": "Host site/ over HTTPS or set APP_STORE_SUPPORT_URL / APP_STORE_BASE_URL."
+        },
+        {
+          "label": "Public site hosting verification",
+          "value": "Status PASS; 45/45 URLs passed; failures=0.",
+          "status": "READY",
+          "note": "After hosting site/ over production HTTPS, run npm run site:verify-hosting and confirm docs/public-site-hosting-verification.md is PASS."
+        },
+        {
+          "label": "Privacy manifest",
+          "value": "Risk PASS; tracking=no; collected data types=0.",
+          "status": "READY",
+          "note": "See docs/privacy-manifest-audit.md; rerun after native dependency or AdMob changes."
+        },
+        {
+          "label": "App Privacy details",
+          "value": "Use docs/app-store-privacy-answers.md; current build state NO_LIVE_ADS.",
+          "status": "TODO",
+          "note": "Must include third-party SDK practices for the submitted build."
+        },
+        {
+          "label": "Privacy review packet",
+          "value": "Risk PASS; local ready=yes; current state=NO_LIVE_ADS; no-live rows=11; live-AdMob rows=6.",
+          "status": "READY",
+          "note": "Use docs/privacy-review-packet.md as the compact App Store Connect privacy-form checklist before setting APP_STORE_PRIVACY_ANSWERS_REVIEWED=1."
+        },
+        {
+          "label": "AdMob release audit",
+          "value": "Risk PASS; state NO_LIVE_ADS; live ads ready=no.",
+          "status": "READY",
+          "note": "See docs/admob-release-audit.md before enabling or submitting live rewarded ads."
+        },
+        {
+          "label": "Data flow privacy audit",
+          "value": "Risk PASS; app-owned network hits=0; analytics SDKs=0; auth SDKs=0.",
+          "status": "READY",
+          "note": "See docs/data-flow-privacy-audit.md before confirming no data collection, no account, no analytics, and no user-generated content."
+        },
+        {
+          "label": "Tracking / IDFA",
+          "value": "Match final AdMob SDK behavior and ATT decision.",
+          "status": "MANUAL",
+          "note": "The app requests non-personalized rewarded ads by default, but final App Store answers must match the production SDK report."
+        },
+        {
+          "label": "Export compliance",
+          "value": "ITSAppUsesNonExemptEncryption=false",
+          "status": "READY",
+          "note": "app.json declares no non-exempt encryption. Recheck if native dependencies change."
+        }
+      ]
+    },
+    {
+      "id": "review-submission",
+      "title": "Review And Submission",
+      "fields": [
+        {
+          "label": "Review contact",
+          "value": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE",
+          "status": "TODO",
+          "note": "Fill APP_STORE_REVIEW_* values before metadata push."
+        },
+        {
+          "label": "Review notes",
+          "value": "Kana Sprint does not require sign-in. Reviewers can start a practice run directly, switch N5-N1 difficulty, open Settings for language and music, and use the rewarded-ad continue entry point when production AdMob IDs are configured.",
+          "status": "READY",
+          "note": "No login or demo account required."
+        },
+        {
+          "label": "Screenshots",
+          "value": "176 generated screenshot entries; QA risk PASS",
+          "status": "READY",
+          "note": "Upload localized screenshot packs from assets/store/ios-localized; see docs/screenshot-qa-audit.md before uploading."
+        },
+        {
+          "label": "Production device test",
+          "value": "Set to 1 only after the real external action is complete.",
+          "status": "TODO",
+          "note": "Complete docs/production-device-smoke-test.md on the exact submitted build."
+        },
+        {
+          "label": "Final strict gate",
+          "value": "npm run release:store-ready",
+          "status": "TODO",
+          "note": "Must pass before metadata push, production build, and submit."
+        }
+      ]
+    }
+  ],
+  "finalCommands": [
+    "npm run release:verify",
+    "npm run release:store-ready",
+    "npm run metadata:ios",
+    "npm run build:ios",
+    "npm run submit:ios"
+  ]
+}

@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>오픈소스 고지</title>
+    <meta name="description" content="Kana Sprint는 60초 라운드로 가나, JLPT N5-N1 단어, 오리지널 애니풍 일본어 문장을 연습하는 게임입니다.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #172131;
+        --ink: #fff7e8;
+        --muted: #a7b0c4;
+        --accent: #ffb23f;
+        --green: #31c6a7;
+        --line: #2e3a4e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 64px;
+      }
+      .mark {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 38px;
+        font-weight: 800;
+      }
+      nav { margin-bottom: 48px; }
+      a { color: var(--accent); }
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 76px);
+        line-height: 1;
+      }
+      h2 {
+        margin: 38px 0 10px;
+        font-size: 24px;
+      }
+      p, li {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: var(--panel);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .button.primary {
+        border-color: transparent;
+        background: var(--accent);
+        color: var(--bg);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 60px;
+      }
+      .fact, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green);
+      }
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      td {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .locale-note {
+        margin-top: 34px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav><a href="../">Kana Sprint</a></nav>
+      <h1>오픈소스 고지</h1>
+      <p class="panel">Kana Sprint is built with open source packages. This page summarizes the current release runtime dependency licenses for users and reviewers.</p>
+      <h2>License Summary</h2>
+
+      <ul>
+        <li>Runtime packages: 515</li>
+        <li>Direct runtime dependencies: 18</li>
+        <li>Distinct runtime licenses: 14</li>
+        <li>Unknown runtime licenses: 0</li>
+        <li>Prohibited runtime licenses: 0</li>
+        <li>Runtime packages needing notice/review: 13</li>
+      </ul>
+      <p>This page is generated from the current package-lock license audit.</p>
+      <h2>Direct Runtime Dependencies</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Package</th><th>Version</th><th>License</th><th>Classification</th></tr></thead>
+          <tbody><tr><td>@expo/metro-runtime</td><td>56.0.16</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>@react-native-async-storage/async-storage</td><td>2.2.0</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo</td><td>56.0.15</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-asset</td><td>56.0.19</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-audio</td><td>56.0.12</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-build-properties</td><td>56.0.22</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-constants</td><td>56.0.20</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-haptics</td><td>56.0.3</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-localization</td><td>56.0.6</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-speech</td><td>56.0.3</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-splash-screen</td><td>56.0.12</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-status-bar</td><td>56.0.4</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>expo-system-ui</td><td>56.0.5</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>react</td><td>19.2.3</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>react-dom</td><td>19.2.3</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>react-native</td><td>0.85.3</td><td>MIT</td><td>permissive</td></tr>
+          <tr><td>react-native-google-mobile-ads</td><td>16.3.4</td><td>Apache-2.0</td><td>permissive</td></tr>
+          <tr><td>react-native-web</td><td>0.21.2</td><td>MIT</td><td>permissive</td></tr></tbody>
+        </table>
+      </div>
+      <h2>Runtime Notice Or Review Packages</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Package</th><th>Version</th><th>License</th><th>Classification</th></tr></thead>
+          <tbody><tr><td>lightningcss</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-android-arm64</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-darwin-arm64</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-darwin-x64</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-freebsd-x64</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-linux-arm-gnueabihf</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-linux-arm64-gnu</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-linux-arm64-musl</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-linux-x64-gnu</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-linux-x64-musl</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-win32-arm64-msvc</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>lightningcss-win32-x64-msvc</td><td>1.32.0</td><td>MPL-2.0</td><td>weak-copyleft-notice</td></tr>
+          <tr><td>node-forge</td><td>1.4.0</td><td>(BSD-3-Clause OR GPL-2.0)</td><td>dual-license-permissive-option</td></tr></tbody>
+        </table>
+      </div>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "ios": {
+    "CFBundleDisplayName": "Kana Sprint"
+  },
+  "android": {
+    "app_name": "Kana Sprint"
+  }
+}

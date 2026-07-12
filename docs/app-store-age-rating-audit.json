@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-age-rating-audit.js",
+  "generatedFrom": {
+    "appConfig": "app.json",
+    "storeConfig": "store.config.js",
+    "appSource": "App.tsx",
+    "appStoreNotes": "docs/app-store-notes.md"
+  },
+  "officialReferences": [
+    {
+      "label": "Apple Set An App Age Rating",
+      "url": "https://developer.apple.com/help/app-store-connect/manage-app-information/set-an-app-age-rating/"
+    },
+    {
+      "label": "Apple Age Rating Values And Definitions",
+      "url": "https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions/"
+    }
+  ],
+  "app": {
+    "name": "Kana Sprint",
+    "version": "1.0.0",
+    "bundleIdentifier": "com.john.kanasprint",
+    "primaryCategory": "Games",
+    "secondaryCategory": "Education"
+  },
+  "posture": {
+    "statement": "Kana Sprint is a language-learning matching game with no account, no user-generated content, no purchases, no chat, and no gambling.",
+    "limitation": "The final global and region-specific ratings must be saved in App Store Connect after answering the live questionnaire."
+  },
+  "questionnaire": {
+    "expectedFrequencyAnswer": "NONE",
+    "frequencyAnswers": [
+      {
+        "key": "alcoholTobaccoOrDrugUseOrReferences",
+        "label": "Alcohol, tobacco, drug use, or references",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No alcohol, tobacco, or drug references are used in the study bank or gameplay."
+      },
+      {
+        "key": "contests",
+        "label": "Contests",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No contest, sweepstakes, or prize competition mechanics exist."
+      },
+      {
+        "key": "gamblingSimulated",
+        "label": "Simulated gambling",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "Gameplay is answer matching only, with no gambling simulation."
+      },
+      {
+        "key": "horrorOrFearThemes",
+        "label": "Horror or fear themes",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "Original anime-style study lines are motivational language-learning prompts, not horror content."
+      },
+      {
+        "key": "matureOrSuggestiveThemes",
+        "label": "Mature or suggestive themes",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "The app contains no mature, dating, or suggestive material."
+      },
+      {
+        "key": "medicalOrTreatmentInformation",
+        "label": "Medical or treatment information",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "The app is a language-learning game and does not provide medical information."
+      },
+      {
+        "key": "profanityOrCrudeHumor",
+        "label": "Profanity or crude humor",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "Study content avoids profanity and crude humor."
+      },
+      {
+        "key": "sexualContentGraphicAndNudity",
+        "label": "Graphic sexual content and nudity",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No graphic sexual content or nudity exists."
+      },
+      {
+        "key": "sexualContentOrNudity",
+        "label": "Sexual content or nudity",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No sexual content or nudity exists."
+      },
+      {
+        "key": "violenceCartoonOrFantasy",
+        "label": "Cartoon or fantasy violence",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "The app has hearts/lives for scoring, but no depicted violence."
+      },
+      {
+        "key": "violenceRealistic",
+        "label": "Realistic violence",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No realistic violence exists."
+      },
+      {
+        "key": "violenceRealisticProlongedGraphicOrSadistic",
+        "label": "Prolonged graphic or sadistic realistic violence",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No graphic or sadistic violence exists."
+      }
+    ],
+    "capabilityAnswers": [
+      {
+        "key": "gambling",
+        "label": "Gambling",
+        "answer": false,
+        "expected": false,
+        "ready": true,
+        "evidence": "No real-money gambling or gambling services exist."
+      },
+      {
+        "key": "unrestrictedWebAccess",
+        "label": "Unrestricted web access",
+        "answer": false,
+        "expected": false,
+        "ready": true,
+        "evidence": "The app opens fixed Support, Privacy, and Open source URLs only; it has no browser or arbitrary URL input."
+      },
+      {
+        "key": "kidsAgeBand",
+        "label": "Made for Kids age band",
+        "answer": null,
+        "expected": null,
+        "ready": true,
+        "evidence": "The app is not submitted in the Kids category."
+      },
+      {
+        "key": "ageRatingOverride",
+        "label": "Override to higher age rating",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No higher rating override is selected locally; App Store Connect remains the final source."
+      },
+      {
+        "key": "koreaAgeRatingOverride",
+        "label": "Korea age rating override",
+        "answer": "NONE",
+        "expected": "NONE",
+        "ready": true,
+        "evidence": "No Korea-specific GRAC override is selected locally."
+      }
+    ],
+    "finalSource": "App Store Connect age rating questionnaire",
+    "suggestedAppleGlobalRating": "4+ candidate",
+    "ageSuitabilityUrl": "Optional public support or marketing URL after hosting site/."
+  },
+  "sourceSignals": {
+    "hasTextInput": false,
+    "hasWebViewDependency": false,
+    "hasInAppPurchaseDependency": false,
+    "hasAuthDependency": false,
+    "reviewNotesMentionNoLogin": true,
+    "notesMentionNoUserGeneratedContent": true,
+    "notesMentionNoPurchases": true,
+    "settingsUsesFixedExternalLinks": true
+  },
+  "summary": {
+    "risk": "PASS",
+    "suggestedAppleGlobalRating": "4+ candidate",
+    "finalRatingSource": "App Store Connect age rating questionnaire",
+    "frequencyQuestions": 12,
+    "frequencyNoneAnswers": 12,
+    "capabilitiesReady": true,
+    "sourceReady": true,
+    "allFrequencyAnswersNone": true,
+    "kidsCategory": false,
+    "unrestrictedWebAccess": false,
+    "gambling": false,
+    "overrides": 0
+  }
+}

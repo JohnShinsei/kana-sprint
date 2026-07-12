@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Polityka prywatności</title>
+    <meta name="description" content="Kana Sprint ćwiczy kanę, słownictwo JLPT N5-N1 i oryginalne japońskie kwestie w stylu anime w rundach 60 sekund.">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #10151f;
+        --panel: #172131;
+        --ink: #fff7e8;
+        --muted: #a7b0c4;
+        --accent: #ffb23f;
+        --green: #31c6a7;
+        --line: #2e3a4e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        width: min(920px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 64px;
+      }
+      .mark {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        place-items: center;
+        border-radius: 16px;
+        background: var(--accent);
+        color: var(--bg);
+        font-size: 38px;
+        font-weight: 800;
+      }
+      nav { margin-bottom: 48px; }
+      a { color: var(--accent); }
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(34px, 7vw, 58px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+      .brand h1 {
+        margin: 0;
+        font-size: clamp(42px, 8vw, 76px);
+        line-height: 1;
+      }
+      h2 {
+        margin: 38px 0 10px;
+        font-size: 24px;
+      }
+      p, li {
+        max-width: 760px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 48px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 0 18px;
+        background: var(--panel);
+        color: var(--ink);
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .button.primary {
+        border-color: transparent;
+        background: var(--accent);
+        color: var(--bg);
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+        margin-top: 60px;
+      }
+      .fact, .panel {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 20px;
+      }
+      .fact strong {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--green);
+      }
+      .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 16px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 680px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        padding: 12px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        color: var(--green);
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+      td {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .locale-note {
+        margin-top: 34px;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+
+      <nav><a href="../">Kana Sprint</a></nav>
+      <h1>Polityka prywatności</h1>
+      <p class="panel">Kana Sprint samodzielnie nie zbiera danych osobowych.</p>
+      <h2>Dane lokalne</h2>
+      <p>Aplikacja zapisuje postępy, najlepsze wyniki, combo, dzienne serie, postęp celu dziennego, liczbę nauczonych elementów, język, muzykę i wybrany poziom trudności lokalnie na urządzeniu. Lokalny postęp można zresetować w ustawieniach. Te dane nie są wysyłane do dewelopera ani do usługi chmurowej.</p>
+      <h2>Brak konta i śledzenia</h2>
+      <p>Kana Sprint nie wymaga logowania, tworzenia konta, analityki, lokalizacji, kontaktów, aparatu, mikrofonu, dźwięku w tle, powiadomień push ani treści tworzonych przez użytkowników. Manifest prywatności iOS w bieżącym buildzie deklaruje brak śledzenia i brak zbieranych danych.</p>
+      <h2>Reklamy z nagrodą</h2>
+      <p>Kana Sprint zawiera opcjonalne wejście do reklamy z nagrodą pozwalającej kontynuować rundę. Google Mobile Ads na żywo jest włączane tylko wtedy, gdy prawidłowe ID AdMob są skonfigurowane dla buildu wydania. Żądania reklam domyślnie używają reklam niespersonalizowanych.</p>
+      <p>Gdy Google UMP zgłasza wymóg opcji prywatności reklam, aplikacja pokazuje wpis w ustawieniach, który otwiera formularz UMP.</p>
+      <p>Po włączeniu Google Mobile Ads SDK może otrzymywać dane związane z reklamami, takie jak adres IP, przybliżona lokalizacja wywnioskowana z IP, logi awarii, dane wydajności, ID urządzenia lub identyfikatory reklamowe, dane reklamowe oraz interakcje produktu, na przykład wyświetlenia reklam lub zdarzenia w aplikacji.</p>
+      <h2>Zmiany</h2>
+      <p>Jeśli sposób użycia danych zmieni się w przyszłej wersji, ta strona oraz informacje o prywatności w App Store powinny zostać zaktualizowane przed wydaniem.</p>
+
+    </main>
+  </body>
+</html>

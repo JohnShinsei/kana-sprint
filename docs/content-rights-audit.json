@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "source": "scripts/generate-content-rights-audit.js",
+  "generatedFrom": {
+    "gameData": "src/gameData.ts",
+    "appStoreLocalizations": "docs/app-store-localizations.json"
+  },
+  "posture": {
+    "statement": "Kana Sprint uses original anime-style study lines and does not include known protected anime quotes, characters, titles, or third-party story worlds.",
+    "limitation": "This is a static release audit for obvious protected-IP terms and duplicate generated lines. It is not a legal opinion.",
+    "actionIfHit": "Replace the matching content before App Store submission, then rerun npm run content:rights and npm run release:verify."
+  },
+  "summary": {
+    "totalStudyItems": 853,
+    "kanaPrompts": 92,
+    "vocabularyPrompts": 513,
+    "originalAnimeStyleLinePrompts": 148,
+    "grammarPrompts": 100,
+    "scannedTextFields": 19669,
+    "protectedIpTerms": 54,
+    "protectedIpTermHits": 0,
+    "duplicateLineDisplays": 0,
+    "duplicateLineMeanings": 0,
+    "metadataOriginalityLocales": 10,
+    "risk": "PASS"
+  },
+  "levels": {
+    "N5": {
+      "vocabulary": 137,
+      "linePrompts": 44,
+      "grammarPrompts": 20,
+      "sampleLineIds": [
+        "line-mada-owarenai",
+        "line-kokoro-orenai",
+        "line-zenryoku-de-ikou",
+        "line-ima-koso-kawaru",
+        "line-yuuki-wa-koko"
+      ]
+    },
+    "N4": {
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "sampleLineIds": [
+        "line-yotei-wa-kaerareru",
+        "line-shippai-shite-mo-daijoubu",
+        "line-yakusoku-no-basho-de",
+        "line-kimi-no-iken-wo-kikasete",
+        "line-junbi-ga-dekitara-hashirou"
+      ]
+    },
+    "N3": {
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "sampleLineIds": [
+        "line-kotae-wa-hitotsu-ja-nai",
+        "line-doryoku-wa-shizuka-ni-hikaru",
+        "line-mokuteki-wo-wasurenai",
+        "line-kitai-ga-senaka-wo-osu",
+        "line-bunka-wo-koete-waraou"
+      ]
+    },
+    "N2": {
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "sampleLineIds": [
+        "line-joukyou-wo-kaeru-handan",
+        "line-sekinin-wo-seotte-mae-e",
+        "line-genjitsu-to-mukiau-yuuki",
+        "line-kachi-wa-dareka-ga-kimeru-mono-ja-nai",
+        "line-kadai-wo-koeta-saki-ni"
+      ]
+    },
+    "N1": {
+      "vocabulary": 94,
+      "linePrompts": 26,
+      "grammarPrompts": 20,
+      "sampleLineIds": [
+        "line-mujun-no-naka-ni-honshitsu",
+        "line-hakanai-yoin-wo-mune-ni",
+        "line-kattou-goto-kakugo-ni-kaeru",
+        "line-bakuzen-to-shita-rinkaku",
+        "line-uketsuida-hikari-wo-tsuranuku"
+      ]
+    }
+  },
+  "metadataOriginality": [
+    {
+      "locale": "zh-Hans",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "zh-Hant",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "en",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "fr",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "it",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "de",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "es-ES",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "ko",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "pl",
+      "hasOriginalityClaim": true
+    },
+    {
+      "locale": "pt-BR",
+      "hasOriginalityClaim": true
+    }
+  ],
+  "protectedIpHits": [],
+  "duplicateLineDisplays": [],
+  "duplicateLineMeanings": [],
+  "scannedProtectedIpGroups": [
+    {
+      "label": "Naruto",
+      "patterns": [
+        "naruto",
+        "ナルト"
+      ]
+    },
+    {
+      "label": "One Piece",
+      "patterns": [
+        "one piece",
+        "ワンピース",
+        "ルフィ",
+        "luffy"
+      ]
+    },
+    {
+      "label": "Dragon Ball",
+      "patterns": [
+        "dragon ball",
+        "ドラゴンボール",
+        "悟空",
+        "goku",
+        "kamehameha",
+        "かめはめ波"
+      ]
+    },
+    {
+      "label": "Demon Slayer",
+      "patterns": [
+        "demon slayer",
+        "鬼滅",
+        "kimetsu"
+      ]
+    },
+    {
+      "label": "Attack on Titan",
+      "patterns": [
+        "attack on titan",
+        "進撃の巨人"
+      ]
+    },
+    {
+      "label": "Jujutsu Kaisen",
+      "patterns": [
+        "jujutsu kaisen",
+        "呪術廻戦"
+      ]
+    },
+    {
+      "label": "Sailor Moon",
+      "patterns": [
+        "sailor moon",
+        "セーラームーン",
+        "月に代わって"
+      ]
+    },
+    {
+      "label": "Pokemon",
+      "patterns": [
+        "pokemon",
+        "pokémon",
+        "ポケモン",
+        "ピカチュウ",
+        "pikachu"
+      ]
+    },
+    {
+      "label": "Gundam",
+      "patterns": [
+        "gundam",
+        "ガンダム"
+      ]
+    },
+    {
+      "label": "Evangelion",
+      "patterns": [
+        "evangelion",
+        "エヴァンゲリオン",
+        "エヴァ"
+      ]
+    },
+    {
+      "label": "Doraemon",
+      "patterns": [
+        "doraemon",
+        "ドラえもん"
+      ]
+    },
+    {
+      "label": "Detective Conan",
+      "patterns": [
+        "detective conan",
+        "名探偵コナン"
+      ]
+    },
+    {
+      "label": "Studio Ghibli",
+      "patterns": [
+        "studio ghibli",
+        "ジブリ",
+        "totoro",
+        "トトロ"
+      ]
+    },
+    {
+      "label": "Bleach",
+      "patterns": [
+        "bleach",
+        "ブリーチ"
+      ]
+    },
+    {
+      "label": "My Hero Academia",
+      "patterns": [
+        "my hero academia",
+        "僕のヒーローアカデミア"
+      ]
+    },
+    {
+      "label": "Fullmetal Alchemist",
+      "patterns": [
+        "fullmetal alchemist",
+        "鋼の錬金術師"
+      ]
+    },
+    {
+      "label": "Death Note",
+      "patterns": [
+        "death note",
+        "デスノート"
+      ]
+    },
+    {
+      "label": "Cowboy Bebop",
+      "patterns": [
+        "cowboy bebop",
+        "カウボーイビバップ"
+      ]
+    },
+    {
+      "label": "Chainsaw Man",
+      "patterns": [
+        "chainsaw man",
+        "チェンソーマン"
+      ]
+    },
+    {
+      "label": "Spy x Family",
+      "patterns": [
+        "spy x family",
+        "スパイファミリー"
+      ]
+    }
+  ]
+}
