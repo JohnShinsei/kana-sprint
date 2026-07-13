@@ -303,7 +303,7 @@
     "easEnvironment": {
       "path": "docs/eas-env-checklist.md",
       "keys": 18,
-      "requiredForEasProduction": 3,
+      "requiredForEasProduction": 1,
       "productionProfileEnvironment": "production"
     },
     "easBuildPreflight": {
@@ -504,7 +504,7 @@
         "status": "OK",
         "category": "local",
         "label": "Store submission input pack",
-        "detail": "18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
+        "detail": "18 env inputs, 1 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
       },
       {
         "status": "OK",
@@ -516,7 +516,7 @@
         "status": "OK",
         "category": "local",
         "label": "Account and service preflight",
-        "detail": "10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5."
+        "detail": "10 remote-service checks prepared, 1 EAS env keys tracked; external blockers=5."
       },
       {
         "status": "OK",
@@ -765,7 +765,7 @@
       "status": "OK",
       "category": "local",
       "label": "Store submission input pack",
-      "detail": "18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
+      "detail": "18 env inputs, 1 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
     },
     {
       "status": "OK",
@@ -777,7 +777,7 @@
       "status": "OK",
       "category": "local",
       "label": "Account and service preflight",
-      "detail": "10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5."
+      "detail": "10 remote-service checks prepared, 1 EAS env keys tracked; external blockers=5."
     },
     {
       "status": "OK",

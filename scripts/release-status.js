@@ -123,7 +123,7 @@ function expectedEasProductionKeyCount() {
     isRealAdMobId(values.EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID, admobUnitIdPattern) &&
     isRealAdMobId(values.EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID, admobUnitIdPattern);
 
-  return liveAdsEnabled ? 7 : 3;
+  return liveAdsEnabled ? 5 : 1;
 }
 
 function addConfirmationRows() {

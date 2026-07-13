@@ -539,7 +539,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4658,
-      "durationMs": 99,
+      "durationMs": 267,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -551,7 +551,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4733,
-      "durationMs": 11,
+      "durationMs": 190,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -563,7 +563,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5383,
-      "durationMs": 9,
+      "durationMs": 185,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -575,7 +575,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8242,
-      "durationMs": 10,
+      "durationMs": 184,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -587,7 +587,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4589,
-      "durationMs": 10,
+      "durationMs": 172,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -599,7 +599,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4614,
-      "durationMs": 27,
+      "durationMs": 185,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -611,7 +611,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5104,
-      "durationMs": 10,
+      "durationMs": 194,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -623,7 +623,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8195,
-      "durationMs": 12,
+      "durationMs": 189,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -635,7 +635,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4589,
-      "durationMs": 13,
+      "durationMs": 191,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -647,7 +647,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4614,
-      "durationMs": 10,
+      "durationMs": 179,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -659,7 +659,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5116,
-      "durationMs": 9,
+      "durationMs": 180,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -671,7 +671,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8201,
-      "durationMs": 10,
+      "durationMs": 190,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -683,7 +683,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4658,
-      "durationMs": 8,
+      "durationMs": 177,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -695,7 +695,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4733,
-      "durationMs": 10,
+      "durationMs": 181,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -707,7 +707,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5383,
-      "durationMs": 11,
+      "durationMs": 183,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -719,7 +719,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8242,
-      "durationMs": 9,
+      "durationMs": 173,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -731,7 +731,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4686,
-      "durationMs": 8,
+      "durationMs": 180,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -743,7 +743,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4968,
-      "durationMs": 9,
+      "durationMs": 178,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -755,7 +755,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5737,
-      "durationMs": 11,
+      "durationMs": 181,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -767,7 +767,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8243,
-      "durationMs": 9,
+      "durationMs": 225,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -779,7 +779,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4660,
-      "durationMs": 9,
+      "durationMs": 194,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -791,7 +791,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4847,
-      "durationMs": 13,
+      "durationMs": 180,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -803,7 +803,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5503,
-      "durationMs": 8,
+      "durationMs": 181,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -815,7 +815,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8236,
-      "durationMs": 9,
+      "durationMs": 177,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -827,7 +827,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4667,
-      "durationMs": 8,
+      "durationMs": 185,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -839,7 +839,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4838,
-      "durationMs": 11,
+      "durationMs": 185,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -851,7 +851,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5487,
-      "durationMs": 9,
+      "durationMs": 179,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -863,7 +863,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8236,
-      "durationMs": 9,
+      "durationMs": 181,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -875,7 +875,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4675,
-      "durationMs": 9,
+      "durationMs": 180,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -887,7 +887,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4917,
-      "durationMs": 8,
+      "durationMs": 177,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -899,7 +899,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5533,
-      "durationMs": 12,
+      "durationMs": 176,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -911,7 +911,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8251,
-      "durationMs": 9,
+      "durationMs": 190,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -923,7 +923,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4746,
-      "durationMs": 14,
+      "durationMs": 189,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -935,7 +935,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4903,
-      "durationMs": 8,
+      "durationMs": 177,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -947,7 +947,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5611,
-      "durationMs": 9,
+      "durationMs": 178,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -959,7 +959,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8252,
-      "durationMs": 9,
+      "durationMs": 178,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -971,7 +971,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4670,
-      "durationMs": 10,
+      "durationMs": 190,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -983,7 +983,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4851,
-      "durationMs": 9,
+      "durationMs": 189,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -995,7 +995,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5455,
-      "durationMs": 8,
+      "durationMs": 179,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -1007,7 +1007,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8241,
-      "durationMs": 9,
+      "durationMs": 178,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -1019,7 +1019,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4679,
-      "durationMs": 9,
+      "durationMs": 183,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -1031,7 +1031,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 4879,
-      "durationMs": 10,
+      "durationMs": 180,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -1043,7 +1043,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 5524,
-      "durationMs": 9,
+      "durationMs": 189,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -1055,7 +1055,7 @@
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "bytes": 8252,
-      "durationMs": 9,
+      "durationMs": 176,
       "passed": true,
       "missingSnippets": [],
       "error": null
@@ -1067,7 +1067,7 @@
       "status": 200,
       "contentType": "application/xml",
       "bytes": 3736,
-      "durationMs": 9,
+      "durationMs": 176,
       "passed": true,
       "missingSnippets": [],
       "error": null

@@ -18,7 +18,7 @@
   },
   "summary": {
     "totalKeys": 18,
-    "requiredForEasProduction": 3,
+    "requiredForEasProduction": 1,
     "clientVisible": 8,
     "sensitive": 8,
     "plaintext": 10,
@@ -200,8 +200,8 @@
     {
       "key": "APP_STORE_SUPPORT_URL",
       "group": "Public store URLs",
-      "easLocation": "local .env.local + EAS production",
-      "requiredForEasProduction": true,
+      "easLocation": "optional override in local .env.local + EAS production",
+      "requiredForEasProduction": false,
       "visibility": "plaintext",
       "validation": "Production HTTPS support URL; APP_STORE_BASE_URL can derive it",
       "usedBy": [
@@ -224,8 +224,8 @@
     {
       "key": "APP_STORE_PRIVACY_URL",
       "group": "Public store URLs",
-      "easLocation": "local .env.local + EAS production",
-      "requiredForEasProduction": true,
+      "easLocation": "optional override in local .env.local + EAS production",
+      "requiredForEasProduction": false,
       "visibility": "plaintext",
       "validation": "Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it",
       "usedBy": [

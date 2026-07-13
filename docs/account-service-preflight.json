@@ -36,9 +36,7 @@
     "submit": "npx eas-cli submit --platform ios --profile production"
   },
   "requiredEasProductionEnv": [
-    "APP_STORE_BASE_URL",
-    "APP_STORE_SUPPORT_URL",
-    "APP_STORE_PRIVACY_URL"
+    "APP_STORE_BASE_URL"
   ],
   "externalBlockingRows": [
     {
@@ -123,7 +121,7 @@
       "owner": "Expo/EAS",
       "command": "npx eas-cli env:list production --format long --scope project",
       "liveProbeId": "eas-production-env-list",
-      "evidence": "3 required production build keys exist in the EAS production environment: APP_STORE_BASE_URL, APP_STORE_SUPPORT_URL, APP_STORE_PRIVACY_URL.",
+      "evidence": "1 required production build keys exist in the EAS production environment: APP_STORE_BASE_URL.",
       "releaseStatusLabels": [
         "Live AdMob IDs",
         "Public support URL",

@@ -8,7 +8,7 @@ This pack is the fillable handoff for the remaining external App Store, EAS, AdM
 - Env keys to fill: 18
 - External readiness items: 11
 - Blocking external items: 5
-- EAS production build keys: 3
+- EAS production build keys: 1
 - Manual confirmations: 6
 - Standalone env template: `docs/store-submission.env.template`
 
@@ -49,8 +49,6 @@ PRODUCTION_DEVICE_TESTED=0
 Run these for the build-time values used by the EAS production profile. Paste values interactively instead of placing production secrets directly in shell history.
 
 - `eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext`
-- `eas env:create --name APP_STORE_SUPPORT_URL --environment production --visibility plaintext`
-- `eas env:create --name APP_STORE_PRIVACY_URL --environment production --visibility plaintext`
 
 ## App Store Connect Fields
 

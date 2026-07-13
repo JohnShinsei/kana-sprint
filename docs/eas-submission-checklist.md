@@ -138,7 +138,7 @@
 - External readiness items: 11
 - Blocking external items: 5
 - EAS environment keys: 18
-- EAS production build env values: 3
+- EAS production build env values: 1
 - EAS production profile ready: Yes
 - EAS build preflight: docs/eas-build-preflight.md
 - EAS build preflight risk: PASS
@@ -176,9 +176,9 @@
 - [OK] AdMob setup handoff: 4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no.
 - [OK] Data flow privacy audit: local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs.
 - [OK] Runtime UI flow audit: 22/22 runtime UI flows verified across 10 locales and 5 JLPT levels.
-- [OK] Store submission input pack: 18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5.
+- [OK] Store submission input pack: 18 env inputs, 1 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5.
 - [OK] External TODO tracker: 11 external items tracked, 5 blocking, 5 final commands blocked.
-- [OK] Account and service preflight: 10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5.
+- [OK] Account and service preflight: 10 remote-service checks prepared, 1 EAS env keys tracked; external blockers=5.
 - [OK] Final launch runbook: 9 launch phases mapped, metadata/build/submit ready=no; external blockers=5.
 - [OK] EAS production preflight: production profile ready, submit metadata path=./store.config.js, strict gate ready=no.
 - [OK] App Store handoff bundle: 301 handoff files indexed with hashes; external blockers=5.

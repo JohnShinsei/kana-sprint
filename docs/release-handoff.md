@@ -11,7 +11,7 @@ Use `docs/external-todo-tracker.md` to track each external blocker by phase, env
 Use `docs/account-service-preflight.md` to verify Expo/EAS login, EAS project linkage, production env values, remote version state, App Store Connect, AdMob, public hosting, TestFlight, iOS build, and EAS Submit readiness.
 Use `docs/final-launch-runbook.md` as the final phase-by-phase execution map from local verification through App Review submission.
 
-- `APP_STORE_BASE_URL` or both `APP_STORE_SUPPORT_URL` and `APP_STORE_PRIVACY_URL`
+- `APP_STORE_BASE_URL` (canonical EAS production value; `APP_STORE_SUPPORT_URL` and `APP_STORE_PRIVACY_URL` are optional overrides)
 - `APP_STORE_REVIEW_FIRST_NAME`
 - `APP_STORE_REVIEW_LAST_NAME`
 - `APP_STORE_REVIEW_EMAIL`

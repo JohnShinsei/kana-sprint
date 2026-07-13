@@ -3349,8 +3349,6 @@ function verifyEasEnvChecklist() {
   const expectedProductionKeys = [
     ...(currentStatusByLabel['Live AdMob IDs']?.status === 'OK' ? adEnvKeys : []),
     'APP_STORE_BASE_URL',
-    'APP_STORE_SUPPORT_URL',
-    'APP_STORE_PRIVACY_URL',
   ];
   const expectedSensitiveKeys = [
     ...adEnvKeys,

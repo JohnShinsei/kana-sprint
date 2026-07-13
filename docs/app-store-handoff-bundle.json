@@ -21,7 +21,7 @@
     "externalReady": false,
     "totalFiles": 301,
     "missingFiles": 0,
-    "totalBytes": 18425288,
+    "totalBytes": 18424730,
     "publicSitePages": 44,
     "publicSiteRoutes": 44,
     "screenshotEntries": 176,
@@ -89,14 +89,14 @@
         {
           "path": "docs/public-site-hosting-verification.json",
           "exists": true,
-          "bytes": 31134,
-          "sha256": "8ab27c6342bb0a41187b4ee660d87ea7ab6dec3e13bb8f7fa912b22806d4d70b"
+          "bytes": 31205,
+          "sha256": "d3c394fbd5dda41a65f30d29378d3cd80383a5d947a1b4ed60605a1d8b7d4da8"
         },
         {
           "path": "docs/public-site-hosting-verification.md",
           "exists": true,
-          "bytes": 3303,
-          "sha256": "3094f89e5886a5d395a24e338875e580a4cf7b5781b760f7bdacf48b2e862abd"
+          "bytes": 3374,
+          "sha256": "6a1f28dc0108c118bb59b39a2fc16ef35e62238de9a8e1fb432c868fda7503d2"
         },
         {
           "path": "docs/public-site-manifest.json",
@@ -396,7 +396,7 @@
       "summary": {
         "files": 56,
         "missingFiles": 0,
-        "bytes": 361676
+        "bytes": 361818
       }
     },
     {
@@ -1659,13 +1659,13 @@
           "path": "docs/release-packet.json",
           "exists": true,
           "bytes": 25470,
-          "sha256": "1e260c7be38d7fd3962b6a9d952cee851b95dd939880dbdfc8a5567c58886d82"
+          "sha256": "bd7198a07236761148bf43ec7d6516ee314a965566c38e728d2993a11ddf38bb"
         },
         {
           "path": "docs/release-packet.md",
           "exists": true,
           "bytes": 7980,
-          "sha256": "fb840d06b27abb575cf4cb8414a5e3f6f348e80da29e27c92bb538f23d1a7842"
+          "sha256": "3527e7841abbb8278b19f8f7fc40465b6618b8f846f31fdf45ecb5fadfcf11e2"
         },
         {
           "path": "docs/runtime-ui-flow-audit.json",
@@ -1723,56 +1723,56 @@
         {
           "path": ".env.example",
           "exists": true,
-          "bytes": 1279,
-          "sha256": "e5553bb893c113417a3caac19a6a0666b64f3c1bb12f0ac0d193f906372c2a0b"
+          "bytes": 1357,
+          "sha256": "d2941b5f9ed1e98145d84386449c0ffd1dab3736cc16349f2eaee53630f989fc"
         },
         {
           "path": "docs/account-service-preflight.json",
           "exists": true,
-          "bytes": 13485,
-          "sha256": "86a38f8440a02ca29b792494fb0e132afba0df6a01dedb47b97363c8aba45a1c"
+          "bytes": 13381,
+          "sha256": "ad83398ed0f31cc9b8007e81d53ad8c883037322ac0a7717f3426f2da1c2a838"
         },
         {
           "path": "docs/account-service-preflight.md",
           "exists": true,
-          "bytes": 4047,
-          "sha256": "d5cf5807ab7faed093b5b9416423b54932190d9326975a541e0f324d8e46f47c"
+          "bytes": 3995,
+          "sha256": "63b97cd0d0c28c10797c7bb7de8d24be043deddd2517cd9f1a4e218c029c1dae"
         },
         {
           "path": "docs/eas-build-preflight.json",
           "exists": true,
           "bytes": 4430,
-          "sha256": "4406f5fb99a2b6d4a90d2082e9bf3d584614bfca4d2dcd53b1d38d53c036f4fb"
+          "sha256": "cf8115405f9afbb089dba068c3c3eaa388ce7d8a325e48eb10c76d1017e36289"
         },
         {
           "path": "docs/eas-build-preflight.md",
           "exists": true,
           "bytes": 2734,
-          "sha256": "23c45d02a927696c4f7de345b4dfb1f86d8df1a8444f0a3746524a472d86809c"
+          "sha256": "66b1bd16a398435b29d378c2f6170797e2b66a0cad1d6f0509169853c0adeace"
         },
         {
           "path": "docs/eas-env-checklist.json",
           "exists": true,
-          "bytes": 15351,
-          "sha256": "5304f8f53bee08e277bb6af42759e616e1b5adffe388f3873a74537d994d4019"
+          "bytes": 15395,
+          "sha256": "2114068d025bea9d38eb71518276e6b5ec547684019020ac119d8dd1bc0fc639"
         },
         {
           "path": "docs/eas-env-checklist.md",
           "exists": true,
-          "bytes": 5082,
-          "sha256": "2a9a300ef38a968268a0a563f0173fb5d887263c69d7fc86580d1f81624d8316"
+          "bytes": 5122,
+          "sha256": "184970cb3e6e289e11d3ebc99956c50347a3a0f1cf094ae0c9ee035c1ddcd912"
         },
         {
           "path": "docs/eas-submission-checklist.json",
           "exists": true,
           "bytes": 15380,
-          "sha256": "b9e554f7d8198d22bbe6cc6f8aea83bf8bd08beda8469185bf99cce947e775ee"
+          "sha256": "a049997973376ece40388c94a129cf0471ebd8c5636fd764bd88347953d2f938"
         },
         {
           "path": "docs/eas-submission-checklist.md",
           "exists": true,
           "bytes": 10221,
-          "sha256": "826620140684bad3d167fa068a7226fb6905e60c2b7f607e1cccc0d462396294"
+          "sha256": "0283ef390c75365b6c21724ce58b5c7570c218f7758023c29228f5fddf299c15"
         },
         {
           "path": "docs/external-readiness.json",
@@ -1789,8 +1789,8 @@
         {
           "path": "docs/external-todo-tracker.json",
           "exists": true,
-          "bytes": 22627,
-          "sha256": "b697ae6b035ae56367d32052122429c417a28447111d1cb2c6015b265860c201"
+          "bytes": 22629,
+          "sha256": "88039a762e8b78a0b69f335c052ca95710b1f8a629962d59f590a931d7ed7c44"
         },
         {
           "path": "docs/external-todo-tracker.md",
@@ -1802,13 +1802,13 @@
           "path": "docs/final-launch-runbook.json",
           "exists": true,
           "bytes": 9679,
-          "sha256": "99aace6e6099c8fe8168223382153c82e7efd1c9c1fb0d51cf50f29c5e9429b8"
+          "sha256": "62515b1ac43a35df3798af67bc9dbc8caaf260515d88c13dab3a04a6f2a66737"
         },
         {
           "path": "docs/final-launch-runbook.md",
           "exists": true,
           "bytes": 4096,
-          "sha256": "2c4c6c9826375cf43110eb60ca712fde6371ba4f3d5c6028f926d60be85b0572"
+          "sha256": "b31d39da001f9175b2ae39bf5f037b6df048c3ccf38213a0adae1adbcc8ab7ef"
         },
         {
           "path": "docs/production-device-smoke-test.json",
@@ -1825,14 +1825,14 @@
         {
           "path": "docs/store-submission-input-pack.json",
           "exists": true,
-          "bytes": 30100,
-          "sha256": "b85f2b0c366cd4846affcbe2be8722d2e4c369074311d836d95b355b6a81e875"
+          "bytes": 29535,
+          "sha256": "d292ba7d9ac6a701ffb07109d990b97dc5a9caf7dc07795ecab8959dbb12a8e1"
         },
         {
           "path": "docs/store-submission-input-pack.md",
           "exists": true,
-          "bytes": 6093,
-          "sha256": "0a35f50f4fc0bd0ba4a4bb29f685f025336604b29b4bf27fb373802c44d0b89f"
+          "bytes": 5901,
+          "sha256": "d5bee33b59e8cb96225b1a50033ae3e9a26b1d4a775bfe4796cac8e0f9ee7e82"
         },
         {
           "path": "docs/store-submission.env.template",
@@ -1850,7 +1850,7 @@
       "summary": {
         "files": 22,
         "missingFiles": 0,
-        "bytes": 191508
+        "bytes": 190759
       }
     },
     {
@@ -1884,8 +1884,8 @@
         {
           "path": "docs/release-handoff.md",
           "exists": true,
-          "bytes": 12709,
-          "sha256": "144782c91cc3faa9fa791a04dd0da64c5b3d35743b061edb66cbb7c9032b1029"
+          "bytes": 12758,
+          "sha256": "3e07a7b3cffd13c25f7085632555c5081ed297aced6537874b184a579675de38"
         },
         {
           "path": "package-lock.json",
@@ -1921,7 +1921,7 @@
       "summary": {
         "files": 10,
         "missingFiles": 0,
-        "bytes": 691911
+        "bytes": 691960
       }
     }
   ],
@@ -2108,7 +2108,7 @@
         "status": "OK",
         "category": "local",
         "label": "Store submission input pack",
-        "detail": "18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
+        "detail": "18 env inputs, 1 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
       },
       {
         "status": "OK",
@@ -2120,7 +2120,7 @@
         "status": "OK",
         "category": "local",
         "label": "Account and service preflight",
-        "detail": "10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5."
+        "detail": "10 remote-service checks prepared, 1 EAS env keys tracked; external blockers=5."
       },
       {
         "status": "OK",

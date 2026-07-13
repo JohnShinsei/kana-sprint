@@ -9,7 +9,7 @@ This file is the local upload and reviewer-evidence manifest. It indexes the gen
 - External store ready: No
 - Files indexed: 301
 - Missing files: 0
-- Total bytes: 18425288
+- Total bytes: 18424730
 - Public site pages: 44
 - Public site routes: 44
 - Screenshot entries: 176
@@ -21,12 +21,12 @@ This file is the local upload and reviewer-evidence manifest. It indexes the gen
 
 | Group | Files | Missing | Bytes |
 | --- | ---: | ---: | ---: |
-| Public support/privacy/license website | 56 | 0 | 361676 |
+| Public support/privacy/license website | 56 | 0 | 361818 |
 | App Store screenshot upload packs | 176 | 0 | 16869189 |
 | App Store metadata sources | 7 | 0 | 95673 |
 | Review, privacy, ads, and content evidence | 30 | 0 | 215331 |
-| EAS build and submit handoff | 22 | 0 | 191508 |
-| Source and runtime configuration snapshot | 10 | 0 | 691911 |
+| EAS build and submit handoff | 22 | 0 | 190759 |
+| Source and runtime configuration snapshot | 10 | 0 | 691960 |
 
 ## Upload Plan
 

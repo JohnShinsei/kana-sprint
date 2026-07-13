@@ -63,7 +63,7 @@
   "evidence": {
     "externalReadinessBlocking": 5,
     "envInputs": 18,
-    "easProductionEnvKeys": 3,
+    "easProductionEnvKeys": 1,
     "accountServiceChecks": 10,
     "easSubmissionSequence": [
       "npm run release:verify",

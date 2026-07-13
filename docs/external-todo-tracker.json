@@ -80,7 +80,7 @@
           "key": "APP_STORE_SUPPORT_URL",
           "group": "Public store URLs",
           "visibility": "plaintext",
-          "requiredForEasProduction": true,
+          "requiredForEasProduction": false,
           "placeholder": "production HTTPS URL"
         }
       ],
@@ -140,7 +140,7 @@
           "key": "APP_STORE_PRIVACY_URL",
           "group": "Public store URLs",
           "visibility": "plaintext",
-          "requiredForEasProduction": true,
+          "requiredForEasProduction": false,
           "placeholder": "production HTTPS URL"
         }
       ],

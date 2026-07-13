@@ -23,8 +23,6 @@ This preflight keeps the external account and remote-service checks aligned with
 ## Required EAS Production Env
 
 - `APP_STORE_BASE_URL`
-- `APP_STORE_SUPPORT_URL`
-- `APP_STORE_PRIVACY_URL`
 
 ## Remote Checks
 

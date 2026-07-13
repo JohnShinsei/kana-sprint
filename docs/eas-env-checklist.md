@@ -12,7 +12,7 @@ This checklist maps `.env.example` to EAS production environment variables, loca
 ## Summary
 
 - Env keys: 18
-- Required for EAS production build: 3
+- Required for EAS production build: 1
 - Client-visible after bundling: 8
 - Sensitive visibility: 8
 - Plaintext visibility: 10
@@ -36,8 +36,8 @@ Client-visible values should not use EAS secret visibility, because values embed
 | `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID` | AdMob | No | sensitive | local .env.local + EAS production | Live AdMob IDs: INFO | Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000 |
 | `APP_STORE_BASE_URL` | Public store URLs | Yes | plaintext | local .env.local + EAS production | Public support URL: OK<br>Public privacy URL: OK<br>Public marketing URL: OK | Production HTTPS root URL; can generate /support and /privacy URLs |
 | `APP_STORE_MARKETING_URL` | Public store URLs | No | plaintext | optional local .env.local + EAS production when used | Public marketing URL: OK | Optional production HTTPS marketing URL |
-| `APP_STORE_SUPPORT_URL` | Public store URLs | Yes | plaintext | local .env.local + EAS production | Public support URL: OK | Production HTTPS support URL; APP_STORE_BASE_URL can derive it |
-| `APP_STORE_PRIVACY_URL` | Public store URLs | Yes | plaintext | local .env.local + EAS production | Public privacy URL: OK | Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it |
+| `APP_STORE_SUPPORT_URL` | Public store URLs | No | plaintext | optional override in local .env.local + EAS production | Public support URL: OK | Production HTTPS support URL; APP_STORE_BASE_URL can derive it |
+| `APP_STORE_PRIVACY_URL` | Public store URLs | No | plaintext | optional override in local .env.local + EAS production | Public privacy URL: OK | Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it |
 | `APP_STORE_REVIEW_FIRST_NAME` | App Store review contact | No | sensitive | local gate + CI/EAS workflow if metadata is automated | App Store review contact: TODO | Non-empty first name for App Review contact |
 | `APP_STORE_REVIEW_LAST_NAME` | App Store review contact | No | sensitive | local gate + CI/EAS workflow if metadata is automated | App Store review contact: TODO | Non-empty last name for App Review contact |
 | `APP_STORE_REVIEW_EMAIL` | App Store review contact | No | sensitive | local gate + CI/EAS workflow if metadata is automated | App Store review contact: TODO | Reachable email address |

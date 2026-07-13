@@ -17,7 +17,7 @@
     "fillableEnvKeys": 18,
     "externalItems": 11,
     "blockingExternalItems": 5,
-    "easProductionKeys": 3,
+    "easProductionKeys": 1,
     "manualConfirmationKeys": 6,
     "localReady": true
   },
@@ -222,7 +222,7 @@
       "group": "Public store URLs",
       "value": "",
       "placeholder": "production HTTPS URL",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "plaintext",
       "validation": "Production HTTPS support URL; APP_STORE_BASE_URL can derive it",
       "clientVisible": true,
@@ -248,7 +248,7 @@
       "group": "Public store URLs",
       "value": "",
       "placeholder": "production HTTPS URL",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "plaintext",
       "validation": "Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it",
       "clientVisible": true,
@@ -536,18 +536,6 @@
       "visibility": "plaintext",
       "command": "eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext",
       "valueHint": "Production HTTPS root URL; can generate /support and /privacy URLs"
-    },
-    {
-      "key": "APP_STORE_SUPPORT_URL",
-      "visibility": "plaintext",
-      "command": "eas env:create --name APP_STORE_SUPPORT_URL --environment production --visibility plaintext",
-      "valueHint": "Production HTTPS support URL; APP_STORE_BASE_URL can derive it"
-    },
-    {
-      "key": "APP_STORE_PRIVACY_URL",
-      "visibility": "plaintext",
-      "command": "eas env:create --name APP_STORE_PRIVACY_URL --environment production --visibility plaintext",
-      "valueHint": "Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it"
     }
   ],
   "appStoreConnectFields": [

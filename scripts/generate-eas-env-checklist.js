@@ -75,8 +75,8 @@ const definitions = {
   },
   APP_STORE_SUPPORT_URL: {
     group: 'Public store URLs',
-    easLocation: 'local .env.local + EAS production',
-    requiredForEasProduction: true,
+    easLocation: 'optional override in local .env.local + EAS production',
+    requiredForEasProduction: false,
     visibility: 'plaintext',
     validation: 'Production HTTPS support URL; APP_STORE_BASE_URL can derive it',
     usedBy: ['app.config.js Settings support link', 'store.config.js supportUrl', 'release-check'],
@@ -85,8 +85,8 @@ const definitions = {
   },
   APP_STORE_PRIVACY_URL: {
     group: 'Public store URLs',
-    easLocation: 'local .env.local + EAS production',
-    requiredForEasProduction: true,
+    easLocation: 'optional override in local .env.local + EAS production',
+    requiredForEasProduction: false,
     visibility: 'plaintext',
     validation: 'Production HTTPS privacy policy URL; APP_STORE_BASE_URL can derive it',
     usedBy: ['app.config.js Settings privacy link', 'store.config.js privacyPolicyUrl', 'release-check'],

@@ -38,7 +38,7 @@ const forbiddenEasIgnoreEntries = [
 ];
 const externalBlockingRows = (releaseStatus.rows ?? []).filter((row) => row.category === 'external' && ['TODO', 'BAD'].includes(row.status));
 const liveAdsEnabled = (releaseStatus.rows ?? []).some((row) => row.label === 'Live AdMob IDs' && row.status === 'OK');
-const expectedProductionEnvKeys = liveAdsEnabled ? 7 : 3;
+const expectedProductionEnvKeys = liveAdsEnabled ? 5 : 1;
 const localFailures = [];
 
 const buildProfile = easJson.build?.production ?? {};

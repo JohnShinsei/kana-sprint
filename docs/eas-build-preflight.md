@@ -71,7 +71,7 @@ This preflight checks the local EAS production build and submit setup before App
 
 - EAS env checklist: docs/eas-env-checklist.md
 - Production environment ready: Yes
-- Required production build env values: 3
+- Required production build env values: 1
 - Client-visible values: 8
 
 ## External Gate

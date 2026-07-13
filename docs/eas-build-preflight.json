@@ -133,7 +133,7 @@
     "checklist": "docs/eas-env-checklist.md",
     "releaseTrack": "NO_LIVE_ADS",
     "productionProfileEnvironmentReady": true,
-    "requiredForEasProduction": 3,
+    "requiredForEasProduction": 1,
     "clientVisible": 8
   },
   "externalGate": {

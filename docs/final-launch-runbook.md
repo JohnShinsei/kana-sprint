@@ -48,7 +48,7 @@ This runbook is the last-mile execution map for moving Kana Sprint from local re
 ## Evidence Counts
 
 - Env inputs: 18
-- EAS production env keys: 3
+- EAS production env keys: 1
 - Account/service checks: 10
 - EAS submission sequence commands: 5
 
