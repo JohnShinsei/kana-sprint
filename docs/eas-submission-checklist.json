@@ -30,7 +30,7 @@
       "localReady": true,
       "externalReady": false,
       "uploadPolicyReady": true,
-      "externalBlockingItems": 7
+      "externalBlockingItems": 5
     }
   },
   "evidence": {
@@ -157,18 +157,18 @@
     "productionSmokeSections": 7,
     "productionSmokeItems": 34,
     "externalReadinessItems": 11,
-    "externalReadinessBlocking": 7,
+    "externalReadinessBlocking": 5,
     "easEnvironmentKeys": 18,
-    "easEnvironmentRequiredForBuild": 7,
+    "easEnvironmentRequiredForBuild": 3,
     "easProductionProfileReady": true,
     "appStoreConnectSections": 5,
     "appStoreConnectFields": 34
   },
   "status": {
     "ok": 36,
-    "todo": 7,
+    "todo": 5,
     "bad": 0,
-    "info": 0,
+    "info": 2,
     "categories": {
       "local": {
         "ok": 32,
@@ -178,9 +178,9 @@
       },
       "external": {
         "ok": 4,
-        "todo": 7,
+        "todo": 5,
         "bad": 0,
-        "info": 0
+        "info": 2
       }
     }
   },
@@ -345,25 +345,25 @@
       "status": "OK",
       "category": "local",
       "label": "Store submission input pack",
-      "detail": "18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7."
+      "detail": "18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
     },
     {
       "status": "OK",
       "category": "local",
       "label": "External TODO tracker",
-      "detail": "11 external items tracked, 7 blocking, 5 final commands blocked."
+      "detail": "11 external items tracked, 5 blocking, 5 final commands blocked."
     },
     {
       "status": "OK",
       "category": "local",
       "label": "Account and service preflight",
-      "detail": "10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7."
+      "detail": "10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5."
     },
     {
       "status": "OK",
       "category": "local",
       "label": "Final launch runbook",
-      "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=7."
+      "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=5."
     },
     {
       "status": "OK",
@@ -375,7 +375,7 @@
       "status": "OK",
       "category": "local",
       "label": "App Store handoff bundle",
-      "detail": "301 handoff files indexed with hashes; external blockers=7."
+      "detail": "301 handoff files indexed with hashes; external blockers=5."
     }
   ],
   "blockers": [
@@ -384,12 +384,6 @@
       "category": "external",
       "label": "App Store review contact",
       "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
-    },
-    {
-      "status": "TODO",
-      "category": "external",
-      "label": "Live AdMob IDs",
-      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
     },
     {
       "status": "TODO",
@@ -407,12 +401,6 @@
       "status": "TODO",
       "category": "external",
       "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-      "detail": "Set to 1 only after the real external action is complete."
-    },
-    {
-      "status": "TODO",
-      "category": "external",
-      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
       "detail": "Set to 1 only after the real external action is complete."
     },
     {

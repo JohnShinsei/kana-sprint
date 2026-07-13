@@ -21,13 +21,13 @@
     "externalReady": false,
     "totalFiles": 301,
     "missingFiles": 0,
-    "totalBytes": 18429510,
+    "totalBytes": 18425288,
     "publicSitePages": 44,
     "publicSiteRoutes": 44,
     "screenshotEntries": 176,
     "localizedScreenshotEntries": 160,
     "appStoreLocales": 10,
-    "externalBlockingItems": 7
+    "externalBlockingItems": 5
   },
   "uploadPlan": [
     {
@@ -89,14 +89,14 @@
         {
           "path": "docs/public-site-hosting-verification.json",
           "exists": true,
-          "bytes": 31205,
-          "sha256": "212fadcb9aec7a1ece38f15b0cf4f3e88b36a5a5ef59a7c8d8f2b9ac419535ef"
+          "bytes": 31134,
+          "sha256": "8ab27c6342bb0a41187b4ee660d87ea7ab6dec3e13bb8f7fa912b22806d4d70b"
         },
         {
           "path": "docs/public-site-hosting-verification.md",
           "exists": true,
-          "bytes": 3374,
-          "sha256": "0fd219dffdc77f77a734cec1dc7071a3729122c9ab4223c731419c096ab82570"
+          "bytes": 3303,
+          "sha256": "3094f89e5886a5d395a24e338875e580a4cf7b5781b760f7bdacf48b2e862abd"
         },
         {
           "path": "docs/public-site-manifest.json",
@@ -396,7 +396,7 @@
       "summary": {
         "files": 56,
         "missingFiles": 0,
-        "bytes": 361818
+        "bytes": 361676
       }
     },
     {
@@ -1539,7 +1539,7 @@
           "path": "docs/admob-setup-handoff.json",
           "exists": true,
           "bytes": 6793,
-          "sha256": "7b3ac51491a510ab557c4a0e388a4bc4dfd58413d9673cf56f6b38115d8a7191"
+          "sha256": "fa70952a5f1b593782aeea61854208181abc0bc087df8e5819bc76e390e42cde"
         },
         {
           "path": "docs/admob-setup-handoff.md",
@@ -1647,7 +1647,7 @@
           "path": "docs/privacy-review-packet.json",
           "exists": true,
           "bytes": 9994,
-          "sha256": "bab472f60f0d598926ad2688c1fc1e23b1a7eb84fcff407251f2b13fc522c1f0"
+          "sha256": "4c2806b3f2757f04e4d7a6a690fe9b2570576553ef892c846485ea2c47b51534"
         },
         {
           "path": "docs/privacy-review-packet.md",
@@ -1658,14 +1658,14 @@
         {
           "path": "docs/release-packet.json",
           "exists": true,
-          "bytes": 25790,
-          "sha256": "9a369be7a1f85431790aa0ec3ecf62219188af5c45195ac4a23fca78bddc404d"
+          "bytes": 25470,
+          "sha256": "1e260c7be38d7fd3962b6a9d952cee851b95dd939880dbdfc8a5567c58886d82"
         },
         {
           "path": "docs/release-packet.md",
           "exists": true,
-          "bytes": 8175,
-          "sha256": "7f9da2fdcd99e5a4b6263fc93dececeacc5fd270c19cb861d790d5acf4e5337d"
+          "bytes": 7980,
+          "sha256": "fb840d06b27abb575cf4cb8414a5e3f6f348e80da29e27c92bb538f23d1a7842"
         },
         {
           "path": "docs/runtime-ui-flow-audit.json",
@@ -1707,7 +1707,7 @@
       "summary": {
         "files": 30,
         "missingFiles": 0,
-        "bytes": 215846
+        "bytes": 215331
       }
     },
     {
@@ -1723,92 +1723,92 @@
         {
           "path": ".env.example",
           "exists": true,
-          "bytes": 1113,
-          "sha256": "4cf63fe3af8f0a4e8eaa652bb8f62ce6bb9873f0abf38774372b352fb02ae0ad"
+          "bytes": 1279,
+          "sha256": "e5553bb893c113417a3caac19a6a0666b64f3c1bb12f0ac0d193f906372c2a0b"
         },
         {
           "path": "docs/account-service-preflight.json",
           "exists": true,
-          "bytes": 14090,
-          "sha256": "b3e81f646e6f8888f62fca5b9bc3fcce5e56fb4bff59960279b896a8e6eb0688"
+          "bytes": 13485,
+          "sha256": "86a38f8440a02ca29b792494fb0e132afba0df6a01dedb47b97363c8aba45a1c"
         },
         {
           "path": "docs/account-service-preflight.md",
           "exists": true,
-          "bytes": 4408,
-          "sha256": "b98d9b637cd7060ecd1edd2d2daed0c16a705a275097f0dfd3e5f85b6b513ad8"
+          "bytes": 4047,
+          "sha256": "d5cf5807ab7faed093b5b9416423b54932190d9326975a541e0f324d8e46f47c"
         },
         {
           "path": "docs/eas-build-preflight.json",
           "exists": true,
-          "bytes": 4736,
-          "sha256": "75ffaf398afab276ac0a13518a1fcf74bf2defaa4611a2f38c07a5568e8c5c57"
+          "bytes": 4430,
+          "sha256": "4406f5fb99a2b6d4a90d2082e9bf3d584614bfca4d2dcd53b1d38d53c036f4fb"
         },
         {
           "path": "docs/eas-build-preflight.md",
           "exists": true,
-          "bytes": 2929,
-          "sha256": "b60fa6cfdc114b90219e54f5601b8947f7b354ce580fb12b43c4de30e4a2f6af"
+          "bytes": 2734,
+          "sha256": "23c45d02a927696c4f7de345b4dfb1f86d8df1a8444f0a3746524a472d86809c"
         },
         {
           "path": "docs/eas-env-checklist.json",
           "exists": true,
-          "bytes": 15181,
-          "sha256": "3cb6536f9b428e4367244e75d732c701434989d0071eb99a87444aeda3908e32"
+          "bytes": 15351,
+          "sha256": "5304f8f53bee08e277bb6af42759e616e1b5adffe388f3873a74537d994d4019"
         },
         {
           "path": "docs/eas-env-checklist.md",
           "exists": true,
-          "bytes": 5086,
-          "sha256": "9f3a1c9582b8f288b14ffa13f7a65c3e6fcf45aae70d128104f7c7366748f940"
+          "bytes": 5082,
+          "sha256": "2a9a300ef38a968268a0a563f0173fb5d887263c69d7fc86580d1f81624d8316"
         },
         {
           "path": "docs/eas-submission-checklist.json",
           "exists": true,
-          "bytes": 15761,
-          "sha256": "53c09db046447660cc7693c092a4cb49f4c5f2af0aef657c2c2257993f87f15f"
+          "bytes": 15380,
+          "sha256": "b9e554f7d8198d22bbe6cc6f8aea83bf8bd08beda8469185bf99cce947e775ee"
         },
         {
           "path": "docs/eas-submission-checklist.md",
           "exists": true,
-          "bytes": 10416,
-          "sha256": "3f40d9dc544b64103556e53f738afa10f8b231522d975589eadbdbc9c2e60c15"
+          "bytes": 10221,
+          "sha256": "826620140684bad3d167fa068a7226fb6905e60c2b7f607e1cccc0d462396294"
         },
         {
           "path": "docs/external-readiness.json",
           "exists": true,
-          "bytes": 9462,
-          "sha256": "7778aa69a0c57fa66666718ce21d334c0be01fa27372b3c279f582f5475df25a"
+          "bytes": 9622,
+          "sha256": "5e6272ba2bd37fa4c07ae9f680e167527baf9131223cbef3ad9399ff502ebd63"
         },
         {
           "path": "docs/external-readiness.md",
           "exists": true,
-          "bytes": 7229,
-          "sha256": "058c8c26e23615321e574d11154c60da8cdda09765a93c9ded22dca467877ac9"
+          "bytes": 7387,
+          "sha256": "571859e7b1c87d5a9fa27c1f890e123b56939243cb3ad5842e5aacc43b21ac17"
         },
         {
           "path": "docs/external-todo-tracker.json",
           "exists": true,
-          "bytes": 22829,
-          "sha256": "bb906185bc3aa4b48c54f7be222af7b122d3faa3003511dfe846bf0d4a9ba028"
+          "bytes": 22627,
+          "sha256": "b697ae6b035ae56367d32052122429c417a28447111d1cb2c6015b265860c201"
         },
         {
           "path": "docs/external-todo-tracker.md",
           "exists": true,
           "bytes": 4788,
-          "sha256": "5ea9c6021003bbd52bbf943a5c428d3c4a5e96d5d93c919c6b0e6aab9ce868ac"
+          "sha256": "096a1fd7676cd897960cf54609cdb51cd47636a8576025acb0e0b1eedd208ff7"
         },
         {
           "path": "docs/final-launch-runbook.json",
           "exists": true,
-          "bytes": 10486,
-          "sha256": "87904cc5b55cf8d36975db3f63f9b1ba2813d0ada054ff505bf25432fdccacfb"
+          "bytes": 9679,
+          "sha256": "99aace6e6099c8fe8168223382153c82e7efd1c9c1fb0d51cf50f29c5e9429b8"
         },
         {
           "path": "docs/final-launch-runbook.md",
           "exists": true,
-          "bytes": 4597,
-          "sha256": "ee75696dbf2fb7ae731eae81a87b2d7f2ee3f9241435db472a5de7166c52272a"
+          "bytes": 4096,
+          "sha256": "2c4c6c9826375cf43110eb60ca712fde6371ba4f3d5c6028f926d60be85b0572"
         },
         {
           "path": "docs/production-device-smoke-test.json",
@@ -1825,14 +1825,14 @@
         {
           "path": "docs/store-submission-input-pack.json",
           "exists": true,
-          "bytes": 30806,
-          "sha256": "0fbdf95443693266a86ee0646588ebd588d60ffb2d7d3832ea33d8d5d1309ac7"
+          "bytes": 30100,
+          "sha256": "b85f2b0c366cd4846affcbe2be8722d2e4c369074311d836d95b355b6a81e875"
         },
         {
           "path": "docs/store-submission-input-pack.md",
           "exists": true,
-          "bytes": 6469,
-          "sha256": "e2989ab7bda0439a7a6724fc87ba0fb636de4be47b16d022ae75700d782c47c7"
+          "bytes": 6093,
+          "sha256": "0a35f50f4fc0bd0ba4a4bb29f685f025336604b29b4bf27fb373802c44d0b89f"
         },
         {
           "path": "docs/store-submission.env.template",
@@ -1850,7 +1850,7 @@
       "summary": {
         "files": 22,
         "missingFiles": 0,
-        "bytes": 195493
+        "bytes": 191508
       }
     },
     {
@@ -1884,8 +1884,8 @@
         {
           "path": "docs/release-handoff.md",
           "exists": true,
-          "bytes": 12529,
-          "sha256": "ec0030a7e3c71ea7d0d3bd7b25649c775eddbaccd0b8cabc229938197cbfa87f"
+          "bytes": 12709,
+          "sha256": "144782c91cc3faa9fa791a04dd0da64c5b3d35743b061edb66cbb7c9032b1029"
         },
         {
           "path": "package-lock.json",
@@ -1902,8 +1902,8 @@
         {
           "path": "README.md",
           "exists": true,
-          "bytes": 25238,
-          "sha256": "d463ca25e5ac49b552d2ef6901bb055640198d09e7275561b50d0e60e33e5e19"
+          "bytes": 25478,
+          "sha256": "036a7b080a0524df098ca9dcab6819a94559b3ac7a79cc867e428663ed4594e7"
         },
         {
           "path": "src/gameData.ts",
@@ -1921,7 +1921,7 @@
       "summary": {
         "files": 10,
         "missingFiles": 0,
-        "bytes": 691491
+        "bytes": 691911
       }
     }
   ],
@@ -1929,9 +1929,9 @@
   "releaseStatus": {
     "summary": {
       "ok": 35,
-      "todo": 7,
+      "todo": 5,
       "bad": 0,
-      "info": 0,
+      "info": 2,
       "categories": {
         "local": {
           "ok": 31,
@@ -1941,9 +1941,9 @@
         },
         "external": {
           "ok": 4,
-          "todo": 7,
+          "todo": 5,
           "bad": 0,
-          "info": 0
+          "info": 2
         }
       }
     },
@@ -2108,25 +2108,25 @@
         "status": "OK",
         "category": "local",
         "label": "Store submission input pack",
-        "detail": "18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7."
+        "detail": "18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5."
       },
       {
         "status": "OK",
         "category": "local",
         "label": "External TODO tracker",
-        "detail": "11 external items tracked, 7 blocking, 5 final commands blocked."
+        "detail": "11 external items tracked, 5 blocking, 5 final commands blocked."
       },
       {
         "status": "OK",
         "category": "local",
         "label": "Account and service preflight",
-        "detail": "10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7."
+        "detail": "10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5."
       },
       {
         "status": "OK",
         "category": "local",
         "label": "Final launch runbook",
-        "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=7."
+        "detail": "9 launch phases mapped, metadata/build/submit ready=no; external blockers=5."
       },
       {
         "status": "OK",
@@ -2159,10 +2159,10 @@
         "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
       },
       {
-        "status": "TODO",
+        "status": "INFO",
         "category": "external",
         "label": "Live AdMob IDs",
-        "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+        "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
       },
       {
         "status": "TODO",
@@ -2189,10 +2189,10 @@
         "detail": "Set to 1 only after the real external action is complete."
       },
       {
-        "status": "TODO",
+        "status": "INFO",
         "category": "external",
         "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
-        "detail": "Set to 1 only after the real external action is complete."
+        "detail": "Not required for the NO_LIVE_ADS launch; required before enabling production AdMob."
       },
       {
         "status": "TODO",

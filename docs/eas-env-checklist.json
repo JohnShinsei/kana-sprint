@@ -18,7 +18,7 @@
   },
   "summary": {
     "totalKeys": 18,
-    "requiredForEasProduction": 7,
+    "requiredForEasProduction": 3,
     "clientVisible": 8,
     "sensitive": 8,
     "plaintext": 10,
@@ -46,7 +46,7 @@
       "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
       "group": "AdMob",
       "easLocation": "local .env.local + EAS production",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
       "usedBy": [
@@ -61,8 +61,8 @@
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ]
     },
@@ -70,7 +70,7 @@
       "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
       "group": "AdMob",
       "easLocation": "local .env.local + EAS production",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
       "usedBy": [
@@ -85,8 +85,8 @@
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ]
     },
@@ -94,7 +94,7 @@
       "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
       "group": "AdMob",
       "easLocation": "local .env.local + EAS production",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
       "usedBy": [
@@ -109,8 +109,8 @@
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ]
     },
@@ -118,7 +118,7 @@
       "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
       "group": "AdMob",
       "easLocation": "local .env.local + EAS production",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
       "usedBy": [
@@ -133,8 +133,8 @@
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ]
     },
@@ -382,8 +382,8 @@
       "releaseStatuses": [
         {
           "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
-          "status": "TODO",
-          "detail": "Set to 1 only after the real external action is complete."
+          "status": "INFO",
+          "detail": "Not required for the NO_LIVE_ADS launch; required before enabling production AdMob."
         }
       ]
     },

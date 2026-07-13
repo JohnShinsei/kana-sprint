@@ -7,8 +7,8 @@ This pack is the fillable handoff for the remaining external App Store, EAS, AdM
 - Local evidence ready: Yes
 - Env keys to fill: 18
 - External readiness items: 11
-- Blocking external items: 7
-- EAS production build keys: 7
+- Blocking external items: 5
+- EAS production build keys: 3
 - Manual confirmations: 6
 - Standalone env template: `docs/store-submission.env.template`
 
@@ -48,10 +48,6 @@ PRODUCTION_DEVICE_TESTED=0
 
 Run these for the build-time values used by the EAS production profile. Paste values interactively instead of placing production secrets directly in shell history.
 
-- `eas env:create --name EXPO_PUBLIC_ADMOB_IOS_APP_ID --environment production --visibility sensitive`
-- `eas env:create --name EXPO_PUBLIC_ADMOB_ANDROID_APP_ID --environment production --visibility sensitive`
-- `eas env:create --name EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID --environment production --visibility sensitive`
-- `eas env:create --name EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID --environment production --visibility sensitive`
 - `eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext`
 - `eas env:create --name APP_STORE_SUPPORT_URL --environment production --visibility plaintext`
 - `eas env:create --name APP_STORE_PRIVACY_URL --environment production --visibility plaintext`
@@ -64,14 +60,14 @@ Run these for the build-time values used by the EAS production profile. Paste va
 | Public privacy URL | `APP_STORE_BASE_URL`, `APP_STORE_PRIVACY_URL` | OK | App Store Connect privacy policy URL and Settings privacy link. | Host site/ over HTTPS and expose the privacy policy page. APP_STORE_BASE_URL can generate /privacy automatically, or APP_STORE_PRIVACY_URL can point to a custom production HTTPS URL. |
 | Public marketing URL | `APP_STORE_BASE_URL`, `APP_STORE_MARKETING_URL` | OK | Optional App Store Connect marketing URL. | Optional. Set APP_STORE_MARKETING_URL or APP_STORE_BASE_URL if the App Store listing should include a marketing URL. |
 | App Store review contact | `APP_STORE_REVIEW_FIRST_NAME`, `APP_STORE_REVIEW_LAST_NAME`, `APP_STORE_REVIEW_EMAIL`, `APP_STORE_REVIEW_PHONE` | TODO | App Review contact block in App Store Connect or EAS Metadata. | Add the review contact that Apple can use during App Review. Use a monitored email address and a reachable phone number. |
-| Live AdMob IDs | `EXPO_PUBLIC_ADMOB_IOS_APP_ID`, `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID` | TODO | Google AdMob app IDs and rewarded ad unit IDs for the submitted build. | Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment. |
+| Live AdMob IDs | `EXPO_PUBLIC_ADMOB_IOS_APP_ID`, `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID` | INFO | Google AdMob app IDs and rewarded ad unit IDs for the submitted build. | Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment. |
 
 ## Manual Confirmations
 
 | Env key | Current status | Set to | Required action |
 | --- | --- | --- | --- |
 | `APP_STORE_PRIVACY_ANSWERS_REVIEWED` | TODO | `1` | Fill App Store Connect privacy answers from docs/app-store-privacy-answers.md after deciding whether live AdMob IDs are enabled for the submitted build. |
-| `ADMOB_PRIVACY_MESSAGES_CONFIGURED` | TODO | `1` | Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads. |
+| `ADMOB_PRIVACY_MESSAGES_CONFIGURED` | INFO | `1` | Required only for a LIVE_ADMOB build. Configure AdMob Privacy & messaging for release regions and verify UMP canRequestAds before requesting rewarded ads. |
 | `APP_STORE_BUNDLE_ID_CONFIRMED` | TODO | `1` | Confirm app.json ios.bundleIdentifier and android.package are the final store identifiers before the first production build. |
 | `APP_STORE_CONNECT_RECORD_READY` | TODO | `1` | Create the App Store Connect app record for the final bundle ID and fill the app category, age rating, pricing, availability, and required compliance fields. |
 | `EAS_REMOTE_VERSION_INITIALIZED` | OK | `1` | Log in to Expo and run npx eas-cli build:version:set once for the production iOS app because eas.json uses remote app version management. |

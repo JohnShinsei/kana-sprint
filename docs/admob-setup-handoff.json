@@ -55,8 +55,8 @@
     "privacyMessagingConfirmed": false,
     "appStorePrivacyReviewed": false,
     "productionDeviceTested": false,
-    "liveAdMobReleaseStatus": "TODO",
-    "privacyMessagingReleaseStatus": "TODO",
+    "liveAdMobReleaseStatus": "INFO",
+    "privacyMessagingReleaseStatus": "INFO",
     "liveAdMobDisclosureRows": 6,
     "smokeTestSections": 7
   },

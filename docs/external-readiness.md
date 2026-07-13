@@ -5,10 +5,10 @@ This checklist maps the external `release:status` rows to the exact account or s
 ## Summary
 
 - OK: 4
-- TODO: 7
+- TODO: 5
 - BAD: 0
-- INFO: 0
-- Blocking external items: 7
+- INFO: 2
+- Blocking external items: 5
 
 ## Items
 
@@ -54,12 +54,12 @@ This checklist maps the external `release:status` rows to the exact account or s
 
 ### Live AdMob IDs
 
-- Status: TODO
+- Status: INFO
 - System: Google AdMob + EAS Build env
 - Env: `EXPO_PUBLIC_ADMOB_IOS_APP_ID`, `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID`
-- Current detail: No production AdMob IDs are set; live rewarded ads remain disabled.
-- Action: Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.
-- Evidence: App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled.
+- Current detail: Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set.
+- Action: Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.
+- Evidence: A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled.
 - Verify with: `npm run release:status`, `npx expo config --json`
 
 ### APP_STORE_BUNDLE_ID_CONFIRMED
@@ -104,12 +104,12 @@ This checklist maps the external `release:status` rows to the exact account or s
 
 ### ADMOB_PRIVACY_MESSAGES_CONFIGURED
 
-- Status: TODO
+- Status: INFO
 - System: Google AdMob Privacy & messaging
 - Env: `ADMOB_PRIVACY_MESSAGES_CONFIGURED`
-- Current detail: Set to 1 only after the real external action is complete.
-- Action: Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads.
-- Evidence: A production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account.
+- Current detail: Not required for the NO_LIVE_ADS launch; required before enabling production AdMob.
+- Action: Required only for a LIVE_ADMOB build. Configure AdMob Privacy & messaging for release regions and verify UMP canRequestAds before requesting rewarded ads.
+- Evidence: NO_LIVE_ADS builds do not request ads. A monetized production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account.
 - Verify with: `npm run release:status`, `physical iPhone or TestFlight ad-flow test`
 
 ### PRODUCTION_DEVICE_TESTED

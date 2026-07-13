@@ -34,6 +34,7 @@ const adKeys = [
   'EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID',
   'EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID',
 ];
+const hasAnyAdEnv = adKeys.some((key) => Boolean(env(key)));
 const rows = [];
 
 addLocalEvidenceRows();
@@ -96,7 +97,6 @@ function addReviewRows() {
 
 function addAdRows() {
   const values = Object.fromEntries(adKeys.map((key) => [key, env(key)]));
-  const hasAny = Object.values(values).some(Boolean);
   const valid = {
     EXPO_PUBLIC_ADMOB_IOS_APP_ID: isRealAdMobId(values.EXPO_PUBLIC_ADMOB_IOS_APP_ID, admobAppIdPattern),
     EXPO_PUBLIC_ADMOB_ANDROID_APP_ID: isRealAdMobId(values.EXPO_PUBLIC_ADMOB_ANDROID_APP_ID, admobAppIdPattern),
@@ -107,16 +107,32 @@ function addAdRows() {
     .filter(([, isValid]) => !isValid)
     .map(([key]) => key);
 
-  if (!hasAny) {
-    add('TODO', 'Live AdMob IDs', 'No production AdMob IDs are set; live rewarded ads remain disabled.');
+  if (!hasAnyAdEnv) {
+    add('INFO', 'Live AdMob IDs', 'Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set.');
     return;
   }
 
   add(invalid.length === 0 ? 'OK' : 'BAD', 'Live AdMob IDs', invalid.length === 0 ? 'All four AdMob IDs match production ID formats.' : `Invalid, placeholder, demo, or missing: ${invalid.join(', ')}`);
 }
 
+function expectedEasProductionKeyCount() {
+  const values = Object.fromEntries(adKeys.map((key) => [key, env(key)]));
+  const liveAdsEnabled =
+    isRealAdMobId(values.EXPO_PUBLIC_ADMOB_IOS_APP_ID, admobAppIdPattern) &&
+    isRealAdMobId(values.EXPO_PUBLIC_ADMOB_ANDROID_APP_ID, admobAppIdPattern) &&
+    isRealAdMobId(values.EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID, admobUnitIdPattern) &&
+    isRealAdMobId(values.EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID, admobUnitIdPattern);
+
+  return liveAdsEnabled ? 7 : 3;
+}
+
 function addConfirmationRows() {
   for (const key of confirmationKeys) {
+    if (key === 'ADMOB_PRIVACY_MESSAGES_CONFIGURED' && !hasAnyAdEnv) {
+      add('INFO', key, 'Not required for the NO_LIVE_ADS launch; required before enabling production AdMob.');
+      continue;
+    }
+
     add(process.env[key] === '1', key, process.env[key] === '1' ? 'Confirmed.' : 'Set to 1 only after the real external action is complete.');
   }
 }
@@ -417,7 +433,7 @@ function addLocalEvidenceRows() {
       manifest.summary?.envKeys === envTemplateKeyCount() &&
       manifest.summary?.fillableEnvKeys === envTemplateKeyCount() &&
       manifest.summary?.externalItems >= 11 &&
-      manifest.summary?.easProductionKeys === 7 &&
+      manifest.summary?.easProductionKeys === expectedEasProductionKeyCount() &&
       manifest.summary?.manualConfirmationKeys === confirmationKeys.length &&
       manifest.outputs?.envLocalTemplate === 'docs/store-submission.env.template' &&
       fs.existsSync(path.join(root, 'docs/store-submission.env.template')) &&
@@ -446,7 +462,7 @@ function addLocalEvidenceRows() {
       manifest.summary?.commandsReady === true &&
       manifest.summary?.checks >= 10 &&
       manifest.mode === 'manual' &&
-      (manifest.requiredEasProductionEnv ?? []).length === 7 &&
+      (manifest.requiredEasProductionEnv ?? []).length === expectedEasProductionKeyCount() &&
       manifest.commands?.finalGate === 'npm run release:verify && node scripts/release-check.js --strict',
     (manifest) =>
       `${manifest.summary?.checks ?? 0} remote-service checks prepared, ${manifest.requiredEasProductionEnv?.length ?? 0} EAS env keys tracked; external blockers=${manifest.summary?.externalBlockingItems ?? 0}.`,

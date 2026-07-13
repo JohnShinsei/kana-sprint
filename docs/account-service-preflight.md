@@ -7,7 +7,7 @@ This preflight keeps the external account and remote-service checks aligned with
 - Mode: manual
 - Checks: 10
 - Commands ready: Yes
-- External blocking items: 7
+- External blocking items: 5
 - Manual/TODO checks: 10
 - OK checks: 0
 
@@ -22,10 +22,6 @@ This preflight keeps the external account and remote-service checks aligned with
 
 ## Required EAS Production Env
 
-- `EXPO_PUBLIC_ADMOB_IOS_APP_ID`
-- `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID`
-- `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID`
-- `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID`
 - `APP_STORE_BASE_URL`
 - `APP_STORE_SUPPORT_URL`
 - `APP_STORE_PRIVACY_URL`
@@ -56,11 +52,9 @@ This preflight keeps the external account and remote-service checks aligned with
 | Status | Item | Detail |
 | --- | --- | --- |
 | TODO | App Store review contact | Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE |
-| TODO | Live AdMob IDs | No production AdMob IDs are set; live rewarded ads remain disabled. |
 | TODO | APP_STORE_BUNDLE_ID_CONFIRMED | Set to 1 only after the real external action is complete. |
 | TODO | APP_STORE_CONNECT_RECORD_READY | Set to 1 only after the real external action is complete. |
 | TODO | APP_STORE_PRIVACY_ANSWERS_REVIEWED | Set to 1 only after the real external action is complete. |
-| TODO | ADMOB_PRIVACY_MESSAGES_CONFIGURED | Set to 1 only after the real external action is complete. |
 | TODO | PRODUCTION_DEVICE_TESTED | Set to 1 only after the real external action is complete. |
 
 ## Official References

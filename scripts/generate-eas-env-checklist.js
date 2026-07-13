@@ -10,12 +10,13 @@ const easJson = readJson('eas.json');
 const envKeys = readEnvTemplateKeys();
 const releaseStatus = readReleaseStatus();
 const statusByLabel = Object.fromEntries((releaseStatus.rows ?? []).map((row) => [row.label, row]));
+const liveAdsEnabled = statusByLabel['Live AdMob IDs']?.status === 'OK';
 
 const definitions = {
   EXPO_PUBLIC_ADMOB_IOS_APP_ID: {
     group: 'AdMob',
     easLocation: 'local .env.local + EAS production',
-    requiredForEasProduction: true,
+    requiredForEasProduction: liveAdsEnabled,
     visibility: 'sensitive',
     validation: 'AdMob app ID: ca-app-pub-0000000000000000~0000000000',
     usedBy: ['app.config.js native plugin injection', 'Expo extra.admob', 'production iOS build'],
@@ -25,7 +26,7 @@ const definitions = {
   EXPO_PUBLIC_ADMOB_ANDROID_APP_ID: {
     group: 'AdMob',
     easLocation: 'local .env.local + EAS production',
-    requiredForEasProduction: true,
+    requiredForEasProduction: liveAdsEnabled,
     visibility: 'sensitive',
     validation: 'AdMob app ID: ca-app-pub-0000000000000000~0000000000',
     usedBy: ['app.config.js native plugin injection', 'Expo extra.admob', 'production Android build'],
@@ -35,7 +36,7 @@ const definitions = {
   EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID: {
     group: 'AdMob',
     easLocation: 'local .env.local + EAS production',
-    requiredForEasProduction: true,
+    requiredForEasProduction: liveAdsEnabled,
     visibility: 'sensitive',
     validation: 'Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000',
     usedBy: ['src/ads.native.ts rewarded ad unit', 'Expo extra.admob', 'production iOS build'],
@@ -45,7 +46,7 @@ const definitions = {
   EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID: {
     group: 'AdMob',
     easLocation: 'local .env.local + EAS production',
-    requiredForEasProduction: true,
+    requiredForEasProduction: liveAdsEnabled,
     visibility: 'sensitive',
     validation: 'Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000',
     usedBy: ['src/ads.native.ts rewarded ad unit', 'Expo extra.admob', 'production Android build'],

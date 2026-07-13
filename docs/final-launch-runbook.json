@@ -30,13 +30,13 @@
     "reviewPhases": 0,
     "localEvidenceRows": 30,
     "externalRows": 11,
-    "externalBlockingItems": 7
+    "externalBlockingItems": 5
   },
   "currentStatus": {
     "ok": 36,
-    "todo": 7,
+    "todo": 5,
     "bad": 0,
-    "info": 0,
+    "info": 2,
     "categories": {
       "local": {
         "ok": 32,
@@ -46,9 +46,9 @@
       },
       "external": {
         "ok": 4,
-        "todo": 7,
+        "todo": 5,
         "bad": 0,
-        "info": 0
+        "info": 2
       }
     }
   },
@@ -61,9 +61,9 @@
     "npm run submit:ios"
   ],
   "evidence": {
-    "externalReadinessBlocking": 7,
+    "externalReadinessBlocking": 5,
     "envInputs": 18,
-    "easProductionEnvKeys": 7,
+    "easProductionEnvKeys": 3,
     "accountServiceChecks": 10,
     "easSubmissionSequence": [
       "npm run release:verify",
@@ -83,12 +83,6 @@
     {
       "status": "TODO",
       "category": "external",
-      "label": "Live AdMob IDs",
-      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
-    },
-    {
-      "status": "TODO",
-      "category": "external",
       "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
       "detail": "Set to 1 only after the real external action is complete."
     },
@@ -102,12 +96,6 @@
       "status": "TODO",
       "category": "external",
       "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-      "detail": "Set to 1 only after the real external action is complete."
-    },
-    {
-      "status": "TODO",
-      "category": "external",
-      "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
       "detail": "Set to 1 only after the real external action is complete."
     },
     {
@@ -146,11 +134,9 @@
       ],
       "blockers": [
         "App Store review contact",
-        "Live AdMob IDs",
         "APP_STORE_BUNDLE_ID_CONFIRMED",
         "APP_STORE_CONNECT_RECORD_READY",
         "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "PRODUCTION_DEVICE_TESTED"
       ],
       "requiredBefore": [
@@ -197,11 +183,9 @@
       ],
       "blockers": [
         "App Store review contact",
-        "Live AdMob IDs",
         "APP_STORE_BUNDLE_ID_CONFIRMED",
         "APP_STORE_CONNECT_RECORD_READY",
         "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "PRODUCTION_DEVICE_TESTED"
       ],
       "requiredBefore": [
@@ -223,11 +207,9 @@
       ],
       "blockers": [
         "App Store review contact",
-        "Live AdMob IDs",
         "APP_STORE_BUNDLE_ID_CONFIRMED",
         "APP_STORE_CONNECT_RECORD_READY",
         "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "PRODUCTION_DEVICE_TESTED"
       ],
       "requiredBefore": [
@@ -247,11 +229,9 @@
       ],
       "blockers": [
         "App Store review contact",
-        "Live AdMob IDs",
         "APP_STORE_BUNDLE_ID_CONFIRMED",
         "APP_STORE_CONNECT_RECORD_READY",
         "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "PRODUCTION_DEVICE_TESTED"
       ],
       "requiredBefore": [
@@ -289,11 +269,9 @@
       ],
       "blockers": [
         "App Store review contact",
-        "Live AdMob IDs",
         "APP_STORE_BUNDLE_ID_CONFIRMED",
         "APP_STORE_CONNECT_RECORD_READY",
         "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "PRODUCTION_DEVICE_TESTED"
       ],
       "requiredBefore": [
@@ -313,11 +291,9 @@
       ],
       "blockers": [
         "App Store review contact",
-        "Live AdMob IDs",
         "APP_STORE_BUNDLE_ID_CONFIRMED",
         "APP_STORE_CONNECT_RECORD_READY",
         "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "PRODUCTION_DEVICE_TESTED"
       ],
       "requiredBefore": [],

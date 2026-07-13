@@ -9,13 +9,13 @@
   },
   "summary": {
     "externalItems": 11,
-    "blockingItems": 7,
-    "optionalItems": 0,
+    "blockingItems": 5,
+    "optionalItems": 2,
     "trackedItems": 11,
     "readyItems": 4,
     "badItems": 0,
-    "todoItems": 7,
-    "infoItems": 0,
+    "todoItems": 5,
+    "infoItems": 2,
     "envKeys": 18,
     "accountChecks": 10,
     "blockedFinalCommands": 5
@@ -261,19 +261,19 @@
     {
       "id": "live-admob-ids",
       "label": "Live AdMob IDs",
-      "status": "TODO",
-      "blocking": true,
+      "status": "INFO",
+      "blocking": false,
       "phase": "admob",
       "system": "Google AdMob + EAS Build env",
-      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled.",
+      "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set.",
       "env": [
         "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
         "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
         "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
         "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID"
       ],
-      "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
-      "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled.",
+      "action": "Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.",
+      "evidence": "A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled.",
       "verification": [
         "npm run release:status",
         "npx expo config --json"
@@ -297,38 +297,32 @@
           "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
           "group": "AdMob",
           "visibility": "sensitive",
-          "requiredForEasProduction": true,
+          "requiredForEasProduction": false,
           "placeholder": "ca-app-pub-0000000000000000~0000000000"
         },
         {
           "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
           "group": "AdMob",
           "visibility": "sensitive",
-          "requiredForEasProduction": true,
+          "requiredForEasProduction": false,
           "placeholder": "ca-app-pub-0000000000000000~0000000000"
         },
         {
           "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
           "group": "AdMob",
           "visibility": "sensitive",
-          "requiredForEasProduction": true,
+          "requiredForEasProduction": false,
           "placeholder": "ca-app-pub-0000000000000000/0000000000"
         },
         {
           "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
           "group": "AdMob",
           "visibility": "sensitive",
-          "requiredForEasProduction": true,
+          "requiredForEasProduction": false,
           "placeholder": "ca-app-pub-0000000000000000/0000000000"
         }
       ],
-      "blocks": [
-        "npm run release:store-ready",
-        "npm run metadata:ios",
-        "npm run build:ios",
-        "npm run submit:ios",
-        "App Store Connect submit for review"
-      ],
+      "blocks": [],
       "completionRule": "Fill EXPO_PUBLIC_ADMOB_IOS_APP_ID, EXPO_PUBLIC_ADMOB_ANDROID_APP_ID, EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID, EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID, rerun the listed verification commands, and confirm release:status reports Live AdMob IDs as OK."
     },
     {
@@ -517,16 +511,16 @@
     {
       "id": "admob-privacy-messages-configured",
       "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
-      "status": "TODO",
-      "blocking": true,
+      "status": "INFO",
+      "blocking": false,
       "phase": "apple",
       "system": "Google AdMob Privacy & messaging",
-      "detail": "Set to 1 only after the real external action is complete.",
+      "detail": "Not required for the NO_LIVE_ADS launch; required before enabling production AdMob.",
       "env": [
         "ADMOB_PRIVACY_MESSAGES_CONFIGURED"
       ],
-      "action": "Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads.",
-      "evidence": "A production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account.",
+      "action": "Required only for a LIVE_ADMOB build. Configure AdMob Privacy & messaging for release regions and verify UMP canRequestAds before requesting rewarded ads.",
+      "evidence": "NO_LIVE_ADS builds do not request ads. A monetized production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account.",
       "verification": [
         "npm run release:status",
         "physical iPhone or TestFlight ad-flow test"
@@ -548,13 +542,7 @@
           "placeholder": "0"
         }
       ],
-      "blocks": [
-        "npm run release:store-ready",
-        "npm run metadata:ios",
-        "npm run build:ios",
-        "npm run submit:ios",
-        "App Store Connect submit for review"
-      ],
+      "blocks": [],
       "completionRule": "Set ADMOB_PRIVACY_MESSAGES_CONFIGURED=1 only after the real action is complete, then rerun npm run release:status."
     },
     {

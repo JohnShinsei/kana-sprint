@@ -54,17 +54,17 @@
 - AdMob release audit: PASS, state=NO_LIVE_ADS, live ads ready=no (docs/admob-release-audit.md)
 - Data flow privacy audit: PASS, app-owned network=0, analytics SDKs=0, auth SDKs=0 (docs/data-flow-privacy-audit.md)
 - Production device smoke test: 34 items / 7 sections (docs/production-device-smoke-test.md)
-- External readiness: 11 items / 7 blocking (docs/external-readiness.md)
-- EAS environment: 18 keys / 7 production-build values (docs/eas-env-checklist.md)
+- External readiness: 11 items / 5 blocking (docs/external-readiness.md)
+- EAS environment: 18 keys / 3 production-build values (docs/eas-env-checklist.md)
 - EAS build preflight: PASS, local ready=yes, external ready=no (docs/eas-build-preflight.md)
 - App Store Connect checklist: 34 fields / 5 sections (docs/app-store-connect-checklist.md)
 
 ## Current Release Status
 
 - OK: 36
-- TODO: 7
+- TODO: 5
 - BAD: 0
-- INFO: 0
+- INFO: 2
 
 ## Local Release Evidence
 
@@ -94,12 +94,12 @@
 - [OK] AdMob setup handoff: 4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no.
 - [OK] Data flow privacy audit: local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs.
 - [OK] Runtime UI flow audit: 22/22 runtime UI flows verified across 10 locales and 5 JLPT levels.
-- [OK] Store submission input pack: 18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7.
-- [OK] External TODO tracker: 11 external items tracked, 7 blocking, 5 final commands blocked.
-- [OK] Account and service preflight: 10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7.
-- [OK] Final launch runbook: 9 launch phases mapped, metadata/build/submit ready=no; external blockers=7.
+- [OK] Store submission input pack: 18 env inputs, 3 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=5.
+- [OK] External TODO tracker: 11 external items tracked, 5 blocking, 5 final commands blocked.
+- [OK] Account and service preflight: 10 remote-service checks prepared, 3 EAS env keys tracked; external blockers=5.
+- [OK] Final launch runbook: 9 launch phases mapped, metadata/build/submit ready=no; external blockers=5.
 - [OK] EAS production preflight: production profile ready, submit metadata path=./store.config.js, strict gate ready=no.
-- [OK] App Store handoff bundle: 301 handoff files indexed with hashes; external blockers=7.
+- [OK] App Store handoff bundle: 301 handoff files indexed with hashes; external blockers=5.
 
 ## Local Items Before Store Submission
 
@@ -108,11 +108,9 @@
 ## External Items Before Store Submission
 
 - [TODO] App Store review contact: Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE
-- [TODO] Live AdMob IDs: No production AdMob IDs are set; live rewarded ads remain disabled.
 - [TODO] APP_STORE_BUNDLE_ID_CONFIRMED: Set to 1 only after the real external action is complete.
 - [TODO] APP_STORE_CONNECT_RECORD_READY: Set to 1 only after the real external action is complete.
 - [TODO] APP_STORE_PRIVACY_ANSWERS_REVIEWED: Set to 1 only after the real external action is complete.
-- [TODO] ADMOB_PRIVACY_MESSAGES_CONFIGURED: Set to 1 only after the real external action is complete.
 - [TODO] PRODUCTION_DEVICE_TESTED: Set to 1 only after the real external action is complete.
 
 ## Final Command Order

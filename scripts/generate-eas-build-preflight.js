@@ -37,6 +37,8 @@ const forbiddenEasIgnoreEntries = [
   '/assets/splash-icon.png',
 ];
 const externalBlockingRows = (releaseStatus.rows ?? []).filter((row) => row.category === 'external' && ['TODO', 'BAD'].includes(row.status));
+const liveAdsEnabled = (releaseStatus.rows ?? []).some((row) => row.label === 'Live AdMob IDs' && row.status === 'OK');
+const expectedProductionEnvKeys = liveAdsEnabled ? 7 : 3;
 const localFailures = [];
 
 const buildProfile = easJson.build?.production ?? {};
@@ -65,7 +67,7 @@ const nativeConfigReady =
   appJson.ios?.supportsTablet === true;
 const envChecklistReady =
   easEnvChecklist.summary?.productionProfileEnvironmentReady === true &&
-  easEnvChecklist.summary?.requiredForEasProduction >= 7;
+  easEnvChecklist.summary?.requiredForEasProduction === expectedProductionEnvKeys;
 const localReady = productionProfileReady && submitProfileReady && scriptReady && uploadPolicyReady && nativeConfigReady && envChecklistReady;
 
 if (!productionProfileReady) localFailures.push('EAS production build profile is not ready for a store build.');
@@ -160,6 +162,7 @@ const preflight = {
   },
   environment: {
     checklist: 'docs/eas-env-checklist.md',
+    releaseTrack: liveAdsEnabled ? 'LIVE_ADMOB' : 'NO_LIVE_ADS',
     productionProfileEnvironmentReady: Boolean(easEnvChecklist.summary?.productionProfileEnvironmentReady),
     requiredForEasProduction: easEnvChecklist.summary?.requiredForEasProduction ?? 0,
     clientVisible: easEnvChecklist.summary?.clientVisible ?? 0,

@@ -93,6 +93,7 @@ The generated voice credit is `VOICEVOX:四国めたん` and is included in the 
 ## Ads
 
 The gameplay has a rewarded-ad entry point for continuing a run. Production ads stay disabled until valid AdMob app IDs and rewarded-unit IDs are provided in environment variables. When all IDs are valid, `app.config.js` injects the `react-native-google-mobile-ads` native plugin for EAS builds.
+The App Store gate supports a `NO_LIVE_ADS` first release when all four AdMob values are empty. Partial, placeholder, demo, or invalid IDs still fail verification; a monetized build also requires the AdMob Privacy & messaging confirmation.
 
 ```bash
 cp .env.example .env.local

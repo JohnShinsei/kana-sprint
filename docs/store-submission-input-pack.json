@@ -16,8 +16,8 @@
     "envKeys": 18,
     "fillableEnvKeys": 18,
     "externalItems": 11,
-    "blockingExternalItems": 7,
-    "easProductionKeys": 7,
+    "blockingExternalItems": 5,
+    "easProductionKeys": 3,
     "manualConfirmationKeys": 6,
     "localReady": true
   },
@@ -42,24 +42,24 @@
       "group": "AdMob",
       "value": "",
       "placeholder": "ca-app-pub-0000000000000000~0000000000",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
       "clientVisible": true,
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ],
       "externalItems": [
         {
           "id": "live-admob-ids",
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
-          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+          "status": "INFO",
+          "action": "Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.",
+          "evidence": "A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled."
         }
       ]
     },
@@ -68,24 +68,24 @@
       "group": "AdMob",
       "value": "",
       "placeholder": "ca-app-pub-0000000000000000~0000000000",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "AdMob app ID: ca-app-pub-0000000000000000~0000000000",
       "clientVisible": true,
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ],
       "externalItems": [
         {
           "id": "live-admob-ids",
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
-          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+          "status": "INFO",
+          "action": "Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.",
+          "evidence": "A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled."
         }
       ]
     },
@@ -94,24 +94,24 @@
       "group": "AdMob",
       "value": "",
       "placeholder": "ca-app-pub-0000000000000000/0000000000",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
       "clientVisible": true,
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ],
       "externalItems": [
         {
           "id": "live-admob-ids",
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
-          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+          "status": "INFO",
+          "action": "Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.",
+          "evidence": "A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled."
         }
       ]
     },
@@ -120,24 +120,24 @@
       "group": "AdMob",
       "value": "",
       "placeholder": "ca-app-pub-0000000000000000/0000000000",
-      "requiredForEasProduction": true,
+      "requiredForEasProduction": false,
       "visibility": "sensitive",
       "validation": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000",
       "clientVisible": true,
       "releaseStatuses": [
         {
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
+          "status": "INFO",
+          "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set."
         }
       ],
       "externalItems": [
         {
           "id": "live-admob-ids",
           "label": "Live AdMob IDs",
-          "status": "TODO",
-          "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
-          "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+          "status": "INFO",
+          "action": "Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.",
+          "evidence": "A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled."
         }
       ]
     },
@@ -411,17 +411,17 @@
       "releaseStatuses": [
         {
           "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
-          "status": "TODO",
-          "detail": "Set to 1 only after the real external action is complete."
+          "status": "INFO",
+          "detail": "Not required for the NO_LIVE_ADS launch; required before enabling production AdMob."
         }
       ],
       "externalItems": [
         {
           "id": "admob-privacy-messages-configured",
           "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
-          "status": "TODO",
-          "action": "Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads.",
-          "evidence": "A production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account."
+          "status": "INFO",
+          "action": "Required only for a LIVE_ADMOB build. Configure AdMob Privacy & messaging for release regions and verify UMP canRequestAds before requesting rewarded ads.",
+          "evidence": "NO_LIVE_ADS builds do not request ads. A monetized production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account."
         }
       ]
     },
@@ -532,30 +532,6 @@
   ],
   "easProductionCommands": [
     {
-      "key": "EXPO_PUBLIC_ADMOB_IOS_APP_ID",
-      "visibility": "sensitive",
-      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_IOS_APP_ID --environment production --visibility sensitive",
-      "valueHint": "AdMob app ID: ca-app-pub-0000000000000000~0000000000"
-    },
-    {
-      "key": "EXPO_PUBLIC_ADMOB_ANDROID_APP_ID",
-      "visibility": "sensitive",
-      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_ANDROID_APP_ID --environment production --visibility sensitive",
-      "valueHint": "AdMob app ID: ca-app-pub-0000000000000000~0000000000"
-    },
-    {
-      "key": "EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID",
-      "visibility": "sensitive",
-      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID --environment production --visibility sensitive",
-      "valueHint": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000"
-    },
-    {
-      "key": "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID",
-      "visibility": "sensitive",
-      "command": "eas env:create --name EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID --environment production --visibility sensitive",
-      "valueHint": "Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000"
-    },
-    {
       "key": "APP_STORE_BASE_URL",
       "visibility": "plaintext",
       "command": "eas env:create --name APP_STORE_BASE_URL --environment production --visibility plaintext",
@@ -634,10 +610,10 @@
         "EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID"
       ],
       "destination": "Google AdMob app IDs and rewarded ad unit IDs for the submitted build.",
-      "currentStatus": "TODO",
-      "detail": "No production AdMob IDs are set; live rewarded ads remain disabled.",
-      "action": "Create production AdMob apps and rewarded ad units, then put the real app IDs and ad unit IDs into .env.local and the EAS production environment.",
-      "evidence": "App IDs use ca-app-pub-0000000000000000~0000000000, ad unit IDs use ca-app-pub-0000000000000000/0000000000, and app.config.js enables liveAdsEnabled."
+      "currentStatus": "INFO",
+      "detail": "Optional for the NO_LIVE_ADS launch; rewarded ads stay disabled until all four production IDs are set.",
+      "action": "Optional for a NO_LIVE_ADS launch. Before monetization, create production AdMob apps and rewarded ad units, then put all four real IDs into .env.local and the EAS production environment.",
+      "evidence": "A no-ID build stays in NO_LIVE_ADS state. A monetized build uses four production-format IDs and app.config.js enables liveAdsEnabled."
     }
   ],
   "manualConfirmations": [
@@ -652,10 +628,10 @@
     {
       "key": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
       "setTo": "1",
-      "currentStatus": "TODO",
-      "detail": "Set to 1 only after the real external action is complete.",
-      "action": "Configure required AdMob Privacy & messaging flows for release regions and verify UMP canRequestAds before requesting rewarded ads.",
-      "evidence": "A production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account."
+      "currentStatus": "INFO",
+      "detail": "Not required for the NO_LIVE_ADS launch; required before enabling production AdMob.",
+      "action": "Required only for a LIVE_ADMOB build. Configure AdMob Privacy & messaging for release regions and verify UMP canRequestAds before requesting rewarded ads.",
+      "evidence": "NO_LIVE_ADS builds do not request ads. A monetized production/TestFlight build confirms privacy options and rewarded ads behave correctly with the real AdMob account."
     },
     {
       "key": "APP_STORE_BUNDLE_ID_CONFIRMED",

@@ -9,24 +9,24 @@ This file is the local upload and reviewer-evidence manifest. It indexes the gen
 - External store ready: No
 - Files indexed: 301
 - Missing files: 0
-- Total bytes: 18429510
+- Total bytes: 18425288
 - Public site pages: 44
 - Public site routes: 44
 - Screenshot entries: 176
 - Localized screenshot entries: 160
 - App Store locales: 10
-- External blocking items: 7
+- External blocking items: 5
 
 ## Groups
 
 | Group | Files | Missing | Bytes |
 | --- | ---: | ---: | ---: |
-| Public support/privacy/license website | 56 | 0 | 361818 |
+| Public support/privacy/license website | 56 | 0 | 361676 |
 | App Store screenshot upload packs | 176 | 0 | 16869189 |
 | App Store metadata sources | 7 | 0 | 95673 |
-| Review, privacy, ads, and content evidence | 30 | 0 | 215846 |
-| EAS build and submit handoff | 22 | 0 | 195493 |
-| Source and runtime configuration snapshot | 10 | 0 | 691491 |
+| Review, privacy, ads, and content evidence | 30 | 0 | 215331 |
+| EAS build and submit handoff | 22 | 0 | 191508 |
+| Source and runtime configuration snapshot | 10 | 0 | 691911 |
 
 ## Upload Plan
 
@@ -41,11 +41,9 @@ This file is the local upload and reviewer-evidence manifest. It indexes the gen
 | Status | Item | Detail |
 | --- | --- | --- |
 | TODO | App Store review contact | Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE |
-| TODO | Live AdMob IDs | No production AdMob IDs are set; live rewarded ads remain disabled. |
 | TODO | APP_STORE_BUNDLE_ID_CONFIRMED | Set to 1 only after the real external action is complete. |
 | TODO | APP_STORE_CONNECT_RECORD_READY | Set to 1 only after the real external action is complete. |
 | TODO | APP_STORE_PRIVACY_ANSWERS_REVIEWED | Set to 1 only after the real external action is complete. |
-| TODO | ADMOB_PRIVACY_MESSAGES_CONFIGURED | Set to 1 only after the real external action is complete. |
 | TODO | PRODUCTION_DEVICE_TESTED | Set to 1 only after the real external action is complete. |
 
 ## Commands

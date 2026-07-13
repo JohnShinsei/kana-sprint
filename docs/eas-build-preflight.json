@@ -29,7 +29,7 @@
     "localReady": true,
     "externalReady": false,
     "strictGateReady": false,
-    "externalBlockingItems": 7,
+    "externalBlockingItems": 5,
     "localFailures": 0
   },
   "app": {
@@ -131,24 +131,20 @@
   },
   "environment": {
     "checklist": "docs/eas-env-checklist.md",
+    "releaseTrack": "NO_LIVE_ADS",
     "productionProfileEnvironmentReady": true,
-    "requiredForEasProduction": 7,
+    "requiredForEasProduction": 3,
     "clientVisible": 8
   },
   "externalGate": {
     "checklist": "docs/external-readiness.md",
     "readinessItems": 11,
-    "blockingItems": 7,
+    "blockingItems": 5,
     "blockers": [
       {
         "label": "App Store review contact",
         "status": "TODO",
         "detail": "Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE"
-      },
-      {
-        "label": "Live AdMob IDs",
-        "status": "TODO",
-        "detail": "No production AdMob IDs are set; live rewarded ads remain disabled."
       },
       {
         "label": "APP_STORE_BUNDLE_ID_CONFIRMED",
@@ -162,11 +158,6 @@
       },
       {
         "label": "APP_STORE_PRIVACY_ANSWERS_REVIEWED",
-        "status": "TODO",
-        "detail": "Set to 1 only after the real external action is complete."
-      },
-      {
-        "label": "ADMOB_PRIVACY_MESSAGES_CONFIGURED",
         "status": "TODO",
         "detail": "Set to 1 only after the real external action is complete."
       },

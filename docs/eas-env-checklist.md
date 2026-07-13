@@ -12,7 +12,7 @@ This checklist maps `.env.example` to EAS production environment variables, loca
 ## Summary
 
 - Env keys: 18
-- Required for EAS production build: 7
+- Required for EAS production build: 3
 - Client-visible after bundling: 8
 - Sensitive visibility: 8
 - Plaintext visibility: 10
@@ -30,10 +30,10 @@ Client-visible values should not use EAS secret visibility, because values embed
 
 | Key | Group | EAS production | Visibility | Where to set | Current release status | Validation |
 | --- | --- | --- | --- | --- | --- | --- |
-| `EXPO_PUBLIC_ADMOB_IOS_APP_ID` | AdMob | Yes | sensitive | local .env.local + EAS production | Live AdMob IDs: TODO | AdMob app ID: ca-app-pub-0000000000000000~0000000000 |
-| `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID` | AdMob | Yes | sensitive | local .env.local + EAS production | Live AdMob IDs: TODO | AdMob app ID: ca-app-pub-0000000000000000~0000000000 |
-| `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID` | AdMob | Yes | sensitive | local .env.local + EAS production | Live AdMob IDs: TODO | Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000 |
-| `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID` | AdMob | Yes | sensitive | local .env.local + EAS production | Live AdMob IDs: TODO | Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000 |
+| `EXPO_PUBLIC_ADMOB_IOS_APP_ID` | AdMob | No | sensitive | local .env.local + EAS production | Live AdMob IDs: INFO | AdMob app ID: ca-app-pub-0000000000000000~0000000000 |
+| `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID` | AdMob | No | sensitive | local .env.local + EAS production | Live AdMob IDs: INFO | AdMob app ID: ca-app-pub-0000000000000000~0000000000 |
+| `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID` | AdMob | No | sensitive | local .env.local + EAS production | Live AdMob IDs: INFO | Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000 |
+| `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID` | AdMob | No | sensitive | local .env.local + EAS production | Live AdMob IDs: INFO | Rewarded ad unit ID: ca-app-pub-0000000000000000/0000000000 |
 | `APP_STORE_BASE_URL` | Public store URLs | Yes | plaintext | local .env.local + EAS production | Public support URL: OK<br>Public privacy URL: OK<br>Public marketing URL: OK | Production HTTPS root URL; can generate /support and /privacy URLs |
 | `APP_STORE_MARKETING_URL` | Public store URLs | No | plaintext | optional local .env.local + EAS production when used | Public marketing URL: OK | Optional production HTTPS marketing URL |
 | `APP_STORE_SUPPORT_URL` | Public store URLs | Yes | plaintext | local .env.local + EAS production | Public support URL: OK | Production HTTPS support URL; APP_STORE_BASE_URL can derive it |
@@ -43,7 +43,7 @@ Client-visible values should not use EAS secret visibility, because values embed
 | `APP_STORE_REVIEW_EMAIL` | App Store review contact | No | sensitive | local gate + CI/EAS workflow if metadata is automated | App Store review contact: TODO | Reachable email address |
 | `APP_STORE_REVIEW_PHONE` | App Store review contact | No | sensitive | local gate + CI/EAS workflow if metadata is automated | App Store review contact: TODO | Reachable phone number with at least 7 digits |
 | `APP_STORE_PRIVACY_ANSWERS_REVIEWED` | Manual release confirmations | No | plaintext | local gate + CI/EAS workflow | APP_STORE_PRIVACY_ANSWERS_REVIEWED: TODO | Set to 1 only after App Store privacy answers match the final build |
-| `ADMOB_PRIVACY_MESSAGES_CONFIGURED` | Manual release confirmations | No | plaintext | local gate + CI/EAS workflow | ADMOB_PRIVACY_MESSAGES_CONFIGURED: TODO | Set to 1 only after AdMob Privacy & messaging is configured and tested |
+| `ADMOB_PRIVACY_MESSAGES_CONFIGURED` | Manual release confirmations | No | plaintext | local gate + CI/EAS workflow | ADMOB_PRIVACY_MESSAGES_CONFIGURED: INFO | Set to 1 only after AdMob Privacy & messaging is configured and tested |
 | `APP_STORE_BUNDLE_ID_CONFIRMED` | Manual release confirmations | No | plaintext | local gate + CI/EAS workflow | APP_STORE_BUNDLE_ID_CONFIRMED: TODO | Set to 1 only after final bundle ID/package records are confirmed |
 | `APP_STORE_CONNECT_RECORD_READY` | Manual release confirmations | No | plaintext | local gate + CI/EAS workflow | APP_STORE_CONNECT_RECORD_READY: TODO | Set to 1 only after the App Store Connect record exists |
 | `EAS_REMOTE_VERSION_INITIALIZED` | Manual release confirmations | No | plaintext | local gate + CI/EAS workflow | EAS_REMOTE_VERSION_INITIALIZED: OK | Set to 1 only after npx eas-cli build:version:set is complete |

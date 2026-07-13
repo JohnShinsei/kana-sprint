@@ -8,7 +8,7 @@ This preflight checks the local EAS production build and submit setup before App
 - Local EAS setup ready: Yes
 - External gate ready: No
 - Strict store-ready gate ready: No
-- Blocking external items: 7
+- Blocking external items: 5
 - Local failures: 0
 
 ## App
@@ -71,21 +71,19 @@ This preflight checks the local EAS production build and submit setup before App
 
 - EAS env checklist: docs/eas-env-checklist.md
 - Production environment ready: Yes
-- Required production build env values: 7
+- Required production build env values: 3
 - Client-visible values: 8
 
 ## External Gate
 
 - External readiness checklist: docs/external-readiness.md
 - Readiness items: 11
-- Blocking items: 7
+- Blocking items: 5
 
 - [TODO] App Store review contact: Missing: APP_STORE_REVIEW_FIRST_NAME, APP_STORE_REVIEW_LAST_NAME, APP_STORE_REVIEW_EMAIL, APP_STORE_REVIEW_PHONE
-- [TODO] Live AdMob IDs: No production AdMob IDs are set; live rewarded ads remain disabled.
 - [TODO] APP_STORE_BUNDLE_ID_CONFIRMED: Set to 1 only after the real external action is complete.
 - [TODO] APP_STORE_CONNECT_RECORD_READY: Set to 1 only after the real external action is complete.
 - [TODO] APP_STORE_PRIVACY_ANSWERS_REVIEWED: Set to 1 only after the real external action is complete.
-- [TODO] ADMOB_PRIVACY_MESSAGES_CONFIGURED: Set to 1 only after the real external action is complete.
 - [TODO] PRODUCTION_DEVICE_TESTED: Set to 1 only after the real external action is complete.
 
 ## Official References

@@ -16,10 +16,8 @@ Use `docs/final-launch-runbook.md` as the final phase-by-phase execution map fro
 - `APP_STORE_REVIEW_LAST_NAME`
 - `APP_STORE_REVIEW_EMAIL`
 - `APP_STORE_REVIEW_PHONE`
-- `EXPO_PUBLIC_ADMOB_IOS_APP_ID`
-- `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID`
-- `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID`
-- `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID`
+- Optional for a `NO_LIVE_ADS` first release: leave all four `EXPO_PUBLIC_ADMOB_*` values empty.
+- Required together for a monetized build: `EXPO_PUBLIC_ADMOB_IOS_APP_ID`, `EXPO_PUBLIC_ADMOB_ANDROID_APP_ID`, `EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID`, and `EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID`.
 
 ## Manual confirmations
 
@@ -29,7 +27,7 @@ Set each value to `1` only after the real action is complete.
 - `APP_STORE_CONNECT_RECORD_READY`: App Store Connect app record exists for the final bundle ID.
 - `EAS_REMOTE_VERSION_INITIALIZED`: `npx eas-cli build:version:set` has been run once for the production iOS app.
 - `APP_STORE_PRIVACY_ANSWERS_REVIEWED`: App Store Connect privacy answers match the final build and AdMob state.
-- `ADMOB_PRIVACY_MESSAGES_CONFIGURED`: AdMob Privacy & messaging contains the required user messages for the release regions, and a production build has confirmed ads only load after UMP reports `canRequestAds`.
+- `ADMOB_PRIVACY_MESSAGES_CONFIGURED`: required only for a `LIVE_ADMOB` build; AdMob Privacy & messaging contains the required user messages for the release regions, and a production build has confirmed ads only load after UMP reports `canRequestAds`.
 - `PRODUCTION_DEVICE_TESTED`: the production build has been tested on a physical iPhone or TestFlight.
 
 ## Final command order

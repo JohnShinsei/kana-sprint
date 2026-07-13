@@ -674,11 +674,13 @@ const expectedReviewEnvKeys = [
   'APP_STORE_REVIEW_PHONE',
 ];
 const requiredStoreConfirmationEnv = {
-  ADMOB_PRIVACY_MESSAGES_CONFIGURED: 'Set ADMOB_PRIVACY_MESSAGES_CONFIGURED=1 after configuring AdMob Privacy & messaging and confirming UMP canRequestAds in a production build.',
   APP_STORE_BUNDLE_ID_CONFIRMED: 'Set APP_STORE_BUNDLE_ID_CONFIRMED=1 after confirming app.json iOS bundleIdentifier and Android package match the final store records.',
   APP_STORE_CONNECT_RECORD_READY: 'Set APP_STORE_CONNECT_RECORD_READY=1 after creating the App Store Connect app record for the final bundle ID.',
   EAS_REMOTE_VERSION_INITIALIZED: 'Set EAS_REMOTE_VERSION_INITIALIZED=1 after running npx eas-cli build:version:set for the production iOS app.',
   PRODUCTION_DEVICE_TESTED: 'Set PRODUCTION_DEVICE_TESTED=1 after testing the production build on a physical iPhone or TestFlight.',
+};
+const conditionalStoreConfirmationEnv = {
+  ADMOB_PRIVACY_MESSAGES_CONFIGURED: 'Set ADMOB_PRIVACY_MESSAGES_CONFIGURED=1 after configuring AdMob Privacy & messaging and confirming UMP canRequestAds in a production build.',
 };
 const expectedPrivacyReasons = {
   NSPrivacyAccessedAPICategoryUserDefaults: 'CA92.1',
@@ -1019,6 +1021,7 @@ assert(releaseStatusSource.includes('publicSiteHostingReady') && releaseStatusSo
 assert(releaseStatusSource.includes('EXPO_PUBLIC_ADMOB_IOS_APP_ID') && releaseStatusSource.includes('APP_STORE_PRIVACY_ANSWERS_REVIEWED'), 'release-status should check AdMob IDs and manual privacy confirmations');
 assert(releaseStatusSource.includes('isRealAdMobId') && releaseStatusSource.includes('admobPlaceholderPattern'), 'release-status should reject placeholder AdMob IDs');
 assert(releaseStatusSource.includes('admobDemoPublisherPattern'), 'release-status should reject Google demo AdMob IDs');
+assert(releaseStatusSource.includes('Optional for the NO_LIVE_ADS launch'), 'release-status should allow a no-live-ads first release');
 assert(admobReleaseAuditGeneratorSource.includes('admobPlaceholderPattern'), 'AdMob release audit generator should reject placeholder AdMob IDs');
 assert(admobReleaseAuditGeneratorSource.includes('admobDemoPublisherPattern'), 'AdMob release audit generator should reject Google demo AdMob IDs');
 assert(admobReleaseAuditGeneratorSource.includes('appConfigWithPlaceholderAds'), 'AdMob release audit generator should test placeholder IDs against Expo config');
@@ -1541,6 +1544,7 @@ verifyReleasePacket();
 verifyEasSubmissionChecklist();
 verifyFinalLaunchRunbook();
 verifyAppStoreHandoffBundle();
+verifyReleaseTrackPolicy();
 
 const currentAdEnv = Object.fromEntries(adEnvKeys.map((key) => [key, process.env[key] ?? '']));
 const hasAnyAdEnv = Object.values(currentAdEnv).some(Boolean);
@@ -1558,9 +1562,17 @@ if (hasAnyAdEnv) {
   assert(isRealAdMobId(currentAdEnv.EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID, admobUnitIdPattern), 'EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID format is invalid, demo, or still a placeholder');
 }
 
-requireForStore(hasValidCurrentAdEnv, 'Valid AdMob app and rewarded-unit IDs are not set; live rewarded ads are disabled for this build.');
 requireForStore(!hasValidCurrentAdEnv || findPlugin(appJson, 'react-native-google-mobile-ads'), 'AdMob env vars are valid but the native plugin was not added to the resolved Expo config.');
 requireForStore(privacyAnswersReviewed, 'Set APP_STORE_PRIVACY_ANSWERS_REVIEWED=1 after updating App Store Connect privacy answers with docs/app-store-privacy-answers.md.');
+assert(envExampleSource.includes('ADMOB_PRIVACY_MESSAGES_CONFIGURED=0'), '.env.example should document ADMOB_PRIVACY_MESSAGES_CONFIGURED');
+assert(releaseHandoffDoc.includes('ADMOB_PRIVACY_MESSAGES_CONFIGURED'), 'docs/release-handoff.md should document ADMOB_PRIVACY_MESSAGES_CONFIGURED');
+
+if (hasValidCurrentAdEnv) {
+  requireForStore(
+    process.env.ADMOB_PRIVACY_MESSAGES_CONFIGURED === '1',
+    conditionalStoreConfirmationEnv.ADMOB_PRIVACY_MESSAGES_CONFIGURED,
+  );
+}
 
 for (const [key, message] of Object.entries(requiredStoreConfirmationEnv)) {
   assert(envExampleSource.includes(`${key}=0`), `.env.example should document ${key}`);
@@ -3335,10 +3347,7 @@ function verifyEasEnvChecklist() {
   const keyByName = Object.fromEntries(keys.map((item) => [item.key, item]));
   const currentStatusByLabel = Object.fromEntries((readReleaseStatusJson().rows ?? []).map((row) => [row.label, row]));
   const expectedProductionKeys = [
-    'EXPO_PUBLIC_ADMOB_IOS_APP_ID',
-    'EXPO_PUBLIC_ADMOB_ANDROID_APP_ID',
-    'EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID',
-    'EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID',
+    ...(currentStatusByLabel['Live AdMob IDs']?.status === 'OK' ? adEnvKeys : []),
     'APP_STORE_BASE_URL',
     'APP_STORE_SUPPORT_URL',
     'APP_STORE_PRIVACY_URL',
@@ -3350,6 +3359,7 @@ function verifyEasEnvChecklist() {
   const expectedPlaintextKeys = envKeys.filter((key) => !expectedSensitiveKeys.includes(key));
   const expectedManualKeys = [
     'APP_STORE_PRIVACY_ANSWERS_REVIEWED',
+    ...Object.keys(conditionalStoreConfirmationEnv),
     ...Object.keys(requiredStoreConfirmationEnv),
   ];
 
@@ -3887,6 +3897,7 @@ function verifyEasBuildPreflight() {
   assert(easBuildPreflight.uploadPolicy?.ready === true, 'EAS build preflight upload policy should be ready');
 
   assert(easBuildPreflight.environment?.checklist === 'docs/eas-env-checklist.md', 'EAS build preflight should reference EAS env checklist markdown');
+  assert(easBuildPreflight.environment?.releaseTrack === (currentStatus.rows?.find((row) => row.label === 'Live AdMob IDs')?.status === 'OK' ? 'LIVE_ADMOB' : 'NO_LIVE_ADS'), 'EAS build preflight release track should match the AdMob release state');
   assert(easBuildPreflight.environment?.productionProfileEnvironmentReady === easEnvChecklist.summary?.productionProfileEnvironmentReady, 'EAS build preflight env readiness should match EAS env checklist');
   assert(easBuildPreflight.environment?.requiredForEasProduction === easEnvChecklist.summary?.requiredForEasProduction, 'EAS build preflight production env count should match EAS env checklist');
   assert(easBuildPreflight.environment?.clientVisible === easEnvChecklist.summary?.clientVisible, 'EAS build preflight client-visible count should match EAS env checklist');
@@ -4820,11 +4831,12 @@ function renderExpectedEnvTemplate(items) {
   return lines.join('\n');
 }
 
-function readReleaseStatusJson() {
+function readReleaseStatusJson(envOverrides = {}) {
   const result = spawnSync('node', ['scripts/release-status.js', '--json'], {
     cwd: root,
     encoding: 'utf8',
     shell: process.platform === 'win32',
+    env: { ...process.env, ...envOverrides },
   });
 
   if (result.error) {
@@ -4838,6 +4850,37 @@ function readReleaseStatusJson() {
   }
 
   return JSON.parse(result.stdout.replace(/^\uFEFF/, '').trim());
+}
+
+function verifyReleaseTrackPolicy() {
+  const emptyAds = Object.fromEntries(adEnvKeys.map((key) => [key, '']));
+  const noAdsRows = rowsByLabel(readReleaseStatusJson({
+    ...emptyAds,
+    ADMOB_PRIVACY_MESSAGES_CONFIGURED: '0',
+  }));
+  assert(noAdsRows['Live AdMob IDs']?.status === 'INFO', 'NO_LIVE_ADS should keep missing AdMob IDs non-blocking');
+  assert(noAdsRows.ADMOB_PRIVACY_MESSAGES_CONFIGURED?.status === 'INFO', 'NO_LIVE_ADS should keep the AdMob privacy confirmation non-blocking');
+
+  const partialAdsRows = rowsByLabel(readReleaseStatusJson({
+    ...emptyAds,
+    EXPO_PUBLIC_ADMOB_IOS_APP_ID: 'ca-app-pub-1111111111111111~1111111111',
+    ADMOB_PRIVACY_MESSAGES_CONFIGURED: '0',
+  }));
+  assert(partialAdsRows['Live AdMob IDs']?.status === 'BAD', 'A partial AdMob configuration should block release');
+
+  const liveAdsRows = rowsByLabel(readReleaseStatusJson({
+    EXPO_PUBLIC_ADMOB_IOS_APP_ID: 'ca-app-pub-1111111111111111~1111111111',
+    EXPO_PUBLIC_ADMOB_ANDROID_APP_ID: 'ca-app-pub-2222222222222222~2222222222',
+    EXPO_PUBLIC_ADMOB_REWARDED_IOS_UNIT_ID: 'ca-app-pub-1111111111111111/3333333333',
+    EXPO_PUBLIC_ADMOB_REWARDED_ANDROID_UNIT_ID: 'ca-app-pub-2222222222222222/4444444444',
+    ADMOB_PRIVACY_MESSAGES_CONFIGURED: '0',
+  }));
+  assert(liveAdsRows['Live AdMob IDs']?.status === 'OK', 'A complete production-format AdMob configuration should pass ID validation');
+  assert(liveAdsRows.ADMOB_PRIVACY_MESSAGES_CONFIGURED?.status === 'TODO', 'LIVE_ADMOB should require the AdMob privacy confirmation');
+}
+
+function rowsByLabel(status) {
+  return Object.fromEntries((status.rows ?? []).map((row) => [row.label, row]));
 }
 
 function envExampleKeys() {

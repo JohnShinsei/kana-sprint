@@ -42,7 +42,7 @@
     "liveAdsReady": false,
     "externalAdSetupReady": false,
     "externalPrivacyMessagingReady": false,
-    "externalBlockingItems": 7,
+    "externalBlockingItems": 5,
     "localFailures": 0
   },
   "noLiveAdsSubmission": {
