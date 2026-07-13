@@ -12,7 +12,7 @@ Kana Sprint starts on the playable game surface and keeps N5-N1 mastery progress
 - Game modes: 5
 - Runtime phases: 3
 - BGM tracks: 3
-- Checks passed: 21/21
+- Checks passed: 22/22
 - Required flow failures: 0
 
 ## Runtime Surface
@@ -35,7 +35,8 @@ Kana Sprint starts on the playable game surface and keeps N5-N1 mastery progress
 | Check | Passed | Evidence |
 | --- | --- | --- |
 | first-playable-screen | Yes | First screen is a playable ready state with practice and daily challenge entry points |
-| difficulty-selector | Yes | N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts |
+| difficulty-selector | Yes | N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts for JLPT study modes |
+| kana-foundation-mode | Yes | Kana practice is a standalone foundation mode and never presents itself as N1-N4 study |
 | level-mastery-map | Yes | Ready screen shows local mastery progress for every JLPT level |
 | weak-review-retention | Yes | Ready screen exposes a local weak-item review loop from recent mistakes |
 | next-step-guidance | Yes | Ready screen recommends the next local learning action from weak items and JLPT mastery |

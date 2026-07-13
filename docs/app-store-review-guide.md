@@ -57,5 +57,5 @@ Kana Sprint does not require sign-in. Reviewers can start a practice run directl
 - App Store screenshot entries: 176
 - Public support/privacy/license pages: 44
 - Runtime UI flow audit: docs/runtime-ui-flow-audit.md
-- Runtime UI flow ready: Yes (21/21 checks)
+- Runtime UI flow ready: Yes (22/22 checks)
 - Final commands: npm run release:status -> npm run release:verify -> npm run release:store-ready

@@ -113,8 +113,8 @@
     "runtimeUiFlowAudit": "docs/runtime-ui-flow-audit.md",
     "runtimeUiFlowRisk": "PASS",
     "runtimeUiFlowReady": true,
-    "runtimeUiFlowChecks": 21,
-    "runtimeUiFlowPassedChecks": 21,
+    "runtimeUiFlowChecks": 22,
+    "runtimeUiFlowPassedChecks": 22,
     "runtimeUiFlowRequiredFailures": 0,
     "publicSiteDeployAudit": "docs/public-site-deploy-audit.md",
     "publicSiteDeployRisk": "PASS",
@@ -324,7 +324,7 @@
         },
         {
           "label": "Runtime UI flow audit",
-          "value": "Risk PASS; 21/21 runtime flows ready; failures=0.",
+          "value": "Risk PASS; 22/22 runtime flows ready; failures=0.",
           "status": "READY",
           "note": "See docs/runtime-ui-flow-audit.md before confirming first screen, Settings language, exit, daily challenge, BGM, support/privacy links, and rewarded-ad entry."
         },

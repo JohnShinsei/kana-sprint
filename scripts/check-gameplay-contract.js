@@ -25,6 +25,9 @@ const packageJson = JSON.parse(fs.readFileSync(path.join(root, 'package.json'), 
 
 const locales = i18n.LOCALE_OPTIONS.map((option) => option.locale);
 const levels = gameData.JLPT_LEVELS;
+const validModeLevelCombinations = levels.flatMap((level) => modes
+  .filter((mode) => mode !== 'kana' || level === 'N5')
+  .map((mode) => ({ level, mode })));
 
 validateLevelBanks();
 validateLineContentQuality();
@@ -37,18 +40,17 @@ validatePronunciationUiContract();
 validateListeningUiContract();
 validateRewardedContinueUiContract();
 validateRunStartStorageGate();
+validateKanaLevelUiContract();
 
 for (const locale of locales) {
-  for (const level of levels) {
-    for (const mode of modes) {
-      const recentIds = [];
+  for (const { level, mode } of validModeLevelCombinations) {
+    const recentIds = [];
 
-      for (let index = 0; index < samplesPerCombination; index += 1) {
-        const question = gameEngine.makeQuestion(mode, index, recentIds, locale, level, `contract-${level}`);
-        validateQuestion(question, { locale, level, mode, index });
-        recentIds.unshift(question.itemId);
-        recentIds.splice(6);
-      }
+    for (let index = 0; index < samplesPerCombination; index += 1) {
+      const question = gameEngine.makeQuestion(mode, index, recentIds, locale, level, `contract-${level}`);
+      validateQuestion(question, { locale, level, mode, index });
+      recentIds.unshift(question.itemId);
+      recentIds.splice(6);
     }
   }
 }
@@ -69,7 +71,7 @@ if (failures.length > 0) {
 }
 
 console.log(
-  `Gameplay contract passed for ${locales.length} locales, ${levels.length} JLPT levels, ${modes.length} modes, and ${locales.length * levels.length * modes.length * samplesPerCombination} generated questions.`,
+  `Gameplay contract passed for ${locales.length} locales, ${levels.length} JLPT levels, ${modes.length} modes, ${validModeLevelCombinations.length} valid mode/level combinations, and ${locales.length * validModeLevelCombinations.length * samplesPerCombination} generated questions.`,
 );
 
 function validateQuestion(question, context) {
@@ -111,6 +113,7 @@ function validateQuestion(question, context) {
   }
 
   if (context.mode === 'kana') {
+    assert(context.level === 'N5', `${label}: kana mode should use its fixed foundation difficulty instead of N1-N4`);
     assert(question.item.kind === 'hiragana' || question.item.kind === 'katakana', `${label}: kana mode should only use kana items`);
   }
 
@@ -537,7 +540,15 @@ function validateRunStartStorageGate() {
   assert(/\(daily: boolean, weakReview = false\) => \{\s+if \(!isStorageReady\) return;/.test(appSource), 'Every run start should wait for stored progress to load');
   assert((appSource.match(/accessibilityState=\{\{ disabled: !isStorageReady \}\}/g) ?? []).length >= 2, 'Practice and daily buttons should expose their loading-disabled state');
   assert((appSource.match(/disabled=\{!isStorageReady\}/g) ?? []).length >= 2, 'Practice and daily buttons should be disabled until progress is ready');
-  assert(appSource.includes('[bgmPlayer, isBgmEnabled, isStorageReady, level, locale, mode, weakReviewItems]'), 'Run start callback should react to storage readiness');
+  assert(appSource.includes('[bgmPlayer, gameplayLevel, isBgmEnabled, isStorageReady, locale, mode, weakReviewItems]'), 'Run start callback should react to storage readiness and the effective gameplay level');
+}
+
+function validateKanaLevelUiContract() {
+  assert(appSource.includes("const gameplayLevel: JlptLevel = mode === 'kana' ? 'N5' : level"), 'Kana mode should use a fixed foundation difficulty internally');
+  assert((appSource.match(/mode !== 'kana' \? \(/g) ?? []).length >= 3, 'Kana mode should hide JLPT selection, next-step, and JLPT progress UI');
+  assert(appSource.includes("mode === 'kana' ? t(locale, 'modeKana') : level"), 'Kana mission preview should not show an N-level');
+  assert(appSource.includes("mode === 'kana' ? null : `${gameplayLevel} / `"), 'Kana question labels should not show an N-level');
+  assert(appSource.includes("mode === 'kana' ? achievementBadges.filter((badge) => badge.id !== 'n1-spark')"), 'Kana ready screen should hide the N1-specific achievement badge');
 }
 
 function levelRank(level) {

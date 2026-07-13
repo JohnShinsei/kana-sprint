@@ -21,7 +21,7 @@
     "externalReady": false,
     "totalFiles": 301,
     "missingFiles": 0,
-    "totalBytes": 18421132,
+    "totalBytes": 18429510,
     "publicSitePages": 44,
     "publicSiteRoutes": 44,
     "screenshotEntries": 176,
@@ -66,7 +66,7 @@
           "path": "docs/public-site-deploy-audit.json",
           "exists": true,
           "bytes": 24640,
-          "sha256": "a9070f90798a0c6a8341d147493f5394e2b07282251bac2a5ee1ae5d08a6cf9b"
+          "sha256": "da1aa182e72a53d5c0391a18f7a7b04c0e3b91fd9f72488a045a936f60e71fe8"
         },
         {
           "path": "docs/public-site-deploy-audit.md",
@@ -90,19 +90,19 @@
           "path": "docs/public-site-hosting-verification.json",
           "exists": true,
           "bytes": 31205,
-          "sha256": "5931cf7d5b6ab29094fe32e77e4981c3fa25fd90f721bbdd9549dcdd15ad09f6"
+          "sha256": "212fadcb9aec7a1ece38f15b0cf4f3e88b36a5a5ef59a7c8d8f2b9ac419535ef"
         },
         {
           "path": "docs/public-site-hosting-verification.md",
           "exists": true,
           "bytes": 3374,
-          "sha256": "44b3e42a94d12584f3362800b83a1a4abf5663fd6fe6e071ecfac9097c1744bf"
+          "sha256": "0fd219dffdc77f77a734cec1dc7071a3729122c9ab4223c731419c096ab82570"
         },
         {
           "path": "docs/public-site-manifest.json",
           "exists": true,
           "bytes": 20849,
-          "sha256": "4eda4355dad44b995dff3c10e639201eed14c6f6771bd1cb551d1b1310bad826"
+          "sha256": "7bf51a7f2e81f3430cc733d1f378c613eeb7dabb7b2df4d63f404518b60ff9a6"
         },
         {
           "path": "site/_headers",
@@ -125,8 +125,8 @@
         {
           "path": "site/de/licenses/index.html",
           "exists": true,
-          "bytes": 7899,
-          "sha256": "5f500f61170b300c0a3a2f7702be0f973a726386c5642573b87b5c9a262aba5e"
+          "bytes": 8236,
+          "sha256": "e93a6d4633b5907fb35244ffb3df1c733cd8cb86a9aa52faa98d5dd0bb39262d"
         },
         {
           "path": "site/de/privacy/index.html",
@@ -149,8 +149,8 @@
         {
           "path": "site/en/licenses/index.html",
           "exists": true,
-          "bytes": 7905,
-          "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669"
+          "bytes": 8242,
+          "sha256": "576ed6af5b280cc2f957df65515431122033d03487e4ba9fa0006907a060719c"
         },
         {
           "path": "site/en/privacy/index.html",
@@ -173,8 +173,8 @@
         {
           "path": "site/es-ES/licenses/index.html",
           "exists": true,
-          "bytes": 7914,
-          "sha256": "ec4f1a7e7e5306c294351eaf1d0fa5f0430383aa0c6a74d60a9b169f51d70f88"
+          "bytes": 8251,
+          "sha256": "7a5137a6cf95faa7bd592feeeaf3e84388e47b42b5812509240f44721f146736"
         },
         {
           "path": "site/es-ES/privacy/index.html",
@@ -197,8 +197,8 @@
         {
           "path": "site/fr/licenses/index.html",
           "exists": true,
-          "bytes": 7906,
-          "sha256": "73cbfd244503a957a1fda5732b5d5699b11ceb190dc53b04253ee234295c3c09"
+          "bytes": 8243,
+          "sha256": "fcba9bbac57f89ca7ddeab306f175030d9a3ad99b9a4bd0e92f22538a97cbced"
         },
         {
           "path": "site/fr/privacy/index.html",
@@ -227,8 +227,8 @@
         {
           "path": "site/it/licenses/index.html",
           "exists": true,
-          "bytes": 7899,
-          "sha256": "05d4676e1457260dcbb53128ba5b753393673965db3748fc7fca8b059d6e0e0b"
+          "bytes": 8236,
+          "sha256": "b646652e8fe036158130fb50bbf8757a6971730e553db75a52079ca6366b92c8"
         },
         {
           "path": "site/it/privacy/index.html",
@@ -251,8 +251,8 @@
         {
           "path": "site/ko/licenses/index.html",
           "exists": true,
-          "bytes": 7915,
-          "sha256": "7eeb9e7df2c35613f7aae29018888f9fe5cad6fde4d10e8969136a7c9f17e126"
+          "bytes": 8252,
+          "sha256": "2364c50d82c91bc909f1d4c4e9b841ae28b320a5ee67d035358fd7643c322b01"
         },
         {
           "path": "site/ko/privacy/index.html",
@@ -269,8 +269,8 @@
         {
           "path": "site/licenses/index.html",
           "exists": true,
-          "bytes": 7905,
-          "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669"
+          "bytes": 8242,
+          "sha256": "576ed6af5b280cc2f957df65515431122033d03487e4ba9fa0006907a060719c"
         },
         {
           "path": "site/pl/index.html",
@@ -281,8 +281,8 @@
         {
           "path": "site/pl/licenses/index.html",
           "exists": true,
-          "bytes": 7904,
-          "sha256": "f384d69c61540a3bfc38ea16f2bde7ad63d2e2455f91c601d5ab537b691137df"
+          "bytes": 8241,
+          "sha256": "e841a22227f9a8237e817058db65afee95e5c78d7d90e0857c9f05c237fed608"
         },
         {
           "path": "site/pl/privacy/index.html",
@@ -311,8 +311,8 @@
         {
           "path": "site/pt-BR/licenses/index.html",
           "exists": true,
-          "bytes": 7915,
-          "sha256": "b36d75a12eb0fa4de91b42df539dba308954965ab3f2663c85c00671bcfe1756"
+          "bytes": 8252,
+          "sha256": "88a16e878fb2679375b0a797fa82bbb021dcc8c0657f93f0290fff8a3d4501a8"
         },
         {
           "path": "site/pt-BR/privacy/index.html",
@@ -353,8 +353,8 @@
         {
           "path": "site/zh-Hans/licenses/index.html",
           "exists": true,
-          "bytes": 7858,
-          "sha256": "283337071bf2fcb13c5e715cffceaefafe4231609fcc3d81ca4711cd5850e5e2"
+          "bytes": 8195,
+          "sha256": "0e752b73947345a52bec7526e91c65b73c9f83fd8f61b96f13f755f607a6ceb8"
         },
         {
           "path": "site/zh-Hans/privacy/index.html",
@@ -377,8 +377,8 @@
         {
           "path": "site/zh-Hant/licenses/index.html",
           "exists": true,
-          "bytes": 7864,
-          "sha256": "43e07c099f4069a52911a5625da5918244e1cae90f38ad4ac553862baa533d07"
+          "bytes": 8201,
+          "sha256": "853cddda8e45552220a963bb9f97174820673e63cd3ddc109c1f3ae0991a8e71"
         },
         {
           "path": "site/zh-Hant/privacy/index.html",
@@ -396,7 +396,7 @@
       "summary": {
         "files": 56,
         "missingFiles": 0,
-        "bytes": 358111
+        "bytes": 361818
       }
     },
     {
@@ -1563,13 +1563,13 @@
           "path": "docs/app-store-connect-checklist.json",
           "exists": true,
           "bytes": 20969,
-          "sha256": "934efd292e524695ff0011006299c4816a1bd8c900d26608db306d685640696e"
+          "sha256": "8efd0e0740d021255eca8287364ddad025cf8d8c6c63e77858554f70e7d081b9"
         },
         {
           "path": "docs/app-store-connect-checklist.md",
           "exists": true,
           "bytes": 12809,
-          "sha256": "72bbd2e1cc93ac60f2cd272b62b1ada1120fbf16f79d57c042795d674fea9d46"
+          "sha256": "ad9ca5cb4781d5c8dd767648a642b2c692dcee42294dd5253e9984ec5f52159d"
         },
         {
           "path": "docs/app-store-privacy-answers.json",
@@ -1587,31 +1587,31 @@
           "path": "docs/app-store-review-guide.json",
           "exists": true,
           "bytes": 2982,
-          "sha256": "3d27f26fedcd696e6826ee08da171fc7e9013f641b0f3c84ff5691b0857bf6cc"
+          "sha256": "492bbd5cf9edd667c4445111a1c7258e5baf1595f2230a8737442a894f760c7b"
         },
         {
           "path": "docs/app-store-review-guide.md",
           "exists": true,
           "bytes": 2685,
-          "sha256": "0603ac9e1fa91a93317d7129b280114f9c1dc4726e48ddb18302be8bbb04b465"
+          "sha256": "5557650e8832b17fafff0bac305a4b3f1325ad03a714150b144a937c40d18355"
         },
         {
           "path": "docs/content-rights-audit.json",
           "exists": true,
-          "bytes": 6303,
-          "sha256": "0fc10ece5a409d2a100d53dbf2e04abe53244524df9f33182a9b596697904fa4"
+          "bytes": 6883,
+          "sha256": "34dec66c05f5ac7fe76e1c900b4158f41c78e9a6e791a2059b765a5c64813090"
         },
         {
           "path": "docs/content-rights-audit.md",
           "exists": true,
-          "bytes": 2544,
-          "sha256": "ddd41fab935bfed5a941d7631ccb41e712e34c923c0c9c85d75cca4a4df55d18"
+          "bytes": 2880,
+          "sha256": "8646f6a933c72264ff2802f28d542debc91e22e5ae5c1bd36eb6eea8074a19eb"
         },
         {
           "path": "docs/data-flow-privacy-audit.json",
           "exists": true,
-          "bytes": 5376,
-          "sha256": "0dab5d1e30c98ea8a409ee3902204d46a6993255935b15a55f1a43a69af53ebf"
+          "bytes": 5517,
+          "sha256": "0cc158abec3bdd33abb891fb71d514c2a138d8ebefb0cc2c45a0843328b8e451"
         },
         {
           "path": "docs/data-flow-privacy-audit.md",
@@ -1658,26 +1658,26 @@
         {
           "path": "docs/release-packet.json",
           "exists": true,
-          "bytes": 25731,
-          "sha256": "65b1c63c9d42aa461e5e824cb9e2a85e0064b9b9b5ad94da4aa8fb58396eb000"
+          "bytes": 25790,
+          "sha256": "9a369be7a1f85431790aa0ec3ecf62219188af5c45195ac4a23fca78bddc404d"
         },
         {
           "path": "docs/release-packet.md",
           "exists": true,
-          "bytes": 8146,
-          "sha256": "93161cd4425d8ee8608ee977d20eef9e74e03bfeba8a4858fe415b553543dcf3"
+          "bytes": 8175,
+          "sha256": "7f9da2fdcd99e5a4b6263fc93dececeacc5fd270c19cb861d790d5acf4e5337d"
         },
         {
           "path": "docs/runtime-ui-flow-audit.json",
           "exists": true,
-          "bytes": 8397,
-          "sha256": "8b1d088c47669857e2e371d2e1eead0df5d7af8458caf5bec257afd46b877e2f"
+          "bytes": 8759,
+          "sha256": "30b9f04b8df7af91de12867a0bbb401c17e4d8128bcc53db7176fcb5fb7fc306"
         },
         {
           "path": "docs/runtime-ui-flow-audit.md",
           "exists": true,
-          "bytes": 3732,
-          "sha256": "8ce4f16e37d720800c74d77d4d9b02221559aaf37adeb74caa2403d8c381845d"
+          "bytes": 3873,
+          "sha256": "519d3145ceb787705f119fc35719b03621e351e91fe3ed97b63bd4e751ba737e"
         },
         {
           "path": "docs/study-bank-depth-audit.json",
@@ -1707,7 +1707,7 @@
       "summary": {
         "files": 30,
         "missingFiles": 0,
-        "bytes": 214198
+        "bytes": 215846
       }
     },
     {
@@ -1765,14 +1765,14 @@
         {
           "path": "docs/eas-submission-checklist.json",
           "exists": true,
-          "bytes": 15732,
-          "sha256": "b82a77478a97b5620727710af3976ef782932b6323e1c10dee2db22c45796d43"
+          "bytes": 15761,
+          "sha256": "53c09db046447660cc7693c092a4cb49f4c5f2af0aef657c2c2257993f87f15f"
         },
         {
           "path": "docs/eas-submission-checklist.md",
           "exists": true,
-          "bytes": 10387,
-          "sha256": "8dd9d293f967bc3e91fd7420fe192adfe4d5da5c2925581911463502dd89d27c"
+          "bytes": 10416,
+          "sha256": "3f40d9dc544b64103556e53f738afa10f8b231522d975589eadbdbc9c2e60c15"
         },
         {
           "path": "docs/external-readiness.json",
@@ -1813,14 +1813,14 @@
         {
           "path": "docs/production-device-smoke-test.json",
           "exists": true,
-          "bytes": 14011,
-          "sha256": "ac5ca7a254be4323f4603da2b416aea39885c1a7ed1ebfb87f68ed0ef7ac9027"
+          "bytes": 14121,
+          "sha256": "5db5487313e3c6f607c1109fe0b503031cb76f5ba131caf507b5541cc8cdbe76"
         },
         {
           "path": "docs/production-device-smoke-test.md",
           "exists": true,
-          "bytes": 8784,
-          "sha256": "45f928f1a697c678feb307b2e3dbf990ff0b937c929dc425046d9bf731414cf6"
+          "bytes": 8894,
+          "sha256": "7f9e4b7ff6bded21865174f265aee2ce80f3617f52a35a6a26a95a87646c8c4c"
         },
         {
           "path": "docs/store-submission-input-pack.json",
@@ -1850,7 +1850,7 @@
       "summary": {
         "files": 22,
         "missingFiles": 0,
-        "bytes": 195215
+        "bytes": 195493
       }
     },
     {
@@ -1878,8 +1878,8 @@
         {
           "path": "App.tsx",
           "exists": true,
-          "bytes": 91057,
-          "sha256": "22206bb0a5b0a7caaf71926b69df684110970be4969c3f9b300712f9d6ae0ce2"
+          "bytes": 93575,
+          "sha256": "4dc6ad61e4770b91952c0e81f1e04c9d22d378688c3fa664b2505476057fd87e"
         },
         {
           "path": "docs/release-handoff.md",
@@ -1896,14 +1896,14 @@
         {
           "path": "package.json",
           "exists": true,
-          "bytes": 4583,
-          "sha256": "19912c41a9be1223b208af3a9db7af6b04f9c08c9ee034cae2b7a71fceab7fe9"
+          "bytes": 4732,
+          "sha256": "14710876d601fc5ea2999ba2c7346bee87187c041eae43d9615cc7efbd0f578d"
         },
         {
           "path": "README.md",
           "exists": true,
-          "bytes": 24706,
-          "sha256": "1daacc8968fca2c71dc0b2c6d9614bdcc0f36c9c6ebfed307816c4aadbf36b43"
+          "bytes": 25238,
+          "sha256": "d463ca25e5ac49b552d2ef6901bb055640198d09e7275561b50d0e60e33e5e19"
         },
         {
           "path": "src/gameData.ts",
@@ -1914,14 +1914,14 @@
         {
           "path": "src/i18n.ts",
           "exists": true,
-          "bytes": 184114,
-          "sha256": "5d45ee477c4b7394934e9d58ed1e59eb7ae4aed28070df17b1dba9cd424783c9"
+          "bytes": 183660,
+          "sha256": "772e4ec5110e64a1885716dc3707cf9871d156b5144fc7c36acb96a03f7f174d"
         }
       ],
       "summary": {
         "files": 10,
         "missingFiles": 0,
-        "bytes": 688746
+        "bytes": 691491
       }
     }
   ],
@@ -1988,7 +1988,7 @@
         "status": "OK",
         "category": "local",
         "label": "Runtime assets",
-        "detail": "6 PNG assets and 3 BGM tracks recorded."
+        "detail": "6 PNG assets, 3 BGM tracks, and 853 offline pronunciations recorded."
       },
       {
         "status": "OK",
@@ -2102,7 +2102,7 @@
         "status": "OK",
         "category": "local",
         "label": "Runtime UI flow audit",
-        "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+        "detail": "22/22 runtime UI flows verified across 10 locales and 5 JLPT levels."
       },
       {
         "status": "OK",

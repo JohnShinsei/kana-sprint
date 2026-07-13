@@ -44,12 +44,24 @@ const checks = [
   ),
   check(
     'difficulty-selector',
-    'N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts',
+    'N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts for JLPT study modes',
     sameSet(levels, expectedLevels) &&
       appSource.includes('JLPT_LEVELS.map') &&
       appSource.includes('getLevelStudyStats(nextLevel)') &&
       sourceContainsAllLevelLabels(),
     [`${levels.length} JLPT levels exposed: ${levels.join(', ')}.`],
+  ),
+  check(
+    'kana-foundation-mode',
+    'Kana practice is a standalone foundation mode and never presents itself as N1-N4 study',
+    sourceContainsAll(appSource, [
+      "const gameplayLevel: JlptLevel = mode === 'kana' ? 'N5' : level",
+      "mode !== 'kana' ? (",
+      "mode === 'kana' ? t(locale, 'modeKana') : level",
+      "mode === 'kana' ? null : `${gameplayLevel} / `",
+      "mode === 'kana' ? achievementBadges.filter((badge) => badge.id !== 'n1-spark')",
+    ]),
+    ['Kana uses foundation difficulty internally and hides JLPT selection, progression, level-specific badges, and run-level labels.'],
   ),
   check(
     'level-mastery-map',

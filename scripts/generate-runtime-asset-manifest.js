@@ -7,6 +7,7 @@ const outputJsonPath = path.join(root, 'docs/runtime-asset-manifest.json');
 const outputMarkdownPath = path.join(root, 'docs/runtime-asset-manifest.md');
 const appJson = require('../app.json').expo;
 const bgmSource = fs.readFileSync(path.join(root, 'src/bgm.ts'), 'utf8');
+const pronunciationSource = fs.readFileSync(path.join(root, 'src/pronunciation.generated.ts'), 'utf8');
 
 const pngAssets = [
   {
@@ -56,6 +57,24 @@ const audioAssets = extractBgmAssets().map((asset) => ({
   file: describeFile(asset.path),
   wav: readWavInfo(asset.path),
 }));
+const pronunciationFiles = extractPronunciationAssets().map((asset) => describeFile(asset.path));
+const pronunciationPack = {
+  itemCount: pronunciationFiles.length,
+  totalBytes: pronunciationFiles.reduce((sum, file) => sum + file.bytes, 0),
+  averageBytes: pronunciationFiles.length > 0
+    ? Math.round(pronunciationFiles.reduce((sum, file) => sum + file.bytes, 0) / pronunciationFiles.length)
+    : 0,
+  maxBytes: Math.max(0, ...pronunciationFiles.map((file) => file.bytes)),
+  format: capturePronunciationMeta('format'),
+  sampleRate: Number(capturePronunciationMeta('sampleRate')),
+  bitrateKbps: Number(capturePronunciationMeta('bitrateKbps')),
+  engine: capturePronunciationMeta('engine'),
+  engineVersion: capturePronunciationMeta('engineVersion'),
+  speaker: capturePronunciationMeta('speaker'),
+  style: capturePronunciationMeta('style'),
+  voiceCredit: capturePronunciationMeta('voiceCredit'),
+  studyTextSha256: capturePronunciationMeta('studyTextSha256'),
+};
 
 const manifest = {
   schemaVersion: 1,
@@ -67,10 +86,14 @@ const manifest = {
   },
   pngAssets,
   audioAssets,
+  pronunciationPack,
   summary: {
     pngCount: pngAssets.length,
     audioCount: audioAssets.length,
-    totalBytes: [...pngAssets, ...audioAssets].reduce((sum, asset) => sum + asset.file.bytes, 0),
+    pronunciationCount: pronunciationPack.itemCount,
+    pronunciationBytes: pronunciationPack.totalBytes,
+    totalBytes: [...pngAssets, ...audioAssets].reduce((sum, asset) => sum + asset.file.bytes, 0)
+      + pronunciationPack.totalBytes,
   },
 };
 
@@ -88,6 +111,21 @@ function extractBgmAssets() {
     platform: 'all',
     path: normalizeAssetPath(match[3]),
   }));
+}
+
+function extractPronunciationAssets() {
+  const matches = [...pronunciationSource.matchAll(/'([^']+)': require\('\.\.\/([^']+\.mp3)'\)/g)];
+
+  return matches.map((match) => ({
+    itemId: match[1],
+    path: normalizeAssetPath(match[2]),
+  }));
+}
+
+function capturePronunciationMeta(key) {
+  const match = pronunciationSource.match(new RegExp(`\\b${key}: (?:'([^']*)'|(\\d+))`));
+  assert(match, `Pronunciation metadata is missing ${key}`);
+  return match[1] ?? match[2];
 }
 
 function describeFile(relativePath) {
@@ -177,6 +215,8 @@ function renderMarkdown(manifest) {
 - App: ${manifest.app.name} ${manifest.app.version}
 - PNG assets: ${manifest.summary.pngCount}
 - Audio assets: ${manifest.summary.audioCount}
+- Offline Japanese pronunciations: ${manifest.summary.pronunciationCount}
+- Pronunciation pack bytes: ${manifest.summary.pronunciationBytes}
 - Runtime asset bytes: ${manifest.summary.totalBytes}
 
 ## PNG Assets
@@ -190,6 +230,18 @@ ${pngRows}
 | Role | Path | Duration | Sample Rate | Channels | Bytes | SHA-256 Prefix |
 | --- | --- | ---: | ---: | ---: | ---: | --- |
 ${audioRows}
+
+## Offline Japanese Pronunciation
+
+- Coverage: ${manifest.pronunciationPack.itemCount} study items
+- Voice: ${manifest.pronunciationPack.speaker} / ${manifest.pronunciationPack.style}
+- Credit: ${manifest.pronunciationPack.voiceCredit}
+- Engine: ${manifest.pronunciationPack.engine} ${manifest.pronunciationPack.engineVersion}
+- Format: ${manifest.pronunciationPack.format}, ${manifest.pronunciationPack.sampleRate} Hz, ${manifest.pronunciationPack.bitrateKbps} kbps
+- Total bytes: ${manifest.pronunciationPack.totalBytes}
+- Average bytes: ${manifest.pronunciationPack.averageBytes}
+- Maximum bytes: ${manifest.pronunciationPack.maxBytes}
+- Study text SHA-256: ${manifest.pronunciationPack.studyTextSha256}
 `;
 }
 

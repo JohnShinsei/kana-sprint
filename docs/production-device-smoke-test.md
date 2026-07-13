@@ -67,8 +67,8 @@ Use this checklist on the exact production archive or TestFlight build intended 
   Expected: The recommendation prioritizes weak review, otherwise current-level practice, next-level advancement, or Daily when all levels are cleared.
 - [ ] P1 Return to the ready screen after a few runs and inspect the milestone badges.
   Expected: First run, 3-day streak, 20 mastered, and N1 spark badges reflect local progress and never require an account or network sync.
-- [ ] P0 Before starting runs, select N5, N4, N3, N2, and N1 once each and confirm the active question label matches the selected level.
-  Expected: N5 includes kana foundations; N4-N1 stay in their level banks and progressively feel harder.
+- [ ] P0 In a JLPT study mode, select N5, N4, N3, N2, and N1 once each and confirm the active question label matches the selected level. Then select Kana mode.
+  Expected: N5 includes kana foundations; N4-N1 stay in their level banks and progressively feel harder. Kana mode hides JLPT levels and stays a standalone hiragana/katakana foundation drill.
 - [ ] P1 Switch Mix, Kana, Vocabulary, Lines, and Grammar modes where available, then start a short run in each.
   Expected: Questions match the selected mode and the app never presents empty options.
 - [ ] P0 Tap at least one wrong answer during a run.

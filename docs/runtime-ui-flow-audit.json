@@ -30,8 +30,8 @@
     "phases": 3,
     "bgmTracks": 3,
     "hasJapaneseUiLocale": false,
-    "checks": 21,
-    "passedChecks": 21,
+    "checks": 22,
+    "passedChecks": 22,
     "requiredFlowFailures": 0
   },
   "app": {
@@ -90,10 +90,18 @@
     },
     {
       "id": "difficulty-selector",
-      "label": "N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts",
+      "label": "N5-N1 difficulty selector is sourced from the study-bank level list and shows real counts for JLPT study modes",
       "passed": true,
       "evidence": [
         "5 JLPT levels exposed: N5, N4, N3, N2, N1."
+      ]
+    },
+    {
+      "id": "kana-foundation-mode",
+      "label": "Kana practice is a standalone foundation mode and never presents itself as N1-N4 study",
+      "passed": true,
+      "evidence": [
+        "Kana uses foundation difficulty internally and hides JLPT selection, progression, level-specific badges, and run-level labels."
       ]
     },
     {

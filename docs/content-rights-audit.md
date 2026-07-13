@@ -15,8 +15,20 @@ Kana Sprint uses original anime-style study lines and does not include known pro
 - Duplicate line displays: 0
 - Duplicate line meanings: 0
 - App Store locales with originality claim: 10
+- Voice synthesis credit ready: Yes
 
 No protected IP term hits were found in the study bank or App Store localization text.
+
+## Voice Synthesis
+
+- Engine and voice: VOICEVOX:四国めたん
+- Style: ノーマル
+- Commercial and non-commercial use with credit: Yes
+- In-app credit present: Yes
+- Public credit present: Yes
+- Official terms:
+  - https://voicevox.hiroshiba.jp/term/
+  - https://zunko.jp/con_ongen_kiyaku.html
 
 ## Level Coverage
 

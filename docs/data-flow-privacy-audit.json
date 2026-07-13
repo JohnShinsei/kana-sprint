@@ -14,6 +14,10 @@
       "src/gameEngine.ts",
       "src/grammarData.ts",
       "src/i18n.ts",
+      "src/pronunciation.generated.ts",
+      "src/pronunciation.native.ts",
+      "src/pronunciation.ts",
+      "src/pronunciation.web.ts",
       "src/storage.ts"
     ],
     "storage": "src/storage.ts",
@@ -79,7 +83,7 @@
       "userInitiatedExternalLinks": [
         {
           "file": "App.tsx",
-          "line": 762,
+          "line": 821,
           "match": "Linking.openURL"
         }
       ],

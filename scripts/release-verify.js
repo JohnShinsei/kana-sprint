@@ -15,6 +15,7 @@ const commonEnv = {
 try {
   run('TypeScript', npmBin, ['run', 'typecheck']);
   run('Gameplay contract', npmBin, ['run', 'gameplay-check']);
+  run('Offline pronunciation pack', npmBin, ['run', 'pronunciation:check']);
   run('Study bank depth audit', npmBin, ['run', 'study:depth']);
   run('Study content localization audit', npmBin, ['run', 'study:localization']);
   run('Expo Doctor', npmBin, ['run', 'doctor']);
@@ -121,6 +122,10 @@ function verifyWebExport() {
 
   assert(relativeFiles.includes('index.html'), 'Web export missing index.html');
   assert(jsFiles.length > 0, 'Web export missing JavaScript bundle');
+  assert(
+    !relativeFiles.some((file) => file.includes('pronunciation') || file.endsWith('.mp3')),
+    'Web export should leave the native offline pronunciation pack out of the browser build',
+  );
 
   const bundledJs = jsFiles.map((file) => fs.readFileSync(file, 'utf8')).join('\n');
   assert(

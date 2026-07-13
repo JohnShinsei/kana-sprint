@@ -200,9 +200,26 @@
       }
     }
   ],
+  "pronunciationPack": {
+    "itemCount": 853,
+    "totalBytes": 6017313,
+    "averageBytes": 7054,
+    "maxBytes": 33213,
+    "format": "mp3",
+    "sampleRate": 24000,
+    "bitrateKbps": 48,
+    "engine": "VOICEVOX",
+    "engineVersion": "0.25.2",
+    "speaker": "四国めたん",
+    "style": "ノーマル",
+    "voiceCredit": "VOICEVOX:四国めたん",
+    "studyTextSha256": "31314b0e462f2a78c38ebd14eec592d68b588a77159fd6732b6545e23fa94886"
+  },
   "summary": {
     "pngCount": 6,
     "audioCount": 3,
-    "totalBytes": 8457900
+    "pronunciationCount": 853,
+    "pronunciationBytes": 6017313,
+    "totalBytes": 14475213
   }
 }

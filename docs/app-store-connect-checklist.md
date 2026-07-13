@@ -48,7 +48,7 @@ Use this file while filling App Store Connect fields that are not fully automate
 - Runtime UI flow audit: docs/runtime-ui-flow-audit.md
 - Runtime UI flow risk: PASS
 - Runtime UI flow ready: Yes
-- Runtime UI flow checks: 21/21
+- Runtime UI flow checks: 22/22
 - Runtime UI flow failures: 0
 - Public site deploy audit: docs/public-site-deploy-audit.md
 - Public site deploy risk: PASS
@@ -157,7 +157,7 @@ Use this file while filling App Store Connect fields that are not fully automate
 | Age rating questionnaire | Risk PASS; 12/12 advisory frequency answers are NONE; suggested 4+ candidate. | READY | Use docs/app-store-age-rating-audit.md while answering App Store Connect; confirm the calculated global and region-specific ratings before review. |
 | App Store copy audit | Risk PASS; 10/10 locales ready; keywords byte limit=pass. | READY | See docs/app-store-copy-audit.md before editing App Store titles, subtitles, keywords, or descriptions. |
 | Metadata upload packet | Risk PASS; fields=10/10; screenshots=10/10; support URLs=10/10; privacy URLs=10/10. | READY | Use docs/app-store-metadata-upload-packet.md as the manual App Store Connect fallback if EAS Metadata cannot push fields. |
-| Runtime UI flow audit | Risk PASS; 21/21 runtime flows ready; failures=0. | READY | See docs/runtime-ui-flow-audit.md before confirming first screen, Settings language, exit, daily challenge, BGM, support/privacy links, and rewarded-ad entry. |
+| Runtime UI flow audit | Risk PASS; 22/22 runtime flows ready; failures=0. | READY | See docs/runtime-ui-flow-audit.md before confirming first screen, Settings language, exit, daily challenge, BGM, support/privacy links, and rewarded-ad entry. |
 | JLPT study depth | 5 JLPT levels, 853 study items, 26 topic families, progression=pass. | READY | See docs/study-bank-depth-audit.md before changing the N5-N1 content bank. |
 | Study content localization | 853 study items, 685 text keys, 10 UI locales, missing fields=0, missing translations=0. | READY | See docs/study-content-localization-audit.md before adding vocabulary, line prompts, or supported languages. |
 | Content rights | Original study data, 148 original anime-style lines, game-style BGM assets, app-owned generated screenshots. | READY | See docs/content-rights-audit.md; confirm no protected anime quote, character, title, brand, or third-party asset is used. |

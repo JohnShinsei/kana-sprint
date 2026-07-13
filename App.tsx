@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import * as SystemUI from 'expo-system-ui';
 import * as Haptics from 'expo-haptics';
 import * as Speech from 'expo-speech';
-import { setAudioModeAsync, useAudioPlayer } from 'expo-audio';
+import { setAudioModeAsync, useAudioPlayer, useAudioPlayerStatus } from 'expo-audio';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
@@ -41,6 +41,7 @@ import {
   scoreForAnswer,
 } from './src/gameEngine';
 import { AppLocale, LOCALE_OPTIONS, detectLocale, feedbackFor, localize, t } from './src/i18n';
+import { getPronunciationAudio } from './src/pronunciation';
 import {
   DAILY_GOAL_TARGET,
   GameProgress,
@@ -204,11 +205,17 @@ export default function App() {
   const settingsLoadedRef = useRef(false);
   const speechRunRef = useRef(0);
   const bgmPlayer = useAudioPlayer(null, { updateInterval: 1000 });
-  const isPronunciationAvailable = Platform.OS !== 'web' || typeof (globalThis as { speechSynthesis?: unknown }).speechSynthesis !== 'undefined';
+  const pronunciationPlayer = useAudioPlayer(null, { updateInterval: 100 });
+  const pronunciationStatus = useAudioPlayerStatus(pronunciationPlayer);
+  const offlinePronunciationSource = getPronunciationAudio(question.itemId);
+  const isSystemPronunciationAvailable = Platform.OS !== 'web'
+    || typeof (globalThis as { speechSynthesis?: unknown }).speechSynthesis !== 'undefined';
+  const isPronunciationAvailable = Boolean(offlinePronunciationSource) || isSystemPronunciationAvailable;
+  const gameplayLevel: JlptLevel = mode === 'kana' ? 'N5' : level;
 
   const record = progress.records[mode];
   const todayDateKey = getDailyKey();
-  const todayLevelKey = `${todayDateKey}-${level}`;
+  const todayLevelKey = `${todayDateKey}-${gameplayLevel}`;
   const selectedBgmTrack = useMemo(
     () => BGM_TRACKS.find((track) => track.id === bgmTrackId) ?? BGM_TRACKS[0],
     [bgmTrackId],
@@ -238,8 +245,11 @@ export default function App() {
   const stopPronunciation = useCallback(() => {
     speechRunRef.current += 1;
     setIsPronunciationPlaying(false);
+    pronunciationPlayer.pause();
+    void pronunciationPlayer.seekTo(0).catch(() => undefined);
+    bgmPlayer.volume = 0.18;
     void Speech.stop();
-  }, []);
+  }, [bgmPlayer, pronunciationPlayer]);
   const playPronunciation = useCallback(() => {
     if (isPronunciationAvailable === false) {
       setFeedback({ tone: 'bad', text: t(locale, 'pronunciationUnavailable') });
@@ -250,29 +260,66 @@ export default function App() {
     const runId = speechRunRef.current + 1;
     speechRunRef.current = runId;
     setIsPronunciationPlaying(true);
+    bgmPlayer.volume = isBgmEnabled ? 0.05 : 0.18;
 
-    void Speech.stop()
-      .then(() => {
-        if (speechRunRef.current !== runId) return;
+    const finish = () => {
+      if (speechRunRef.current !== runId) return;
+      setIsPronunciationPlaying(false);
+      bgmPlayer.volume = 0.18;
+    };
 
-        const finish = () => {
-          if (speechRunRef.current === runId) setIsPronunciationPlaying(false);
-        };
+    const speakWithSystemVoice = () => {
+      if (!isSystemPronunciationAvailable) {
+        finish();
+        setFeedback({ tone: 'bad', text: t(locale, 'pronunciationUnavailable') });
+        return;
+      }
 
-        Speech.speak(utterance, {
-          language: 'ja-JP',
-          pitch: 1,
-          rate: question.item.kind === 'line' ? 0.78 : question.item.kind === 'vocab' ? 0.86 : 0.9,
-          useApplicationAudioSession: false,
-          onDone: finish,
-          onStopped: finish,
-          onError: finish,
-        });
-      })
-      .catch(() => {
-        if (speechRunRef.current === runId) setIsPronunciationPlaying(false);
-      });
-  }, [isPronunciationAvailable, locale, question.item.display, question.item.kana, question.item.kind]);
+      void Speech.stop()
+        .then(() => {
+          if (speechRunRef.current !== runId) return;
+
+          Speech.speak(utterance, {
+            language: 'ja-JP',
+            pitch: 1,
+            rate: question.item.kind === 'line' ? 0.78 : question.item.kind === 'vocab' ? 0.86 : 0.9,
+            useApplicationAudioSession: false,
+            onDone: finish,
+            onStopped: finish,
+            onError: finish,
+          });
+        })
+        .catch(finish);
+    };
+
+    if (offlinePronunciationSource) {
+      void Speech.stop();
+
+      try {
+        pronunciationPlayer.pause();
+        pronunciationPlayer.replace(offlinePronunciationSource);
+        pronunciationPlayer.volume = 1;
+        pronunciationPlayer.play();
+        return;
+      } catch {
+        speakWithSystemVoice();
+        return;
+      }
+    }
+
+    speakWithSystemVoice();
+  }, [
+    bgmPlayer,
+    isBgmEnabled,
+    isPronunciationAvailable,
+    isSystemPronunciationAvailable,
+    locale,
+    offlinePronunciationSource,
+    pronunciationPlayer,
+    question.item.display,
+    question.item.kana,
+    question.item.kind,
+  ]);
   const todaysBest = dailyKey ? record.dailyBest[dailyKey] ?? 0 : record.dailyBest[todayLevelKey] ?? 0;
   const accuracy = totalAnswers === 0 ? 0 : Math.round((correctCount / totalAnswers) * 100);
   const masteredCount = getMasteryCount(progress.mastery);
@@ -283,7 +330,7 @@ export default function App() {
   const dailyGoalPercent = Math.min(100, Math.round((dailyGoalProgress / dailyGoalTarget) * 100));
   const isDailyGoalComplete = dailyGoalRuns >= dailyGoalTarget;
   const timerPercent = Math.max(0, Math.min(100, (timeLeft / GAME_SECONDS) * 100));
-  const readyGoal = useMemo(() => createSessionGoal(mode, level, false, false), [level, mode]);
+  const readyGoal = useMemo(() => createSessionGoal(mode, gameplayLevel, false, false), [gameplayLevel, mode]);
   const sessionGoalComplete = isSessionGoalComplete(sessionGoal, score, bestCombo, correctCount, totalAnswers);
   const sessionGoalProgress = sessionGoalProgressText(sessionGoal, score, bestCombo, correctCount, totalAnswers);
   const answerStudyHint = isLocked ? getAnswerStudyHint(question, locale) : null;
@@ -360,9 +407,9 @@ export default function App() {
       .map((itemId) => itemsById.get(itemId))
       .filter((item): item is StudyItem => Boolean(item))
       .filter((item) => (progress.mistakes[item.id] ?? 0) > 0)
-      .filter((item) => itemMatchesReviewScope(item, mode, level))
+      .filter((item) => itemMatchesReviewScope(item, mode, gameplayLevel))
       .slice(0, 24);
-  }, [level, mode, progress.mistakes, progress.reviewQueue]);
+  }, [gameplayLevel, mode, progress.mistakes, progress.reviewQueue]);
   const sessionMistakeTotal = useMemo(
     () => Object.values(sessionMistakes).reduce((sum, count) => sum + count, 0),
     [sessionMistakes],
@@ -375,12 +422,16 @@ export default function App() {
     [progress.mastery, sessionMastery],
   );
   const nextStepAdvice = useMemo(
-    () => createNextStepAdvice(levelMasteryRows, level, weakReviewItems.length, locale),
-    [level, levelMasteryRows, locale, weakReviewItems.length],
+    () => createNextStepAdvice(levelMasteryRows, gameplayLevel, weakReviewItems.length, locale),
+    [gameplayLevel, levelMasteryRows, locale, weakReviewItems.length],
   );
   const achievementBadges = useMemo(
     () => createAchievementBadges(progress, masteredCount, locale),
     [locale, masteredCount, progress],
+  );
+  const visibleAchievementBadges = useMemo(
+    () => mode === 'kana' ? achievementBadges.filter((badge) => badge.id !== 'n1-spark') : achievementBadges,
+    [achievementBadges, mode],
   );
 
   const hearts = useMemo(
@@ -392,11 +443,18 @@ export default function App() {
     void setAudioModeAsync({
       allowsRecording: false,
       interruptionMode: 'mixWithOthers',
-      playsInSilentMode: false,
+      playsInSilentMode: true,
       shouldPlayInBackground: false,
       shouldRouteThroughEarpiece: false,
     });
   }, []);
+
+  useEffect(() => {
+    if (!pronunciationStatus.didJustFinish || !isPronunciationPlaying) return;
+
+    setIsPronunciationPlaying(false);
+    bgmPlayer.volume = 0.18;
+  }, [bgmPlayer, isPronunciationPlaying, pronunciationStatus.didJustFinish]);
 
   useEffect(() => {
     let isMounted = true;
@@ -472,8 +530,9 @@ export default function App() {
 
   useEffect(() => () => {
     speechRunRef.current += 1;
+    pronunciationPlayer.pause();
     void Speech.stop();
-  }, []);
+  }, [pronunciationPlayer]);
 
   useEffect(() => {
     let isMounted = true;
@@ -547,13 +606,13 @@ export default function App() {
           setFeedback(null);
           setSelectedOption(null);
           setIsLocked(false);
-          setQuestion(makeQuestion(mode, questionIndex, recentIds, nextLocale, level, dailyKey));
+          setQuestion(makeQuestion(mode, questionIndex, recentIds, nextLocale, gameplayLevel, dailyKey));
         }
       }
     });
 
     return () => subscription.remove();
-  }, [dailyKey, isManualLocale, level, mode, phase, questionIndex, recentIds]);
+  }, [dailyKey, gameplayLevel, isManualLocale, mode, phase, questionIndex, recentIds]);
 
   const finishGame = useCallback(() => {
     if (finishSavedRef.current) return;
@@ -615,12 +674,12 @@ export default function App() {
         }
       }
 
-      const nextDailyKey = daily ? `${getDailyKey()}-${level}` : undefined;
+      const nextDailyKey = daily ? `${getDailyKey()}-${gameplayLevel}` : undefined;
       const useWeakReview = !daily && weakReview && weakReviewItems.length > 0;
-      const nextGoal = createSessionGoal(mode, level, daily, useWeakReview);
+      const nextGoal = createSessionGoal(mode, gameplayLevel, daily, useWeakReview);
       const firstQuestion = useWeakReview
-        ? makeQuestionFromItems(weakReviewItems, 0, [], locale, level)
-        : makeQuestion(mode, 0, [], locale, level, nextDailyKey);
+        ? makeQuestionFromItems(weakReviewItems, 0, [], locale, gameplayLevel)
+        : makeQuestion(mode, 0, [], locale, gameplayLevel, nextDailyKey);
 
       finishSavedRef.current = false;
       setPhase('playing');
@@ -647,7 +706,7 @@ export default function App() {
       setIsAdLoading(false);
       void tapFeedback('start');
     },
-    [bgmPlayer, isBgmEnabled, isStorageReady, level, locale, mode, weakReviewItems],
+    [bgmPlayer, gameplayLevel, isBgmEnabled, isStorageReady, locale, mode, weakReviewItems],
   );
 
   const followNextStep = useCallback(() => {
@@ -709,10 +768,10 @@ export default function App() {
       setIsResetProgressArmed(false);
 
       if (phase === 'playing') {
-        setQuestion(makeQuestion(mode, questionIndex, recentIds, nextLocale, level, dailyKey));
+        setQuestion(makeQuestion(mode, questionIndex, recentIds, nextLocale, gameplayLevel, dailyKey));
       }
     },
-    [dailyKey, level, mode, phase, questionIndex, recentIds],
+    [dailyKey, gameplayLevel, mode, phase, questionIndex, recentIds],
   );
 
   const followSystemLocale = useCallback(() => {
@@ -726,9 +785,9 @@ export default function App() {
     setIsResetProgressArmed(false);
 
     if (phase === 'playing') {
-      setQuestion(makeQuestion(mode, questionIndex, recentIds, nextLocale, level, dailyKey));
+      setQuestion(makeQuestion(mode, questionIndex, recentIds, nextLocale, gameplayLevel, dailyKey));
     }
-  }, [dailyKey, level, mode, phase, questionIndex, recentIds]);
+  }, [dailyKey, gameplayLevel, mode, phase, questionIndex, recentIds]);
 
   const selectBgmTrack = useCallback((trackId: BgmTrackId) => {
     setHasAudioGesture(true);
@@ -836,8 +895,8 @@ export default function App() {
       const nextQuestionIndex = questionIndex + 1;
       const gained = isCorrect ? scoreForAnswer(combo, timeLeft) : 0;
       const nextQuestion = isWeakReview
-        ? makeQuestionFromItems(weakReviewItems, nextQuestionIndex, nextRecentIds, locale, level)
-        : makeQuestion(mode, nextQuestionIndex, nextRecentIds, locale, level, dailyKey);
+        ? makeQuestionFromItems(weakReviewItems, nextQuestionIndex, nextRecentIds, locale, gameplayLevel)
+        : makeQuestion(mode, nextQuestionIndex, nextRecentIds, locale, gameplayLevel, dailyKey);
       const feedbackSet = feedbackFor(locale, isCorrect ? 'good' : 'bad');
       const feedbackText = isCorrect
         ? feedbackSet[Math.min(nextCombo - 1, feedbackSet.length - 1)]
@@ -910,7 +969,7 @@ export default function App() {
       finishGame,
       isLocked,
       isWeakReview,
-      level,
+      gameplayLevel,
       lives,
       locale,
       mode,
@@ -995,34 +1054,36 @@ export default function App() {
             })}
           </View>
 
-          <View style={styles.levelPanel}>
-            <Text style={styles.sectionLabel}>{t(locale, 'difficulty')}</Text>
-            <View style={styles.levelGrid}>
-              {levelChoices.map((choice) => {
-                const selected = choice.level === level;
+          {mode !== 'kana' ? (
+            <View style={styles.levelPanel}>
+              <Text style={styles.sectionLabel}>{t(locale, 'difficulty')}</Text>
+              <View style={styles.levelGrid}>
+                {levelChoices.map((choice) => {
+                  const selected = choice.level === level;
 
-                return (
-                  <Pressable
-                    accessibilityLabel={`${t(locale, 'difficulty')}: ${choice.level}. ${choice.label}. ${choice.stats}`}
-                    accessibilityRole="button"
-                    accessibilityState={{ selected }}
-                    aria-pressed={selected}
-                    key={choice.level}
-                    onPress={() => setLevel(choice.level)}
-                    style={[styles.levelButton, selected && styles.levelButtonSelected]}
-                  >
-                    <Text style={[styles.levelTitle, selected && styles.levelTitleSelected]}>{choice.level}</Text>
-                    <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.levelLabel, selected && styles.levelLabelSelected]}>
-                      {choice.label}
-                    </Text>
-                    <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.levelMeta, selected && styles.levelMetaSelected]}>
-                      {choice.stats}
-                    </Text>
-                  </Pressable>
-                );
-              })}
+                  return (
+                    <Pressable
+                      accessibilityLabel={`${t(locale, 'difficulty')}: ${choice.level}. ${choice.label}. ${choice.stats}`}
+                      accessibilityRole="button"
+                      accessibilityState={{ selected }}
+                      aria-pressed={selected}
+                      key={choice.level}
+                      onPress={() => setLevel(choice.level)}
+                      style={[styles.levelButton, selected && styles.levelButtonSelected]}
+                    >
+                      <Text style={[styles.levelTitle, selected && styles.levelTitleSelected]}>{choice.level}</Text>
+                      <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.levelLabel, selected && styles.levelLabelSelected]}>
+                        {choice.label}
+                      </Text>
+                      <Text adjustsFontSizeToFit numberOfLines={1} style={[styles.levelMeta, selected && styles.levelMetaSelected]}>
+                        {choice.stats}
+                      </Text>
+                    </Pressable>
+                  );
+                })}
+              </View>
             </View>
-          </View>
+          ) : null}
 
           <View style={styles.actionRow}>
             <Pressable
@@ -1075,40 +1136,42 @@ export default function App() {
           >
             <View style={styles.missionHeader}>
               <Text style={styles.missionEyebrow}>{t(locale, 'missionPreview')}</Text>
-              <Text style={styles.missionLevelPill}>{level}</Text>
+              <Text style={styles.missionLevelPill}>{mode === 'kana' ? t(locale, 'modeKana') : level}</Text>
             </View>
             <Text adjustsFontSizeToFit numberOfLines={1} style={styles.missionTitle}>
               {sessionGoalTargetText(readyGoal, locale)}
             </Text>
           </View>
 
-          <Pressable
-            accessibilityLabel={`${t(locale, 'nextStep')}: ${nextStepAdvice.title}. ${nextStepAdvice.body}`}
-            accessibilityRole="button"
-            accessibilityState={{ disabled: !isStorageReady && nextStepAdvice.action !== 'advance' }}
-            disabled={!isStorageReady && nextStepAdvice.action !== 'advance'}
-            onPress={followNextStep}
-            style={[
-              styles.nextStepCard,
-              nextStepAdvice.action === 'review' && styles.nextStepCardReview,
-              (!isStorageReady && nextStepAdvice.action !== 'advance') && styles.disabledButton,
-            ]}
-          >
-            <View style={styles.nextStepCopy}>
-              <Text style={styles.nextStepEyebrow}>{t(locale, 'nextStep')}</Text>
-              <Text adjustsFontSizeToFit numberOfLines={1} style={styles.nextStepTitle}>
-                {nextStepAdvice.title}
-              </Text>
-              <Text adjustsFontSizeToFit numberOfLines={1} style={styles.nextStepBody}>
-                {nextStepAdvice.body}
-              </Text>
-            </View>
-            <View style={styles.nextStepActionPill}>
-              <Text adjustsFontSizeToFit numberOfLines={1} style={styles.nextStepActionText}>
-                {nextStepAdvice.actionLabel}
-              </Text>
-            </View>
-          </Pressable>
+          {mode !== 'kana' ? (
+            <Pressable
+              accessibilityLabel={`${t(locale, 'nextStep')}: ${nextStepAdvice.title}. ${nextStepAdvice.body}`}
+              accessibilityRole="button"
+              accessibilityState={{ disabled: !isStorageReady && nextStepAdvice.action !== 'advance' }}
+              disabled={!isStorageReady && nextStepAdvice.action !== 'advance'}
+              onPress={followNextStep}
+              style={[
+                styles.nextStepCard,
+                nextStepAdvice.action === 'review' && styles.nextStepCardReview,
+                (!isStorageReady && nextStepAdvice.action !== 'advance') && styles.disabledButton,
+              ]}
+            >
+              <View style={styles.nextStepCopy}>
+                <Text style={styles.nextStepEyebrow}>{t(locale, 'nextStep')}</Text>
+                <Text adjustsFontSizeToFit numberOfLines={1} style={styles.nextStepTitle}>
+                  {nextStepAdvice.title}
+                </Text>
+                <Text adjustsFontSizeToFit numberOfLines={1} style={styles.nextStepBody}>
+                  {nextStepAdvice.body}
+                </Text>
+              </View>
+              <View style={styles.nextStepActionPill}>
+                <Text adjustsFontSizeToFit numberOfLines={1} style={styles.nextStepActionText}>
+                  {nextStepAdvice.actionLabel}
+                </Text>
+              </View>
+            </Pressable>
+          ) : null}
 
           <Pressable
             accessibilityLabel={`${t(locale, 'weakReview')}: ${weakReviewItems.length} ${t(locale, 'weakItems')}`}
@@ -1134,7 +1197,7 @@ export default function App() {
 
           <View style={styles.snapshotRow}>
             <MiniStat label={t(locale, 'mode')} value={modeLabel(mode, locale)} />
-            <MiniStat label={t(locale, 'difficulty')} value={level} />
+            <MiniStat label={t(locale, 'difficulty')} value={mode === 'kana' ? t(locale, 'modeKanaLabel') : level} />
             <MiniStat label={t(locale, 'dailyStreak')} value={`${dailyStreakCount}`} />
             <MiniStat label={t(locale, 'runs')} value={`${progress.totalSessions}`} />
           </View>
@@ -1142,7 +1205,7 @@ export default function App() {
           <View style={styles.badgePanel}>
             <Text style={styles.sectionLabel}>{t(locale, 'milestones')}</Text>
             <View style={styles.badgeGrid}>
-              {achievementBadges.map((badge) => (
+              {visibleAchievementBadges.map((badge) => (
                 <View
                   accessibilityLabel={`${badge.title}: ${badge.unlocked ? t(locale, 'unlocked') : t(locale, 'locked')}. ${badge.progress}`}
                   key={badge.id}
@@ -1162,29 +1225,31 @@ export default function App() {
             </View>
           </View>
 
-          <View style={styles.levelProgressPanel}>
-            <Text style={styles.sectionLabel}>{t(locale, 'levelProgress')}</Text>
-            {levelMasteryRows.map((row) => (
-              <View
-                accessibilityLabel={`${row.level} ${t(locale, 'mastered')}: ${row.mastered}/${row.total}`}
-                key={row.level}
-                style={styles.levelProgressRow}
-              >
-                <View style={styles.levelProgressHeader}>
-                  <Text style={styles.levelProgressLevel}>{row.level}</Text>
-                  <Text style={styles.levelProgressValue}>{row.mastered}/{row.total}</Text>
+          {mode !== 'kana' ? (
+            <View style={styles.levelProgressPanel}>
+              <Text style={styles.sectionLabel}>{t(locale, 'levelProgress')}</Text>
+              {levelMasteryRows.map((row) => (
+                <View
+                  accessibilityLabel={`${row.level} ${t(locale, 'mastered')}: ${row.mastered}/${row.total}`}
+                  key={row.level}
+                  style={styles.levelProgressRow}
+                >
+                  <View style={styles.levelProgressHeader}>
+                    <Text style={styles.levelProgressLevel}>{row.level}</Text>
+                    <Text style={styles.levelProgressValue}>{row.mastered}/{row.total}</Text>
+                  </View>
+                  <View style={styles.levelProgressTrack}>
+                    <View
+                      style={[
+                        styles.levelProgressFill,
+                        { backgroundColor: row.color, width: `${row.percent}%` },
+                      ]}
+                    />
+                  </View>
                 </View>
-                <View style={styles.levelProgressTrack}>
-                  <View
-                    style={[
-                      styles.levelProgressFill,
-                      { backgroundColor: row.color, width: `${row.percent}%` },
-                    ]}
-                  />
-                </View>
-              </View>
-            ))}
-          </View>
+              ))}
+            </View>
+          ) : null}
         </ScrollView>
       ) : null}
 
@@ -1271,7 +1336,7 @@ export default function App() {
                   {withCjkBreaks(visibleQuestionPrompt)}
                 </Text>
                 <Text style={styles.questionTopic}>
-                  {level} / {modeLabel(mode, locale)} / {dailyKey ? t(locale, 'daily') : isWeakReview ? t(locale, 'weakReview') : t(locale, 'sprint')}
+                  {mode === 'kana' ? null : `${gameplayLevel} / `}{modeLabel(mode, locale)} / {dailyKey ? t(locale, 'daily') : isWeakReview ? t(locale, 'weakReview') : t(locale, 'sprint')}
                 </Text>
               </View>
 

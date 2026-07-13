@@ -163,8 +163,13 @@ function addLocalEvidenceRows() {
   addManifestRow(
     'Runtime assets',
     'docs/runtime-asset-manifest.json',
-    (manifest) => manifest.summary?.pngCount === 6 && manifest.summary?.audioCount === 3,
-    (manifest) => `${manifest.summary?.pngCount ?? 0} PNG assets and ${manifest.summary?.audioCount ?? 0} BGM tracks recorded.`,
+    (manifest) =>
+      manifest.summary?.pngCount === 6 &&
+      manifest.summary?.audioCount === 3 &&
+      manifest.summary?.pronunciationCount === 853 &&
+      manifest.pronunciationPack?.voiceCredit === 'VOICEVOX:四国めたん',
+    (manifest) =>
+      `${manifest.summary?.pngCount ?? 0} PNG assets, ${manifest.summary?.audioCount ?? 0} BGM tracks, and ${manifest.summary?.pronunciationCount ?? 0} offline pronunciations recorded.`,
   );
   addManifestRow(
     'Public support/privacy/license site',

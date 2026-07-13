@@ -37,6 +37,8 @@
     "web": "expo start --web",
     "typecheck": "tsc --noEmit",
     "gameplay-check": "node scripts/check-gameplay-contract.js",
+    "pronunciation:generate": "node scripts/generate-pronunciation-audio.js",
+    "pronunciation:check": "node scripts/check-pronunciation-pack.js",
     "study:depth": "node scripts/generate-study-bank-depth-audit.js",
     "study:localization": "node scripts/generate-study-content-localization-audit.js",
     "doctor": "expo-doctor",

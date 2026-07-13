@@ -61,8 +61,8 @@
       "htmlLang": "en",
       "title": "Open Source Notices",
       "description": "Kana Sprint is a 60-second Japanese learning game for kana, JLPT N5-N1 vocabulary, and original anime-style practice lines.",
-      "bytes": 7905,
-      "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669"
+      "bytes": 8242,
+      "sha256": "576ed6af5b280cc2f957df65515431122033d03487e4ba9fa0006907a060719c"
     },
     {
       "path": "site/zh-Hans/index.html",
@@ -109,8 +109,8 @@
       "htmlLang": "zh-Hans",
       "title": "开源许可说明",
       "description": "Kana Sprint 是 60 秒日语学习游戏，训练假名、JLPT N5-N1 词汇和原创动漫感短句。",
-      "bytes": 7858,
-      "sha256": "283337071bf2fcb13c5e715cffceaefafe4231609fcc3d81ca4711cd5850e5e2"
+      "bytes": 8195,
+      "sha256": "0e752b73947345a52bec7526e91c65b73c9f83fd8f61b96f13f755f607a6ceb8"
     },
     {
       "path": "site/zh-Hant/index.html",
@@ -157,8 +157,8 @@
       "htmlLang": "zh-Hant",
       "title": "開源授權說明",
       "description": "Kana Sprint 是 60 秒日語學習遊戲，訓練假名、JLPT N5-N1 詞彙和原創動漫感短句。",
-      "bytes": 7864,
-      "sha256": "43e07c099f4069a52911a5625da5918244e1cae90f38ad4ac553862baa533d07"
+      "bytes": 8201,
+      "sha256": "853cddda8e45552220a963bb9f97174820673e63cd3ddc109c1f3ae0991a8e71"
     },
     {
       "path": "site/en/index.html",
@@ -205,8 +205,8 @@
       "htmlLang": "en",
       "title": "Open Source Notices",
       "description": "Kana Sprint is a 60-second Japanese learning game for kana, JLPT N5-N1 vocabulary, and original anime-style practice lines.",
-      "bytes": 7905,
-      "sha256": "c43974387f6d8e96a953457e5a1de1d32e9593e2ccb93c80c21a17f07236d669"
+      "bytes": 8242,
+      "sha256": "576ed6af5b280cc2f957df65515431122033d03487e4ba9fa0006907a060719c"
     },
     {
       "path": "site/fr/index.html",
@@ -253,8 +253,8 @@
       "htmlLang": "fr",
       "title": "Mentions open source",
       "description": "Kana Sprint entraîne kana, vocabulaire JLPT N5-N1 et phrases japonaises originales style anime en parties de 60 secondes.",
-      "bytes": 7906,
-      "sha256": "73cbfd244503a957a1fda5732b5d5699b11ceb190dc53b04253ee234295c3c09"
+      "bytes": 8243,
+      "sha256": "fcba9bbac57f89ca7ddeab306f175030d9a3ad99b9a4bd0e92f22538a97cbced"
     },
     {
       "path": "site/it/index.html",
@@ -301,8 +301,8 @@
       "htmlLang": "it",
       "title": "Licenze open source",
       "description": "Kana Sprint allena kana, vocabolario JLPT N5-N1 e frasi giapponesi originali in stile anime in partite da 60 secondi.",
-      "bytes": 7899,
-      "sha256": "05d4676e1457260dcbb53128ba5b753393673965db3748fc7fca8b059d6e0e0b"
+      "bytes": 8236,
+      "sha256": "b646652e8fe036158130fb50bbf8757a6971730e553db75a52079ca6366b92c8"
     },
     {
       "path": "site/de/index.html",
@@ -349,8 +349,8 @@
       "htmlLang": "de",
       "title": "Open-Source-Hinweise",
       "description": "Kana Sprint trainiert Kana, JLPT N5-N1 Wortschatz und originale japanische Anime-Stil-Sätze in 60-Sekunden-Runden.",
-      "bytes": 7899,
-      "sha256": "5f500f61170b300c0a3a2f7702be0f973a726386c5642573b87b5c9a262aba5e"
+      "bytes": 8236,
+      "sha256": "e93a6d4633b5907fb35244ffb3df1c733cd8cb86a9aa52faa98d5dd0bb39262d"
     },
     {
       "path": "site/es-ES/index.html",
@@ -397,8 +397,8 @@
       "htmlLang": "es-ES",
       "title": "Avisos de código abierto",
       "description": "Kana Sprint entrena kana, vocabulario JLPT N5-N1 y frases japonesas originales estilo anime en rondas de 60 segundos.",
-      "bytes": 7914,
-      "sha256": "ec4f1a7e7e5306c294351eaf1d0fa5f0430383aa0c6a74d60a9b169f51d70f88"
+      "bytes": 8251,
+      "sha256": "7a5137a6cf95faa7bd592feeeaf3e84388e47b42b5812509240f44721f146736"
     },
     {
       "path": "site/ko/index.html",
@@ -445,8 +445,8 @@
       "htmlLang": "ko",
       "title": "오픈소스 고지",
       "description": "Kana Sprint는 60초 라운드로 가나, JLPT N5-N1 단어, 오리지널 애니풍 일본어 문장을 연습하는 게임입니다.",
-      "bytes": 7915,
-      "sha256": "7eeb9e7df2c35613f7aae29018888f9fe5cad6fde4d10e8969136a7c9f17e126"
+      "bytes": 8252,
+      "sha256": "2364c50d82c91bc909f1d4c4e9b841ae28b320a5ee67d035358fd7643c322b01"
     },
     {
       "path": "site/pl/index.html",
@@ -493,8 +493,8 @@
       "htmlLang": "pl",
       "title": "Informacje open source",
       "description": "Kana Sprint ćwiczy kanę, słownictwo JLPT N5-N1 i oryginalne japońskie kwestie w stylu anime w rundach 60 sekund.",
-      "bytes": 7904,
-      "sha256": "f384d69c61540a3bfc38ea16f2bde7ad63d2e2455f91c601d5ab537b691137df"
+      "bytes": 8241,
+      "sha256": "e841a22227f9a8237e817058db65afee95e5c78d7d90e0857c9f05c237fed608"
     },
     {
       "path": "site/pt-BR/index.html",
@@ -541,8 +541,8 @@
       "htmlLang": "pt-BR",
       "title": "Avisos de código aberto",
       "description": "Kana Sprint treina kana, vocabulário JLPT N5-N1 e frases japonesas originais em estilo anime em rodadas de 60 segundos.",
-      "bytes": 7915,
-      "sha256": "b36d75a12eb0fa4de91b42df539dba308954965ab3f2663c85c00671bcfe1756"
+      "bytes": 8252,
+      "sha256": "88a16e878fb2679375b0a797fa82bbb021dcc8c0657f93f0290fff8a3d4501a8"
     }
   ]
 }

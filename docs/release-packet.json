@@ -96,14 +96,14 @@
       "path": "docs/runtime-asset-manifest.json",
       "pngAssets": 6,
       "audioAssets": 3,
-      "bytes": 8457900
+      "bytes": 14475213
     },
     "runtimeUiFlowAudit": {
       "path": "docs/runtime-ui-flow-audit.md",
       "risk": "PASS",
       "localReady": true,
-      "checks": 21,
-      "passedChecks": 21,
+      "checks": 22,
+      "passedChecks": 22,
       "requiredFlowFailures": 0,
       "locales": 10,
       "levels": 5,
@@ -384,7 +384,7 @@
         "status": "OK",
         "category": "local",
         "label": "Runtime assets",
-        "detail": "6 PNG assets and 3 BGM tracks recorded."
+        "detail": "6 PNG assets, 3 BGM tracks, and 853 offline pronunciations recorded."
       },
       {
         "status": "OK",
@@ -498,7 +498,7 @@
         "status": "OK",
         "category": "local",
         "label": "Runtime UI flow audit",
-        "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+        "detail": "22/22 runtime UI flows verified across 10 locales and 5 JLPT levels."
       },
       {
         "status": "OK",
@@ -645,7 +645,7 @@
       "status": "OK",
       "category": "local",
       "label": "Runtime assets",
-      "detail": "6 PNG assets and 3 BGM tracks recorded."
+      "detail": "6 PNG assets, 3 BGM tracks, and 853 offline pronunciations recorded."
     },
     {
       "status": "OK",
@@ -759,7 +759,7 @@
       "status": "OK",
       "category": "local",
       "label": "Runtime UI flow audit",
-      "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+      "detail": "22/22 runtime UI flows verified across 10 locales and 5 JLPT levels."
     },
     {
       "status": "OK",

@@ -68,8 +68,8 @@
     "screenshotQaUnexpectedDuplicateGroups": 0,
     "runtimeUiFlowRisk": "PASS",
     "runtimeUiFlowReady": true,
-    "runtimeUiFlowChecks": 21,
-    "runtimeUiFlowPassedChecks": 21,
+    "runtimeUiFlowChecks": 22,
+    "runtimeUiFlowPassedChecks": 22,
     "runtimeUiFlowRequiredFailures": 0,
     "appStoreCopyRisk": "PASS",
     "appStoreCopyReadyLocales": 10,
@@ -225,7 +225,7 @@
       "status": "OK",
       "category": "local",
       "label": "Runtime assets",
-      "detail": "6 PNG assets and 3 BGM tracks recorded."
+      "detail": "6 PNG assets, 3 BGM tracks, and 853 offline pronunciations recorded."
     },
     {
       "status": "OK",
@@ -339,7 +339,7 @@
       "status": "OK",
       "category": "local",
       "label": "Runtime UI flow audit",
-      "detail": "21/21 runtime UI flows verified across 10 locales and 5 JLPT levels."
+      "detail": "22/22 runtime UI flows verified across 10 locales and 5 JLPT levels."
     },
     {
       "status": "OK",

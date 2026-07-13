@@ -518,6 +518,12 @@ function licenses(locale) {
       <nav><a href="../">Kana Sprint</a></nav>
       <h1>${html(values.licensesTitle)}</h1>
       <p class="panel">${html(values.licensesPanel)}</p>
+      <h2>Voice synthesis credit</h2>
+      <p>Japanese pronunciation: <strong>VOICEVOX:四国めたん</strong></p>
+      <ul>
+        <li><a href="https://voicevox.hiroshiba.jp/term/">VOICEVOX software terms</a></li>
+        <li><a href="https://zunko.jp/con_ongen_kiyaku.html">四国めたん voice library terms</a></li>
+      </ul>
       <h2>${html(values.licensesSummaryTitle)}</h2>
       ${summary ? `
       <ul>

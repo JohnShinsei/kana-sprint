@@ -79,6 +79,17 @@ Language follows the device system language by default. Manual language selectio
 
 The app includes three game-style BGM loops under `assets/bgm`: Rush, Focus, and Night. Music is off by default and can be enabled or changed in Settings.
 
+## Pronunciation
+
+Native builds include an offline Japanese pronunciation clip for every study item. The pack is generated locally with VOICEVOX using `四国めたん / ノーマル`; Web keeps the system speech fallback so the browser bundle stays small. After changing Japanese study text, start or install the local VOICEVOX engine and run:
+
+```bash
+npm run pronunciation:generate
+npm run pronunciation:check
+```
+
+The generated voice credit is `VOICEVOX:四国めたん` and is included in the in-app and public license pages.
+
 ## Ads
 
 The gameplay has a rewarded-ad entry point for continuing a run. Production ads stay disabled until valid AdMob app IDs and rewarded-unit IDs are provided in environment variables. When all IDs are valid, `app.config.js` injects the `react-native-google-mobile-ads` native plugin for EAS builds.

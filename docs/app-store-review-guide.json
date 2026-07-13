@@ -61,8 +61,8 @@
     "publicSitePages": 44,
     "runtimeUiFlowAudit": "docs/runtime-ui-flow-audit.md",
     "runtimeUiFlowReady": true,
-    "runtimeUiFlowChecks": 21,
-    "runtimeUiFlowPassedChecks": 21,
+    "runtimeUiFlowChecks": 22,
+    "runtimeUiFlowPassedChecks": 22,
     "releaseCommands": [
       "npm run release:status",
       "npm run release:verify",

@@ -395,6 +395,12 @@ const gameDataSource = fs.readFileSync(path.join(root, 'src/gameData.ts'), 'utf8
 const grammarDataSource = fs.readFileSync(path.join(root, 'src/grammarData.ts'), 'utf8');
 const gameEngineSource = fs.readFileSync(path.join(root, 'src/gameEngine.ts'), 'utf8');
 const gameplayContractSource = fs.readFileSync(path.join(root, 'scripts/check-gameplay-contract.js'), 'utf8');
+const pronunciationGeneratedSource = fs.readFileSync(path.join(root, 'src/pronunciation.generated.ts'), 'utf8');
+const pronunciationModuleSource = fs.readFileSync(path.join(root, 'src/pronunciation.ts'), 'utf8');
+const pronunciationNativeSource = fs.readFileSync(path.join(root, 'src/pronunciation.native.ts'), 'utf8');
+const pronunciationWebSource = fs.readFileSync(path.join(root, 'src/pronunciation.web.ts'), 'utf8');
+const pronunciationCheckSource = fs.readFileSync(path.join(root, 'scripts/check-pronunciation-pack.js'), 'utf8');
+const localizedSiteSource = fs.readFileSync(path.join(root, 'scripts/generate-localized-site.js'), 'utf8');
 const adsFallbackSource = fs.readFileSync(path.join(root, 'src/ads.ts'), 'utf8');
 const adsNativeSource = fs.readFileSync(path.join(root, 'src/ads.native.ts'), 'utf8');
 const adsWebSource = fs.readFileSync(path.join(root, 'src/ads.web.ts'), 'utf8');
@@ -983,6 +989,8 @@ assert(packageJson.scripts?.['age:rating'] === 'node scripts/generate-age-rating
 assert(packageJson.scripts?.['study:depth'] === 'node scripts/generate-study-bank-depth-audit.js', 'study:depth script should generate the study bank depth audit');
 assert(packageJson.scripts?.['study:localization'] === 'node scripts/generate-study-content-localization-audit.js', 'study:localization script should generate the study content localization audit');
 assert(packageJson.scripts?.['content:rights'] === 'node scripts/generate-content-rights-audit.js', 'content:rights script should generate the content rights audit');
+assert(packageJson.scripts?.['pronunciation:generate'] === 'node scripts/generate-pronunciation-audio.js', 'pronunciation:generate script should build the offline Japanese audio pack');
+assert(packageJson.scripts?.['pronunciation:check'] === 'node scripts/check-pronunciation-pack.js', 'pronunciation:check script should verify the offline Japanese audio pack');
 assert(packageJson.scripts?.['legal:licenses'] === 'node scripts/generate-open-source-license-audit.js', 'legal:licenses script should generate the open source license audit');
 assert(packageJson.scripts?.['privacy:manifest'] === 'node scripts/generate-privacy-manifest-audit.js', 'privacy:manifest script should generate the privacy manifest audit');
 assert(packageJson.scripts?.['privacy:answers'] === 'node scripts/generate-app-store-privacy-answers.js', 'privacy:answers script should generate the App Store privacy answer pack');
@@ -1159,6 +1167,7 @@ assert(releaseVerifySource.includes("run('Release packet'"), 'release:verify sho
 assert(releaseVerifySource.includes("run('EAS submission checklist'"), 'release:verify should regenerate the EAS submission checklist before release-check');
 assert(releaseVerifySource.includes("run('Final launch runbook'"), 'release:verify should regenerate the final launch runbook before release-check');
 assert(releaseVerifySource.includes("run('App Store handoff bundle'"), 'release:verify should regenerate the App Store handoff bundle before release-check');
+assert(releaseVerifySource.includes("run('Offline pronunciation pack'"), 'release:verify should verify the offline pronunciation pack');
 assert(releaseVerifySource.includes("run('Runtime asset manifest'"), 'release:verify should regenerate the runtime asset manifest before release-check');
 
 assert((appJson.plugins ?? []).includes('expo-system-ui'), 'expo-system-ui config plugin is missing');
@@ -1259,6 +1268,8 @@ for (const [level, minimum] of Object.entries(levelMinimums)) {
 
 assert(gameDataSource.includes('export function getLevelStudyStats'), 'Study data should expose per-level stats for the JLPT selector');
 assert(appSource.includes('getLevelStudyStats(nextLevel)'), 'Level selector should display real per-level study-bank counts');
+assert(appSource.includes("const gameplayLevel: JlptLevel = mode === 'kana' ? 'N5' : level"), 'Kana mode should use a fixed foundation difficulty instead of N1-N4');
+assert((appSource.match(/mode !== 'kana' \? \(/g) ?? []).length >= 3, 'Kana mode should hide JLPT selection and progression UI');
 assert(i18nSource.includes('levelKanaShort:') && i18nSource.includes('levelWordsShort:') && i18nSource.includes('levelLinesShort:'), 'UI localization missing level bank count labels');
 assert(gameEngineSource.includes('LEVEL_DIFFICULTY_PROFILES'), 'Game engine should define explicit N5-N1 difficulty profiles');
 assert(gameEngineSource.includes('meaningToWordWeight'), 'Game engine should make higher levels require more reverse Japanese recall');
@@ -1372,6 +1383,7 @@ for (const ignoredEntry of expectedEasIgnoreEntries) {
   assert(easIgnoreSource.includes(ignoredEntry), `.easignore should include ${ignoredEntry} to keep EAS Build uploads lean`);
 }
 assert(!easIgnoreSource.includes('/assets/bgm'), '.easignore must not exclude BGM runtime assets from native builds');
+assert(!easIgnoreSource.includes('/assets/pronunciation'), '.easignore must not exclude offline pronunciation assets from native builds');
 assert(readmeDoc.includes('`.easignore` excludes App Store screenshots'), 'README should document the EAS Build upload trim policy');
 assert(loadEnvSource.includes("const envFiles = ['.env.local', '.env.production', '.env'];"), 'scripts/load-env.js should load local release env files in priority order');
 assert(loadEnvSource.includes('originalKeys.has(key)'), 'scripts/load-env.js should not override shell or EAS environment variables');
@@ -1389,6 +1401,18 @@ assert(Boolean(packageJson.dependencies?.['react-native-google-mobile-ads']), 'r
 assert(appSource.includes("import Constants from 'expo-constants'"), 'App should read support/privacy/license URLs from Expo constants');
 assert(appSource.includes('Linking.openURL'), 'App settings should open configured support/privacy/license links');
 assert(appSource.includes('storeUrls.localized?.[locale]'), 'App settings should prefer localized support/privacy/license URLs for the selected UI language');
+assert(appSource.includes('getPronunciationAudio(question.itemId)'), 'App should resolve offline Japanese audio by study item id');
+assert(appSource.includes('useAudioPlayerStatus(pronunciationPlayer)'), 'App should monitor offline pronunciation playback completion');
+assert(appSource.includes('pronunciationPlayer.replace(offlinePronunciationSource)'), 'App should play bundled pronunciation audio before system TTS fallback');
+assert(appSource.includes('Speech.speak(utterance'), 'App should preserve system Japanese TTS as a fallback');
+assert(appSource.includes('bgmPlayer.volume = isBgmEnabled ? 0.05 : 0.18'), 'App should duck BGM while Japanese pronunciation plays');
+assert(pronunciationModuleSource.includes('PRONUNCIATION_AUDIO[itemId]'), 'Pronunciation module should expose generated item audio');
+assert(pronunciationNativeSource.includes('PRONUNCIATION_AUDIO[itemId]'), 'Native pronunciation module should expose generated item audio');
+assert(pronunciationWebSource.includes('return undefined'), 'Web pronunciation module should use system TTS without bundling native audio');
+assert(pronunciationGeneratedSource.includes("voiceCredit: 'VOICEVOX:四国めたん'"), 'Generated pronunciation metadata should include the required voice credit');
+assert(pronunciationCheckSource.includes('studyTextSha256'), 'Pronunciation pack check should reject stale study text audio');
+assert(i18nSource.includes('VOICEVOX:四国めたん'), 'In-app notices should include the required VOICEVOX voice credit');
+assert(localizedSiteSource.includes('VOICEVOX:四国めたん'), 'Public license pages should include the required VOICEVOX voice credit');
 assert(appSource.includes('openComplianceLink') && appSource.includes('localCompliancePanel'), 'App settings should expose local support/privacy/license fallback panels when public URLs are pending');
 assert(appSource.includes("openComplianceLink(activeSupportUrl, 'support')"), 'Support entry should open configured URL or local support fallback');
 assert(appSource.includes("openComplianceLink(activePrivacyPolicyUrl, 'privacy')"), 'Privacy entry should open configured URL or local privacy fallback');
@@ -1598,6 +1622,12 @@ function verifyRuntimeAssetManifest() {
   assert(runtimeAssetManifest.app?.version === appJson.version, 'Runtime asset manifest app version should match app.json');
   assert(runtimeAssetManifest.summary?.pngCount === Object.keys(expectedPngAssets).length, 'Runtime asset manifest PNG count should match expected runtime PNG assets');
   assert(runtimeAssetManifest.summary?.audioCount === Object.keys(expectedAudioAssets).length, 'Runtime asset manifest audio count should match expected BGM assets');
+  assert(runtimeAssetManifest.summary?.pronunciationCount === contentRightsAudit.summary?.totalStudyItems, 'Runtime asset manifest should cover every study item with offline pronunciation');
+  assert(runtimeAssetManifest.pronunciationPack?.voiceCredit === 'VOICEVOX:四国めたん', 'Runtime asset manifest should record the required voice credit');
+  assert(runtimeAssetManifest.pronunciationPack?.format === 'mp3', 'Runtime pronunciation assets should use MP3');
+  assert(runtimeAssetManifest.pronunciationPack?.sampleRate === 24000, 'Runtime pronunciation assets should use 24 kHz audio');
+  assert(runtimeAssetManifest.pronunciationPack?.bitrateKbps === 48, 'Runtime pronunciation assets should use 48 kbps audio');
+  assert(runtimeAssetManifest.pronunciationPack?.totalBytes < 20 * 1024 * 1024, 'Runtime pronunciation pack should stay below 20 MiB');
   sameSet((runtimeAssetManifest.pngAssets ?? []).map((asset) => asset.role), Object.keys(expectedPngAssets), 'Runtime PNG asset roles');
   sameSet((runtimeAssetManifest.audioAssets ?? []).map((asset) => asset.role), Object.keys(expectedAudioAssets), 'Runtime audio asset roles');
 
@@ -1649,12 +1679,24 @@ function verifyRuntimeAssetManifest() {
     assert(entry.wav?.durationSeconds >= 15, `Runtime asset manifest ${role} duration should be long enough for a BGM loop`);
   }
 
+  const pronunciationDir = path.join(root, 'assets', 'pronunciation');
+  const pronunciationFiles = fs.readdirSync(pronunciationDir).filter((fileName) => fileName.endsWith('.mp3'));
+  const pronunciationBytes = pronunciationFiles.reduce(
+    (sum, fileName) => sum + fs.statSync(path.join(pronunciationDir, fileName)).size,
+    0,
+  );
+  totalBytes += pronunciationBytes;
+  assert(pronunciationFiles.length === runtimeAssetManifest.pronunciationPack?.itemCount, 'Runtime pronunciation file count should match manifest');
+  assert(pronunciationBytes === runtimeAssetManifest.pronunciationPack?.totalBytes, 'Runtime pronunciation byte count should match manifest');
+
   assert(runtimeAssetManifest.summary?.totalBytes === totalBytes, 'Runtime asset manifest total byte count should match current files');
 
   for (const snippet of [
     '# Runtime Asset Manifest',
     'PNG assets: 6',
     'Audio assets: 3',
+    'Offline Japanese pronunciations: 853',
+    'VOICEVOX:四国めたん',
     'app-icon',
     'bgm-night',
   ]) {
@@ -2256,6 +2298,7 @@ function verifyContentRightsAudit() {
   assert(contentRightsAudit.source === 'scripts/generate-content-rights-audit.js', 'Content rights audit should name its generator');
   assert(contentRightsAudit.generatedFrom?.gameData === 'src/gameData.ts', 'Content rights audit should reference gameData');
   assert(contentRightsAudit.generatedFrom?.appStoreLocalizations === 'docs/app-store-localizations.json', 'Content rights audit should reference App Store localizations');
+  assert(contentRightsAudit.generatedFrom?.pronunciationPack === 'src/pronunciation.generated.ts', 'Content rights audit should reference the offline pronunciation pack');
   assert(contentRightsAudit.posture?.statement?.includes('original anime-style study lines'), 'Content rights audit should state the original anime-style line posture');
   assert(contentRightsAudit.posture?.limitation?.includes('not a legal opinion'), 'Content rights audit should include the legal limitation');
   assert(contentRightsAudit.summary?.risk === 'PASS', 'Content rights audit should pass before release');
@@ -2269,6 +2312,13 @@ function verifyContentRightsAudit() {
   assert(contentRightsAudit.summary?.duplicateLineDisplays === 0, 'Content rights audit should have zero duplicate line displays');
   assert(contentRightsAudit.summary?.duplicateLineMeanings === 0, 'Content rights audit should have zero duplicate line meanings');
   assert(contentRightsAudit.summary?.metadataOriginalityLocales === expectedLocales.length, 'Content rights audit should confirm originality claims in every App Store locale');
+  assert(contentRightsAudit.summary?.voiceCreditReady === true, 'Content rights audit should confirm the voice credit is ready');
+  assert(contentRightsAudit.voiceSynthesis?.credit === 'VOICEVOX:四国めたん', 'Content rights audit should record the exact voice credit');
+  assert(contentRightsAudit.voiceSynthesis?.commercialAndNonCommercialUseWithCredit === true, 'Content rights audit should record credited commercial use posture');
+  assert(contentRightsAudit.voiceSynthesis?.inAppCreditPresent === true, 'Content rights audit should confirm the in-app voice credit');
+  assert(contentRightsAudit.voiceSynthesis?.publicCreditPresent === true, 'Content rights audit should confirm the public voice credit');
+  assert((contentRightsAudit.voiceSynthesis?.officialTerms ?? []).includes('https://voicevox.hiroshiba.jp/term/'), 'Content rights audit should link the VOICEVOX terms');
+  assert((contentRightsAudit.voiceSynthesis?.officialTerms ?? []).includes('https://zunko.jp/con_ongen_kiyaku.html'), 'Content rights audit should link the 四国めたん voice terms');
   assert((contentRightsAudit.protectedIpHits ?? []).length === 0, 'Content rights audit protectedIpHits should be empty');
   assert((contentRightsAudit.duplicateLineDisplays ?? []).length === 0, 'Content rights audit duplicateLineDisplays should be empty');
   assert((contentRightsAudit.duplicateLineMeanings ?? []).length === 0, 'Content rights audit duplicateLineMeanings should be empty');
@@ -2291,6 +2341,8 @@ function verifyContentRightsAudit() {
     'Original anime-style line prompts',
     'Protected IP term hits: 0',
     'No protected IP term hits were found',
+    'VOICEVOX:四国めたん',
+    'Voice synthesis credit ready: Yes',
     'not a legal opinion',
     'N5',
     'N1',
@@ -2903,6 +2955,10 @@ function verifyDataFlowPrivacyAudit() {
     'src/grammarData.ts',
     'src/gameEngine.ts',
     'src/i18n.ts',
+    'src/pronunciation.generated.ts',
+    'src/pronunciation.native.ts',
+    'src/pronunciation.ts',
+    'src/pronunciation.web.ts',
     'src/storage.ts',
   ], 'Data flow privacy audit runtime sources');
   assert(dataFlowPrivacyAudit.app?.name === appJson.name, 'Data flow privacy audit app name should match app config');
@@ -3065,6 +3121,7 @@ function verifyRuntimeUiFlowAudit() {
   const requiredCheckIds = [
     'first-playable-screen',
     'difficulty-selector',
+    'kana-foundation-mode',
     'level-mastery-map',
     'weak-review-retention',
     'next-step-guidance',
@@ -3140,6 +3197,7 @@ function verifyRuntimeUiFlowAudit() {
     'Japanese UI locale present: No',
     'Language switching owned by Settings: Yes',
     'first-playable-screen',
+    'kana-foundation-mode',
     'level-mastery-map',
     'weak-review-retention',
     'next-step-guidance',

@@ -158,8 +158,8 @@
         {
           "id": "all-levels",
           "priority": "P0",
-          "action": "Before starting runs, select N5, N4, N3, N2, and N1 once each and confirm the active question label matches the selected level.",
-          "expected": "N5 includes kana foundations; N4-N1 stay in their level banks and progressively feel harder."
+          "action": "In a JLPT study mode, select N5, N4, N3, N2, and N1 once each and confirm the active question label matches the selected level. Then select Kana mode.",
+          "expected": "N5 includes kana foundations; N4-N1 stay in their level banks and progressively feel harder. Kana mode hides JLPT levels and stays a standalone hiragana/katakana foundation drill."
         },
         {
           "id": "all-modes",

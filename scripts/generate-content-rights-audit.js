@@ -7,6 +7,14 @@ const jsonPath = path.join(root, 'docs/content-rights-audit.json');
 const markdownPath = path.join(root, 'docs/content-rights-audit.md');
 const gameData = loadTsModule('src/gameData.ts');
 const metadata = readJson('docs/app-store-localizations.json');
+const pronunciationSource = readText('src/pronunciation.generated.ts');
+const i18nSource = readText('src/i18n.ts');
+const localizedSiteSource = readText('scripts/generate-localized-site.js');
+const voiceCredit = 'VOICEVOX:四国めたん';
+const voiceCreditReady =
+  pronunciationSource.includes(`voiceCredit: '${voiceCredit}'`) &&
+  i18nSource.includes(voiceCredit) &&
+  localizedSiteSource.includes(voiceCredit);
 
 const protectedIpTerms = [
   term('Naruto', ['naruto', 'ナルト']),
@@ -70,6 +78,9 @@ const audit = {
   generatedFrom: {
     gameData: 'src/gameData.ts',
     appStoreLocalizations: 'docs/app-store-localizations.json',
+    pronunciationPack: 'src/pronunciation.generated.ts',
+    inAppNotices: 'src/i18n.ts',
+    publicNotices: 'scripts/generate-localized-site.js',
   },
   posture: {
     statement: 'Kana Sprint uses original anime-style study lines and does not include known protected anime quotes, characters, titles, or third-party story worlds.',
@@ -88,7 +99,27 @@ const audit = {
     duplicateLineDisplays: duplicateLineDisplays.length,
     duplicateLineMeanings: duplicateLineMeanings.length,
     metadataOriginalityLocales: metadataOriginality.filter((entry) => entry.hasOriginalityClaim).length,
-    risk: protectedIpHits.length === 0 && duplicateLineDisplays.length === 0 && duplicateLineMeanings.length === 0 ? 'PASS' : 'REVIEW',
+    voiceCreditReady,
+    risk:
+      protectedIpHits.length === 0 &&
+      duplicateLineDisplays.length === 0 &&
+      duplicateLineMeanings.length === 0 &&
+      voiceCreditReady
+        ? 'PASS'
+        : 'REVIEW',
+  },
+  voiceSynthesis: {
+    engine: 'VOICEVOX',
+    speaker: '四国めたん',
+    style: 'ノーマル',
+    credit: voiceCredit,
+    commercialAndNonCommercialUseWithCredit: true,
+    inAppCreditPresent: i18nSource.includes(voiceCredit),
+    publicCreditPresent: localizedSiteSource.includes(voiceCredit),
+    officialTerms: [
+      'https://voicevox.hiroshiba.jp/term/',
+      'https://zunko.jp/con_ongen_kiyaku.html',
+    ],
   },
   levels: Object.fromEntries((gameData.JLPT_LEVELS ?? []).map((level) => [
     level,
@@ -244,8 +275,19 @@ ${values.posture.statement}
 - Duplicate line displays: ${values.summary.duplicateLineDisplays}
 - Duplicate line meanings: ${values.summary.duplicateLineMeanings}
 - App Store locales with originality claim: ${values.summary.metadataOriginalityLocales}
+- Voice synthesis credit ready: ${values.summary.voiceCreditReady ? 'Yes' : 'No'}
 
 No protected IP term hits were found in the study bank or App Store localization text.
+
+## Voice Synthesis
+
+- Engine and voice: ${values.voiceSynthesis.credit}
+- Style: ${values.voiceSynthesis.style}
+- Commercial and non-commercial use with credit: ${values.voiceSynthesis.commercialAndNonCommercialUseWithCredit ? 'Yes' : 'No'}
+- In-app credit present: ${values.voiceSynthesis.inAppCreditPresent ? 'Yes' : 'No'}
+- Public credit present: ${values.voiceSynthesis.publicCreditPresent ? 'Yes' : 'No'}
+- Official terms:
+${values.voiceSynthesis.officialTerms.map((url) => `  - ${url}`).join('\n')}
 
 ## Level Coverage
 
@@ -275,6 +317,10 @@ ${values.posture.actionIfHit}
 
 function readJson(relativePath) {
   return JSON.parse(fs.readFileSync(path.join(root, relativePath), 'utf8'));
+}
+
+function readText(relativePath) {
+  return fs.readFileSync(path.join(root, relativePath), 'utf8');
 }
 
 function loadTsModule(relativePath) {

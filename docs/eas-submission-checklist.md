@@ -51,7 +51,7 @@
 - Screenshot QA unexpected duplicate groups: 0
 - Runtime UI flow risk: PASS
 - Runtime UI flow ready: Yes
-- Runtime UI flow checks: 21/21
+- Runtime UI flow checks: 22/22
 - Runtime UI flow failures: 0
 - App Store copy risk: PASS
 - App Store copy ready locales: 10/10
@@ -156,7 +156,7 @@
 - [OK] JLPT N5-N1 study bank: 92 kana, 513 vocabulary, 148 original anime-style line prompts, 100 grammar prompts.
 - [OK] Study bank depth audit: 853 items, 26 topic families, N5-N1 progression verified.
 - [OK] Study content localization: 853 study items and 685 study text keys localized for 10 UI locales.
-- [OK] Runtime assets: 6 PNG assets and 3 BGM tracks recorded.
+- [OK] Runtime assets: 6 PNG assets, 3 BGM tracks, and 853 offline pronunciations recorded.
 - [OK] Public support/privacy/license site: 44 generated pages for 10 UI locales.
 - [OK] Public site deploy audit: 44 routes plus hosting control files packaged; GitHub Pages workflow ready=yes, sitemap ready=yes, external hosting ready=yes.
 - [OK] Public site hosting handoff: 44 routes mapped to 4 hosting options; external hosting verified=yes.
@@ -175,7 +175,7 @@
 - [OK] AdMob release audit: NO_LIVE_ADS state audited; live ads ready=no, external ad setup ready=no.
 - [OK] AdMob setup handoff: 4 AdMob env values and 3 manual confirmations mapped; external AdMob ready=no.
 - [OK] Data flow privacy audit: local-only storage with 0 app-owned network hits, 0 analytics SDKs, and 0 auth SDKs.
-- [OK] Runtime UI flow audit: 21/21 runtime UI flows verified across 10 locales and 5 JLPT levels.
+- [OK] Runtime UI flow audit: 22/22 runtime UI flows verified across 10 locales and 5 JLPT levels.
 - [OK] Store submission input pack: 18 env inputs, 7 EAS production keys, 6 manual confirmations, standalone env template ready; external blockers=7.
 - [OK] External TODO tracker: 11 external items tracked, 7 blocking, 5 final commands blocked.
 - [OK] Account and service preflight: 10 remote-service checks prepared, 7 EAS env keys tracked; external blockers=7.

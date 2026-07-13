@@ -3,7 +3,10 @@
   "source": "scripts/generate-content-rights-audit.js",
   "generatedFrom": {
     "gameData": "src/gameData.ts",
-    "appStoreLocalizations": "docs/app-store-localizations.json"
+    "appStoreLocalizations": "docs/app-store-localizations.json",
+    "pronunciationPack": "src/pronunciation.generated.ts",
+    "inAppNotices": "src/i18n.ts",
+    "publicNotices": "scripts/generate-localized-site.js"
   },
   "posture": {
     "statement": "Kana Sprint uses original anime-style study lines and does not include known protected anime quotes, characters, titles, or third-party story worlds.",
@@ -22,7 +25,21 @@
     "duplicateLineDisplays": 0,
     "duplicateLineMeanings": 0,
     "metadataOriginalityLocales": 10,
+    "voiceCreditReady": true,
     "risk": "PASS"
+  },
+  "voiceSynthesis": {
+    "engine": "VOICEVOX",
+    "speaker": "四国めたん",
+    "style": "ノーマル",
+    "credit": "VOICEVOX:四国めたん",
+    "commercialAndNonCommercialUseWithCredit": true,
+    "inAppCreditPresent": true,
+    "publicCreditPresent": true,
+    "officialTerms": [
+      "https://voicevox.hiroshiba.jp/term/",
+      "https://zunko.jp/con_ongen_kiyaku.html"
+    ]
   },
   "levels": {
     "N5": {

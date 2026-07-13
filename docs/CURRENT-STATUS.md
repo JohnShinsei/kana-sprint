@@ -33,7 +33,7 @@ The core Japanese-learning game is working, the rewarded-ad continue flow is com
 ## Verified before shutdown
 
 - `npm run typecheck`: PASS on 2026-07-12.
-- `npm run gameplay-check`: PASS for 10 locales, 5 JLPT levels, 5 modes, and 4,500 generated questions.
+- `npm run gameplay-check`: PASS for 10 locales, 5 JLPT levels, 5 modes, 21 valid mode/level combinations, and 3,780 generated questions. Kana is a standalone foundation mode rather than an N1-N4 difficulty.
 - Mobile browser test at 390x844: PASS for N5/N1 grammar, answer explanation, old-feedback clearing, rewarded continue, and zero horizontal overflow.
 - Mobile browser listening test at 390x844: PASS for hidden Japanese prompt, automatic listening flow, written-answer reveal, zero horizontal overflow, and zero console errors or warnings.
 - Browser runtime test: PASS for three-loss rescue, rewarded continue, second-run end action, and final results screen.
