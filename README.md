@@ -112,11 +112,21 @@ npm run pronunciation:generate
 npm run pronunciation:check
 ```
 
-语音由 VOICEVOX 生成，项目内标注为：
+语音由 [VOICEVOX](https://voicevox.hiroshiba.jp/) 生成。项目实际使用三种声线；点击表格中的试听链接，可在 VOICEVOX 官方页面直接播放对应的声音样本：
+
+| 用途 | VOICEVOX 声线 | Speaker ID | 官方试听 |
+| --- | --- | ---: | --- |
+| 普通学习内容与听力对话角色 A | 四国めたん／ノーマル | 2 | [试听四国めたん](https://voicevox.hiroshiba.jp/product/shikoku_metan/) |
+| JLPT 听力题旁白与问题播报 | No.7／アナウンス | 30 | [试听 No.7](https://voicevox.hiroshiba.jp/product/number_seven/) |
+| 听力对话角色 B | 玄野武宏／ノーマル | 11 | [试听玄野武宏](https://voicevox.hiroshiba.jp/product/kurono_takehiro/) |
+
+项目中的完整署名为：
 
 ```text
-VOICEVOX:四国めたん
+VOICEVOX:四国めたん / No.7 / 玄野武宏
 ```
+
+使用相关音频前，请同时确认 [VOICEVOX 软件使用条款](https://voicevox.hiroshiba.jp/term/) 和各声线官方页面所链接的音声库条款。
 
 ## 激励广告
 
