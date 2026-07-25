@@ -4,7 +4,9 @@
 
 玩家需要在限时挑战中完成假名、词汇、原创动漫风格台词、文法和 JLPT 听力题，通过连续答对积累分数，在短时间内反复练习日语识别与回忆能力。
 
-![Kana Sprint 中文首页](assets/store/ios-localized/zh-Hans/iphone-6.9/01-ready.png)
+<p align="center">
+  <img src="assets/readme/kana-sprint-android-zh.png" alt="Kana Sprint 新版简体中文首页" width="360">
+</p>
 
 ## 核心玩法
 
